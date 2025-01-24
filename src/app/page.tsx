@@ -1,11 +1,11 @@
-import { Button } from "@/components/ui/button";
+
+import HeroSection from "@/components/custom/HeroSection";
+// import { TextEffect } from "@/components/ui/text-effect";
 
 
 const page = ({}) => {
-	return (
-		<div>
-			<Button variant={"destructive"}>hii</Button>
-		</div>
+    return (
+        <HeroSection/>
 	);
 };
 
