@@ -12,6 +12,7 @@ const page = ({}) => {
         <AnimatedLogoCloud/>
         <WorldMapDemo />
         
+        
         </>
 	);
 };
