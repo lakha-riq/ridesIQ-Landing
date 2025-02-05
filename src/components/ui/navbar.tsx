@@ -19,7 +19,7 @@ export function Navbar() {
 								href="/"
 								className="flex items-center"
 							>
-								<span className="text-white text-xl font-bold">IOT Rides</span>
+								<span className="text-white text-xl font-bold">Rides IQ</span>
 							</Link>
 						</div>
 
