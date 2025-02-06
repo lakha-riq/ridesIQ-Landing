@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Iot Rides",
   description: "Iot Rides",
+  
 };
 
 export default function RootLayout({

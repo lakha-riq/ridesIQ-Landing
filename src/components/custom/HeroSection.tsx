@@ -16,7 +16,7 @@ export default function HeroSection() {
 								per="word"
 								as="h3"
 								preset="blur"
-								className="text-md uhe ppercase tracking-wider mb-4 font-sans text-gray-400"
+								className="text-md uppercase tracking-wider mb-4 font-sans text-gray-400"
 							>
 								Carbon neutral way to track cars.
 							</TextEffect>
@@ -34,7 +34,7 @@ export default function HeroSection() {
 					</div>
 				</div>
 			</div>
-			<MarqueeEffect baseVelocity={-2}>
+			<MarqueeEffect baseVelocity={-0.25}>
 				<div className="flex flex-col items-center justify-center w-[50rem]  h-96 rounded-lg">
 					<Image
 						src="/assets/1.png"

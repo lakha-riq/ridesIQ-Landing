@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export function GlowEffectButton() {
 	return (
-		<div className="relative">
+		<div className="relative scale-200">
 			<GlowEffect
 				colors={["#FF5733", "#33FF57", "#3357FF", "#F1C40F"]}
 				mode="colorShift"
