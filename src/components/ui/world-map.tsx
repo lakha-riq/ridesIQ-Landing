@@ -52,14 +52,13 @@ export default function WorldMap({ dots = [], lineColor = "#0ea5e9" }: MapProps)
 			},
 		);
 
-		const currentContainer = containerRef.current;
-		if (currentContainer) {
-			observer.observe(currentContainer);
+		if (containerRef.current) {
+			observer.observe(containerRef.current);
 		}
 
 		return () => {
-			if (currentContainer) {
-				observer.unobserve(currentContainer);
+			if (containerRef.current) {
+				observer.unobserve(containerRef.current);
 			}
 		};
 	}, []);
