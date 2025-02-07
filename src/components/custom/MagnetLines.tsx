@@ -74,7 +74,7 @@ const MagnetLines: React.FC<MagnetLinesProps> = ({
 				backgroundColor: lineColor,
 				width: lineWidth,
 				height: lineHeight,
-				//@ts-ignore
+				//@ts-expect-error - TODO: fix this 
 				"--rotate": `${baseAngle}deg`,
 				transform: "rotate(var(--rotate))",
 				willChange: "transform",

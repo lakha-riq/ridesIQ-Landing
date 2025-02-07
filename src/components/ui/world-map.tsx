@@ -41,6 +41,7 @@ export default function WorldMap({ dots = [], lineColor = "#0ea5e9" }: MapProps)
 	};
 
 	useEffect(() => {
+		const ContainerRef = containerRef.current;
 		const observer = new IntersectionObserver(
 			([entry]) => {
 				setIsInView(entry.isIntersecting);
@@ -52,13 +53,14 @@ export default function WorldMap({ dots = [], lineColor = "#0ea5e9" }: MapProps)
 			},
 		);
 
-		if (containerRef.current) {
-			observer.observe(containerRef.current);
+		if (ContainerRef) {
+			observer.observe(ContainerRef);
 		}
 
 		return () => {
-			if (containerRef.current) {
-				observer.unobserve(containerRef.current);
+			
+			if (ContainerRef) {
+				observer.unobserve(ContainerRef);
 			}
 		};
 	}, []);

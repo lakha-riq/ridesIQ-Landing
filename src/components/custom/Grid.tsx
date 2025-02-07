@@ -1,7 +1,7 @@
-import { BentoGrid, type BentoItems } from "@/components/ui/bento-grid";
+import { BentoGrid, type BentoItem } from "@/components/ui/bento-grid";
 import { CheckCircle, TrendingUp, Video, Globe } from "lucide-react";
 
-const itemsSample: BentoItems[] = [
+const itemsSample: BentoItem[] = [
 	{
 		title: "Analytics Dashboard",
 		meta: "v2.4.1",
