@@ -2,7 +2,7 @@
 import { BentoGridDemo } from "@/components/custom/Grid";
 import HeroSection from "@/components/custom/HeroSection";
 import Quotes from "@/components/custom/Quotes";
-import { TestimonialsSectionDemo } from "@/components/custom/TestimonialsAll";
+// import { TestimonialsSectionDemo } from "@/components/custom/TestimonialsAll";
 import { WorldMapDemo } from "@/components/custom/WorldmapDemo";
 
 // import { TextEffect } from "@/components/ui/text-effect";
@@ -21,7 +21,7 @@ const page = ({}) => {
 				quote="We are a team of experts in the field of IoT "
       />
       <div>
-        <TestimonialsSectionDemo/>
+        {/* <TestimonialsSectionDemo/> */}
       </div>
 			<WorldMapDemo />
 		</>
