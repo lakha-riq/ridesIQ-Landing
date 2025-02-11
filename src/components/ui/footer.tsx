@@ -1,21 +1,16 @@
 import Link from "next/link";
 import { FC } from "react";
+import { TextHoverEffect } from "../custom/FooterText";
 
-interface FooterProps { 
-	title : string;
-	links : {
-		text : string;
-		href : string;
+interface FooterProps {
+	title: string;
+	links: {
+		text: string;
+		href: string;
 	}[];
 }
 
-
-
-
-const FooterSection : FC<FooterProps> = ({
-	title,
-	links,
-}) => (
+const FooterSection: FC<FooterProps> = ({ title, links }) => (
 	<div className="flex flex-col gap-2">
 		<h3 className="text-lg font-bold text-[#555555] mb-2">{title}</h3>
 		<div className="flex flex-col gap-1">
@@ -62,7 +57,8 @@ const Footer = () => {
 	return (
 		<footer className="w-full min-h-[70vh] bg-black">
 			<div className="flex flex-col items-center">
-				<h1 className="md:text-[14rem] text-[4rem] text-center w-[90vw] font-extrabold tracking-tighter text-[#555555] border-b border-[#555555]"> RidesIQ.</h1>
+				{/* <h1 className="md:text-[14rem] text-[4rem] text-center w-[90vw] font-extrabold tracking-tighter text-[#555555] border-b border-[#555555]"> RidesIQ.</h1> */}
+				<TextHoverEffect text="RIDESIQ" />
 
 				{/* Grid Layout for Footer Links */}
 				<div className="w-[90vw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-12">
@@ -87,7 +83,6 @@ const Footer = () => {
 				{/* Copyright Section */}
 				<div className="w-[90vw] flex items-center justify-between flex-wrap pt-2 pb-8 text-[#555555] font-bold border-t border-[#555555]">
 					<div className="text-start w-full md:w-auto">
-						
 						<Link
 							href={""}
 							className="text-[#6f6e6e] p-1"

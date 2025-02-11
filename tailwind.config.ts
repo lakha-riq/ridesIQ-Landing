@@ -1,5 +1,8 @@
 import type { Config } from "tailwindcss";
-import twAnimate from "tailwindcss-animate"
+import twAnimate from "tailwindcss-animate";
+
+import { default as flattenColorPalette } from "tailwindcss";
+
 export default {
 	darkMode: ["class"],
 	content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
@@ -63,5 +66,15 @@ export default {
 			},
 		},
 	},
-	plugins: [twAnimate],
+	plugins: [twAnimate, addVariablesForColors],
 } satisfies Config;
+
+//@ts-expect-error any is needed here
+function addVariablesForColors({ addBase, theme }) {
+	const allColors = flattenColorPalette(theme("colors"));
+	const newVars = Object.fromEntries(Object.entries(allColors).map(([key, val]) => [`--${key}`, val]));
+
+	addBase({
+		":root": newVars,
+	});
+}
