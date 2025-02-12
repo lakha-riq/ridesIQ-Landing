@@ -1,3 +1,7 @@
+import { ChartArea } from "@/components/custom/charts/chart-area";
+import { ChartBar } from "@/components/custom/charts/chart-bar";
+import { ChartLine } from "@/components/custom/charts/chart-line";
+import { ChartPie } from "@/components/custom/charts/chart-pie";
 import { BentoGridDemo } from "@/components/custom/Grid";
 import CardProgramLayout from "@/components/custom/ProductsCard";
 import { VehicleTrackingGrid } from "@/components/custom/ProductsGrid";
@@ -7,7 +11,7 @@ import { Car } from "lucide-react";
 
 const page = ({}) => {
 	return (
-		<div className="w-full min-h-screen p-6 mx-auto">
+		<main className="w-full min-h-screen p-6 mx-auto">
 			<div
 				className="min-h-[20vh] w-full relative bg-cover bg-center bg-no-repeat rounded-lg text-7xl font-medium"
 				// style={{
@@ -39,7 +43,7 @@ const page = ({}) => {
 				}
 			/>
 
-			<div className="min-h-screen bg-black text-white">
+			<section className="min-h-screen bg-black text-white">
 				{/* Hero Section */}
 				<div className="w-full  mx-auto px-4 py-16 md:py-32">
 					<div className="max-w-6xl mx-auto">
@@ -65,8 +69,15 @@ const page = ({}) => {
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</section>
+
+			<section className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-full">
+				<ChartLine />
+				<ChartBar />
+				<ChartArea />
+				<ChartPie />
+			</section>
+		</main>
 	);
 };
 
