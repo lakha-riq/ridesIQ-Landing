@@ -29,14 +29,14 @@ export function Navbar() {
 								href="/products"
 								className="text-gray-300 hover:text-white text-sm font-medium transition-colors"
 							>
-								Products
+								Products and Solution
 							</Link>
-							<Link
+							{/* <Link
 								href="/solutions"
 								className="text-gray-300 hover:text-white text-sm font-medium transition-colors"
 							>
 								Solutions
-							</Link>
+							</Link> */}
 							<Link
 								href="/contact"
 								className="text-gray-300 hover:text-white text-sm font-medium transition-colors"

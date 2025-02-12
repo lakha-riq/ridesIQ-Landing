@@ -1,6 +1,7 @@
-import { ChartArea } from "@/components/custom/charts/chart-area";
+
 import { ChartBar } from "@/components/custom/charts/chart-bar";
 import { ChartLine } from "@/components/custom/charts/chart-line";
+import { ChartMilitary } from "@/components/custom/charts/chart-military";
 import { ChartPie } from "@/components/custom/charts/chart-pie";
 import { BentoGridDemo } from "@/components/custom/Grid";
 import CardProgramLayout from "@/components/custom/ProductsCard";
@@ -74,7 +75,7 @@ const page = ({}) => {
 			<section className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-full">
 				<ChartLine />
 				<ChartBar />
-				<ChartArea />
+				<ChartMilitary/>
 				<ChartPie />
 			</section>
 		</main>
