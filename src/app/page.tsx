@@ -1,7 +1,7 @@
 import Faq02 from "@/components/custom/FAQ";
 import { GlowingEffectDemo } from "@/components/custom/GlowGrid";
 import GradientCard from "@/components/custom/GradientCard";
-import { BentoGridDemo } from "@/components/custom/Grid";
+// import { BentoGridDemo } from "@/components/custom/Grid";
 import HeroSection from "@/components/custom/HeroSection";
 import Quotes from "@/components/custom/Quotes";
 import { TestimonialsSectionDemo } from "@/components/custom/TestimonialsAll";

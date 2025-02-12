@@ -9,7 +9,7 @@ export function ProgressiveBlurHover() {
 
 	return (
 		<div
-			className="relative my-4 aspect-square h-[400px] overflow-hidden rounded-[4px]"
+			className="relative my-4 w-[400px] h-[400px] overflow-hidden rounded-[4px]"
 			onMouseEnter={() => setIsHover(true)}
 			onMouseLeave={() => setIsHover(false)}
 		>
@@ -17,8 +17,8 @@ export function ProgressiveBlurHover() {
 				src={"/assets/4.png"}
 				alt="John Martin - Pandemonium"
 				className="absolute inset-0"
-				width={300}
-				height={300}
+				width={500}
+				height={500}
 			/>
 			<ProgressiveBlur
 				className="pointer-events-none absolute bottom-0 left-0 h-[75%] w-full"
