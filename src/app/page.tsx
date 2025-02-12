@@ -1,10 +1,10 @@
+import Faq02 from "@/components/custom/FAQ";
 import { GlowingEffectDemo } from "@/components/custom/GlowGrid";
 import GradientCard from "@/components/custom/GradientCard";
 import { BentoGridDemo } from "@/components/custom/Grid";
 import HeroSection from "@/components/custom/HeroSection";
 import Quotes from "@/components/custom/Quotes";
 import { TestimonialsSectionDemo } from "@/components/custom/TestimonialsAll";
-import { WorldMapDemo } from "@/components/custom/WorldmapDemo";
 
 // import { TextEffect } from "@/components/ui/text-effect";
 
@@ -15,7 +15,6 @@ const page = ({}) => {
 			<div className="flex flex-col items-center justify-center min-w-full min-h-[50vh] pt-20">
 				<div className="text-3xl">Discover why people are willing to work with us</div>
 				<div className="text-xl opacity-50">the features and benefits of our services</div>
-				{/* <BentoGridDemo /> */}
 				<div className="w-full min-h-screen grid place-content-center">
 					<GlowingEffectDemo />
 				</div>
@@ -29,6 +28,7 @@ const page = ({}) => {
 			</div>
 
 			<GradientCard />
+			<Faq02 />
 
 			{/* <WorldMapDemo /> */}
 		</>

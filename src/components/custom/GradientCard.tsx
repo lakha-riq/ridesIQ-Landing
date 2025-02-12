@@ -4,9 +4,9 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function GradientCard() {
 	return (
-		<div className="px-20">
+		<div className="md:px-20">
 			<div
-				className="min-h-[70vh] w-full relative bg-cover bg-center bg-no-repeat rounded-lg "
+				className="md:min-h-[70vh] min-h-[50vh] w-full relative bg-cover bg-center bg-no-repeat rounded-lg "
 				style={{
 					backgroundImage: 'url("/bg.png")',
 				}}

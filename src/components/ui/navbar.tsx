@@ -38,16 +38,10 @@ export function Navbar() {
 								Solutions
 							</Link>
 							<Link
-								href="/partners"
+								href="/contact"
 								className="text-gray-300 hover:text-white text-sm font-medium transition-colors"
 							>
-								Partners
-							</Link>
-							<Link
-								href="/resources"
-								className="text-gray-300 hover:text-white text-sm font-medium transition-colors"
-							>
-								Resources
+								Contact us
 							</Link>
 						</div>
 
@@ -57,14 +51,9 @@ export function Navbar() {
 								href="/company"
 								className="text-gray-300 hover:text-white text-sm font-medium transition-colors"
 							>
-								Company
+								About 
 							</Link>
-							<Link
-								href="/signin"
-								className="text-gray-300 hover:text-white text-sm font-medium transition-colors"
-							>
-								Sign in
-							</Link>
+
 							<div className="relative">
 								<GlowEffect
 									colors={["#FF5733", "#33FF57", "#3357FF", "#F1C40F"]}
