@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight, Menu, X } from "lucide-react";
 
 import { GlowEffect } from "@/components/ui/glow-effect";
+import { GlowEffectButton } from "../custom/GlowButton";
 export function Navbar() {
 	const [isOpen, setIsOpen] = React.useState(false);
 
@@ -54,7 +55,7 @@ export function Navbar() {
 								About 
 							</Link>
 
-							<div className="relative">
+							{/* <div className="relative">
 								<GlowEffect
 									colors={["#FF5733", "#33FF57", "#3357FF", "#F1C40F"]}
 									mode="colorShift"
@@ -63,9 +64,10 @@ export function Navbar() {
 									scale={0.9}
 								/>
 								<button className="relative inline-flex items-center gap-1 rounded-md bg-zinc-950 px-2.5 py-1.5 text-sm text-zinc-50 outline outline-1 outline-[#fff2f21f] ">
-									Explore <ArrowRight className="h4 w-4" />
+									Contact Us <ArrowRight className="h4 w-4" />
 								</button>
-							</div>
+							</div> */}
+							<GlowEffectButton/>
 						</div>
 
 						{/* Mobile menu button */}
