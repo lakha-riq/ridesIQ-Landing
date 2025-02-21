@@ -40,8 +40,8 @@ export default function ContactFormPreview() {
 	}
 
 	return (
-		<div className="flex min-h-[60vh] h-full w-full items-center justify-center px-4">
-			hi
+		<div className="relative flex min-h-[60vh] h-full w-full items-center justify-center px-4">
+
 			<Card className="mx-auto max-w-md">
 				<CardHeader>
 					<CardTitle className="text-2xl">Contact Us</CardTitle>
