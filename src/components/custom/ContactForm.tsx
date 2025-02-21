@@ -59,22 +59,41 @@ export default function MyForm() {
 	}
 
 	return (
-		<Form {...form}>
-			<form
-				onSubmit={form.handleSubmit(onSubmit)}
-				className="space-y-8 max-w-3xl mx-auto py-10"
-			>
-				<FormField
-					control={form.control}
-					name="email"
-					render={({ field }) => (
-						<FormItem>
-							<FormLabel>Email</FormLabel>
-							<FormControl>
-								<Input
-									placeholder="Clark@superman.co"
-									type="email"
-									{...field}
+
+		<div className="relative flex min-h-[60vh] h-full w-full items-center justify-center px-4">
+
+			<Card className="mx-auto max-w-md">
+				<CardHeader>
+					<CardTitle className="text-2xl">Contact Us</CardTitle>
+					<CardDescription>Please fill out the form below and we will get back to you shortly.</CardDescription>
+				</CardHeader>
+				<CardContent>
+					<Form {...form}>
+						<form
+							onSubmit={form.handleSubmit(onSubmit)}
+							className="space-y-8"
+						>
+							<div className="grid gap-4">
+								{/* Name Field */}
+								<FormField
+									control={form.control}
+									name="name"
+									render={({ field }) => (
+										<FormItem className="grid gap-2">
+											<FormLabel htmlFor="name">Name</FormLabel>
+											<FormControl>
+												<Input
+													id="name"
+													placeholder="John Doe"
+													type="text"
+													autoComplete="name"
+													{...field}
+												/>
+											</FormControl>
+											<FormMessage />
+										</FormItem>
+									)}
+
 								/>
 							</FormControl>
 							<FormDescription>email address</FormDescription>

@@ -8,7 +8,7 @@ import MarqueeEffect from "@/components/custom/Carousel";
 export default function HeroSection() {
 	return (
 		<>
-			<div className="bg-black text-white min-h-[80vh] w-full flex items-end">
+			<div className="bg-black text-white min-h-[20vh] w-full flex items-start">
 				<div className=" px-4 py-2">
 					<div className="grid md:grid-cols-5 gap-40 items-end justify-around ">
 						<div className="col-span-3">

@@ -4,9 +4,11 @@ import { ChartLine } from "@/components/custom/charts/chart-line";
 import { ChartMilitary } from "@/components/custom/charts/chart-military";
 import { ChartPie } from "@/components/custom/charts/chart-pie";
 import { BentoGridDemo } from "@/components/custom/Grid";
+import IndustrySolutions from "@/components/custom/IndustrySolutions";
 import CardProgramLayout from "@/components/custom/ProductsCard";
 import { VehicleTrackingGrid } from "@/components/custom/ProductsGrid";
 import { ProgressiveBlurHover } from "@/components/custom/SomeTextCard";
+import IndustryServices from "@/components/IndustryServices";
 import { TextEffect } from "@/components/ui/text-effect";
 import { Car } from "lucide-react";
 
@@ -78,6 +80,13 @@ const page = ({}) => {
 				<ChartMilitary/>
 				<ChartPie />
 			</section>
+
+
+
+<IndustryServices/>
+<IndustrySolutions/>			
+
+
 		</main>
 	);
 };

@@ -1,103 +1,128 @@
 import Link from "next/link";
-import { FC } from "react";
+
 import { TextHoverEffect } from "../custom/FooterText";
+import { Linkedin, X } from "lucide-react";
+import { Input } from "./input";
+import { Button } from "./button";
 
-interface FooterProps {
-	title: string;
-	links: {
-		text: string;
-		href: string;
-	}[];
-}
 
-const FooterSection: FC<FooterProps> = ({ title, links }) => (
-	<div className="flex flex-col gap-2">
-		<h3 className="text-lg font-bold text-[#555555] mb-2">{title}</h3>
-		<div className="flex flex-col gap-1">
-			{links.map((link, index) => (
-				<Link
-					key={index}
-					href={link.href}
-					className="text-[#6f6e6e] hover:text-[#555555] transition-colors"
-				>
-					{link.text}
-				</Link>
-			))}
-		</div>
-	</div>
-);
+
+
 
 const Footer = () => {
-	const footerLinks = {
-		company: [
-			{ text: "About Us", href: "#" },
-			{ text: "Careers", href: "#" },
-			{ text: "Press", href: "#" },
-			{ text: "Blog", href: "#" },
-		],
-		support: [
-			{ text: "Help Center", href: "#" },
-			{ text: "Safety", href: "#" },
-			{ text: "Terms of Service", href: "#" },
-			{ text: "Privacy Policy", href: "#" },
-		],
-		contact: [
-			{ text: "Email: contact@iotrides.com", href: "mailto:contact@iotrides.com" },
-			{ text: "Phone: +1 (555) 123-4567", href: "tel:+15551234567" },
-			{ text: "Toronto, Canada", href: "#" },
-		],
-		social: [
-			{ text: "Twitter", href: "#" },
-			{ text: "LinkedIn", href: "#" },
-			{ text: "Instagram", href: "#" },
-			{ text: "Facebook", href: "#" },
-		],
-	};
+
 
 	return (
 		<footer className="w-full min-h-[70vh] bg-black">
 			<div className="flex flex-col items-center">
 				{/* <h1 className="md:text-[14rem] text-[4rem] text-center w-[90vw] font-extrabold tracking-tighter text-[#555555] border-b border-[#555555]"> RidesIQ.</h1> */}
 				<TextHoverEffect text="RIDESIQ" />
+			</div>
+			<div className="container mx-auto px-4 py-12">
+				{/* Main Content */}
+				<div className="flex flex-col md:flex-row justify-between gap-12 mb-12">
+					{/* Newsletter Section */}
+					<div className="flex-1 max-w-xl">
+						<h2 className="text-2xl font-semibold mb-4">Sign up for email updates</h2>
+						<p className="text-gray-400 mb-6">Your one-stop shop for Telematics news you need to know each month.</p>
+						<div className="flex flex-col gap-4">
+							<Input
+								type="email"
+								placeholder="Enter email address..."
+								className="bg-[#1C1C1C] border-0 text-white"
+							/>
+							<Button
+								variant="secondary"
+								className="whitespace-nowrap bg-white text-black hover:bg-gray-200 w-40"
+							>
+								Subscribe
+							</Button>
+						</div>
+					</div>
 
-				{/* Grid Layout for Footer Links */}
-				<div className="w-[90vw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-12">
-					<FooterSection
-						title="Company"
-						links={footerLinks.company}
-					/>
-					<FooterSection
-						title="Support"
-						links={footerLinks.support}
-					/>
-					<FooterSection
-						title="Contact"
-						links={footerLinks.contact}
-					/>
-					<FooterSection
-						title="Social"
-						links={footerLinks.social}
-					/>
+					{/* Navigation Links */}
+					<div className="space-y-12">
+						<div>
+							<h3 className="text-sm font-semibold text-gray-400 uppercase mb-4">Company</h3>
+							<div className="flex flex-col space-y-3">
+								<Link
+									href="/products"
+									className="text-white hover:text-gray-300 transition-colors"
+								>
+									Products
+								</Link>
+								<Link
+									href="/solutions"
+									className="text-white hover:text-gray-300 transition-colors"
+								>
+									Solutions
+									</Link>
+								<Link
+									href="#"
+									className="text-white hover:text-gray-300 transition-colors"
+								>
+									Contact Us
+								</Link>
+							</div>
+						</div>
+
+						<div>
+							<h3 className="text-sm font-semibold text-gray-400 uppercase mb-4">Support</h3>
+							<div className="flex flex-col space-y-3">
+								<Link
+									href="#"
+									className="text-white hover:text-gray-300 transition-colors"
+								>
+									Privacy Policy
+								</Link>
+								{/* <Link
+									href="#"
+									className="text-white hover:text-gray-300 transition-colors"
+								>
+									Terms of Services
+								</Link> */}
+								<Link
+									href="#"
+									className="text-white hover:text-gray-300 transition-colors"
+								>
+									FAQs
+								</Link>
+							</div>
+						</div>
+					</div>
 				</div>
 
-				{/* Copyright Section */}
-				<div className="w-[90vw] flex items-center justify-between flex-wrap pt-2 pb-8 text-[#555555] font-bold border-t border-[#555555]">
-					<div className="text-start w-full md:w-auto">
+				{/* Bottom Bar */}
+				<div className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-gray-800 text-sm text-gray-400">
+					<div className="flex items-center gap-8 mb-4 sm:mb-0">
 						<Link
-							href={""}
-							className="text-[#6f6e6e] p-1"
+							href="#"
+							className="hover:text-gray-300 transition-colors"
 						>
-							{"Canada"}
+							Privacy Policy
 						</Link>
-						operational in
 						<Link
-							href={"#"}
-							className="text-[#6f6e6e] p-1"
+							href="#"
+							className="hover:text-gray-300 transition-colors"
 						>
-							{"North America"}
+							Terms of Service
+						</Link>
+						<span>©2025 RidesIQ. All rights reserved.</span>
+					</div>
+					<div className="flex items-center gap-4">
+						<Link
+							href="#"
+							className="hover:text-gray-300 transition-colors"
+						>
+							<X className="w-5 h-5" />
+						</Link>
+						<Link
+							href="#"
+							className="hover:text-gray-300 transition-colors"
+						>
+							<Linkedin className="w-5 h-5" />
 						</Link>
 					</div>
-					<div className="text-[#6f6e6e] mt-4 md:mt-0">© 2025 IoT Rides. All rights reserved.</div>
 				</div>
 			</div>
 		</footer>

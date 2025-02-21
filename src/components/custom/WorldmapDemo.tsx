@@ -1,11 +1,11 @@
 "use client";
 import WorldMap from "@/components/ui/world-map";
-import { motion } from "motion/react";
 
-export function WorldMapDemo() {
+
+export function WorldMapTop() {
 	return (
-		<div className=" py-40  bg-black w-full">
-			<div className="max-w-7xl mx-auto text-center">
+		<div className="   bg-black w-full ">
+			{/* <div className="max-w-7xl mx-auto text-center">
 				<p className="font-bold text-xl md:text-4xl  text-white">
 					Remote{" "}
 					<span className="text-neutral-400">
@@ -25,7 +25,7 @@ export function WorldMapDemo() {
 				<p className="text-sm md:text-lg text-neutral-500 max-w-2xl mx-auto py-4">
 					Break free from traditional boundaries. Work from anywhere, at the comfort of your own studio apartment. Perfect for Nomads and Travellers.
 				</p>
-			</div>
+			</div> */}
 			<WorldMap
 				dots={[
 					{
