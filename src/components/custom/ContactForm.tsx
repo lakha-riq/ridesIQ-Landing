@@ -5,22 +5,25 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 
 const formSchema = z.object({
+	name: z.string().min(1, "Name is required"),
 	email: z.string().email("Please enter a valid email address"),
 	subject: z.string().min(1, "Subject is required"),
 	text: z.string().min(1, "Message is required"),
 });
 
-export default function MyForm() {
+export default function ContactForm() {
 	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
 		defaultValues: {
+			name: "",
 			email: "",
 			subject: "",
 			text: "",
@@ -30,7 +33,7 @@ export default function MyForm() {
 	async function onSubmit(values: z.infer<typeof formSchema>) {
 		setIsSubmitting(true);
 		try {
-			const response = await fetch("/api/send-email", {
+			const response = await fetch("/api/mail", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
@@ -59,10 +62,8 @@ export default function MyForm() {
 	}
 
 	return (
-
 		<div className="relative flex min-h-[60vh] h-full w-full items-center justify-center px-4">
-
-			<Card className="mx-auto max-w-md">
+			<Card className="mx-auto max-w-md w-full">
 				<CardHeader>
 					<CardTitle className="text-2xl">Contact Us</CardTitle>
 					<CardDescription>Please fill out the form below and we will get back to you shortly.</CardDescription>
@@ -74,16 +75,14 @@ export default function MyForm() {
 							className="space-y-8"
 						>
 							<div className="grid gap-4">
-								{/* Name Field */}
 								<FormField
 									control={form.control}
 									name="name"
 									render={({ field }) => (
-										<FormItem className="grid gap-2">
-											<FormLabel htmlFor="name">Name</FormLabel>
+										<FormItem>
+											<FormLabel>Name</FormLabel>
 											<FormControl>
 												<Input
-													id="name"
 													placeholder="John Doe"
 													type="text"
 													autoComplete="name"
@@ -93,57 +92,74 @@ export default function MyForm() {
 											<FormMessage />
 										</FormItem>
 									)}
-
 								/>
-							</FormControl>
-							<FormDescription>email address</FormDescription>
-							<FormMessage />
-						</FormItem>
-					)}
-				/>
 
-				<FormField
-					control={form.control}
-					name="subject"
-					render={({ field }) => (
-						<FormItem>
-							<FormLabel>Subject</FormLabel>
-							<FormControl>
-								<Input
-									placeholder="I needed to contact you for XYZ"
-									{...field}
+								<FormField
+									control={form.control}
+									name="email"
+									render={({ field }) => (
+										<FormItem>
+											<FormLabel>Email</FormLabel>
+											<FormControl>
+												<Input
+													placeholder="john@example.com"
+													type="email"
+													autoComplete="email"
+													{...field}
+												/>
+											</FormControl>
+											<FormMessage />
+										</FormItem>
+									)}
 								/>
-							</FormControl>
-							<FormDescription>the reason to reach out</FormDescription>
-							<FormMessage />
-						</FormItem>
-					)}
-				/>
 
-				<FormField
-					control={form.control}
-					name="text"
-					render={({ field }) => (
-						<FormItem>
-							<FormLabel>Message</FormLabel>
-							<FormControl>
-								<Textarea
-									placeholder="so i was walking and saw someone checking your website... "
-									className="resize-none"
-									{...field}
+								<FormField
+									control={form.control}
+									name="subject"
+									render={({ field }) => (
+										<FormItem>
+											<FormLabel>Subject</FormLabel>
+											<FormControl>
+												<Input
+													placeholder="I needed to contact you for XYZ"
+													{...field}
+												/>
+											</FormControl>
+											<FormMessage />
+										</FormItem>
+									)}
 								/>
-							</FormControl>
-							<FormMessage />
-						</FormItem>
-					)}
-				/>
-				<Button
-					type="submit"
-					disabled={isSubmitting}
-				>
-					{isSubmitting ? "Sending..." : "Submit"}
-				</Button>
-			</form>
-		</Form>
+
+								<FormField
+									control={form.control}
+									name="text"
+									render={({ field }) => (
+										<FormItem>
+											<FormLabel>Message</FormLabel>
+											<FormControl>
+												<Textarea
+													placeholder="Your message here..."
+													className="resize-none"
+													{...field}
+												/>
+											</FormControl>
+											<FormMessage />
+										</FormItem>
+									)}
+								/>
+							</div>
+
+							<Button
+								type="submit"
+								className="w-full"
+								disabled={isSubmitting}
+							>
+								{isSubmitting ? "Sending..." : "Submit"}
+							</Button>
+						</form>
+					</Form>
+				</CardContent>
+			</Card>
+		</div>
 	);
 }
