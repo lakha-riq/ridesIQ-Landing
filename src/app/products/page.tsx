@@ -3,10 +3,10 @@ import { ChartBar } from "@/components/custom/charts/chart-bar";
 import { ChartLine } from "@/components/custom/charts/chart-line";
 import { ChartMilitary } from "@/components/custom/charts/chart-military";
 import { ChartPie } from "@/components/custom/charts/chart-pie";
-import { BentoGridDemo } from "@/components/custom/Grid";
+// import { BentoGridDemo } from "@/components/custom/Grid";
 import IndustrySolutions from "@/components/custom/IndustrySolutions";
 import CardProgramLayout from "@/components/custom/ProductsCard";
-import { VehicleTrackingGrid } from "@/components/custom/ProductsGrid";
+// import { VehicleTrackingGrid } from "@/components/custom/ProductsGrid";
 import { ProgressiveBlurHover } from "@/components/custom/SomeTextCard";
 import IndustryServices from "@/components/IndustryServices";
 import { TextEffect } from "@/components/ui/text-effect";
@@ -31,9 +31,9 @@ const page = ({}) => {
 			</TextEffect>
 			<h1 className="md:text-7xl text-5xl">PRODUCTS</h1>
 
-			<BentoGridDemo />
+			{/* <BentoGridDemo /> */}
 
-			<VehicleTrackingGrid />
+
 
 			<CardProgramLayout
 				title="Custom Title"

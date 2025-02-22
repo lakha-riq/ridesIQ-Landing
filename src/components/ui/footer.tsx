@@ -110,7 +110,7 @@ const Footer = () => {
 						<span>©2025 RidesIQ. All rights reserved.</span>
 					</div>
 					<div className="flex items-center gap-4">
-						<Link
+						{/* <Link
 							href="#"
 							className="hover:text-gray-300 transition-colors"
 						>
@@ -121,7 +121,7 @@ const Footer = () => {
 							className="hover:text-gray-300 transition-colors"
 						>
 							<Linkedin className="w-5 h-5" />
-						</Link>
+						</Link> */}
 					</div>
 				</div>
 			</div>

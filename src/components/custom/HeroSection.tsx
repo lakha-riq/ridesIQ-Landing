@@ -2,15 +2,15 @@
 
 import { TextEffect } from "../ui/text-effect";
 import { GlowEffectButton } from "./GlowButton";
-import Image from "next/image";
-import MarqueeEffect from "@/components/custom/Carousel";
+// import Image from "next/image";
+// import MarqueeEffect from "@/components/custom/Carousel";
 
 export default function HeroSection() {
 	return (
 		<>
 			<div className="bg-black text-white min-h-[20vh] w-full flex items-start">
 				<div className=" px-4 py-2">
-					<div className="grid md:grid-cols-5 gap-40 items-end justify-around ">
+					<div className="grid md:grid-cols-5 md:gap-40 gap-20 items-end justify-around ">
 						<div className="col-span-3">
 							<TextEffect
 								per="word"
@@ -22,19 +22,19 @@ export default function HeroSection() {
 							</TextEffect>
 							<h1 className="text-4xl md:text-7xl font-semibold leading-tight mb-6 font-sans ">RidesIQ</h1>
 						</div>
-						<div className="space-y-6 col-span-2   ">
+						<div className=" col-span-2   flex flex-col md:items-start md:justify-start items-center">
 							<p className="text-sm md:text-md ">
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit. In mollitia, voluptas voluptatibus, facilis perspiciatis, accusantium natus amet sapiente nobis quia dolorum.
 								Quos, provident?
 							</p>
-							<div className="flex items-center justify-center w-20 h-20 ">
+							<div className="flex items-center justify-start w-full mt-2 ">
 								<GlowEffectButton />
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<MarqueeEffect baseVelocity={-0.25}>
+			{/* <MarqueeEffect baseVelocity={-0.25}>
 				<div className="flex flex-col items-center justify-center w-[50rem]  h-96 rounded-lg">
 					<Image
 						src="/assets/1.png"
@@ -91,7 +91,7 @@ export default function HeroSection() {
 						/>
 					</div>
 				</div>
-			</MarqueeEffect>
+			</MarqueeEffect> */}
 		</>
 	);
 }

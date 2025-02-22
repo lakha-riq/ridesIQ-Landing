@@ -1,6 +1,6 @@
 "use client";
 
-import { Truck, Shield, BarChart3, Globe2 } from "lucide-react";
+import { Truck, Shield, BarChart3 } from "lucide-react";
 import { GlowingEffect } from "./GlowGridComp";
 import type React from "react";
 
@@ -13,7 +13,7 @@ export function VehicleTrackingGrid() {
 					<p className="text-gray-400 text-lg md:text-xl">Comprehensive tracking solutions for all vehicle types</p>
 				</div>
 
-				<ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+				<ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
 					<GridItem
 						area=""
 						icon={<Truck className="h-4 w-4 text-neutral-400" />}
@@ -35,12 +35,12 @@ export function VehicleTrackingGrid() {
 						description="Comprehensive monitoring for heavy machinery and construction vehicles"
 					/>
 
-					<GridItem
+					{/* <GridItem
 						area=""
 						icon={<Globe2 className="h-4 w-4 text-neutral-400" />}
 						title="Agricultural Vehicles"
 						description="Precision tracking for farm equipment and harvest operations"
-					/>
+					/> */}
 				</ul>
 			</div>
 		</div>

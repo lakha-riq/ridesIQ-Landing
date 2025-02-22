@@ -46,16 +46,16 @@ const features = [
 
 export default function ChartsSection() {
 	return (
-		<div className="min-h-screen bg-black text-white">
+		<div className="max-h-screen bg-black text-white mb-6">
 			<div className="container mx-auto px-4 py-12">
 				<div className="grid gap-8 lg:grid-cols-2">
 					{/* Chart Section - Shows first on mobile */}
 					<div className="order-1 lg:order-2 ">
 						<Card className="bg-black border-zinc-800">
-							<div className="p-6">
+							<div className="p-6 sm:p-2">
 								<h3 className="text-lg font-medium mb-2">Area Chart - Gradient</h3>
 								<p className="text-sm text-zinc-400 mb-4">Showing total visitors for the last 6 months</p>
-								<div className="h-[300px]">
+								<div className="max-h-[300px]">
 									<ChartContainer config={chartConfig}>
 										<ResponsiveContainer
 											width="100%"
