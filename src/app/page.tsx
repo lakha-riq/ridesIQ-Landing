@@ -25,7 +25,7 @@ const page = ({}) => {
 			<div className="sm:mb-screen">
 				<ChartsSection />
 			</div>
-			<div className="md:hidden flex min-h-[10vh]"></div>
+			<div className="md:hidden flex min-h-[15vh]"></div>
 
 			<VehicleTrackingGrid />
 			{/* <Quotes

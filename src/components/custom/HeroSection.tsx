@@ -8,7 +8,7 @@ import { GlowEffectButton } from "./GlowButton";
 export default function HeroSection() {
 	return (
 		<>
-			<div className="bg-black text-white min-h-[20vh] w-full flex items-start">
+			<div className="bg-black text-white min-h-[20vh] w-full flex items-start mb-10">
 				<div className=" px-4 py-2">
 					<div className="grid md:grid-cols-5 md:gap-40 gap-20 items-end justify-around ">
 						<div className="col-span-3">
@@ -18,16 +18,15 @@ export default function HeroSection() {
 								preset="blur"
 								className="text-md uppercase tracking-wider mb-4 font-sans text-gray-400"
 							>
-								Carbon neutral way to track cars.
+								Turn Vehicle Data Into Competitive Advantage
 							</TextEffect>
 							<h1 className="text-4xl md:text-7xl font-semibold leading-tight mb-6 font-sans ">RidesIQ</h1>
 						</div>
-						<div className=" col-span-2   flex flex-col md:items-start md:justify-start items-center">
-							<p className="text-sm md:text-md ">
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. In mollitia, voluptas voluptatibus, facilis perspiciatis, accusantium natus amet sapiente nobis quia dolorum.
-								Quos, provident?
+						<div className=" col-span-2   flex flex-col md:items-start md:justify-start items-center ">
+							<p className="text-md md:text-md ">
+								Transform fleet data into business advantage with enterprise-grade telematics that reduce costs, enhance security, and scale globally.
 							</p>
-							<div className="flex items-center justify-start w-full mt-2 ">
+							<div className="flex items-center justify-start w-full mt-20 ">
 								<GlowEffectButton />
 							</div>
 						</div>

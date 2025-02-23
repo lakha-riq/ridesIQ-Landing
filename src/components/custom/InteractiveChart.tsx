@@ -137,15 +137,15 @@ export default function ChartsSection() {
 					<div className="order-2 lg:order-1">
 						<div className="md:space-y-6 space-y-4">
 							<p className="text-sm font-medium text-zinc-400">BUSINESS FRIENDLY</p>
-							<h1 className="text-4xl font-medium leading-tight lg:text-5xl">Intelligent Fleet Management Designed With Your Business in Mind</h1>
-							<p className="text-lg text-zinc-400">
+							<h1 className="text-3xl font-medium leading-tight lg:text-4xl">Intelligent Fleet Management Designed With Your Business in Mind</h1>
+							<p className="text-lg text-zinc-400 ">
 								Give your business complete visibility and control over your fleet operations with real-time tracking and analytics, including these powerful features:
 							</p>
-							<div className="grid gap-6 sm:grid-cols-2">
+							<div className="grid gap-16 sm:grid-cols-2 mt-20">
 								{features.map((feature, index) => (
 									<div
 										key={index}
-										className="flex items-start gap-4"
+										className="flex items-start gap-6"
 									>
 										<div className="rounded-lg bg-zinc-800 p-2">
 											<feature.icon className="h-5 w-5" />
