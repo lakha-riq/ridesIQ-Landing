@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { TextHoverEffect } from "../custom/FooterText";
-// import { Linkedin, X } from "lucide-react";
+/*import { Linkedin, X } from "lucide-react";*/
 import { Input } from "./input";
 import { Button } from "./button";
 
