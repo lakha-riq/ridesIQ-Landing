@@ -16,7 +16,7 @@ export default function GradientCard() {
 									<div className="space-y-6">
 										<p className="text-white/80">Better together</p>
 										<h2 className="text-3xl md:text-4xl font-medium text-white max-w-xl leading-tight">
-											Rides Iq is building a suite of embedded Tracking products to deliver seamless solutions for your customers
+											RidesIQ delivers comprehensive fleet management solutions to transform your business operations
 										</h2>
 									</div>
 									<Link href="/contact">
