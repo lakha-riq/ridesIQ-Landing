@@ -28,17 +28,7 @@ const page = ({}) => {
 			<div className="md:hidden flex min-h-[15vh]"></div>
 
 			<VehicleTrackingGrid />
-			{/* <Quotes
-				header="Working with Industry leading Infrastructure"
-				quote="We are a team of experts in the field of IoT "
-			/> */}
-			{/* <div>
-				<TestimonialsSectionDemo />
-			</div> */}
-			{/* 
-			<div className="p-6">
-				<InteractiveCards />
-			</div> */}
+
 			<GradientCard />
 
 			<Faq02 />

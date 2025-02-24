@@ -38,22 +38,22 @@ export function Navbar() {
 							>
 								Solutions
 							</Link>
-							<Link
+							{/* <Link
 								href="/contact"
 								className="text-gray-300 hover:text-white text-sm font-medium transition-colors"
 							>
 								Contact us
-							</Link>
+							</Link> */}
 						</div>
 
 						{/* Right Navigation */}
 						<div className="hidden md:flex md:items-center md:space-x-6">
-							<Link
+							{/* <Link
 								href="/company"
 								className="text-gray-300 hover:text-white text-sm font-medium transition-colors"
 							>
 								About 
-							</Link>
+							</Link> */}
 
 							{/* <div className="relative">
 								<GlowEffect

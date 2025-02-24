@@ -158,7 +158,7 @@ export default function BentoGrid() {
 											{card.features.map((feature, idx) => (
 												<li
 													key={idx}
-													className="flex items-center space-x-2 text-sm text-blue-100"
+													className="flex items-center space-x-2 text-xl text-blue-100"
 												>
 													<Check className="w-4 h-4 text-blue-300 flex-shrink-0" />
 													<span>{feature}</span>
