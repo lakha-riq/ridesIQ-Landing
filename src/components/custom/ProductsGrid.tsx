@@ -15,7 +15,7 @@ export function VehicleTrackingGrid() {
 					</p>
 				</div>
 
-				<ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+				<ul className="grid grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-3">
 					<GridItem
 						area=""
 						icon={<Brain className="h-4 w-4 text-neutral-400" />}

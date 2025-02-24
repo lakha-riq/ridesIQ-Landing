@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowUpRight } from "lucide-react";
-
+import Link from "next/link";
 export default function GradientCard() {
 	return (
 		<div className="md:px-20">
@@ -19,13 +19,15 @@ export default function GradientCard() {
 											Rides Iq is building a suite of embedded Tracking products to deliver seamless solutions for your customers
 										</h2>
 									</div>
-									<Button
-										size="icon"
-										variant="secondary"
-										className="bg-white/10 hover:bg-white/20 text-white"
-									>
-										<ArrowUpRight className="h-5 w-5" />
-									</Button>
+									<Link href="/contact">
+										<Button
+											size="icon"
+											variant="secondary"
+											className="bg-white/10 hover:bg-white/20 text-white"
+										>
+											<ArrowUpRight className="h-5 w-5" />
+										</Button>
+									</Link>
 								</div>
 								<div className="flex flex-wrap gap-6 justify-between items-center mt-auto pt-4">
 									<div className="flex gap-3">
@@ -42,7 +44,9 @@ export default function GradientCard() {
 											Expertise
 										</Button>
 									</div>
-									<Button className="bg-white/20 hover:bg-white/30 text-white">Book a demo</Button>
+									<Link href="/contact">
+										<Button className="bg-white/20 hover:bg-white/30 text-white">Book a demo</Button>
+									</Link>
 								</div>
 							</div>
 						</CardContent>
