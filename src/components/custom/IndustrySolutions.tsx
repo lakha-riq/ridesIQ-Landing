@@ -56,7 +56,7 @@ export default function IndustrySolutions() {
 		<section className="bg-black min-h-screen w-full py-16 px-4">
 			<div className="max-w-7xl mx-auto">
 				<div className="text-center mb-12">
-					<p className="text-sm uppercase tracking-wider text-gray-400 mb-4">TRUSTED ACROSS INDUSTRIES</p>
+					<p className="text-sm uppercase tracking-wider text-gray-400 mb-4 text-start">TRUSTED ACROSS INDUSTRIES</p>
 					<div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
 						<h2 className="text-4xl md:text-5xl font-bold text-white">Industry Solutions</h2>
 						<p className="text-gray-300 md:max-w-xl text-left">

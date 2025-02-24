@@ -6,9 +6,9 @@ import type React from "react";
 
 export function VehicleTrackingGrid() {
 	return (
-		<div className="bg-black min-h-screen p-6 md:p-10">
+		<div className="bg-black min-h-screen p-6 md:p-40">
 			<div className="max-w-7xl mx-auto space-y-8">
-				<div className=" mb-12 gap-10 grid grid-cols-1 md:grid-cols-5 place-content-center max-w-6xl">
+				<div className=" mb-12 gap-10 grid grid-cols-1 md:grid-cols-5 place-content-center max-w-6xl ">
 					<h1 className="text-2xl md:text-3xl font-bold text-white mb-4 col-span-1 md:col-span-3">The Competitive Edge</h1>
 					<p className="opacity-50 text-sm md:text-sm col-span-1 md:col-span-2  tracking-tighter">
 						Transform your fleet operations with enterprise-grade telematics that deliver actionable insights, robust security, and seamless integration.
@@ -67,7 +67,7 @@ interface GridItemProps {
 const GridItem = ({ icon, title, description, long = false, Num }: GridItemProps) => {
 
 	return (
-		<li className="min-h-[30rem] list-none">
+		<li className="max-h-[80vh] list-none">
 			<div className="relative h-full rounded-2.5xl border border-zinc-800 p-2 md:rounded-3xl md:p-3">
 				<GlowingEffect
 					spread={40}
@@ -82,7 +82,8 @@ const GridItem = ({ icon, title, description, long = false, Num }: GridItemProps
 							<div className="w-fit rounded-lg border border-zinc-700 p-2">{icon}</div>
 							<div className="uppercase text-md font-semibold  opacity-50 tracking-wide">{Num}</div>
 						</div>
-						<div className="space-y-3 flex flex-col  gap-60">
+						<div className="space-y-3 flex flex-col  gap-40">
+							{/* prab check the text size over here. */}
 							<h3 className={`pt-0.5 text-xl/[1.375rem] font-semibold font-sans -tracking-4 text-balance text-center text-white${long ? " md:text-5xl" : " md:text-4xl/[1.875rem]"}`}>{title}</h3>
 							<h2 className={"font-sans text-sm/[1.125rem] md:text-base/[1.375rem] text-neutral-400 px-6 text-center"}>{description}</h2>
 						</div>

@@ -1,3 +1,5 @@
+"use client";
+import Link from "next/link";
 import type { ReactNode } from "react";
 
 // Interfaces
@@ -7,14 +9,14 @@ interface HeroProps {
 	heading: ReactNode;
 	description: string;
 	buttonText?: string;
-	onButtonClick?: () => void;
+
 	className?: string;
 }
 
 // Main Hero Component
-export function Hero({ label, heading, description, buttonText = "Schedule a Demo", onButtonClick, className = "" }: HeroProps) {
+export function Hero({ label, heading, description, buttonText = "Schedule a Demo", className = "" }: HeroProps) {
 	return (
-		<div className={`bg-gradient-to-br from-blue-600 via-blue-500 to-teal-400 min-h-[600px] px-6 py-12 flex items-center rounded-lg ${className}`}>
+		<div className={`bg-gradient-to-r from-[#678FCA]  to-teal-400 min-h-[600px] px-6 py-12 flex items-center rounded-lg ${className}`}>
 			<div className="max-w-7xl mx-2">
 				{label && <div className="text-sm font-medium tracking-wider text-white/80 uppercase">{label}</div>}
 
@@ -23,12 +25,9 @@ export function Hero({ label, heading, description, buttonText = "Schedule a Dem
 				<p className="mt-6 text-lg text-white/90 md:text-xl lg:text-2xl max-w-2xl">{description}</p>
 
 				{buttonText && (
-					<button
-						onClick={onButtonClick}
-						className="mt-8 px-8 py-3 text-base font-medium text-blue-600 bg-white rounded-lg hover:bg-white/90 transition-colors duration-200"
-					>
-						{buttonText}
-					</button>
+					<Link href={"/contact"}>
+						<button className="mt-8 px-8 py-3 text-base md:w-96 tracking-wider text-black font-bold  bg-white rounded-lg hover:bg-white/90 transition-colors duration-200">{buttonText}</button>
+					</Link>
 				)}
 			</div>
 		</div>
@@ -36,7 +35,7 @@ export function Hero({ label, heading, description, buttonText = "Schedule a Dem
 }
 
 // Example usage component
-export function FleetHero({ onScheduleDemo }: { onScheduleDemo?: () => void }) {
+export function SolutionsHeader() {
 	return (
 		<Hero
 			label="Fleet Management Platform"
@@ -47,7 +46,24 @@ export function FleetHero({ onScheduleDemo }: { onScheduleDemo?: () => void }) {
 				</>
 			}
 			description="Comprehensive fleet management software with real-time tracking, analytics, and automated reporting."
-			onButtonClick={onScheduleDemo}
+			
+		/>
+	);
+}
+
+export function ProductsHeader() {
+	return (
+		<Hero
+			label="GPS TRACKING DEVICES"
+			heading={
+				<>
+					Enterprise-Grade
+					<br className="hidden sm:inline" />
+					Vehicle Trackers
+				</>
+			}
+			description="High-performance GPS tracking devices with real-time connectivity and advanced security."
+			buttonText="Request a Quote"
 		/>
 	);
 }

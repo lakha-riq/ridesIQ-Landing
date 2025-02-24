@@ -1,69 +1,110 @@
+"use client";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
-export default function SolutionCards() {
-  const ListElm = ({ text }: { text: string }) => <li className="before:content-['•'] before:text-blue-400 before:inline-block before:mr-2 before:leading-6">{text}</li>;
+function SolutionCards() {
+	const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
+	const ListElm = ({ text }: { text: string }) => <li className="before:content-['•'] before:text-blue-400 before:inline-block before:mr-2 before:leading-6">{text}</li>;
+
+	const cards = [
+		{
+			id: 1,
+			title: "Real-Time Fleet Visibility",
+			gradient: "from-[#486390] to-[#678FCA]",
+			items: ["Live tracking across your entire fleet.", "Instant location & status updates.", "Comprehensive route history.", "Custom geofencing alerts."],
+		},
+		{
+			id: 2,
+			title: "Safety & Analytics",
+			gradient: "from-[#678FCA] to-[#99D5C9]",
+			items: ["Speeding detection.", "Harsh driving alerts (braking, acceleration)", "Driver scoring & safety metrics.", "Trip history analysis."],
+		},
+		{
+			id: 3,
+			title: "Comprehensive Reports",
+			gradient: "from-[#567AA8] to-[#7AB3A9]",
+			items: ["Trip summary reports", "Stop report analysis", "Event logging", "Custom report generation"],
+		},
+		{
+			id: 4,
+			title: "Automated Toll Management",
+			gradient: "from-[#7AB3A9] to-[#99D5C9]",
+			items: ["Automated toll detection", "Simplified billing process", "Real-time notifications", "API Integration"],
+		},
+	];
 
 	return (
 		<div className="min-h-screen bg-black text-white p-6 md:p-12">
 			<div className="max-w-7xl mx-auto">
 				<h1 className="uppercase font-light opacity-50 mb-10 tracking-tighter">platform features</h1>
-				<h2 className="text-2xl md:text-4xl font-medium  mb-12 max-w-4xl ">
+				<h2 className="text-2xl md:text-4xl font-medium mb-12 max-w-4xl">
 					Streamline your fleet operations with integrated tracking, analytics, and automated toll management in one powerful platform.
 				</h2>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 min-h-[50vh]">
-					{/* Card 1 */}
-					<div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 p-6 transition-all duration-300 hover:shadow-xl">
-						<div className="absolute top-4 left-4 text-sm font-medium opacity-70">01</div>
-						<div className="mt-8">
-							<h3 className="text-xl font-semibold mb-2">Real-Time Fleet Visibility</h3>
-              <ul className="text-sm opacity-0 translate-y-8 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                <ListElm text="Track driver behavior, fuel consumption, and maintenance schedules." />
-                <ListElm text="Monitor fleet performance and efficiency." />
-                <ListElm text="Optimize fleet operations with automated toll management." />
-							</ul>
-						</div>
-					</div>
-
-					{/* Card 2 */}
-					<div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-400 to-teal-400 p-6 transition-all duration-300 hover:shadow-xl">
-						<div className="absolute top-4 left-4 text-sm font-medium opacity-70">02</div>
-						<div className="mt-8">
-							<h3 className="text-xl font-semibold mb-2">Safety & Analytics</h3>
-              <ul className="text-sm opacity-0 translate-y-8 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                <ListElm text="Monitor driver behavior and safety compliance." />
-                <ListElm text="Analyze fleet performance and optimize routes." />
-                <ListElm text="Reduce fuel consumption and maintenance costs."/>
-							</ul>
-						</div>
-					</div>
-
-					{/* Card 3 */}
-					<div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500 to-teal-500 p-6 transition-all duration-300 hover:shadow-xl">
-						<div className="absolute top-4 left-4 text-sm font-medium opacity-70">03</div>
-						<div className="mt-8">
-							<h3 className="text-xl font-semibold mb-2">Comprehensive Reports</h3>
-              <ul className="text-sm opacity-0 translate-y-8 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                <ListElm text="Generate detailed reports on fleet performance and efficiency." />
-                <ListElm text="Analyze driver behavior and safety compliance." />
-                <ListElm text="Monitor fuel consumption and maintenance costs."/>
-							</ul>
-						</div>
-					</div>
-
-					{/* Card 4 */}
-					<div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-teal-400 to-teal-300 p-6 transition-all duration-300 hover:shadow-xl">
-						<div className="absolute top-4 left-4 text-sm font-medium opacity-70">04</div>
-						<div className="mt-8">
-							<h3 className="text-xl font-semibold mb-2">Automated Toll Management</h3>
-              <ul className="text-sm opacity-0 translate-y-8 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                <ListElm text="Automate toll payments and reduce administrative overhead." />
-                <ListElm text="Monitor toll expenses and optimize routes." />
-                <ListElm text="Reduce fuel consumption and maintenance costs."/>
-							</ul>
-						</div>
-					</div>
+				<div className="flex flex-col md:flex-row gap-6 min-h-[50vh] relative">
+					{cards.map((card) => (
+						<motion.div
+							key={card.id}
+							className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${card.gradient} p-6`}
+							onHoverStart={() => setHoveredCard(card.id)}
+							onHoverEnd={() => setHoveredCard(null)}
+							layout
+							transition={{
+								layout: { duration: 0.4, ease: [0.4, 0, 0.2, 1] },
+								opacity: { duration: 0.3 },
+							}}
+							animate={{
+								flex: hoveredCard === card.id ? "1 1 60%" : hoveredCard === null ? "1 1 25%" : "1 1 10%",
+								opacity: hoveredCard === null || hoveredCard === card.id ? 1 : 0.3,
+							}}
+							style={{
+								minWidth: hoveredCard !== null && hoveredCard !== card.id ? "80px" : "auto",
+							}}
+						>
+							<motion.div
+								initial={false}
+								animate={{
+									opacity: hoveredCard === null || hoveredCard === card.id ? 1 : 0.3,
+								}}
+								transition={{ duration: 0.3 }}
+								className="h-full flex flex-col"
+							>
+								<div className="absolute top-4 left-4 text-lg font-medium opacity-70">{String(card.id).padStart(2, "0")}</div>
+								<div className="mt-8 flex-grow">
+									<motion.h3
+										layout="position"
+										className="text-xl font-semibold mb-2 whitespace-nowrap"
+										animate={{
+											opacity: hoveredCard === null || hoveredCard === card.id ? 1 : 0,
+										}}
+									>
+										{card.title}
+									</motion.h3>
+									<motion.ul
+										initial={{ opacity: 0, y: 20 }}
+										animate={{
+											opacity: hoveredCard === card.id ? 1 : 0,
+											y: hoveredCard === card.id ? 0 : 20,
+										}}
+										transition={{ duration: 0.3 }}
+										className="text-sm"
+									>
+										{card.items.map((item, index) => (
+											<ListElm
+												key={index}
+												text={item}
+											/>
+										))}
+									</motion.ul>
+								</div>
+							</motion.div>
+						</motion.div>
+					))}
 				</div>
 			</div>
 		</div>
 	);
 }
+
+export default SolutionCards;
