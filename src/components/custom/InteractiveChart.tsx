@@ -176,12 +176,12 @@ export default function ChartsSection() {
 						{features.map((feature, index) => (
 							<div
 								key={index}
-								className="flex items-start gap-6"
+								className="flex items-center gap-6 "
 							>
 								<div className="rounded-lg bg-zinc-800 p-2">
 									<feature.icon className="h-5 w-5" />
 								</div>
-								<p className="text-sm text-zinc-300">{feature.title}</p>
+								<p className="text-sm text-zinc-300 text-center ">{feature.title}</p>
 							</div>
 						))}
 					</div>
@@ -200,12 +200,12 @@ export default function ChartsSection() {
 							{features.map((feature, index) => (
 								<div
 									key={index}
-									className="flex items-start gap-6"
+									className="flex items-center gap-6 "
 								>
 									<div className="rounded-lg bg-zinc-800 p-2">
 										<feature.icon className="h-5 w-5" />
 									</div>
-									<p className="text-sm text-zinc-300">{feature.title}</p>
+									<p className="text-sm text-zinc-300 text-left">{feature.title}</p>
 								</div>
 							))}
 						</div>

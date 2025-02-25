@@ -16,17 +16,19 @@ interface HeroProps {
 // Main Hero Component
 export function Hero({ label, heading, description, buttonText = "Schedule a Demo", className = "" }: HeroProps) {
 	return (
-		<div className={`bg-gradient-to-r from-[#678FCA]  to-teal-400 min-h-[600px] px-6 py-12 flex items-center rounded-lg ${className}`}>
+		<div className={`bg-gradient-to-r from-[#678FCA]  to-[#99D5C9] min-h-[600px] px-8 py-12 flex items-center rounded-lg ${className}`}>
 			<div className="max-w-7xl mx-2">
 				{label && <div className="text-sm font-medium tracking-wider text-white/80 uppercase">{label}</div>}
 
-				<h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">{heading}</h1>
+				<h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-5xl md:text-4xl lg:text-6xl mb-20">{heading}</h1>
 
 				<p className="mt-6 text-lg text-white/90 md:text-xl lg:text-2xl max-w-2xl">{description}</p>
 
 				{buttonText && (
 					<Link href={"/contact"}>
-						<button className="mt-8 px-8 py-3 text-base md:w-96 tracking-wider text-black font-bold  bg-white rounded-lg hover:bg-white/90 transition-colors duration-200">{buttonText}</button>
+						<button className="mt-8 px-8 py-3 text-base md:w-96 tracking-wider text-black font-bold  bg-white rounded-lg hover:bg-white/90 transition-colors duration-200">
+							{buttonText}
+						</button>
 					</Link>
 				)}
 			</div>

@@ -63,7 +63,7 @@ const Card = ({ title, description, Icon, color, features }: CardProps) => {
 				</div>
 			</div>
 			<motion.div
-				className="p-6 bg-gradient-to-t from-[#1a237e] via-[#1565c0] to-transparent absolute inset-0 flex flex-col justify-end"
+				className="p-6 bg-gradient-to-t from-[#293243] via-[#22282F] to-transparent absolute inset-0 flex flex-col justify-end"
 				initial={{ opacity: 0, y: "100%" }}
 				animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : "100%" }}
 				transition={{ duration: 0.3 }}
@@ -90,7 +90,7 @@ export default function BentoGrid() {
 			title: "Real-Time Fleet Visibility",
 			description: "Monitor your entire fleet with live tracking and instant alerts. Transform complex data into actionable insights.",
 			Icon: Car,
-			color: "bg-gradient-to-b from-[#1E1E1E] via-[#1E325C] to-[#2C4A87]",
+			color: "bg-gradient-to-b from-[#22282F] via-[#1E325C] to-[#2C4A87]",
 			features: ["Live GPS tracking", "Real-time alerts", "Performance metrics", "Route optimization"],
 			span: "md:col-span-2",
 		},

@@ -35,7 +35,7 @@ const solutions = [
 			"Monitor driver behavior and vehicle health to improve safety and minimize downtime, keeping your fleet running efficiently around the clock.",
 			"Ensure on-time deliveries while reducing fuel costs.",
 		],
-		gradient: "from-emerald-500 to-teal-400",
+		gradient: "from-[#73ACA2] to-[#5C9B91]",
 	},
 	{
 		id: "04",
