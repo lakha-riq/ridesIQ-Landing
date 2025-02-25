@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -74,7 +74,7 @@ function SolutionCards() {
 								<div className="mt-8 flex-grow">
 									<motion.h3
 										layout="position"
-										className="text-xl font-semibold mb-2 whitespace-nowrap"
+										className="text-xl font-semibold mb-2 whitespace-nowrap text-wrap"
 										animate={{
 											opacity: hoveredCard === null || hoveredCard === card.id ? 1 : 0,
 										}}
@@ -88,7 +88,7 @@ function SolutionCards() {
 											y: hoveredCard === card.id ? 0 : 20,
 										}}
 										transition={{ duration: 0.3 }}
-										className="text-sm"
+										className="text-sm md:block hidden"
 									>
 										{card.items.map((item, index) => (
 											<ListElm
@@ -97,6 +97,15 @@ function SolutionCards() {
 											/>
 										))}
 									</motion.ul>
+									{/* Mobile list - always visible */}
+									<ul className="text-sm md:hidden block space-y-2">
+										{card.items.map((item, index) => (
+											<ListElm
+												key={index}
+												text={item}
+											/>
+										))}
+									</ul>
 								</div>
 							</motion.div>
 						</motion.div>

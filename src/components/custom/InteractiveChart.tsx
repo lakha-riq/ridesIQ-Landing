@@ -1,14 +1,14 @@
 "use client";
 
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
-import { Activity, AlertCircle, BarChart2, Navigation } from "lucide-react";
+import { Activity, AlertCircle, BarChart2, Navigation, TrendingUp } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 
 interface ChartData {
-	month: string;
-	visitors: number;
-	customers: number;
+	time: string;
+	speed: number;
+	altitude: number;
 }
 
 interface ChartConfig {
@@ -24,21 +24,21 @@ interface Feature {
 }
 
 const data: ChartData[] = [
-	{ month: "Jan", visitors: 2400, customers: 1800 },
-	{ month: "Feb", visitors: 1398, customers: 1210 },
-	{ month: "Mar", visitors: 9800, customers: 2290 },
-	{ month: "Apr", visitors: 3908, customers: 2000 },
-	{ month: "May", visitors: 4800, customers: 2181 },
-	{ month: "Jun", visitors: 3800, customers: 2500 },
+	{ time: "6:58:03 AM", speed: 2400, altitude: 1800 },
+	{ time: "7:58:03 AM", speed: 1398, altitude: 1210 },
+	{ time: "8:58:03 AM", speed: 9800, altitude: 2290 },
+	{ time: "9:58:03 AM", speed: 3908, altitude: 2000 },
+	{ time: "10:58:03 AM", speed: 4800, altitude: 2181 },
+	{ time: "11:58:03 AM", speed: 3800, altitude: 2500 },
 ];
 
 const chartConfig: ChartConfig = {
-	visitors: {
-		label: "Visitors",
+	speed: {
+		label: "Speed",
 		color: "hsl(220, 70%, 50%)",
 	},
-	customers: {
-		label: "Customers",
+	altitude: {
+		label: "Altitude",
 		color: "hsl(340, 40%, 30%)",
 	},
 };
@@ -65,9 +65,9 @@ const features: Feature[] = [
 const ChartSection = () => (
 	<Card className="bg-black border-zinc-800">
 		<div className="p-6 sm:p-2">
-			<h3 className="text-lg font-medium mb-2">Area Chart - Gradient</h3>
-			<p className="text-sm text-zinc-400 mb-4">Showing total visitors for the last 6 months</p>
-			<div className="max-h-[300px]">
+			<h3 className="text-lg font-medium mb-2">Line Chart - Speed vs Altitude</h3>
+			<p className="text-sm text-zinc-400 mb-4">Showing for COMPANY: UNIT #697159</p>
+			<div className="max-h-[500px]">
 				<ChartContainer config={chartConfig}>
 					<ResponsiveContainer
 						width="100%"
@@ -76,7 +76,7 @@ const ChartSection = () => (
 						<AreaChart data={data}>
 							<defs>
 								<linearGradient
-									id="visitors"
+									id="speed"
 									x1="0"
 									y1="0"
 									x2="0"
@@ -94,7 +94,7 @@ const ChartSection = () => (
 									/>
 								</linearGradient>
 								<linearGradient
-									id="customers"
+									id="altitude"
 									x1="0"
 									y1="0"
 									x2="0"
@@ -113,7 +113,7 @@ const ChartSection = () => (
 								</linearGradient>
 							</defs>
 							<XAxis
-								dataKey="month"
+								dataKey="time"
 								stroke="#525252"
 								tickLine={false}
 							/>
@@ -125,21 +125,27 @@ const ChartSection = () => (
 							<ChartTooltip content={<ChartTooltipContent />} />
 							<Area
 								type="monotone"
-								dataKey="visitors"
+								dataKey="speed"
 								stroke="hsl(220, 70%, 50%)"
 								fillOpacity={1}
-								fill="url(#visitors)"
+								fill="url(#speed)"
 							/>
 							<Area
 								type="monotone"
-								dataKey="customers"
+								dataKey="altitude"
 								stroke="hsl(340, 40%, 30%)"
 								fillOpacity={1}
-								fill="url(#customers)"
+								fill="url(#altitude)"
 							/>
 						</AreaChart>
 					</ResponsiveContainer>
 				</ChartContainer>
+				<div className="flex flex-col  gap-2 ">
+					<div className="mx-8  text-start flex  gap-2">
+						Speed Alerts: 7 times <TrendingUp className="w-4 h-4" />
+					</div>
+					<div className="mx-8  text-start flex  gap-2 text-xs uppercase mb-2 opacity-50">January 07, 2023 6:58:03 AM - 11:58:03 AM</div>
+				</div>
 			</div>
 		</div>
 	</Card>
