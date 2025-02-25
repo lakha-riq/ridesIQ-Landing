@@ -74,7 +74,7 @@ function SolutionCards() {
 								<div className="mt-8 flex-grow">
 									<motion.h3
 										layout="position"
-										className="text-2xl font-semibold mb-2 whitespace-nowrap text-wrap"
+										className="text-3xl font-semibold mb-2 whitespace-nowrap text-wrap tracking-tighter leading-2"
 										animate={{
 											opacity: hoveredCard === null || hoveredCard === card.id ? 1 : 0,
 										}}

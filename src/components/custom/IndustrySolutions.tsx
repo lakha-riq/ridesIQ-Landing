@@ -47,7 +47,7 @@ const solutions = [
 			"Leverage valuable telematics data to enhance route planning, maximize asset utilization, and drive operational efficiency across your transportation business.",
 			"Ensure timely maintenance with predictive alerts and remote diagnostics, minimizing downtime and extending vehicle lifespan.",
 		],
-		gradient: "from-teal-400 to-emerald-300",
+		gradient: "from-[#73ACA2] to-[#73ACA2]",
 	},
 ];
 
