@@ -1,12 +1,26 @@
 "use client";
-import React, { useRef, useEffect, useState } from "react";
+
+import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import colors from "tailwindcss/colors";
-export const TextHoverEffect = ({ text, duration }: { text: string; duration?: number; automatic?: boolean }) => {
+
+export const TextHoverEffect = ({ text, duration }: { text: string; duration?: number }) => {
 	const svgRef = useRef<SVGSVGElement>(null);
 	const [cursor, setCursor] = useState({ x: 0, y: 0 });
 	const [hovered, setHovered] = useState(false);
+	const [isMobile, setIsMobile] = useState(false);
 	const [maskPosition, setMaskPosition] = useState({ cx: "50%", cy: "50%" });
+
+	useEffect(() => {
+		const checkMobile = () => {
+			setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+		};
+
+		checkMobile();
+		window.addEventListener("resize", checkMobile);
+
+		return () => window.removeEventListener("resize", checkMobile);
+	}, []);
 
 	useEffect(() => {
 		if (svgRef.current && cursor.x !== null && cursor.y !== null) {
@@ -27,41 +41,87 @@ export const TextHoverEffect = ({ text, duration }: { text: string; duration?: n
 			height="100%"
 			viewBox="0 0 300 100"
 			xmlns="http://www.w3.org/2000/svg"
-			onMouseEnter={() => setHovered(true)}
-			onMouseLeave={() => setHovered(false)}
-			onMouseMove={(e) => setCursor({ x: e.clientX, y: e.clientY })}
+			onMouseEnter={() => !isMobile && setHovered(true)}
+			onMouseLeave={() => !isMobile && setHovered(false)}
+			onMouseMove={(e) => !isMobile && setCursor({ x: e.clientX, y: e.clientY })}
 			className="select-none"
 		>
 			<defs>
 				<linearGradient
 					id="textGradient"
 					gradientUnits="userSpaceOnUse"
-					cx="50%"
-					cy="50%"
-					r="25%"
+					x1="0%"
+					y1="0%"
+					x2="100%"
+					y2="0%"
 				>
-					{hovered && (
+					{(hovered || isMobile) && (
 						<>
 							<stop
 								offset="0%"
 								stopColor={colors.yellow[500]}
-							/>
+							>
+								{isMobile && (
+									<animate
+										attributeName="offset"
+										values="0;0.25;0.5;0.75;1;0"
+										dur="5s"
+										repeatCount="indefinite"
+									/>
+								)}
+							</stop>
 							<stop
 								offset="25%"
 								stopColor={colors.red[500]}
-							/>
+							>
+								{isMobile && (
+									<animate
+										attributeName="offset"
+										values="0.25;0.5;0.75;1;0;0.25"
+										dur="5s"
+										repeatCount="indefinite"
+									/>
+								)}
+							</stop>
 							<stop
 								offset="50%"
 								stopColor={colors.blue[500]}
-							/>
+							>
+								{isMobile && (
+									<animate
+										attributeName="offset"
+										values="0.5;0.75;1;0;0.25;0.5"
+										dur="5s"
+										repeatCount="indefinite"
+									/>
+								)}
+							</stop>
 							<stop
 								offset="75%"
 								stopColor={colors.cyan[500]}
-							/>
+							>
+								{isMobile && (
+									<animate
+										attributeName="offset"
+										values="0.75;1;0;0.25;0.5;0.75"
+										dur="5s"
+										repeatCount="indefinite"
+									/>
+								)}
+							</stop>
 							<stop
 								offset="100%"
 								stopColor={colors.violet[500]}
-							/>
+							>
+								{isMobile && (
+									<animate
+										attributeName="offset"
+										values="1;0;0.25;0.5;0.75;1"
+										dur="5s"
+										repeatCount="indefinite"
+									/>
+								)}
+							</stop>
 						</>
 					)}
 				</linearGradient>
@@ -69,17 +129,9 @@ export const TextHoverEffect = ({ text, duration }: { text: string; duration?: n
 				<motion.radialGradient
 					id="revealMask"
 					gradientUnits="userSpaceOnUse"
-					r="20%"
-					animate={maskPosition}
+					r={isMobile ? "100%" : "20%"}
+					animate={isMobile ? { cx: "50%", cy: "50%" } : maskPosition}
 					transition={{ duration: duration ?? 0, ease: "easeOut" }}
-
-					// example for a smoother animation below
-
-					//   transition={{
-					//     type: "spring",
-					//     stiffness: 300,
-					//     damping: 50,
-					//   }}
 				>
 					<stop
 						offset="0%"
@@ -106,8 +158,8 @@ export const TextHoverEffect = ({ text, duration }: { text: string; duration?: n
 				textAnchor="middle"
 				dominantBaseline="middle"
 				strokeWidth="0.3"
-				className="font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent text-7xl  "
-				style={{ opacity: hovered ? 0.7 : 0 }}
+				className="font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent text-7xl"
+				style={{ opacity: hovered || isMobile ? 0.7 : 0 }}
 			>
 				{text}
 			</text>
@@ -117,7 +169,7 @@ export const TextHoverEffect = ({ text, duration }: { text: string; duration?: n
 				textAnchor="middle"
 				dominantBaseline="middle"
 				strokeWidth="0.3"
-				className="font-[helvetica] font-bold fill-transparent text-7xl   stroke-neutral-200 dark:stroke-neutral-800"
+				className="font-[helvetica] font-bold fill-transparent text-7xl stroke-neutral-200 dark:stroke-neutral-800"
 				initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
 				animate={{
 					strokeDashoffset: 0,
@@ -138,7 +190,7 @@ export const TextHoverEffect = ({ text, duration }: { text: string; duration?: n
 				stroke="url(#textGradient)"
 				strokeWidth="0.3"
 				mask="url(#textMask)"
-				className="font-[helvetica] font-bold fill-transparent text-7xl  "
+				className="font-[helvetica] font-bold fill-transparent text-7xl"
 			>
 				{text}
 			</text>
