@@ -84,7 +84,7 @@ const GridItem = ({ icon, title, description, long = false, Num }: GridItemProps
 						</div>
 						<div className="space-y-3 flex flex-col  gap-40">
 							{/* prab check the text size over here. */}
-							<h3 className={`pt-0.5 text-xl/[1.375rem] font-semibold font-sans -tracking-4 text-balance text-center text-white${long ? " md:text-5xl" : " md:text-4xl/[1.875rem]"}`}>{title}</h3>
+							<h3 className={`pt-0.5 text-3xl/[1.375rem] font-semibold font-sans md:-tracking-4   tracking-8  text-balance text-center text-white${long ? " md:text-5xl" : " md:text-4xl/[1.875rem]"}`}>{title}</h3>
 							<h2 className={"font-sans text-sm/[1.125rem] md:text-base/[1.375rem] text-neutral-400 px-6 text-center"}>{description}</h2>
 						</div>
 					</div>

@@ -64,10 +64,10 @@ const features: Feature[] = [
 
 const ChartSection = () => (
 	<Card className="bg-black border-zinc-800">
-		<div className="p-6 sm:p-2">
+		<div className="md:p-6 p-2">
 			<h3 className="text-lg font-medium mb-2">Line Chart - Speed vs Altitude</h3>
 			<p className="text-sm text-zinc-400 mb-4">Showing for COMPANY: UNIT #697159</p>
-			<div className="max-h-[500px]">
+			<div className="max-h-[700px]">
 				<ChartContainer config={chartConfig}>
 					<ResponsiveContainer
 						width="100%"

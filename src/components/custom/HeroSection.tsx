@@ -10,7 +10,7 @@ export default function HeroSection() {
 		<>
 			<div className="bg-black text-white min-h-[20vh] w-full flex items-start mb-10">
 				<div className=" px-4 py-2">
-					<div className="grid md:grid-cols-5 md:gap-40 gap-20 items-end justify-around ">
+					<div className="grid md:grid-cols-5 md:gap-40 gap-2 items-end justify-around ">
 						<div className="col-span-3">
 							<TextEffect
 								per="word"

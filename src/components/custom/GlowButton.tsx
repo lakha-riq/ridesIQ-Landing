@@ -1,8 +1,10 @@
 import { GlowEffect } from "@/components/ui/glow-effect";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export function GlowEffectButton() {
 	return (
+		<Link href="/contact">
 		<div className="relative scale-200">
 			<GlowEffect
 				colors={["#FF5733", "#33FF57", "#3357FF", "#F1C40F"]}
@@ -15,5 +17,6 @@ export function GlowEffectButton() {
 				Schedule A Demo <ArrowRight className="h-4 w-4" />
 			</button>
 		</div>
+		</Link>
 	);
 }

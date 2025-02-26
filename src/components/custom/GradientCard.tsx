@@ -11,7 +11,7 @@ export default function GradientCard() {
 				<div className="h-full w-full p-8 flex items-center justify-center relative">
 					<Card className="w-full max-w-6xl bg-white/10 backdrop-blur-sm border-white/30">
 						<CardContent className="p-8">
-							<div className="flex flex-col h-full">
+							<div className="flex flex-col gap-20 h-full">
 								<div className="flex justify-between items-start mb-9">
 									<div className="space-y-6">
 										<p className="text-white/80">Better together</p>
@@ -44,8 +44,8 @@ export default function GradientCard() {
 											Expertise
 										</Button>
 									</div>
-									<Link href="/contact">
-										<Button className="bg-white/20 hover:bg-white/30 text-white">Book a demo</Button>
+									<Link href="/contact" className="sm:w-full ">
+										<Button  className="sm:w-full ">Book a demo</Button>
 									</Link>
 								</div>
 							</div>

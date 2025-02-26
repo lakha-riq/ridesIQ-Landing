@@ -19,15 +19,15 @@ const page = ({}) => {
 			<WorldMapTop />
 			<HeroSection />
 			<div className="flex flex-col items-center justify-center min-w-full min-h-[50vh] pt-20">
-
 				<BentoGridDemo />
 			</div>
 			<div className="sm:mb-screen">
 				<ChartsSection />
 			</div>
-			<div className="md:hidden flex min-h-[15vh]"></div>
+			<div className="lg:hidden flex min-h-[90vh]"></div>
 
 			<VehicleTrackingGrid />
+			<div className="lg:hidden flex min-h-[20vh]"></div>
 
 			<GradientCard />
 

@@ -4,7 +4,7 @@ import WorldMap from "@/components/ui/world-map";
 
 export function WorldMapTop() {
 	return (
-		<div className="   bg-black w-full ">
+		<div className="   bg-black w-full max-h-[38vh] md:max-h-full overflow-hidden  rounded-lg">
 			{/* <div className="max-w-7xl mx-auto text-center">
 				<p className="font-bold text-xl md:text-4xl  text-white">
 					Remote{" "}
