@@ -70,7 +70,7 @@ const Footer = () => {
 							<h3 className="text-sm font-semibold text-gray-400 uppercase mb-4">Support</h3>
 							<div className="flex flex-col space-y-3">
 								<Link
-									href="#"
+									href="/privacy-policy"
 									className="text-white hover:text-gray-300 transition-colors"
 								>
 									Privacy Policy
@@ -82,7 +82,7 @@ const Footer = () => {
 									Terms of Services
 								</Link> */}
 								<Link
-									href="#"
+									href="#faq"
 									className="text-white hover:text-gray-300 transition-colors"
 								>
 									FAQs

@@ -44,8 +44,8 @@ export default function GradientCard() {
 											Expertise
 										</Button>
 									</div>
-									<Link href="/contact" className="sm:w-full ">
-										<Button  className="sm:w-full ">Book a demo</Button>
+									<Link href="/contact" className="w-full sm:w-auto">
+										<Button  className="w-full ">Book a demo</Button>
 									</Link>
 								</div>
 							</div>
