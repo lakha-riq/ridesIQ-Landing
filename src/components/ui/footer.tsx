@@ -30,6 +30,7 @@ const Footer = () => {
 								type="email"
 								placeholder="Enter email address..."
 								className="bg-[#1C1C1C] border-0 text-white"
+								
 							/>
 							<Button
 								variant="secondary"
@@ -96,17 +97,17 @@ const Footer = () => {
 				<div className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-gray-800 text-sm text-gray-400">
 					<div className="flex items-center gap-8 mb-4 sm:mb-0">
 						<Link
-							href="#"
+							href="/privacy-policy"
 							className="hover:text-gray-300 transition-colors"
 						>
 							Privacy Policy
 						</Link>
-						<Link
+						{/* <Link
 							href="#"
 							className="hover:text-gray-300 transition-colors"
 						>
 							Terms of Service
-						</Link>
+						</Link> */}
 						<span>©2025 RidesIQ. All rights reserved.</span>
 					</div>
 					<div className="flex items-center gap-4">

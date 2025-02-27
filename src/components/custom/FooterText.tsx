@@ -31,6 +31,7 @@ export const TextHoverEffect = ({ text, duration }: { text: string; duration?: n
 				cx: `${cxPercentage}%`,
 				cy: `${cyPercentage}%`,
 			});
+		
 		}
 	}, [cursor]);
 
