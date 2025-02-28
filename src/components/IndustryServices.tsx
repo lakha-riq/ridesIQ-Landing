@@ -17,7 +17,7 @@ const IndustryServices = ({}) => {
 					{/* Hard-Wired Tracker Card */}
 					<div className="rounded-3xl overflow-hidden relative h-[450px] group transition-transform hover:scale-105">
 						<div className="absolute inset-0 bg-gradient-to-b from-[#678FCA] to-[#4A6491]" />
-						<div className="absolute right-0 left-140   translate-x-1/2 w-[280px] h-[280px]">
+						<div className="absolute right-20 left-100 -rotate-90  bottom-120 translate-x-1/2 w-[280px] h-[280px]">
 							<Image
 								src="/assets/devices/device1.svg"
 								alt="Hard-Wired Tracker"
@@ -36,7 +36,7 @@ const IndustryServices = ({}) => {
 					{/* OBD Tracker Card */}
 					<div className="rounded-3xl overflow-hidden relative h-[450px] group transition-transform hover:scale-105">
 						<div className="absolute inset-0 bg-gradient-to-b from-[#678FCA] to-[#99D5C9]" />
-						<div className="absolute right-0 left-100 top-20  translate-x-1/2 w-[280px] h-[280px]">
+						<div className="absolute right-0 left-100 top-32  translate-x-1/2 w-[280px] h-[280px]">
 							<Image
 								src="/assets/devices/OBD.svg"
 								alt="OBD Tracker"
