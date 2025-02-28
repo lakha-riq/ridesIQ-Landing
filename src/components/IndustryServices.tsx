@@ -38,7 +38,7 @@ const IndustryServices = ({}) => {
 						<div className="absolute inset-0 bg-gradient-to-b from-[#678FCA] to-[#99D5C9]" />
 						<div className="absolute right-0 left-100 top-20  translate-x-1/2 w-[280px] h-[280px]">
 							<Image
-								src="/assets/devices/obd.svg"
+								src="/assets/devices/OBD.svg"
 								alt="OBD Tracker"
 								width={220}
 								height={220}
