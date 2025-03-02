@@ -17,7 +17,7 @@ const page= ({}) => {
 			<div className="sm:mb-screen">
 				<ChartsSection />
 			</div>
-			<div className="md:hidden flex min-h-[15vh]"></div>
+			<div className="md:hidden flex min-h-full"></div>
 			<GradientCard />
 			<Faq02 />
 		</div>

@@ -160,7 +160,7 @@ export default function ChartsSection() {
 					{/* Title section */}
 					<div className="space-y-4">
 						<p className="text-sm font-medium text-zinc-400">BUSINESS FRIENDLY</p>
-						<h1 className="text-3xl font-medium leading-tight">Intelligent Fleet Management Designed With Your Business in Mind</h1>
+						<h1 className="text-3xl font-medium leading-tight">Fleet Intelligence Visualized: Comprehensive Features with Real-Time Insights</h1>
 					</div>
 
 					{/* Chart section */}
@@ -192,7 +192,7 @@ export default function ChartsSection() {
 					{/* Content Section */}
 					<div className="space-y-6">
 						<p className="text-sm font-medium text-zinc-400">BUSINESS FRIENDLY</p>
-						<h1 className="text-4xl font-medium leading-tight">Intelligent Fleet Management Designed With Your Business in Mind</h1>
+						<h1 className="text-4xl font-medium leading-tight">Fleet Intelligence Visualized: Comprehensive Features with Real-Time Insights</h1>
 						<p className="text-lg text-zinc-400">
 							Give your business complete visibility and control over your fleet operations with real-time tracking and analytics, including these powerful features:
 						</p>

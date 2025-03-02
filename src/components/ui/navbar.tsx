@@ -28,7 +28,7 @@ export function Navbar() {
 								href="/"
 								className="flex items-center"
 							>
-								<span className="text-white text-xl font-bold">Rides IQ</span>
+								<span className="text-white text-xl font-bold">RidesIQ</span>
 							</Link>
 						</div>
 
@@ -38,7 +38,7 @@ export function Navbar() {
 								<Link
 									key={item.name}
 									href={item.href}
-									className="text-gray-300 hover:text-white text-sm font-medium transition-colors"
+									className="text-gray-300 hover:text-white text-sm font-bold uppercase transition-colors"
 								>
 									{item.name}
 								</Link>
@@ -78,7 +78,7 @@ export function Navbar() {
 									<Link
 										key={item.name}
 										href={item.href}
-										className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium"
+										className="text-gray-300 hover:text-white block px-3 py-2 text-base font-bold uppercase"
 										onClick={() => setIsOpen(false)}
 									>
 										{item.name}
@@ -93,8 +93,8 @@ export function Navbar() {
 											duration={3}
 											scale={0.9}
 										/>
-										<button className="relative inline-flex items-center gap-1 rounded-md bg-zinc-950 px-2.5 py-1.5 text-sm text-zinc-50 outline outline-1 outline-[#fff2f21f] w-full">
-											Explore <ArrowRight className="h4 w-4" />
+										<button className="relative inline-flex items-center gap-1 rounded-md bg-zinc-950 px-2.5 py-1.5 text-sm text-zinc-50 outline outline-1 outline-[#fff2f21f] w-full font-bold uppercase">
+											Schedule A Demo <ArrowRight className="h-4 w-4" />
 										</button>
 									</div>
 								</div>

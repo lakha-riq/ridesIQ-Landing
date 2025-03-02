@@ -38,7 +38,7 @@ export function GlowingEffectDemo() {
 			<GridItem
 				area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
 				icon={<Search className="h-4 w-4 text-black dark:text-neutral-400" />}
-				title="Coming soon on Rides IQ"
+				title="Coming soon on RidesIQ"
 				description="I'm writing the code as I record this, no shit."
 			/>
 		</ul>

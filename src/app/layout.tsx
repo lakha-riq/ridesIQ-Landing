@@ -5,6 +5,7 @@ import { Navbar } from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 import { Providers } from "@/components/theme/providers";
 import { Toaster } from "@/components/ui/sonner";
+import {  GoogleTagManager } from "@next/third-parties/google";
 const geistSans = Geist({
 	variable: "--font-geist-sans",
 	subsets: ["latin"],
@@ -16,9 +17,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "Iot Rides",
-	description: "Iot Rides",
+	title: "RidesIQ",
+	description: "RidesIQ is a fleet management solution that provides real-time tracking, monitoring, and diagnostics for vehicles and assets.",
 };
+
+
+
 
 export default function RootLayout({
 	children,
@@ -30,6 +34,7 @@ export default function RootLayout({
 			lang="en"
 			suppressHydrationWarning={true}
 		>
+			<head></head>
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}>
 				<Providers>
 					<Navbar />
@@ -37,6 +42,7 @@ export default function RootLayout({
 					<Toaster />
 					<Footer />
 				</Providers>
+				<GoogleTagManager gtmId="GTM-MVKTVVZT" />
 			</body>
 		</html>
 	);

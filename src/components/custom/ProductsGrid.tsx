@@ -9,7 +9,7 @@ export function VehicleTrackingGrid() {
 		<div className="bg-black min-h-screen p-6 md:p-40">
 			<div className="max-w-7xl mx-auto space-y-8">
 				<div className=" mb-12 gap-10 grid grid-cols-1 md:grid-cols-5 place-content-center max-w-6xl ">
-					<h1 className="text-2xl md:text-3xl font-bold text-white mb-4 col-span-1 md:col-span-3">The Competitive Edge</h1>
+					<h1 className="text-2xl md:text-4xl font-medium text-white mb-4 col-span-1 md:col-span-3 tracking-tight ">The Competitive Edge</h1>
 					<p className="opacity-50 text-sm md:text-sm col-span-1 md:col-span-2  tracking-tighter">
 						Transform your fleet operations with enterprise-grade telematics that deliver actionable insights, robust security, and seamless integration.
 					</p>

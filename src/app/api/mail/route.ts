@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
-import {sendEmail}   from "@/actions/smtp";
+import { sendEmail } from "@/actions/smtp";
 
 export async function POST(request: Request) {
 	try {
 		const body = await request.json();
-        const { to, subject , text } = body;
-        const html = ` <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		const { to, subject, text } = body;
+		const html = ` <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
 <!--[if gte mso 9]>
@@ -101,7 +101,7 @@ table, td { color: #ffffff; } </style>
       <td style="overflow-wrap:break-word;word-break:break-word;padding:0px;font-family:helvetica,sans-serif;" align="left">
         
   <!--[if mso]><table width="100%"><tr><td><![endif]-->
-    <h1 style="margin: 0px; color: #ffffff; line-height: 140%; text-align: center; word-wrap: break-word; font-size: 48px; font-weight: 400;"><span>Rides IQ</span></h1>
+    <h1 style="margin: 0px; color: #ffffff; line-height: 140%; text-align: center; word-wrap: break-word; font-size: 48px; font-weight: 400;"><span>RidesIQ</span></h1>
   <!--[if mso]></td></tr></table><![endif]-->
 
       </td>
