@@ -21,7 +21,7 @@ const page = ({}) => {
 			<ProductsHeader />
 			<IndustryServices />
 			<IndustrySolutions />
-			<div className="md:hidden flex min-h-[15vh]"></div>
+			<div className="md:hidden flex min-h-[5vh]"></div>
 			<GradientCard />
 
 			<Faq02 />

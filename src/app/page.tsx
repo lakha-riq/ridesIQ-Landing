@@ -27,7 +27,7 @@ const page = ({}) => {
 			<div className="lg:hidden flex min-h-[90vh]"></div>
 
 			<VehicleTrackingGrid />
-			<div className="lg:hidden flex min-h-[20vh]"></div>
+			<div className="lg:hidden flex min-h-[5vh]"></div>
 
 			<GradientCard />
 

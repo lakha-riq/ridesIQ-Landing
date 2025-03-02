@@ -14,11 +14,12 @@ const page= ({}) => {
 			<SolutionsHeader />
 			<SolutionCards />
 			<IndustrySolutions />
-			<div className="sm:mb-screen">
+			<div className="mb-[75vh] md:mb-0">
 				<ChartsSection />
 			</div>
-			<div className="md:hidden flex min-h-full"></div>
-			<GradientCard />
+			<div className="mt-[75vh] md:mt-0">
+				<GradientCard />
+			</div>
 			<Faq02 />
 		</div>
   );

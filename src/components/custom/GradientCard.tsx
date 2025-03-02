@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 export default function GradientCard() {
 	return (
-		<div className="md:px-20 mt-[35rem] md:mt-0">
+		<div className="md:px-20 mt-[2rem] md:mt-0">
 			<div className="md:min-h-[70vh] min-h-[50vh] w-full relative rounded-lg bg-gradient-to-b from-[#678FCA] via-[#485F8A] to-[#1E1E1E]">
 				<div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent rounded-lg" />
 
