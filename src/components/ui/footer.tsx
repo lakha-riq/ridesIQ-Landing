@@ -4,6 +4,7 @@ import { TextHoverEffect } from "../custom/FooterText";
 /*import { Linkedin, X } from "lucide-react";*/
 import { Input } from "./input";
 import { Button } from "./button";
+import { getAbsoluteUrl } from "@/lib/utils";
 
 
 
@@ -59,7 +60,7 @@ const Footer = () => {
 									Solutions
 									</Link>
 								<Link
-									href="#"
+									href="contact"
 									className="text-white hover:text-gray-300 transition-colors"
 								>
 									Contact Us
@@ -83,7 +84,7 @@ const Footer = () => {
 									Terms of Services
 								</Link> */}
 								<Link
-									href="#faq"
+									href={getAbsoluteUrl("#faq")}
 									className="text-white hover:text-gray-300 transition-colors"
 								>
 									FAQs

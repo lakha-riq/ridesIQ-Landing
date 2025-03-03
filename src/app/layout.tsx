@@ -45,7 +45,6 @@ export default function RootLayout({
 					<Toaster />
 					<Footer />
 				</Providers>
-				<GoogleTagManager gtmId="GTM-MVKTVVZT" />
 				<SpeedInsights /> 
 			</body>
 		</html>

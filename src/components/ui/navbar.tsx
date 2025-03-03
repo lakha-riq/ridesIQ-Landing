@@ -52,6 +52,7 @@ export function Navbar() {
 
 						{/* Mobile menu button */}
 						<div className="flex md:hidden">
+							<Link href={"/contact"}>
 							<button
 								onClick={() => setIsOpen(!isOpen)}
 								className="text-gray-400 hover:text-white focus:outline-none"
@@ -59,6 +60,7 @@ export function Navbar() {
 								<span className="sr-only">Open main menu</span>
 								{isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
 							</button>
+							</Link>
 						</div>
 					</div>
 				</div>
