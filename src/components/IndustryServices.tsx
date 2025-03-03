@@ -38,7 +38,7 @@ const IndustryServices = ({}) => {
 						<div className="absolute inset-0 bg-gradient-to-b from-[#678FCA] to-[#99D5C9]" />
 						<div className="absolute w-full min-h-80 grid place-content-center">
 							<Image
-								src="/assets/devices/OBD.svg"
+								src="/assets/devices/OBD.png"
 								alt="OBD Tracker"
 								width={220}
 								height={220}
@@ -57,7 +57,7 @@ const IndustryServices = ({}) => {
 						<div className="absolute inset-0 bg-gradient-to-b from-[#99D5C9] to-[#7AB3A9]" />
 						<div className="absolute w-full  min-h-80 grid place-content-center">
 							<Image
-								src="/window.svg"
+								src="/assets/devices/asset_tracker.png"
 								alt="Asset Tracker"
 								width={220}
 								height={220}
