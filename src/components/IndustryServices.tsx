@@ -59,8 +59,8 @@ const IndustryServices = ({}) => {
 							<Image
 								src="/assets/devices/asset_tracker.png"
 								alt="Asset Tracker"
-								width={220}
-								height={220}
+								width={170}
+								height={170}
 								className="object-contain transition-transform group-hover:translate-y-2"
 							/>
 						</div>
