@@ -6,6 +6,7 @@ import Footer from "@/components/ui/footer";
 import { Providers } from "@/components/theme/providers";
 import { Toaster } from "@/components/ui/sonner";
 import {  GoogleTagManager } from "@next/third-parties/google";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const geistSans = Geist({
 	variable: "--font-geist-sans",
 	subsets: ["latin"],
@@ -43,6 +44,7 @@ export default function RootLayout({
 					<Footer />
 				</Providers>
 				<GoogleTagManager gtmId="GTM-MVKTVVZT" />
+				<SpeedInsights /> 
 			</body>
 		</html>
 	);
