@@ -35,7 +35,9 @@ export default function RootLayout({
 			lang="en"
 			suppressHydrationWarning={true}
 		>
-			<head></head>
+			<head>
+				<GoogleTagManager gtmId="G-20S21GCSHW" />
+			</head>
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}>
 				<Providers>
 					<Navbar />
