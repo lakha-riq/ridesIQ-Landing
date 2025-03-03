@@ -121,7 +121,7 @@ export default function ContactForm() {
 											<FormLabel>Subject</FormLabel>
 											<FormControl>
 												<Input
-													placeholder="I needed to contact you for XYZ"
+													placeholder="Your subject here..."
 													{...field}
 												/>
 											</FormControl>
