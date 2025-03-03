@@ -162,11 +162,11 @@ const faqs: Omit<FAQItemProps, "index">[] = [
 		question: "How do I manage my vehicles and drivers with RidesIQ?",
 		answer: `Our cloud-based portal and mobile application give you a centralized dashboard. 
 		
-		You can: Add/Remove Vehicles: Set up each vehicle with its unique details.
+		Add/Remove Vehicles: Set up each vehicle with its unique details.
 		 
 		Assign Drivers: Create driver profiles and track individual performance.
 		 
-		 Set Alerts and Notifications: Receive emails or push notifications for speeding events, idling, or maintenance needs.`,
+		Set Alerts and Notifications: Receive emails or push notifications for speeding events, idling, or maintenance needs.`,
 	},
 	{
 		question: "What does RidesIQ's pricing look like?",
