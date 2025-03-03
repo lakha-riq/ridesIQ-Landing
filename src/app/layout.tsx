@@ -6,6 +6,7 @@ import Footer from "@/components/ui/footer";
 import { Providers } from "@/components/theme/providers";
 import { Toaster } from "@/components/ui/sonner";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import {  GoogleTagManager } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -35,10 +36,9 @@ export default function RootLayout({
 			lang="en"
 			suppressHydrationWarning={true}
 		>
-			<head>
-				<GoogleAnalytics  gaId="G-20S21GCSHW" />
-			</head>
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}>
+			<GoogleTagManager gtmId="GTM-MVKTVVZT" />
+			<head></head>
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}>	
 				<Providers>
 					<Navbar />
 					{children}
@@ -47,6 +47,7 @@ export default function RootLayout({
 				</Providers>
 				<SpeedInsights /> 
 			</body>
+			<GoogleAnalytics  gaId="G-20S21GCSHW" />
 		</html>
 	);
 }
