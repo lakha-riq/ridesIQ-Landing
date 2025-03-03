@@ -8,6 +8,8 @@ import { Toaster } from "@/components/ui/sonner";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import {  GoogleTagManager } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
+
 const geistSans = Geist({
 	variable: "--font-geist-sans",
 	subsets: ["latin"],
@@ -36,6 +38,7 @@ export default function RootLayout({
 			lang="en"
 			suppressHydrationWarning={true}
 		>
+			<Analytics/>
 			<GoogleTagManager gtmId="GTM-MVKTVVZT" />
 			<head></head>
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}>	
