@@ -52,7 +52,7 @@ export function Navbar() {
 
 						{/* Mobile menu button */}
 						<div className="flex md:hidden">
-							<Link href={"/contact"}>
+							
 							<button
 								onClick={() => setIsOpen(!isOpen)}
 								className="text-gray-400 hover:text-white focus:outline-none"
@@ -60,7 +60,7 @@ export function Navbar() {
 								<span className="sr-only">Open main menu</span>
 								{isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
 							</button>
-							</Link>
+							
 						</div>
 					</div>
 				</div>
@@ -87,6 +87,7 @@ export function Navbar() {
 									</Link>
 								))}
 								<div className="px-3 py-2">
+									<Link href={"/contact"}>
 									<div className="relative">
 										<GlowEffect
 											colors={["#FF5733", "#33FF57", "#3357FF", "#F1C40F"]}
@@ -99,6 +100,7 @@ export function Navbar() {
 											Schedule A Demo <ArrowRight className="h-4 w-4" />
 										</button>
 									</div>
+									</Link>
 								</div>
 							</div>
 						</motion.div>
