@@ -59,7 +59,7 @@ export async function sendEmail({ to, from, subject, html, text }: SendEmailPara
 }
 
 
-export async function StoreEmail({  from, subject, text, name} : SendEmailParams) {
+export async function StoreEmail({ to, from, subject, text, name} : SendEmailParams) {
 	try {
 		// Store email in a database
 		
@@ -80,7 +80,7 @@ export async function StoreEmail({  from, subject, text, name} : SendEmailParams
 										</head>
 										<body>
 										<h1>Message from ${name}</h1>
-											<p>email : ${from}</p>
+											<p>email : ${to}</p>
 											<p>subject : ${subject}</p>
 											<p>message : ${text}</p>
 										</body>
