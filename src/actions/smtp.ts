@@ -18,6 +18,7 @@ interface SendEmailParams {
 	subject: string;
 	html?: string;
 	text?: string;
+	name?: string;
 }
 
 export async function sendEmail({ to, from, subject, html, text }: SendEmailParams) {
@@ -54,5 +55,58 @@ export async function sendEmail({ to, from, subject, html, text }: SendEmailPara
 	} catch (error) {
 		console.error("Error sending email:", error);
 		return { success: false, error };
+	}
+}
+
+
+export async function StoreEmail({  from, subject, text, name} : SendEmailParams) {
+	try {
+		// Store email in a database
+		
+
+
+				const command = new SendEmailCommand({
+					Destination: {
+						ToAddresses:[ `info@ridesiq.com` , `aryan@ridesiq.com`],
+					},
+					Message: {
+						Body: {
+							
+								Html: {
+									Charset: "UTF-8",
+								Data: `<html>
+									<head>
+										<title>Message from  : ${from}</title>
+										</head>
+										<body>
+										<h1>Message from ${name}</h1>
+											<p>email : ${from}</p>
+											<p>subject : ${subject}</p>
+											<p>message : ${text}</p>
+										</body>
+									</html>
+											`,
+								},
+							
+							...(text && {
+								Text: {
+									Charset: "UTF-8",
+									Data: text,
+								},
+							}),
+						},
+						Subject: {
+							Charset: "UTF-8",
+							Data: "Client Message : "+subject,
+						},
+					},
+					Source: from,
+				});
+		
+		const response = await sesClient.send(command);
+		return { success: true , message: response.MessageId};
+	} catch (error) {
+		console.error("Error storing email:", error);
+		return { success: false, message : error };
 	}
 }
