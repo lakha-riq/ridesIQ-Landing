@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
-import { sendEmail } from "@/actions/smtp";
+import { sendEmail, StoreEmail } from "@/actions/smtp";
 
 export async function POST(request: Request) {
 	try {
 		const body = await request.json();
-		const { to, subject, text } = body;
+		const { to, subject, text , name } = body;
 		const html = ` <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
@@ -212,9 +212,26 @@ table, td { color: #ffffff; } </style>
 
 		if (!to || !subject || (!html && !text)) {
 			return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
-		}
+    }
+    
 
-		const result = await sendEmail({
+    const StoreEmailResult = await StoreEmail(
+      {
+			to: Array.isArray(to) ? to : [to],
+			from: process.env.AWS_SES_VERIFIED_EMAIL!,
+			subject,
+			name,
+			text,
+		}
+    ); 
+
+    if (!StoreEmailResult.success) {
+      return NextResponse.json({ error: "Failed to store email" }, { status: 500 });
+      }
+
+    
+
+		const SendToContacterResult = await sendEmail({
 			to: Array.isArray(to) ? to : [to],
 			from: process.env.AWS_SES_VERIFIED_EMAIL!,
 			subject,
@@ -222,11 +239,13 @@ table, td { color: #ffffff; } </style>
 			text,
 		});
 
-		if (!result.success) {
+		if (!SendToContacterResult.success) {
 			return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
-		}
+    }
+    
 
-		return NextResponse.json({ success: true, messageId: result.messageId });
+
+		return NextResponse.json({ success: true, messageId: SendToContacterResult.messageId });
 	} catch (error) {
 		console.error("Error in email API route:", error);
 		return NextResponse.json({ error: "Internal server error" }, { status: 500 });

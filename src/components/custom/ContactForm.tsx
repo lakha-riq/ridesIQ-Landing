@@ -42,6 +42,7 @@ export default function ContactForm() {
 					to: values.email,
 					subject: values.subject,
 					text: values.text,
+					name : values.name
 				}),
 			});
 
