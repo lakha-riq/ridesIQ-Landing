@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { format } from "date-fns";
 import { ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 interface BlogCardProps {
 	slug: string;
@@ -31,11 +32,13 @@ export const BlogCard: React.FC<BlogCardProps> = ({ slug, title, excerpt, image,
 				className="block"
 			>
 				<div className="aspect-[16/9] overflow-hidden">
-					<img
+					<Image
 						src={image}
 						alt={title}
 						className="w-full h-full object-cover object-center transform transition-transform duration-700 group-hover:scale-110"
 						loading="lazy"
+						width={1280}
+						height={720}
 					/>
 				</div>
 
@@ -46,11 +49,13 @@ export const BlogCard: React.FC<BlogCardProps> = ({ slug, title, excerpt, image,
 
 					<div className="flex items-center justify-between">
 						<div className="flex items-center gap-3">
-							<img
+							<Image
 								src={author.avatar}
 								alt={author.name}
 								className="w-10 h-10 rounded-full"
 								loading="lazy"
+								width={40}
+								height={40}
 							/>
 							<div>
 								<div className="text-sm font-medium text-gray-900">{author.name}</div>

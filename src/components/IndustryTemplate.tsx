@@ -5,6 +5,7 @@ import { Navigation } from './Navigation';
 import { ChallengesSolutions } from './ChallengesSolutions';
 import { StatsCard } from './StatsCard';
 import { ProductCard } from './ProductCard';
+import Image from 'next/image';
 
 interface IndustryTemplateProps {
   industry: {
@@ -66,10 +67,12 @@ export const IndustryTemplate: React.FC<IndustryTemplateProps> = ({
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Background Image & Overlays */}
         <div className="absolute inset-0">
-          <img 
+          <Image 
             src={industry.heroImage} 
             alt={industry.name}
             className="w-full h-full object-cover"
+            width={1280}
+            height={720}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 to-gray-900/70" />
           <div className="absolute inset-0 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:32px_32px] opacity-10" />
@@ -166,10 +169,12 @@ export const IndustryTemplate: React.FC<IndustryTemplateProps> = ({
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6" />
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80"
                   alt="Fleet Management Solution"
                   className="relative z-10 rounded-3xl shadow-2xl transform -rotate-3 transition-transform duration-500 hover:rotate-0"
+                  width={800}
+                  height={800}
                 />
               </div>
 
@@ -250,10 +255,12 @@ export const IndustryTemplate: React.FC<IndustryTemplateProps> = ({
                     {`${industry.testimonial.quote}`}
                   </blockquote>
                   <div className="flex items-center">
-                    <img
+                    <Image
                       src={industry.testimonial.image}
                       alt={industry.testimonial.author}
                       className="w-12 h-12 rounded-full mr-4"
+                      width={48}
+                      height={48}
                     />
                     <div>
                       <div className="text-white font-semibold">

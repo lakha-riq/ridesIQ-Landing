@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { DivideIcon as LucideIcon } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
+import Image from 'next/image';
 
 interface FeatureCardProps {
   icon: typeof LucideIcon;
@@ -100,11 +101,13 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
 											}}
 											className="relative rounded-xl overflow-hidden shadow-lg"
 										>
-											<img
+											<Image
 												src={details.image}
 												alt="Feature illustration"
 												className="w-full h-48 object-cover"
-												loading="lazy"
+											  loading="lazy"
+											  width={400}
+											  height={400}
 											/>
 											<div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
 										</motion.div>

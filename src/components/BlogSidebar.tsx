@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { format } from "date-fns";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 interface Post {
 	slug: string;
@@ -54,11 +55,13 @@ export const BlogSidebar: React.FC<BlogSidebarProps> = ({ popularPosts, recentPo
 							href={`/blog/${post.slug}`}
 							className="flex items-start gap-4 group"
 						>
-							<img
+							<Image
 								src={post.image}
 								alt={post.title}
 								className="w-20 h-20 rounded-lg object-cover"
 								loading="lazy"
+								width={80}
+								height={80}
 							/>
 							<div>
 								<h4 className="font-medium text-gray-900 group-hover:text-[#678FCA] transition-colors line-clamp-2">{post.title}</h4>
@@ -79,11 +82,13 @@ export const BlogSidebar: React.FC<BlogSidebarProps> = ({ popularPosts, recentPo
 							href={`/blog/${post.slug}`}
 							className="flex items-start gap-4 group"
 						>
-							<img
+							<Image
 								src={post.image}
 								alt={post.title}
 								className="w-20 h-20 rounded-lg object-cover"
 								loading="lazy"
+								width={80}
+								height={80}
 							/>
 							<div>
 								<h4 className="font-medium text-gray-900 group-hover:text-[#678FCA] transition-colors line-clamp-2">{post.title}</h4>
