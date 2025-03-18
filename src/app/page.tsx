@@ -31,7 +31,7 @@ function Home() {
 			details: {
 				stat: "98%",
 				statLabel: "Accuracy Rate",
-				image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+				image: "/assets/homepage/1.png",
 				points: ["Real-time vehicle tracking and monitoring", "Predictive maintenance alerts", "Fuel efficiency optimization", "Driver behavior analysis"],
 			},
 		},
@@ -42,7 +42,7 @@ function Home() {
 			details: {
 				stat: "45%",
 				statLabel: "Cost Reduction",
-				image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80",
+				image: "/assets/homepage/2.png",
 				points: ["Predictive maintenance scheduling", "Automated service reminders", "Parts inventory management", "Service history tracking"],
 			},
 		},
@@ -53,7 +53,7 @@ function Home() {
 			details: {
 				stat: "2.5x",
 				statLabel: "ROI Increase",
-				image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+				image: "/assets/homepage/3.png",
 				points: ["Custom report generation", "Performance benchmarking", "Cost analysis tools", "Trend forecasting"],
 			},
 		},
@@ -449,19 +449,19 @@ function Home() {
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 						<ProductCard
 							title="Hard-Wired Tracker"
-							image="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80"
+							image="/assets/homepage/2.png"
 							features={["Professional installation", "Continuous power supply", "Advanced security features", "Real-time tracking & alerts"]}
 							index={0}
 						/>
 						<ProductCard
 							title="OBD Tracker"
-							image="https://images.unsplash.com/photo-1635773054019-33b29b3399b1?auto=format&fit=crop&w=800&q=80"
+							image="/assets/homepage/3.png"
 							features={["Plug & play installation", "Engine diagnostics", "Fuel consumption monitoring", "Driver behavior analysis"]}
 							index={1}
 						/>
 						<ProductCard
 							title="Asset Tracker"
-							image="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80"
+							image="/assets/homepage/1.png"
 							features={["Long battery life", "Weather-resistant design", "Geofencing capabilities", "Theft prevention alerts"]}
 							index={2}
 						/>
