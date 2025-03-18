@@ -18,6 +18,7 @@ interface BlogCardProps {
 	index: number;
 }
 
+
 export const BlogCard: React.FC<BlogCardProps> = ({ slug, title, excerpt, image, author, publishedAt, index }) => {
 	return (
 		<motion.article
