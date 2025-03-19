@@ -1,27 +1,28 @@
-"use client"
-import React, { useEffect, useState } from "react";
+"use client";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { X, Shield, ChevronRight, Menu as MenuIcon, BarChart3, ArrowRight, Sparkles, Gauge, AlertCircle, FileBarChart, Truck, Timer, TrendingUp, Target } from "lucide-react";
+import {  Shield, ChevronRight, BarChart3, ArrowRight, Sparkles, Gauge, AlertCircle, FileBarChart, Truck, Timer, TrendingUp, Target } from "lucide-react";
 import { FeatureCard } from "@/components/FeatureCard";
 import { StatsCard } from "@/components/StatsCard";
 import { ProductCard } from "@/components/ProductCard";
 import { CompetitiveAdvantage } from "@/components/CompetitiveAdvantage";
 import { IndustrySolutions } from "@/components/IndustrySolutions";
 import Image from "next/image";
+import { Navigation } from "@/components/Navigation";
 
 function Home() {
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const [scrolled, setScrolled] = useState(false);
+	// const [isMenuOpen, setIsMenuOpen] = useState(false);
+	// const [scrolled, setScrolled] = useState(false);
 	const [activeFeature, setActiveFeature] = useState(0);
 
-	useEffect(() => {
-		const handleScroll = () => {
-			setScrolled(window.scrollY > 20);
-		};
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
+	// useEffect(() => {
+	// 	const handleScroll = () => {
+	// 		// setScrolled(window.scrollY > 20);
+	// 	};
+	// 	window.addEventListener("scroll", handleScroll);
+	// 	return () => window.removeEventListener("scroll", handleScroll);
+	// }, []);
 
 	const features = [
 		{
@@ -62,106 +63,7 @@ function Home() {
 	return (
 		<div className="min-h-screen bg-white">
 			{/* Navigation */}
-			<nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-sm shadow-sm" : "bg-transparent"}`}>
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="flex justify-between items-center h-20">
-						<div className="flex items-center">
-							<Link
-								href="/"
-								className="text-2xl font-bold text-[#678FCA]"
-							>
-								RidesIQ
-							</Link>
-						</div>
-
-						<div className="hidden md:flex items-center space-x-8">
-							<div className="relative group">
-								<button className="text-gray-600 hover:text-[#678FCA] transition-colors">Industries</button>
-								<div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-									<Link
-										href="/industries/fleet-management"
-										className="block px-4 py-2 text-gray-800 hover:bg-gray-50"
-									>
-										Fleet Management
-									</Link>
-								</div>
-							</div>
-							<a
-								href="#features"
-								className="text-gray-600 hover:text-[#678FCA] transition-colors"
-							>
-								Features
-							</a>
-							<a
-								href="#pricing"
-								className="text-gray-600 hover:text-[#678FCA] transition-colors"
-							>
-								Pricing
-							</a>
-							<a
-								href="#about"
-								className="text-gray-600 hover:text-[#678FCA] transition-colors"
-							>
-								About
-							</a>
-							<a
-								href="#resources"
-								className="text-gray-600 hover:text-[#678FCA] transition-colors"
-							>
-								Resources
-							</a>
-							<button className="bg-[#678FCA] text-white px-6 py-2.5 rounded-full hover:bg-[#678FCA]/90 transition-colors">Get a Demo</button>
-						</div>
-
-						<button
-							className="md:hidden"
-							onClick={() => setIsMenuOpen(!isMenuOpen)}
-						>
-							{isMenuOpen ? <X /> : <MenuIcon />}
-						</button>
-					</div>
-				</div>
-
-				{/* Mobile menu */}
-				{isMenuOpen && (
-					<div className="md:hidden bg-white border-t border-gray-100">
-						<div className="px-4 py-4 space-y-3">
-							<Link
-								href="/industries/fleet-management"
-								className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg"
-							>
-								Fleet Management
-							</Link>
-							<a
-								href="#features"
-								className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg"
-							>
-								Features
-							</a>
-							<a
-								href="#pricing"
-								className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg"
-							>
-								Pricing
-							</a>
-							<a
-								href="#about"
-								className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg"
-							>
-								About
-							</a>
-							<a
-								href="#resources"
-								className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg"
-							>
-								Resources
-							</a>
-							<button className="w-full mt-4 bg-[#678FCA] text-white px-6 py-3 rounded-full">Get a Demo</button>
-						</div>
-					</div>
-				)}
-			</nav>
-
+			<Navigation />
 			{/* Hero Section */}
 			<section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-white">
 				<div className="absolute inset-0 bg-[#678FCA]/[0.02] hero-pattern opacity-50"></div>
