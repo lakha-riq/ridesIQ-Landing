@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight, Sparkles, ArrowRight, DivideIcon as LucideIcon } from 'lucide-react';
@@ -6,6 +7,7 @@ import { ChallengesSolutions } from './ChallengesSolutions';
 import { StatsCard } from './StatsCard';
 import { ProductCard } from './ProductCard';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface IndustryTemplateProps {
   industry: {
@@ -170,7 +172,7 @@ export const IndustryTemplate: React.FC<IndustryTemplateProps> = ({
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6" />
                 <Image
-                  src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80"
+                  src="/assets/homepage/2.png"
                   alt="Fleet Management Solution"
                   className="relative z-10 rounded-3xl shadow-2xl transform -rotate-3 transition-transform duration-500 hover:rotate-0"
                   width={800}
@@ -488,7 +490,7 @@ export const IndustryTemplate: React.FC<IndustryTemplateProps> = ({
 
               {/* Social Links */}
               <div className="flex items-center space-x-4">
-                <a
+                <Link
                   href="#"
                   className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#678FCA] transition-colors group"
                 >
@@ -500,7 +502,7 @@ export const IndustryTemplate: React.FC<IndustryTemplateProps> = ({
                   >
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

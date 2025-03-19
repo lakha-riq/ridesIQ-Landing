@@ -1,3 +1,4 @@
+"use client"
 import React, { useRef, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { DivideIcon as LucideIcon } from 'lucide-react';

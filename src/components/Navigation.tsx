@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu as MenuIcon, X, ChevronRight, Truck, Construction, Bike, Bus, Factory, Ambulance, Warehouse, ChevronDown } from "lucide-react";
