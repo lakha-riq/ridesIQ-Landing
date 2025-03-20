@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/Link";
-import { useRouter } from "next/router";
+
 import { Sparkles, ChevronRight, Share2, Twitter, Linkedin, Facebook, Mail } from "lucide-react";
 import { format } from "date-fns";
 import { Navigation } from "@/components/Navigation";
@@ -81,8 +81,9 @@ const blogPosts = [
 	},
 ];
 
-const BlogPost = () => {
-	const { slug } = useRouter().query;
+const BlogPost = async ({ params }: { params: Promise<{ slug: string }> }) => {
+	const {slug} = await params;
+	
 	const post = blogPosts.find((p) => p.slug === slug);
 
 	if (!post) {

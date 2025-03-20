@@ -471,13 +471,13 @@ const Tracking = () => {
 								viewport={{ once: true }}
 								className="space-y-6"
 							>
-								<h2 className="text-3xl sm:text-4xl font-bold">
+								<h2 className="text-3xl sm:text-4xl font-bold text-black">
 									Advanced GPS Tracking for
 									<br />
 									<span className="bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent">Modern Fleet Management</span>
 								</h2>
 
-								<p className="text-lg text-gray-600 leading-relaxed">
+								<p className="text-lg text-black leading-relaxed">
 									Designed for fleets of all sizes, RidesIQ Tracker offers industry-leading accuracy, real-time tracking, and AI-driven analytics to enhance fleet efficiency and
 									reduce downtime. Our comprehensive solution helps you make data-driven decisions while ensuring maximum security and reliability.
 								</p>

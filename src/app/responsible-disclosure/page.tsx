@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import {  ChevronRight, Shield, Mail } from "lucide-react";
@@ -34,8 +35,7 @@ Do not cause harm.
 			id: "vulnerability-reporting",
 			title: "Vulnerability Reporting",
 			content: `If you discover a vulnerability, please email the details of your findings, along with replication steps, to:
-
-📧 info@ridesiq.com`,
+			info@ridesiq.com`,
 		},
 	];
 

@@ -99,7 +99,7 @@ const distributionData: IndustryData = {
       icon: Clock,
       title: "Delivery Timing",
       description: "Meeting tight delivery schedules across multiple distribution points.",
-    },
+},
     {
       icon: AlertCircle,
       title: "Fleet Coordination",

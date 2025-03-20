@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import {  Shield, ChevronRight, BarChart3, ArrowRight, Sparkles, Gauge, AlertCircle, FileBarChart, Truck, Timer, TrendingUp, Target } from "lucide-react";
+import { Shield, ChevronRight, BarChart3, ArrowRight, Sparkles, Gauge, AlertCircle, FileBarChart, Truck, Timer, TrendingUp, Target } from "lucide-react";
 import { FeatureCard } from "@/components/FeatureCard";
 import { StatsCard } from "@/components/StatsCard";
 import { ProductCard } from "@/components/ProductCard";
@@ -188,7 +188,7 @@ function Home() {
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
-							className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 tracking-tight"
+							className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 tracking-tight text-black"
 						>
 							Powerful Fleet
 							<br />
@@ -199,7 +199,7 @@ function Home() {
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
-							className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed"
+							className="text-lg sm:text-xl text-black max-w-2xl mx-auto leading-relaxed"
 						>
 							Experience data-driven fleet intelligence with powerful tools designed to optimize operations and deliver measurable business results.
 						</motion.p>
@@ -255,7 +255,7 @@ function Home() {
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
-							className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 tracking-tight"
+							className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 tracking-tight text-black"
 						>
 							Proven Results for
 							<br />
@@ -266,7 +266,7 @@ function Home() {
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
-							className="text-xl text-gray-600 max-w-2xl mx-auto"
+							className="text-xl text-black max-w-2xl mx-auto"
 						>
 							Trusted by fleets worldwide, RidesIQ delivers measurable impact
 						</motion.p>
@@ -342,7 +342,7 @@ function Home() {
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
-							className="text-xl text-gray-600 max-w-2xl mx-auto"
+							className="text-xl text-black max-w-2xl mx-auto"
 						>
 							Compare our range of tracking devices to find the one that fits your needs
 						</motion.p>

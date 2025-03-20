@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { Sparkles, ChevronRight, MapPin, Construction, Bike, Bus, Truck, Factory, Ambulance, Warehouse } from "lucide-react";
@@ -86,7 +86,7 @@ export const IndustrySolutions = () => {
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
-						className="text-4xl sm:text-5xl font-bold mb-6"
+						className="text-4xl sm:text-5xl font-bold mb-6 text-black"
 					>
 						Built for Every Industry – <span className="bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent">Optimized for Efficiency</span>
 					</motion.h2>
@@ -95,7 +95,7 @@ export const IndustrySolutions = () => {
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
-						className="text-xl text-gray-600 max-w-3xl mx-auto"
+						className="text-xl text-black max-w-3xl mx-auto"
 					>
 						RidesIQ offers tailored fleet tracking solutions to meet the unique needs of different industries. No matter your fleet size, we help you streamline operations, improve safety,
 						and reduce costs.
