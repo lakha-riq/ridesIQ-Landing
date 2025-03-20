@@ -2,9 +2,53 @@
 import React from "react";
 import { IndustryTemplate } from "@/components/IndustryTemplate";
 import { IndustryKeyFeatures } from "@/components/IndustryKeyFeatures";
-import { Truck, Shield, BarChart3, Clock, AlertCircle, Settings2, Timer, TrendingUp, Target, DollarSign, LineChart } from "lucide-react";
+import { Truck, Shield, BarChart3, Clock, AlertCircle, Settings2, Timer, TrendingUp, Target, DollarSign, LineChart, LucideIcon } from "lucide-react";
 
-const fleetKeyFeatures = [
+type KeyFeature = {
+	icon: LucideIcon; // From lucide-react
+	title: string;
+	description: string;
+	stat: string;
+	statLabel: string;
+};
+
+
+
+type IndustryData = {
+	name: string;
+	subtitle: string;
+	description: string;
+	heroImage: string;
+	challenges: {
+		icon: LucideIcon;
+		title: string;
+		description: string;
+	}[];
+	solutions: {
+		icon: LucideIcon;
+		title: string;
+		description: string;
+	}[];
+	stats: {
+		icon: LucideIcon;
+		value: number;
+		suffix: string;
+		label: string;
+	}[];
+	testimonial: {
+		quote: string;
+		author: string;
+		role: string;
+		company: string;
+		image: string;
+	};
+	products: {
+		title: string;
+		image: string;
+		features: string[];
+	}[];
+};
+const fleetKeyFeatures:KeyFeature[] = [
 	{
 		icon: DollarSign,
 		title: "Lower Fuel & Maintenance Costs",
@@ -35,7 +79,7 @@ const fleetKeyFeatures = [
 	},
 ];
 
-const fleetManagementData = {
+const fleetManagementData:IndustryData = {
 	name: "Fleet Management Solutions",
 	subtitle: "Next-Gen Fleet Operations",
 	description: "Transform your fleet operations with AI-powered tracking and analytics that deliver real-time insights and maximize efficiency across your entire fleet.",
