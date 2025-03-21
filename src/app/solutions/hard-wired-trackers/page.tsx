@@ -129,12 +129,12 @@ const Tracking = () => {
 				className: "object-contain p-4",
 			},
 			specs: {
-				installation: { icon: Wrench, value: "Plug & Play", description: "Self-installation in minutes" },
-				power: { icon: Zap, value: "OBD-II Port", description: "Vehicle diagnostic port" },
-				bestFor: { icon: Truck, value: "Small-Medium Fleets", description: "Cars & light vehicles" },
-				battery: { icon: Battery, value: "No Battery", description: "Port-powered operation" },
-				connectivity: { icon: Wifi, value: "4G LTE", description: "Cellular network only" },
-				features: { icon: Shield, value: "Engine Diagnostics", description: "Real-time vehicle data" },
+				installation: { icon: Wrench, value: "Plug & Play", description: "Self-installation in OBD-II port" },
+				power: { icon: Zap, value: "OBD-II Port", description: "Direct vehicle power supply" },
+				bestFor: { icon: Truck, value: "All Vehicles", description: "Cars & light commercial vehicles" },
+				battery: { icon: Battery, value: "No Battery", description: "Continuous power from vehicle" },
+				connectivity: { icon: Wifi, value: "LTE Cat M1/NB1", description: "LTE-FDD B1/B2/B3/B4/B5/B8/B12/B13/B18/B19/B20/B25/B28" },
+				features: { icon: Shield, value: "Motion Detection", description: "3-axis accelerometer tracking" },
 			},
 		},
 		{

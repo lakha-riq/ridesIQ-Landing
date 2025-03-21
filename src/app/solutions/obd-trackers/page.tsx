@@ -108,12 +108,12 @@ const Tracking = () => {
 				className: "object-contain p-4",
 			},
 			specs: {
-				installation: { icon: Wrench, value: "Plug & Play", description: "Self-installation in minutes" },
-				power: { icon: Zap, value: "OBD-II Port", description: "Vehicle diagnostic port" },
-				bestFor: { icon: Truck, value: "Small-Medium Fleets", description: "Cars & light vehicles" },
-				battery: { icon: Battery, value: "No Battery", description: "Port-powered operation" },
-				connectivity: { icon: Wifi, value: "4G LTE", description: "Cellular network only" },
-				features: { icon: Shield, value: "Engine Diagnostics", description: "Real-time vehicle data" },
+				installation: { icon: Wrench, value: "Plug & Play", description: "Self-installation in OBD-II port" },
+				power: { icon: Zap, value: "OBD-II Port", description: "Direct vehicle power supply" },
+				bestFor: { icon: Truck, value: "All Vehicles", description: "Cars & light commercial vehicles" },
+				battery: { icon: Battery, value: "No Battery", description: "Continuous power from vehicle" },
+				connectivity: { icon: Wifi, value: "LTE Cat M1/NB1", description: "LTE-FDD B1/B2/B3/B4/B5/B8/B12/B13/B18/B19/B20/B25/B28" },
+				features: { icon: Shield, value: "Motion Detection", description: "3-axis accelerometer tracking" },
 			},
 		},
 		{
@@ -156,24 +156,24 @@ const Tracking = () => {
 
 	const faqs = [
 		{
-			question: "How accurate is the GPS tracking?",
-			answer: "Our GPS tracking provides accuracy within 2 meters (CEP) in optimal conditions. The system uses the L76K GPS module with high sensitivity for precise positioning.",
+			question: "What communication protocols does the device support?",
+			answer: "The device supports TCP, UDP, and SMS protocols for data transmission, with @Track protocol command set.",
 		},
 		{
-			question: "What is the battery life of the tracking devices?",
-			answer: "The device includes a 120mAh backup battery, ensuring short-term power retention during outages.",
+			question: "What are the working modes available?",
+			answer: "The device offers two working modes: power saving mode for long standby time and continuous mode for emergency tracking.",
 		},
 		{
-			question: "Is the device weather-resistant?",
-			answer: "Yes, our tracking device is IP66 rated, offering protection against dust and high-pressure water jets.",
+			question: "What is the data transmission speed?",
+			answer: "For LTE Cat M1/NB1: eMTC (DL) 375 Kbps, eMTC (UL) 375 Kbps, NB1 (DL) 32 Kbps, NB1 (UL) 70 Kbps",
 		},
 		{
-			question: "What connectivity options does the device support?",
-			answer: "The device supports LTE-FDD and GSM connectivity across multiple frequency bands for reliable tracking and communication.",
+			question: "What is the GPS sensitivity and accuracy?",
+			answer: "The device features a u-blox All-in-One GNSS receiver with sensitivity ratings of -147 dBm for autonomous operation, -156 dBm for hot start, -160 dBm for reacquisition, and -162 dBm for tracking. Position accuracy is < 2.5m.",
 		},
 		{
-			question: "What operating conditions can the device handle?",
-			answer: "The device is designed for vehicle environments, operating efficiently with a direct vehicle power supply (DC 9-100V/1.5A).",
+			question: "What are the TTFF (Time To First Fix) specifications?",
+			answer: "Cold start: 27s average, Warm start: 27s average, Hot start: 1s average under open sky conditions.",
 		},
 	];
 
@@ -680,7 +680,7 @@ const Tracking = () => {
 									<div className="flex items-center gap-6 mb-4">
 										<div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0">
 											<div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
-												<feature.icon className="w-7 h-7 text-[#678FCA]" />
+												<feature.icon className="w-6 h-6 text-[#678FCA]" />
 											</div>
 										</div>
 
@@ -775,76 +775,75 @@ const Tracking = () => {
 										{[
 											{
 												icon: Ruler,
-												name: "Dimensions",
-												value: "110mm x 65mm x 30mm",
-												description: "Compact design for easy installation",
+												name: "GNSS Type",
+												value: "u-blox All-in-One",
+												description: "High-performance GNSS receiver",
 											},
 											{
 												icon: Wifi,
-												name: "Connectivity",
-												value: "4G LTE with fallback",
-												description: "3G/2G network support",
+												name: "Network Support",
+												value: "LTE Cat M1/NB1",
+												description: "LTE-FDD B1/B2/B3/B4/B5/B8/B12/B13/B18/B19/B20/B25/B28",
 											},
 											{
 												icon: Power,
-												name: "Power Source",
-												value: "Multiple Options",
-												description: "Hard-wired / OBD Plug / Battery",
+												name: "Data Speed",
+												value: "375 Kbps DL/UL",
+												description: "eMTC (DL/UL) 375 Kbps, NB1 32/70 Kbps",
 											},
 											{
 												icon: Award,
-												name: "Certifications",
-												value: "FCC, CE, PTCRB Certified",
-												description: "Industry standard compliance",
+												name: "Position Accuracy",
+												value: "< 2.5m CEP",
+												description: "Autonomous positioning",
 											},
 											{
 												icon: Battery,
-												name: "Battery Life",
-												value: "Up to 5 years",
-												description: "For asset tracking models",
+												name: "Sensitivity",
+												value: "-147 dBm",
+												description: "Autonomous: -147 dBm, Tracking: -162 dBm",
 											},
 											{
 												icon: Database,
-												name: "Data Storage",
-												value: "Cloud + Local Backup",
-												description: "Secure data redundancy",
+												name: "TTFF (Open Sky)",
+												value: "27s average",
+												description: "Cold start: 27s, Hot start: 1s average",
 											},
 											{
 												icon: Laptop,
-												name: "Software Compatibility",
-												value: "Universal Integration",
-												description: "Works with RidesIQ, GeoTab, and other fleet management platforms",
+												name: "Working Modes",
+												value: "Dual Mode",
+												description: "Power saving and continuous tracking modes",
 											},
 											{
 												icon: Shield,
-												name: "Security",
-												value: "Enterprise Grade",
-												description: "End-to-end encryption for data protection",
+												name: "Protocols",
+												value: "TCP/UDP/SMS",
+												description: "@Track protocol command support",
 											},
-											// Adding extra items to make the list longer
 											{
 												icon: Wifi,
-												name: "GPS Accuracy",
-												value: "±2 meters",
-												description: "Precise location tracking",
+												name: "EGPRS Support",
+												value: "Multi-band",
+												description: "850/900/1800/1900 MHz",
 											},
 											{
 												icon: Battery,
-												name: "Operating Temperature",
-												value: "-20°C to 60°C",
-												description: "Works in extreme conditions",
+												name: "Motion Detection",
+												value: "3-axis",
+												description: "Built-in accelerometer",
 											},
 											{
 												icon: Shield,
-												name: "Water Resistance",
-												value: "IP67 Rated",
-												description: "Protected against dust and water immersion",
+												name: "Reporting",
+												value: "Intelligent",
+												description: "Scheduled timing and frequency adjustment",
 											},
 											{
 												icon: Database,
-												name: "Memory",
-												value: "8GB Flash Storage",
-												description: "For offline data logging",
+												name: "Data Class",
+												value: "Class 33",
+												description: "GPRS/EDGE multi-slot class 33",
 											},
 										].map((spec, index) => (
 											<motion.div
@@ -1062,7 +1061,7 @@ const Tracking = () => {
 									{/* Tag Buttons */}
 									<div className="flex flex-wrap justify-center gap-4">
 										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Fleet Tracking</div>
-										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">AI Insights</div>
+										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium"> Insights</div>
 										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Compliance</div>
 									</div>
 								</motion.div>
