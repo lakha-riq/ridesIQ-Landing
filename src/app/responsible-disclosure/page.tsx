@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Navigation } from "@/components/Navigation";
-import { ResponsibleDisclosureContent } from "@/components/responsible-disclosure/ResponsibleDisclosureContent";
+import  ResponsibleDisclosureContent  from "@/components/responsible-disclosure/ResponsibleDisclosureContent";
 import { ContactCTA } from "@/components/shared/ContactCTA";
 
 export default function ResponsibleDisclosure() {

@@ -146,7 +146,7 @@ const carRentalData: IndustryData = {
 		author: "Michael Chen",
 		role: "Operations Director",
 		company: "Premier Car Rentals",
-		image: "/assets/car-rental/testimonial.png",
+		image: "/assets/fleet-management/1.png",
 	},
 	products: [
 		{
