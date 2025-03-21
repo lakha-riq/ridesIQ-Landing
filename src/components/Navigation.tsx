@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { MenuIcon, X, ChevronRight, Truck, Construction, Bike, Bus, Factory, Ambulance, Warehouse, ChevronDown } from "lucide-react";
+import { MenuIcon, X, ChevronRight, Truck, Construction, Bike, Bus, Factory, Ambulance, Warehouse, ChevronDown, Car } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface IndustryLink {
@@ -53,6 +53,12 @@ const industryLinks: IndustryLink[] = [
 		title: "Distribution",
 		description: "Manage warehouse and logistics fleets",
 		href: "/industries/distribution",
+	},
+	{
+		icon: Car,
+		title: "Car Rental",
+		description: "Smart solutions for car rental fleet management",
+		href: "/industries/car-rental",
 	},
 ];
 

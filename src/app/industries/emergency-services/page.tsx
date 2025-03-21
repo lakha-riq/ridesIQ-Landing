@@ -2,7 +2,7 @@
 import React from "react";
 import { IndustryTemplate } from "@/components/IndustryTemplate";
 import { IndustryKeyFeatures } from "@/components/IndustryKeyFeatures";
-import { Ambulance, Shield, BarChart3, Clock, AlertCircle, Settings2, Timer, TrendingUp, Target, LineChart, Heart, LucideIcon } from "lucide-react";
+import { Ambulance, Shield, Clock, AlertCircle, Settings2, Timer, TrendingUp, Target, LineChart, Heart, LucideIcon, MapPin } from "lucide-react";
 
 type KeyFeature = {
 	icon: LucideIcon; // From lucide-react
@@ -78,42 +78,42 @@ const emergencyServicesKeyFeatures: KeyFeature[] = [
 ];
 
 const emergencyServicesData: IndustryData = {
-	name: "Emergency Services Solutions",
-	subtitle: "Critical Response Management",
-	description: "Enhance emergency response capabilities with advanced tracking and real-time coordination for life-saving operations.",
-	heroImage: "/assets/emergency-services/hero.png",
+	name: "Emergency Vehicle GPS Tracking",
+	subtitle: "Emergency Response Vehicle Monitoring",
+	description: "High-precision GPS tracking devices for emergency response vehicles, providing real-time location monitoring and rapid dispatch capabilities.",
+	heroImage: "/assets/fleet-management/3.png",
 	challenges: [
 		{
 			icon: Clock,
-			title: "Response Times",
-			description: "Meeting critical response time requirements in emergency situations.",
+			title: "Vehicle Location",
+			description: "Tracking emergency response vehicles with precise GPS monitoring systems.",
 		},
 		{
 			icon: AlertCircle,
-			title: "Vehicle Readiness",
-			description: "Maintaining constant vehicle availability for emergency responses.",
+			title: "Response Monitoring",
+			description: "Real-time tracking of vehicle locations and response times with GPS devices.",
 		},
 		{
 			icon: Settings2,
-			title: "Resource Coordination",
-			description: "Coordinating multiple emergency vehicles and resources effectively.",
+			title: "Fleet Coordination",
+			description: "Managing multiple emergency vehicles with GPS-based dispatch systems.",
 		},
 	],
 	solutions: [
 		{
 			icon: Ambulance,
-			title: "Smart Dispatch",
-			description: "Real-Time dispatch system for optimal emergency response coordination.",
+			title: "Emergency GPS Trackers",
+			description: "Professional GPS tracking devices designed for emergency response vehicles.",
 		},
 		{
 			icon: Shield,
-			title: "Vehicle Monitoring",
-			description: "Real-time tracking and status monitoring of emergency vehicles.",
+			title: "Vehicle Monitor System",
+			description: "24/7 fleet tracking with real-time location updates and status monitoring.",
 		},
 		{
-			icon: BarChart3,
-			title: "Response Analytics",
-			description: "Comprehensive analysis of response times and operational efficiency.",
+			icon: MapPin,
+			title: "Dispatch Control System",
+			description: "GPS-based tracking and dispatch management for emergency fleets.",
 		},
 	],
 	stats: [
@@ -147,23 +147,23 @@ const emergencyServicesData: IndustryData = {
 		author: "Dr. Sarah Thompson",
 		role: "Emergency Services Director",
 		company: "City Emergency Department",
-		image: "/assets/emergency-services/testimonial.png",
+		image: "/assets/fleet-management/1.png",
 	},
 	products: [
 		{
-			title: "Emergency Response Pro",
-			image: "/assets/emergency-services/product1.png",
-			features: ["Real-time tracking", "Smart dispatch", "Route optimization", "Vehicle status monitoring"],
+			title: "Emergency Vehicle Tracker",
+			image: "/assets/homepage/2.png",
+			features: ["Real-time GPS tracking", "Dispatch integration", "Route optimization", "Status monitoring"],
 		},
 		{
-			title: "Response Analytics Suite",
-			image: "/assets/emergency-services/product2.png",
-			features: ["Response time analysis", "Resource optimization", "Performance metrics", "Compliance reporting"],
+			title: "Response Fleet Monitor",
+			image: "/assets/homepage/3.png",
+			features: ["Vehicle tracking", "Location history", "Response logging", "Maintenance alerts"],
 		},
 		{
-			title: "Emergency Fleet Manager",
-			image: "/assets/emergency-services/product3.png",
-			features: ["Fleet maintenance", "Equipment tracking", "Staff coordination", "Incident reporting"],
+			title: "Command Center Console",
+			image: "/assets/fleet-management/3.png",
+			features: ["Multi-vehicle tracking", "Dispatch management", "Performance tracking", "Mobile access"],
 		},
 	],
 };

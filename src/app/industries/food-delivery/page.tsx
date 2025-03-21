@@ -2,7 +2,7 @@
 import React from "react";
 import { IndustryTemplate } from "@/components/IndustryTemplate";
 import { IndustryKeyFeatures } from "@/components/IndustryKeyFeatures";
-import { Bike, Shield, BarChart3, Clock, AlertCircle, Settings2, Timer, TrendingUp, Target, LucideIcon, LineChart, Thermometer } from "lucide-react";
+import { Bike, Shield, Clock, AlertCircle, Settings2, Timer, TrendingUp, Target, LucideIcon, LineChart, Thermometer, MapPin } from "lucide-react";
 type KeyFeature = {
 	icon: LucideIcon; // From lucide-react
 	title: string;
@@ -78,42 +78,42 @@ const foodDeliveryKeyFeatures: KeyFeature[] = [
 ];
 
 const foodDeliveryData: IndustryData = {
-	name: "Food Delivery Solutions",
-	subtitle: "Smart Food Delivery Management",
-	description: "Revolutionize your food delivery operations with real-time tracking, temperature monitoring, and Real-Time route optimization.",
-	heroImage: "/assets/food-delivery/hero.png",
+	name: "Food Delivery GPS Tracking",
+	subtitle: "Delivery Vehicle Monitoring & Temperature Control",
+	description: "Professional GPS tracking devices for food delivery fleets, with integrated temperature monitoring and real-time location tracking.",
+	heroImage: "/assets/fleet-management/1.png",
 	challenges: [
 		{
 			icon: Clock,
-			title: "Delivery Times",
-			description: "Meeting customer expectations for fast delivery while maintaining food quality.",
+			title: "Vehicle Tracking",
+			description: "Monitoring delivery vehicle locations with GPS devices for timely deliveries.",
 		},
 		{
 			icon: AlertCircle,
-			title: "Temperature Control",
-			description: "Maintaining proper food temperature throughout the delivery process.",
+			title: "Temperature Monitoring",
+			description: "Tracking food temperature with specialized monitoring devices during transit.",
 		},
 		{
 			icon: Settings2,
-			title: "Route Efficiency",
-			description: "Optimizing multiple deliveries while keeping food fresh and hot.",
+			title: "Route Management",
+			description: "Optimizing delivery routes with GPS tracking and navigation systems.",
 		},
 	],
 	solutions: [
 		{
 			icon: Bike,
-			title: "Smart Routing",
-			description: "Real-Time route optimization considering traffic, weather, and delivery windows.",
+			title: "Delivery GPS Trackers",
+			description: "Compact GPS tracking devices designed for delivery vehicles and bikes.",
 		},
 		{
 			icon: Thermometer,
-			title: "Temperature Tracking",
-			description: "Real-time monitoring of food temperature throughout delivery.",
+			title: "Temperature Sensors",
+			description: "Professional temperature monitoring devices for food transport vehicles.",
 		},
 		{
-			icon: BarChart3,
-			title: "Delivery Analytics",
-			description: "Comprehensive delivery metrics and performance tracking.",
+			icon: MapPin,
+			title: "Route Planning System",
+			description: "GPS-based route optimization and tracking for delivery fleets.",
 		},
 	],
 	stats: [
@@ -151,19 +151,19 @@ const foodDeliveryData: IndustryData = {
 	},
 	products: [
 		{
-			title: "Delivery Track Pro",
-			image: "/assets/food-delivery/product1.png",
-			features: ["Real-time tracking", "Temperature monitoring", "Route optimization", "Driver app"],
+			title: "Delivery Vehicle Tracker",
+			image: "/assets/homepage/2.png",
+			features: ["GPS tracking", "Temperature monitoring", "Route planning", "Delivery status"],
 		},
 		{
-			title: "Food Safety Suite",
-			image: "/assets/food-delivery/product2.png",
-			features: ["Temperature compliance", "Safety reporting", "Quality assurance", "Regulatory compliance"],
+			title: "Temperature Monitor Pro",
+			image: "/assets/homepage/3.png",
+			features: ["Temperature logging", "Location tracking", "Alert system", "Compliance reporting"],
 		},
 		{
-			title: "Delivery Analytics",
-			image: "/assets/food-delivery/product3.png",
-			features: ["Performance metrics", "Customer feedback", "Cost analysis", "Efficiency reports"],
+			title: "Fleet Control Center",
+			image: "/assets/fleet-management/3.png",
+			features: ["Multi-vehicle tracking", "Route management", "Performance monitoring", "Mobile access"],
 		},
 	],
 };

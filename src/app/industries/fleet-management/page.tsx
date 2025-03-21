@@ -78,42 +78,42 @@ const fleetKeyFeatures: KeyFeature[] = [
 ];
 
 const fleetManagementData: IndustryData = {
-	name: "Fleet Management Solutions",
-	subtitle: "Next-Gen Fleet Operations",
-	description: "Transform your fleet operations with Real-Time tracking and analytics that deliver real-time insights and maximize efficiency across your entire fleet.",
-	heroImage: "/assets/fleet-management/5.png",
+	name: "GPS Fleet Tracking Solutions",
+	subtitle: "Professional Vehicle Monitoring Systems",
+	description: "Comprehensive fleet management solutions featuring advanced GPS tracking devices, fuel monitoring systems, and real-time vehicle diagnostics.",
+	heroImage: "/assets/fleet-management/3.png",
 	challenges: [
 		{
 			icon: Shield,
-			title: "Vehicle Theft",
-			description: "Rising vehicle theft rates and unauthorized usage leading to significant financial losses and security concerns.",
+			title: "Vehicle Security",
+			description: "Protecting valuable assets with advanced GPS tracking devices and instant theft alerts.",
 		},
 		{
 			icon: Globe,
-			title: "International Border Transfer",
-			description: "Complex cross-border operations requiring precise tracking, documentation, and compliance management.",
+			title: "Fleet Monitoring",
+			description: "Managing widespread fleet operations with real-time location tracking and status updates.",
 		},
 		{
 			icon: Receipt,
-			title: "Toll Management",
-			description: "Inefficient toll tracking and reporting systems resulting in unexpected expenses and administrative burden.",
+			title: "Expense Management",
+			description: "Tracking fuel consumption, maintenance costs, and operational expenses across the fleet.",
 		},
 	],
 	solutions: [
 		{
 			icon: MapPin,
-			title: "Real-time Tracking",
-			description: "24/7 vehicle monitoring with instant alerts for unauthorized movement and geofence violations.",
+			title: "GPS Tracking Hardware",
+			description: "Professional-grade tracking devices with real-time location monitoring and geofencing capabilities.",
 		},
 		{
 			icon: FileCheck,
-			title: "Border Compliance",
-			description: "Automated documentation and real-time location tracking for seamless cross-border fleet operations.",
+			title: "Fleet Management Software",
+			description: "Comprehensive dashboard for vehicle tracking, maintenance scheduling, and expense monitoring.",
 		},
 		{
 			icon: Bell,
-			title: "Automated Toll Reports",
-			description: "Comprehensive toll tracking with instant notifications and detailed expense reporting systems.",
+			title: "Mobile Monitoring Apps",
+			description: "User-friendly mobile applications for on-the-go fleet management and instant notifications.",
 		},
 	],
 	stats: [
@@ -162,7 +162,7 @@ const fleetManagementData: IndustryData = {
 		},
 		{
 			title: "Enterprise Fleet AI",
-			image: "/assets/homepage/4.png",
+			image: "/assets/fleet-management/4.png",
 			features: ["Real-Time insights", "Predictive maintenance", "Custom reporting", "API access"],
 		},
 	],

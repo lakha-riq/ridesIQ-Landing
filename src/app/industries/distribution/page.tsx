@@ -2,7 +2,7 @@
 import React from "react";
 import { IndustryTemplate } from "@/components/IndustryTemplate";
 import { IndustryKeyFeatures } from "@/components/IndustryKeyFeatures";
-import { Warehouse, Shield, BarChart3, Clock, AlertCircle, Settings2, Timer, TrendingUp, Target, LineChart, Box, LucideIcon } from "lucide-react";
+import { Warehouse, Shield, Clock, AlertCircle, Settings2, Timer, TrendingUp, Target, LineChart, Box, LucideIcon, MapPin } from "lucide-react";
 type KeyFeature = {
 	icon: LucideIcon; // From lucide-react
 	title: string;
@@ -77,42 +77,42 @@ const distributionKeyFeatures: KeyFeature[] = [
 ];
 
 const distributionData: IndustryData = {
-	name: "Distribution Fleet Solutions",
-	subtitle: "Smart Distribution Operations",
-	description: "Optimize your distribution fleet with intelligent tracking and warehouse management for improved operational efficiency.",
-	heroImage: "/assets/fleet-management/1.png",
+	name: "Distribution GPS Tracking Solutions",
+	subtitle: "Warehouse & Delivery Vehicle Tracking",
+	description: "Professional GPS tracking devices for distribution fleets, warehouse vehicles, and delivery operations with real-time location monitoring.",
+	heroImage: "/assets/fleet-management/3.png",
 	challenges: [
 		{
 			icon: Clock,
-			title: "Delivery Timing",
-			description: "Meeting tight delivery schedules across multiple distribution points.",
+			title: "Vehicle Location",
+			description: "Tracking delivery vehicles and warehouse equipment with GPS devices across multiple locations.",
 		},
 		{
 			icon: AlertCircle,
-			title: "Fleet Coordination",
-			description: "Coordinating warehouse and delivery vehicles efficiently.",
+			title: "Fleet Monitoring",
+			description: "Managing delivery schedules and vehicle locations with real-time GPS tracking.",
 		},
 		{
 			icon: Settings2,
-			title: "Resource Management",
-			description: "Optimizing vehicle utilization in warehouse and distribution operations.",
+			title: "Equipment Tracking",
+			description: "Monitoring warehouse vehicles and equipment with GPS tracking devices.",
 		},
 	],
 	solutions: [
 		{
 			icon: Warehouse,
-			title: "Smart Operations",
-			description: "Real-Time optimization of warehouse and distribution vehicle deployment.",
+			title: "Distribution GPS Trackers",
+			description: "Professional GPS tracking devices for delivery vehicles and warehouse equipment.",
 		},
 		{
 			icon: Shield,
-			title: "Fleet Monitoring",
-			description: "Real-time tracking and management of distribution fleet.",
+			title: "Vehicle Monitoring System",
+			description: "24/7 fleet tracking with real-time location updates and status monitoring.",
 		},
 		{
-			icon: BarChart3,
-			title: "Performance Analytics",
-			description: "Comprehensive analysis of distribution operations and efficiency.",
+			icon: MapPin,
+			title: "Warehouse Equipment Trackers",
+			description: "Specialized GPS devices for tracking forklifts and warehouse vehicles.",
 		},
 	],
 	stats: [
@@ -120,7 +120,7 @@ const distributionData: IndustryData = {
 			icon: Box,
 			value: 40,
 			suffix: "k+",
-			label: "Daily Deliveries",
+			label: "Vehicles Tracked",
 		},
 		{
 			icon: Timer,
@@ -138,31 +138,31 @@ const distributionData: IndustryData = {
 			icon: Target,
 			value: 99.8,
 			suffix: "%",
-			label: "Tracking Accuracy",
+			label: "GPS Accuracy",
 		},
 	],
 	testimonial: {
-		quote: "The distribution fleet management system has transformed our warehouse operations and delivery efficiency.",
+		quote: "The GPS tracking devices have revolutionized our distribution operations. We can now monitor every vehicle in real-time and optimize our delivery routes.",
 		author: "Mark Anderson",
 		role: "Distribution Director",
 		company: "Global Distribution Co.",
-		image: "/assets/distribution/testimonial.png",
+		image: "/assets/fleet-management/3.png",
 	},
 	products: [
 		{
-			title: "Distribution Fleet Manager",
-			image: "/assets/distribution/product1.png",
-			features: ["Real-time tracking", "Route optimization", "Load planning", "Delivery scheduling"],
+			title: "Distribution Fleet Tracker",
+			image: "/assets/homepage/2.png",
+			features: ["Real-time GPS tracking", "Route monitoring", "Delivery scheduling", "Vehicle status"],
 		},
 		{
-			title: "Warehouse Operations Suite",
-			image: "/assets/distribution/product2.png",
-			features: ["Vehicle coordination", "Loading efficiency", "Resource allocation", "Inventory tracking"],
+			title: "Warehouse Vehicle Monitor",
+			image: "/assets/fleet-management/3.png",
+			features: ["Equipment tracking", "Location history", "Usage monitoring", "Maintenance alerts"],
 		},
 		{
-			title: "Distribution Analytics Pro",
-			image: "/assets/distribution/product3.png",
-			features: ["Performance metrics", "Cost analysis", "Efficiency reporting", "Fleet optimization"],
+			title: "Fleet Command Center",
+			image: "/assets/fleet-management/4.png",
+			features: ["Multi-vehicle tracking", "Route management", "Performance tracking", "Mobile access"],
 		},
 	],
 };

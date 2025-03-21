@@ -82,7 +82,7 @@ const publicTransitData: IndustryData = {
 	name: "Public Transit Solutions",
 	subtitle: "Smart Transit Operations",
 	description: "Transform public transportation with Real time scheduling, real-time tracking, and passenger analytics for improved service reliability.",
-	heroImage: "/assets/public-transit/hero.png",
+	heroImage: "/assets/fleet-management/1.png",
 	challenges: [
 		{
 			icon: Clock,
@@ -148,22 +148,22 @@ const publicTransitData: IndustryData = {
 		author: "Robert Martinez",
 		role: "Transit Director",
 		company: "Metro Transit Authority",
-		image: "/assets/public-transit/testimonial.png",
+		image: "/assets/fleet-management/1.png",
 	},
 	products: [
 		{
 			title: "Transit Control Center",
-			image: "/assets/public-transit/product1.png",
+			image: "/assets/homepage/2.png",
 			features: ["Real-time tracking", "Schedule management", "Driver assignments", "Route optimization"],
 		},
 		{
 			title: "Passenger Analytics",
-			image: "/assets/public-transit/product2.png",
+			image: "/assets/fleet-management/3.png",
 			features: ["Passenger counting", "Demand analysis", "Service planning", "Mobile updates"],
 		},
 		{
 			title: "Transit Operations Suite",
-			image: "/assets/public-transit/product3.png",
+			image: "/assets/fleet-management/4.png",
 			features: ["Fleet maintenance", "Safety monitoring", "Performance analytics", "Compliance tracking"],
 		},
 	],

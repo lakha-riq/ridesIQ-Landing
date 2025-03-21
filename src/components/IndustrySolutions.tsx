@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Sparkles, ChevronRight, MapPin, Construction, Bike, Bus, Truck, Factory, Ambulance, Warehouse } from "lucide-react";
+import { Sparkles, ChevronRight, MapPin, Construction, Bike, Bus, Truck, Factory, Ambulance, Warehouse, Car } from "lucide-react";
 import Link from "next/link";
 
 interface Industry {
@@ -35,6 +35,12 @@ const industries: Industry[] = [
 		title: "Public Transit",
 		description: "Improve transit efficiency with automated scheduling and vehicle health tracking.",
 		link: "/industries/public-transit",
+	},
+	{
+		icon: Car,
+		title: "Car Rental",
+		description: "Streamline rental operations with automated booking and fleet management solutions.",
+		link: "/industries/car-rental",
 	},
 ];
 

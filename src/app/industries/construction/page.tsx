@@ -79,42 +79,42 @@ const constructionKeyFeatures: KeyFeature[] = [
 ];
 
 const constructionData: IndustryData = {
-	name: "Construction Fleet Solutions",
-	subtitle: "Smart Construction Management",
-	description: "Optimize your construction fleet with Real-Time tracking and analytics for improved efficiency and project outcomes.",
-	heroImage: "/assets/construction/hero.png",
+	name: "Construction Equipment GPS Tracking",
+	subtitle: "Heavy Equipment Monitoring Solutions",
+	description: "Professional GPS tracking devices for construction equipment, including heavy machinery, vehicles, and valuable assets on construction sites.",
+	heroImage: "/assets/fleet-management/3.png",
 	challenges: [
 		{
 			icon: Clock,
-			title: "Equipment Tracking",
-			description: "Difficulty in tracking multiple pieces of equipment across various construction sites.",
+			title: "Equipment Location",
+			description: "Tracking heavy machinery and equipment across multiple construction sites with GPS devices.",
 		},
 		{
 			icon: AlertCircle,
-			title: "Asset Utilization",
-			description: "Inefficient use of expensive construction equipment leading to project delays.",
+			title: "Asset Security",
+			description: "Protecting valuable construction equipment with real-time GPS monitoring and alerts.",
 		},
 		{
 			icon: Settings2,
-			title: "Maintenance Planning",
-			description: "Reactive maintenance approaches causing unexpected equipment downtime.",
+			title: "Equipment Maintenance",
+			description: "Managing maintenance schedules and preventing equipment downtime with digital tracking.",
 		},
 	],
 	solutions: [
 		{
 			icon: ConstructionIcon,
-			title: "Real-time Tracking",
-			description: "GPS-based tracking system for complete visibility of all construction assets.",
+			title: "Heavy-Duty GPS Trackers",
+			description: "Rugged GPS tracking devices designed for construction equipment and harsh environments.",
 		},
 		{
 			icon: Shield,
-			title: "Equipment Security",
-			description: "Advanced security features including geofencing and unauthorized use alerts.",
+			title: "Security Monitoring",
+			description: "24/7 equipment tracking with theft prevention alerts and geofencing capabilities.",
 		},
 		{
 			icon: BarChart3,
-			title: "Performance Monitoring",
-			description: "Detailed equipment performance analytics for optimal resource allocation.",
+			title: "Digital Maintenance System",
+			description: "Electronic maintenance tracking with service history and scheduling features.",
 		},
 	],
 	stats: [
@@ -148,23 +148,23 @@ const constructionData: IndustryData = {
 		author: "Michael Chen",
 		role: "Operations Director",
 		company: "BuildTech Construction",
-		image: "/assets/construction/testimonial.png",
+		image: "/assets/fleet-management/1.png",
 	},
 	products: [
 		{
-			title: "Site Fleet Manager",
-			image: "/assets/construction/product1.png",
-			features: ["Equipment tracking", "Utilization monitoring", "Maintenance scheduling", "Security alerts"],
+			title: "Construction Asset Tracker",
+			image: "/assets/homepage/2.png",
+			features: ["Rugged GPS hardware", "Real-time tracking", "Geofencing", "Theft alerts"],
 		},
 		{
-			title: "Construction Analytics Pro",
-			image: "/assets/construction/product2.png",
-			features: ["Performance analytics", "Cost tracking", "Project planning", "Resource optimization"],
+			title: "Equipment Monitor",
+			image: "/assets/homepage/3.png",
+			features: ["Usage tracking", "Maintenance scheduling", "Location history", "Status reports"],
 		},
 		{
-			title: "Equipment Safety Suite",
-			image: "/assets/construction/product3.png",
-			features: ["Safety compliance", "Operator tracking", "Accident prevention", "Risk management"],
+			title: "Site Manager Pro",
+			image: "/assets/fleet-management/4.png",
+			features: ["Multi-site tracking", "Equipment logs", "Utilization reports", "Mobile access"],
 		},
 	],
 };
