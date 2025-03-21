@@ -96,7 +96,7 @@ const Tracking = () => {
 		{
 			id: "obd",
 			name: "OBD Tracker",
-			image: "/assets/fleet-management/5.png",
+			image: "/devices/OBD_tracker.png",
 			specs: {
 				installation: { icon: Wrench, value: "Plug & Play", description: "Self-installation in minutes" },
 				power: { icon: Zap, value: "OBD-II Port", description: "Vehicle diagnostic port" },
@@ -106,24 +106,25 @@ const Tracking = () => {
 				features: { icon: Shield, value: "Engine Diagnostics", description: "Real-time vehicle data" },
 			},
 		},
-		{
-			id: "hardwired",
-			name: "Hard-Wired Tracker",
-			image: "/assets/fleet-management/4.png",
-			specs: {
-				installation: { icon: Wrench, value: "Professional Installation", description: "Requires certified technician" },
-				power: { icon: Zap, value: "Direct Vehicle Power", description: "Continuous power supply" },
-				bestFor: { icon: Truck, value: "Large Fleets", description: "Commercial vehicles & trucks" },
-				battery: { icon: Battery, value: "Backup Battery", description: "48-hour backup power" },
-				connectivity: { icon: Wifi, value: "4G LTE + GPS", description: "Multi-network support" },
-				features: { icon: Shield, value: "Advanced Security", description: "Tamper detection & alerts" },
-			},
-		},
+{
+  id: "hardwired",
+  name: "Hard-Wired Tracker",
+  image: "/devices/hardware_tracker.svg",
+  specs: {
+    installation: { icon: Wrench, value: "Professional Installation", description: "Requires certified technician" },
+    power: { icon: Zap, value: "Direct Vehicle Power", description: "Continuous power supply (DC 9-100V/1.5A)" },
+    bestFor: { icon: Truck, value: "Large Fleets", description: "Commercial vehicles & trucks" },
+    battery: { icon: Battery, value: "Backup Battery", description: "120mAh backup battery" },
+    connectivity: { icon: Wifi, value: "4G LTE + GPS + GSM", description: "Supports LTE-FDD & GSM bands" },
+    features: { icon: Shield, value: "Advanced Security", description: "Tamper detection, geo-fence, impact alerts, and remote fuel/electricity cut-off" }
+  }
+}
+,
 
 		{
 			id: "asset",
 			name: "Asset Tracker",
-			image: "/assets/fleet-management/4.png",
+			image: "/devices/asset_tracker.png",
 			specs: {
 				installation: { icon: Wrench, value: "Compact Design", description: "64.6 x 51 x 20.9mm form factor" },
 				power: { icon: Zap, value: "Battery Powered", description: "2400mAh lithium battery" },
@@ -138,25 +139,26 @@ const Tracking = () => {
 const faqs = [
 	{
 		question: "How accurate is the GPS tracking?",
-		answer: "Our GPS tracking provides accuracy within 2 meters (CEP) in optimal conditions. The system uses an All-in-One GNSS receiver with high sensitivity (-148 dBm autonomous, -165 dBm tracking).",
+		answer: "Our GPS tracking provides accuracy within 2 meters (CEP) in optimal conditions. The system uses the L76K GPS module with high sensitivity for precise positioning.",
 	},
 	{
 		question: "What is the battery life of the tracking devices?",
-		answer: "Battery life varies by reporting frequency. With the 2400mAh lithium manganese dioxide battery, you can get up to 3 years with 1 report per day, 300 days with 4 reports per day, or 5 days with 5-minute reporting intervals.",
+		answer: "The device includes a 120mAh backup battery, ensuring short-term power retention during outages.",
 	},
 	{
 		question: "Is the device weather-resistant?",
-		answer: "Yes, our tracking device is IP67 compliant, providing complete protection against dust ingress and protection against water immersion between 15cm and 1m for up to 30 minutes.",
+		answer: "Yes, our tracking device is IP66 rated, offering protection against dust and high-pressure water jets.",
 	},
 	{
 		question: "What connectivity options does the device support?",
-		answer: "The device supports LTE Cat M1/NB2 with multiple frequency bands (B1/B2/B3/B4/B5/B8/B12/B13/B18/B19/B20/B25/B26/B28/B66/B85) and EGPRS 850/900/1800/1900 MHz fallback.",
+		answer: "The device supports LTE-FDD and GSM connectivity across multiple frequency bands for reliable tracking and communication.",
 	},
 	{
 		question: "What operating conditions can the device handle?",
-		answer: "The device operates in temperatures ranging from -20°C to +60°C, making it suitable for a wide range of environmental conditions. It weighs only 78g (2.75oz) and includes BLE 5.2 protocol support.",
+		answer: "The device is designed for vehicle environments, operating efficiently with a direct vehicle power supply (DC 9-100V/1.5A).",
 	},
 ];
+
 
 	return (
 		<div className="min-h-screen bg-white">
@@ -526,22 +528,22 @@ const faqs = [
 										{
 											icon: Navigation2,
 											title: "Real-Time GPS Tracking",
-											description: "Know your vehicle's location anytime with GPS updates every 10 seconds.",
+											description: "Know your vehicle's location anytime with GPS updates, supporting real-time tracking by time interval and distance.",
 										},
 										{
 											icon: AlertCircle,
-											title: "Predictive Maintenance",
-											description: "Reduce unexpected breakdowns with AI-powered maintenance predictions.",
+											title: "Advanced Security Alerts",
+											description: "Stay informed with geo-fence alerts, tamper detection, speeding alarms, and impact notifications.",
 										},
 										{
 											icon: FileText,
-											title: "Fleet Compliance",
-											description: "Ensure adherence to industry regulations with automated reporting.",
+											title: "Fleet Compliance & Reporting",
+											description: "Track mileage, fuel consumption, and engine status with automated reports for compliance and efficiency.",
 										},
 										{
 											icon: Activity,
-											title: "Telematics Data",
-											description: "Gain insights into driver behavior and vehicle performance.",
+											title: "Comprehensive Telematics Data",
+											description: "Monitor harsh acceleration, braking, turning, idling, and fatigue driving with real-time analytics.",
 										},
 									].map((benefit, index) => (
 										<motion.div
@@ -612,7 +614,8 @@ const faqs = [
 					</motion.div>
 
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-						{[
+						{
+							[
 							{
 								icon: MapPin,
 								title: "Real-Time Location Tracking",
@@ -643,7 +646,8 @@ const faqs = [
 								title: "Multi-Network Connectivity",
 								description: "Reliable tracking with 4G LTE & satellite backup for uninterrupted coverage.",
 							},
-						].map((feature, index) => (
+						]
+							.map((feature, index) => (
 							<motion.div
 								key={feature.title}
 								initial={{ opacity: 0, y: 20 }}

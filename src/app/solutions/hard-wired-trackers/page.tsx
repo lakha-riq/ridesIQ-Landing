@@ -95,23 +95,24 @@ const Tracking = () => {
 	}, []);
 
 	const products: Products[] = [
-		{
-			id: "hardwired",
-			name: "Hard-Wired Tracker",
-			image: "/assets/fleet-management/4.png",
-			specs: {
-				installation: { icon: Wrench, value: "Professional Installation", description: "Requires certified technician" },
-				power: { icon: Zap, value: "Direct Vehicle Power", description: "Continuous power supply" },
-				bestFor: { icon: Truck, value: "Large Fleets", description: "Commercial vehicles & trucks" },
-				battery: { icon: Battery, value: "Backup Battery", description: "48-hour backup power" },
-				connectivity: { icon: Wifi, value: "4G LTE + GPS", description: "Multi-network support" },
-				features: { icon: Shield, value: "Advanced Security", description: "Tamper detection & alerts" },
-			},
-		},
+{
+  id: "hardwired",
+  name: "Hard-Wired Tracker",
+  image: "/devices/hardware_tracker.svg",
+  specs: {
+    installation: { icon: Wrench, value: "Professional Installation", description: "Requires certified technician" },
+    power: { icon: Zap, value: "Direct Vehicle Power", description: "Continuous power supply (DC 9-100V/1.5A)" },
+    bestFor: { icon: Truck, value: "Large Fleets", description: "Commercial vehicles & trucks" },
+    battery: { icon: Battery, value: "Backup Battery", description: "120mAh backup battery" },
+    connectivity: { icon: Wifi, value: "4G LTE + GPS + GSM", description: "Supports LTE-FDD & GSM bands" },
+    features: { icon: Shield, value: "Advanced Security", description: "Tamper detection, geo-fence, impact alerts, and remote fuel/electricity cut-off" }
+  }
+},
+
 		{
 			id: "obd",
 			name: "OBD Tracker",
-			image: "/assets/fleet-management/5.png",
+			image: "/devices/OBD_tracker.png",
 			specs: {
 				installation: { icon: Wrench, value: "Plug & Play", description: "Self-installation in minutes" },
 				power: { icon: Zap, value: "OBD-II Port", description: "Vehicle diagnostic port" },
@@ -124,7 +125,7 @@ const Tracking = () => {
 		{
 			id: "asset",
 			name: "Asset Tracker",
-			image: "/assets/fleet-management/4.png",
+			image: "/devices/asset_tracker.png",
 			specs: {
 				installation: { icon: Wrench, value: "Compact Design", description: "64.6 x 51 x 20.9mm form factor" },
 				power: { icon: Zap, value: "Battery Powered", description: "2400mAh lithium battery" },
@@ -527,22 +528,22 @@ const Tracking = () => {
 										{
 											icon: Navigation2,
 											title: "Real-Time GPS Tracking",
-											description: "Know your vehicle's location anytime with GPS updates every 10 seconds.",
+											description: "Know your vehicle's location anytime with GPS updates, supporting real-time tracking by time interval and distance.",
 										},
 										{
 											icon: AlertCircle,
-											title: "Predictive Maintenance",
-											description: "Reduce unexpected breakdowns with AI-powered maintenance predictions.",
+											title: "Advanced Security Alerts",
+											description: "Stay informed with geo-fence alerts, tamper detection, speeding alarms, and impact notifications.",
 										},
 										{
 											icon: FileText,
-											title: "Fleet Compliance",
-											description: "Ensure adherence to industry regulations with automated reporting.",
+											title: "Fleet Compliance & Reporting",
+											description: "Track mileage, fuel consumption, and engine status with automated reports for compliance and efficiency.",
 										},
 										{
 											icon: Activity,
-											title: "Telematics Data",
-											description: "Gain insights into driver behavior and vehicle performance.",
+											title: "Comprehensive Telematics Data",
+											description: "Monitor harsh acceleration, braking, turning, idling, and fatigue driving with real-time analytics.",
 										},
 									].map((benefit, index) => (
 										<motion.div
@@ -617,32 +618,32 @@ const Tracking = () => {
 							{
 								icon: MapPin,
 								title: "Real-Time Location Tracking",
-								description: "Monitor your fleet's exact location with live GPS updates every 10 seconds.",
+								description: "Monitor your fleet’s exact location with live GPS updates, tracking by time interval and distance.",
 							},
 							{
 								icon: BarChart3,
-								title: "AI-Powered Analytics",
-								description: "Gain insights into vehicle performance, driving behavior, and fuel efficiency.",
+								title: "AI-Powered Telematics",
+								description: "Gain insights into vehicle performance, driver behavior, and fuel efficiency using real-time data.",
 							},
 							{
 								icon: Bell,
 								title: "Geofencing & Alerts",
-								description: "Set virtual boundaries and receive instant alerts for unauthorized movements.",
+								description: "Set virtual boundaries and receive alerts for unauthorized movements, speeding, and harsh driving.",
 							},
 							{
 								icon: Tool,
-								title: "Predictive Maintenance",
-								description: "Prevent costly breakdowns with AI-driven diagnostics and maintenance scheduling.",
+								title: "Advanced Maintenance Alerts",
+								description: "Prevent costly repairs with alerts for battery levels, engine status, and harsh acceleration or braking.",
 							},
 							{
 								icon: Lock,
-								title: "Secure Data Encryption",
-								description: "End-to-end encrypted tracking to ensure your fleet data remains protected.",
+								title: "Secure Data Transmission",
+								description: "End-to-end encrypted GPS tracking with multi-server support for data security and reliability.",
 							},
 							{
 								icon: Radio,
 								title: "Multi-Network Connectivity",
-								description: "Reliable tracking with 4G LTE & satellite backup for uninterrupted coverage.",
+								description: "Reliable tracking with LTE-FDD & GSM support, ensuring uninterrupted coverage across networks.",
 							},
 						].map((feature, index) => (
 							<motion.div
@@ -755,75 +756,74 @@ const Tracking = () => {
 											{
 												icon: Ruler,
 												name: "Dimensions",
-												value: "110mm x 65mm x 30mm",
-												description: "Compact design for easy installation",
+												value: "90mm x 33.87mm x 17mm",
+												description: "Compact design with IP66 waterproof protection",
 											},
 											{
 												icon: Wifi,
 												name: "Connectivity",
-												value: "4G LTE with fallback",
-												description: "3G/2G network support",
+												value: "4G LTE + GSM",
+												description: "Supports LTE-FDD & GSM (850/900/1800/1900MHz) for multi-network coverage",
 											},
 											{
 												icon: Power,
 												name: "Power Source",
-												value: "Multiple Options",
-												description: "Hard-wired / OBD Plug / Battery",
+												value: "DC 9V - 100V / 1.5A",
+												description: "Hard-wired for continuous power with backup battery support",
 											},
 											{
 												icon: Award,
 												name: "Certifications",
-												value: "FCC, CE, PTCRB Certified",
-												description: "Industry standard compliance",
+												value: "Industry Compliant",
+												description: "Meets global standards for fleet tracking and telematics",
 											},
 											{
 												icon: Battery,
 												name: "Battery Life",
-												value: "Up to 5 years",
-												description: "For asset tracking models",
+												value: "120mAh Backup",
+												description: "Supports emergency tracking in case of power loss",
 											},
 											{
 												icon: Database,
 												name: "Data Storage",
-												value: "Cloud + Local Backup",
-												description: "Secure data redundancy",
+												value: "16Mb Flash Memory",
+												description: "Stores critical GPS and vehicle data locally",
 											},
 											{
 												icon: Laptop,
 												name: "Software Compatibility",
 												value: "Universal Integration",
-												description: "Works with RidesIQ, GeoTab, and other fleet management platforms",
+												description: "Works with various fleet management platforms",
 											},
 											{
 												icon: Shield,
 												name: "Security",
-												value: "Enterprise Grade",
-												description: "End-to-end encryption for data protection",
+												value: "Tamper Alerts & Encryption",
+												description: "Detects unauthorized disconnection and protects data",
 											},
-											// Adding extra items to make the list longer
 											{
 												icon: Wifi,
 												name: "GPS Accuracy",
 												value: "±2 meters",
-												description: "Precise location tracking",
+												description: "High-precision tracking with L76K GPS module",
 											},
 											{
 												icon: Battery,
 												name: "Operating Temperature",
 												value: "-20°C to 60°C",
-												description: "Works in extreme conditions",
+												description: "Reliable performance in extreme conditions",
 											},
 											{
 												icon: Shield,
 												name: "Water Resistance",
-												value: "IP67 Rated",
-												description: "Protected against dust and water immersion",
+												value: "IP66 Rated",
+												description: "Dustproof and resistant to heavy water exposure",
 											},
 											{
 												icon: Database,
 												name: "Memory",
-												value: "8GB Flash Storage",
-												description: "For offline data logging",
+												value: "16Mb Flash Storage",
+												description: "Ensures reliable offline data logging",
 											},
 										].map((spec, index) => (
 											<motion.div
@@ -1040,7 +1040,7 @@ const Tracking = () => {
 									{/* Tag Buttons */}
 									<div className="flex flex-wrap justify-center gap-4">
 										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Fleet Tracking</div>
-										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">AI Insights</div>
+										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Comprehensive Insights</div>
 										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Compliance</div>
 									</div>
 								</motion.div>

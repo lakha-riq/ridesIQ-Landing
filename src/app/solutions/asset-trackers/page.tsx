@@ -99,7 +99,7 @@ const Tracking = () => {
 {
   id: "asset",
   name: "Asset Tracker",
-  image: "/assets/fleet-management/4.png",
+  image: "/devices/asset_tracker.png",
   specs: {
     installation: { icon: Wrench, value: "Compact Design", description: "64.6 x 51 x 20.9mm form factor" },
     power: { icon: Zap, value: "Battery Powered", description: "2400mAh lithium battery" },
@@ -109,23 +109,24 @@ const Tracking = () => {
     features: { icon: Shield, value: "Weather Resistant", description: "IP67 rated protection" },
   },
 },
-		{
-			id: "hardwired",
-			name: "Hard-Wired Tracker",
-			image: "/assets/fleet-management/4.png",
-			specs: {
-				installation: { icon: Wrench, value: "Professional Installation", description: "Requires certified technician" },
-				power: { icon: Zap, value: "Direct Vehicle Power", description: "Continuous power supply" },
-				bestFor: { icon: Truck, value: "Large Fleets", description: "Commercial vehicles & trucks" },
-				battery: { icon: Battery, value: "Backup Battery", description: "48-hour backup power" },
-				connectivity: { icon: Wifi, value: "4G LTE + GPS", description: "Multi-network support" },
-				features: { icon: Shield, value: "Advanced Security", description: "Tamper detection & alerts" },
-			},
-		},
+{
+  id: "hardwired",
+  name: "Hard-Wired Tracker",
+  image: "/devices/hardware_tracker.svg",
+  specs: {
+    installation: { icon: Wrench, value: "Professional Installation", description: "Requires certified technician" },
+    power: { icon: Zap, value: "Direct Vehicle Power", description: "Continuous power supply (DC 9-100V/1.5A)" },
+    bestFor: { icon: Truck, value: "Large Fleets", description: "Commercial vehicles & trucks" },
+    battery: { icon: Battery, value: "Backup Battery", description: "120mAh backup battery" },
+    connectivity: { icon: Wifi, value: "4G LTE + GPS + GSM", description: "Supports LTE-FDD & GSM bands" },
+    features: { icon: Shield, value: "Advanced Security", description: "Tamper detection, geo-fence, impact alerts, and remote fuel/electricity cut-off" }
+  }
+}
+,
 		{
 			id: "obd",
 			name: "OBD Tracker",
-			image: "/assets/fleet-management/5.png",
+			image: "/devices/OBD_tracker.png",
 			specs: {
 				installation: { icon: Wrench, value: "Plug & Play", description: "Self-installation in minutes" },
 				power: { icon: Zap, value: "OBD-II Port", description: "Vehicle diagnostic port" },
