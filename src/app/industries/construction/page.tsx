@@ -4,7 +4,6 @@ import { IndustryTemplate } from "@/components/IndustryTemplate";
 import { IndustryKeyFeatures } from "@/components/IndustryKeyFeatures";
 import { Construction as ConstructionIcon, Shield, BarChart3, Clock, AlertCircle, Settings2, Timer, TrendingUp, Target, DollarSign, LineChart, PenTool as Tool, LucideIcon } from "lucide-react";
 
-
 type KeyFeature = {
 	icon: LucideIcon; // From lucide-react
 	title: string;
@@ -12,7 +11,6 @@ type KeyFeature = {
 	stat: string;
 	statLabel: string;
 };
-
 
 type IndustryData = {
 	name: string;
@@ -49,7 +47,6 @@ type IndustryData = {
 	}[];
 };
 
-
 const constructionKeyFeatures: KeyFeature[] = [
 	{
 		icon: Tool,
@@ -84,7 +81,7 @@ const constructionKeyFeatures: KeyFeature[] = [
 const constructionData: IndustryData = {
 	name: "Construction Fleet Solutions",
 	subtitle: "Smart Construction Management",
-	description: "Optimize your construction fleet with AI-powered tracking and analytics for improved efficiency and project outcomes.",
+	description: "Optimize your construction fleet with Real-Time tracking and analytics for improved efficiency and project outcomes.",
 	heroImage: "/assets/construction/hero.png",
 	challenges: [
 		{

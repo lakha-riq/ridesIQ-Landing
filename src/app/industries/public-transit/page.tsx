@@ -4,7 +4,6 @@ import { IndustryTemplate } from "@/components/IndustryTemplate";
 import { IndustryKeyFeatures } from "@/components/IndustryKeyFeatures";
 import { Bus, Shield, BarChart3, Clock, AlertCircle, Settings2, Timer, TrendingUp, Target, LineChart, Users, LucideIcon } from "lucide-react";
 
-
 type KeyFeature = {
 	icon: LucideIcon; // From lucide-react
 	title: string;
@@ -48,12 +47,11 @@ type IndustryData = {
 	}[];
 };
 
-
 const publicTransitKeyFeatures: KeyFeature[] = [
 	{
 		icon: Clock,
 		title: "Schedule Optimization",
-		description: "AI-powered scheduling system for improved route timing and passenger service.",
+		description: "Real-Time scheduling system for improved route timing and passenger service.",
 		stat: "42%",
 		statLabel: "Improved Punctuality",
 	},
@@ -106,7 +104,7 @@ const publicTransitData: IndustryData = {
 		{
 			icon: Bus,
 			title: "Smart Scheduling",
-			description: "AI-powered schedule optimization considering traffic patterns and passenger demand.",
+			description: "Real-Time schedule optimization considering traffic patterns and passenger demand.",
 		},
 		{
 			icon: Shield,

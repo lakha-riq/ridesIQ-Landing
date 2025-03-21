@@ -50,7 +50,7 @@ const emergencyServicesKeyFeatures: KeyFeature[] = [
 	{
 		icon: Clock,
 		title: "Response Time Optimization",
-		description: "AI-powered routing for fastest emergency response times.",
+		description: "Real-Time routing for fastest emergency response times.",
 		stat: "45%",
 		statLabel: "Faster Response",
 	},
@@ -103,7 +103,7 @@ const emergencyServicesData: IndustryData = {
 		{
 			icon: Ambulance,
 			title: "Smart Dispatch",
-			description: "AI-powered dispatch system for optimal emergency response coordination.",
+			description: "Real-Time dispatch system for optimal emergency response coordination.",
 		},
 		{
 			icon: Shield,

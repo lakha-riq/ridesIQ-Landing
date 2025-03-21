@@ -10,7 +10,7 @@ import { BlogSidebar } from "@/components/BlogSidebar";
 const blogPosts = [
 	{
 		slug: "maximizing-fleet-efficiency",
-		title: "Maximizing Fleet Efficiency with AI-Powered Analytics",
+		title: "Maximizing Fleet Efficiency with Real-Time Analytics",
 		excerpt: "Discover how artificial intelligence is revolutionizing fleet management and driving operational excellence.",
 		image: "/assets/fleet-management/3.png",
 		author: {

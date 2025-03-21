@@ -90,7 +90,7 @@ const Tracking = () => {
 
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
-	}, []); 
+	}, []);
 
 	const products: Products[] = [
 		{
@@ -106,21 +106,19 @@ const Tracking = () => {
 				features: { icon: Shield, value: "Engine Diagnostics", description: "Real-time vehicle data" },
 			},
 		},
-{
-  id: "hardwired",
-  name: "Hard-Wired Tracker",
-  image: "/devices/hardware_tracker.svg",
-  specs: {
-    installation: { icon: Wrench, value: "Professional Installation", description: "Requires certified technician" },
-    power: { icon: Zap, value: "Direct Vehicle Power", description: "Continuous power supply (DC 9-100V/1.5A)" },
-    bestFor: { icon: Truck, value: "Large Fleets", description: "Commercial vehicles & trucks" },
-    battery: { icon: Battery, value: "Backup Battery", description: "120mAh backup battery" },
-    connectivity: { icon: Wifi, value: "4G LTE + GPS + GSM", description: "Supports LTE-FDD & GSM bands" },
-    features: { icon: Shield, value: "Advanced Security", description: "Tamper detection, geo-fence, impact alerts, and remote fuel/electricity cut-off" }
-  }
-}
-,
-
+		{
+			id: "hardwired",
+			name: "Hard-Wired Tracker",
+			image: "/devices/hardware_tracker.svg",
+			specs: {
+				installation: { icon: Wrench, value: "Professional Installation", description: "Requires certified technician" },
+				power: { icon: Zap, value: "Direct Vehicle Power", description: "Continuous power supply (DC 9-100V/1.5A)" },
+				bestFor: { icon: Truck, value: "Large Fleets", description: "Commercial vehicles & trucks" },
+				battery: { icon: Battery, value: "Backup Battery", description: "120mAh backup battery" },
+				connectivity: { icon: Wifi, value: "4G LTE + GPS + GSM", description: "Supports LTE-FDD & GSM bands" },
+				features: { icon: Shield, value: "Advanced Security", description: "Tamper detection, geo-fence, impact alerts, and remote fuel/electricity cut-off" },
+			},
+		},
 		{
 			id: "asset",
 			name: "Asset Tracker",
@@ -136,29 +134,28 @@ const Tracking = () => {
 		},
 	];
 
-const faqs = [
-	{
-		question: "How accurate is the GPS tracking?",
-		answer: "Our GPS tracking provides accuracy within 2 meters (CEP) in optimal conditions. The system uses the L76K GPS module with high sensitivity for precise positioning.",
-	},
-	{
-		question: "What is the battery life of the tracking devices?",
-		answer: "The device includes a 120mAh backup battery, ensuring short-term power retention during outages.",
-	},
-	{
-		question: "Is the device weather-resistant?",
-		answer: "Yes, our tracking device is IP66 rated, offering protection against dust and high-pressure water jets.",
-	},
-	{
-		question: "What connectivity options does the device support?",
-		answer: "The device supports LTE-FDD and GSM connectivity across multiple frequency bands for reliable tracking and communication.",
-	},
-	{
-		question: "What operating conditions can the device handle?",
-		answer: "The device is designed for vehicle environments, operating efficiently with a direct vehicle power supply (DC 9-100V/1.5A).",
-	},
-];
-
+	const faqs = [
+		{
+			question: "How accurate is the GPS tracking?",
+			answer: "Our GPS tracking provides accuracy within 2 meters (CEP) in optimal conditions. The system uses the L76K GPS module with high sensitivity for precise positioning.",
+		},
+		{
+			question: "What is the battery life of the tracking devices?",
+			answer: "The device includes a 120mAh backup battery, ensuring short-term power retention during outages.",
+		},
+		{
+			question: "Is the device weather-resistant?",
+			answer: "Yes, our tracking device is IP66 rated, offering protection against dust and high-pressure water jets.",
+		},
+		{
+			question: "What connectivity options does the device support?",
+			answer: "The device supports LTE-FDD and GSM connectivity across multiple frequency bands for reliable tracking and communication.",
+		},
+		{
+			question: "What operating conditions can the device handle?",
+			answer: "The device is designed for vehicle environments, operating efficiently with a direct vehicle power supply (DC 9-100V/1.5A).",
+		},
+	];
 
 	return (
 		<div className="min-h-screen bg-white">
@@ -215,7 +212,7 @@ const faqs = [
 									transition={{ duration: 0.6, delay: 0.4 }}
 									className="text-xl text-white/90 leading-relaxed"
 								>
-									Real-time tracking, AI-powered analytics, and predictive maintenance – all in one powerful tracking device.
+									Real-time tracking, Real-Time analytics, and predictive maintenance – all in one powerful tracking device.
 								</motion.h2>
 
 								<motion.div
@@ -614,8 +611,7 @@ const faqs = [
 					</motion.div>
 
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-						{
-							[
+						{[
 							{
 								icon: MapPin,
 								title: "Real-Time Location Tracking",
@@ -623,7 +619,7 @@ const faqs = [
 							},
 							{
 								icon: BarChart3,
-								title: "AI-Powered Analytics",
+								title: "Real-Time Analytics",
 								description: "Gain insights into vehicle performance, driving behavior, and fuel efficiency.",
 							},
 							{
@@ -646,8 +642,7 @@ const faqs = [
 								title: "Multi-Network Connectivity",
 								description: "Reliable tracking with 4G LTE & satellite backup for uninterrupted coverage.",
 							},
-						]
-							.map((feature, index) => (
+						].map((feature, index) => (
 							<motion.div
 								key={feature.title}
 								initial={{ opacity: 0, y: 20 }}

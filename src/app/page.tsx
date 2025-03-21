@@ -28,7 +28,7 @@ function Home() {
 		{
 			icon: Gauge,
 			title: "Real-Time Fleet Intelligence",
-			description: "Transform your fleet operations with AI-powered real-time monitoring and predictive analytics.",
+			description: "Transform your fleet operations with Real-Time real-time monitoring and predictive analytics.",
 			details: {
 				stat: "98%",
 				statLabel: "Accuracy Rate",

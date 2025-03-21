@@ -55,7 +55,7 @@ const features: ComparisonFeature[] = [
 		},
 	},
 	{
-		name: "AI-Powered Analytics",
+		name: "Real-Time Analytics",
 		ridesiq: {
 			supported: true,
 			detail: "Advanced AI for Predictive Insights",

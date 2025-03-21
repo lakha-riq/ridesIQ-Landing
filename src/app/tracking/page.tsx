@@ -174,7 +174,7 @@ const Tracking = () => {
 									transition={{ duration: 0.6, delay: 0.4 }}
 									className="text-xl text-white/90 leading-relaxed"
 								>
-									Real-time tracking, AI-powered analytics, and predictive maintenance – all in one powerful tracking device.
+									Real-time tracking, Real-Time analytics, and predictive maintenance – all in one powerful tracking device.
 								</motion.h2>
 
 								<motion.div
@@ -492,7 +492,7 @@ const Tracking = () => {
 										{
 											icon: AlertCircle,
 											title: "Predictive Maintenance",
-											description: "Reduce unexpected breakdowns with AI-powered maintenance predictions.",
+											description: "Reduce unexpected breakdowns with Real-Time maintenance predictions.",
 										},
 										{
 											icon: FileText,
@@ -581,7 +581,7 @@ const Tracking = () => {
 							},
 							{
 								icon: BarChart3,
-								title: "AI-Powered Analytics",
+								title: "Real-Time Analytics",
 								description: "Gain insights into vehicle performance, driving behavior, and fuel efficiency.",
 							},
 							{

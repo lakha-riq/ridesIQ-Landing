@@ -2,7 +2,7 @@
 import React from "react";
 import { IndustryTemplate } from "@/components/IndustryTemplate";
 import { IndustryKeyFeatures } from "@/components/IndustryKeyFeatures";
-import { Truck, Shield,  Timer, TrendingUp, Target, DollarSign, LineChart, LucideIcon, Bell, Globe, Receipt, MapPin, FileCheck } from "lucide-react";
+import { Truck, Shield, Timer, TrendingUp, Target, DollarSign, LineChart, LucideIcon, Bell, Globe, Receipt, MapPin, FileCheck } from "lucide-react";
 
 type KeyFeature = {
 	icon: LucideIcon; // From lucide-react
@@ -11,8 +11,6 @@ type KeyFeature = {
 	stat: string;
 	statLabel: string;
 };
-
-
 
 type IndustryData = {
 	name: string;
@@ -48,7 +46,7 @@ type IndustryData = {
 		features: string[];
 	}[];
 };
-const fleetKeyFeatures:KeyFeature[] = [
+const fleetKeyFeatures: KeyFeature[] = [
 	{
 		icon: DollarSign,
 		title: "Lower Fuel & Maintenance Costs",
@@ -82,7 +80,7 @@ const fleetKeyFeatures:KeyFeature[] = [
 const fleetManagementData: IndustryData = {
 	name: "Fleet Management Solutions",
 	subtitle: "Next-Gen Fleet Operations",
-	description: "Transform your fleet operations with AI-powered tracking and analytics that deliver real-time insights and maximize efficiency across your entire fleet.",
+	description: "Transform your fleet operations with Real-Time tracking and analytics that deliver real-time insights and maximize efficiency across your entire fleet.",
 	heroImage: "/assets/fleet-management/5.png",
 	challenges: [
 		{
@@ -165,7 +163,7 @@ const fleetManagementData: IndustryData = {
 		{
 			title: "Enterprise Fleet AI",
 			image: "/assets/homepage/4.png",
-			features: ["AI-powered insights", "Predictive maintenance", "Custom reporting", "API access"],
+			features: ["Real-Time insights", "Predictive maintenance", "Custom reporting", "API access"],
 		},
 	],
 };

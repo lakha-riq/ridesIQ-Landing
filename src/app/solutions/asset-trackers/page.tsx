@@ -15,7 +15,6 @@ import {
 	Lock,
 	Radio,
 	Navigation2,
-
 	Activity,
 	Ruler,
 	Wifi,
@@ -44,6 +43,11 @@ interface Products {
 	id: string;
 	name: string;
 	image: string;
+	imageProps: {
+		width: number;
+		height: number;
+		className: string;
+	};
 	specs: {
 		[key: string]: {
 			icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>;
@@ -96,37 +100,51 @@ const Tracking = () => {
 	}, []);
 
 	const products: Products[] = [
-{
-  id: "asset",
-  name: "Asset Tracker",
-  image: "/devices/asset_tracker.png",
-  specs: {
-    installation: { icon: Wrench, value: "Compact Design", description: "64.6 x 51 x 20.9mm form factor" },
-    power: { icon: Zap, value: "Battery Powered", description: "2400mAh lithium battery" },
-    bestFor: { icon: Box, value: "Asset Tracking", description: "Vehicles & equipment monitoring" },
-    battery: { icon: Battery, value: "3-Year Battery", description: "With 1 report per day" },
-    connectivity: { icon: Wifi, value: "LTE Cat M1/NB2", description: "With 2G/3G fallback" },
-    features: { icon: Shield, value: "Weather Resistant", description: "IP67 rated protection" },
-  },
-},
-{
-  id: "hardwired",
-  name: "Hard-Wired Tracker",
-  image: "/devices/hardware_tracker.svg",
-  specs: {
-    installation: { icon: Wrench, value: "Professional Installation", description: "Requires certified technician" },
-    power: { icon: Zap, value: "Direct Vehicle Power", description: "Continuous power supply (DC 9-100V/1.5A)" },
-    bestFor: { icon: Truck, value: "Large Fleets", description: "Commercial vehicles & trucks" },
-    battery: { icon: Battery, value: "Backup Battery", description: "120mAh backup battery" },
-    connectivity: { icon: Wifi, value: "4G LTE + GPS + GSM", description: "Supports LTE-FDD & GSM bands" },
-    features: { icon: Shield, value: "Advanced Security", description: "Tamper detection, geo-fence, impact alerts, and remote fuel/electricity cut-off" }
-  }
-}
-,
+		{
+			id: "asset",
+			name: "Asset Tracker",
+			image: "/devices/asset_tracker.png",
+			imageProps: {
+				width: 300,
+				height: 300,
+				className: "object-contain p-4",
+			},
+			specs: {
+				installation: { icon: Wrench, value: "Compact Design", description: "64.6 x 51 x 20.9mm form factor" },
+				power: { icon: Zap, value: "Battery Powered", description: "2400mAh lithium battery" },
+				bestFor: { icon: Box, value: "Asset Tracking", description: "Vehicles & equipment monitoring" },
+				battery: { icon: Battery, value: "3-Year Battery", description: "With 1 report per day" },
+				connectivity: { icon: Wifi, value: "LTE Cat M1/NB2", description: "With 2G/3G fallback" },
+				features: { icon: Shield, value: "Weather Resistant", description: "IP67 rated protection" },
+			},
+		},
+		{
+			id: "hardwired",
+			name: "Hard-Wired Tracker",
+			image: "/devices/hardware_tracker.svg",
+			imageProps: {
+				width: 280,
+				height: 280,
+				className: "object-contain p-4",
+			},
+			specs: {
+				installation: { icon: Wrench, value: "Professional Installation", description: "Requires certified technician" },
+				power: { icon: Zap, value: "Direct Vehicle Power", description: "Continuous power supply (DC 9-100V/1.5A)" },
+				bestFor: { icon: Truck, value: "Large Fleets", description: "Commercial vehicles & trucks" },
+				battery: { icon: Battery, value: "Backup Battery", description: "120mAh backup battery" },
+				connectivity: { icon: Wifi, value: "4G LTE + GPS + GSM", description: "Supports LTE-FDD & GSM bands" },
+				features: { icon: Shield, value: "Advanced Security", description: "Tamper detection, geo-fence, impact alerts, and remote fuel/electricity cut-off" },
+			},
+		},
 		{
 			id: "obd",
 			name: "OBD Tracker",
 			image: "/devices/OBD_tracker.png",
+			imageProps: {
+				width: 250,
+				height: 250,
+				className: "object-contain p-4",
+			},
 			specs: {
 				installation: { icon: Wrench, value: "Plug & Play", description: "Self-installation in minutes" },
 				power: { icon: Zap, value: "OBD-II Port", description: "Vehicle diagnostic port" },
@@ -216,7 +234,7 @@ const Tracking = () => {
 									transition={{ duration: 0.6, delay: 0.4 }}
 									className="text-xl text-white/90 leading-relaxed"
 								>
-									Real-time tracking, AI-powered analytics, and predictive maintenance – all in one powerful tracking device.
+									Real-time tracking, Real-Time analytics, and predictive maintenance – all in one powerful tracking device.
 								</motion.h2>
 
 								<motion.div
@@ -362,10 +380,11 @@ const Tracking = () => {
 										className="bg-white p-6"
 									>
 										<div className="text-center">
-											<img
+											<Image
 												src={product.image}
 												alt={product.name}
-												className="w-full h-32 object-cover rounded-lg mb-4"
+												{...product.imageProps}
+												priority
 											/>
 											<h3 className="text-lg font-semibold text-gray-900">{product.name}</h3>
 										</div>
@@ -415,10 +434,11 @@ const Tracking = () => {
 									className="w-full p-6 flex items-center justify-between"
 								>
 									<div className="flex items-center gap-4">
-										<img
+										<Image
 											src={product.image}
 											alt={product.name}
-											className="w-16 h-16 object-cover rounded-lg"
+											{...product.imageProps}
+											priority
 										/>
 										<h3 className="text-lg font-semibold text-gray-900">{product.name}</h3>
 									</div>
@@ -478,10 +498,12 @@ const Tracking = () => {
 						>
 							<div className="relative">
 								<div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6" />
-								<img
+								<Image
 									src="/assets/homepage/1.png"
 									alt="RidesIQ GPS Tracking Device"
 									className="relative z-10 rounded-3xl shadow-2xl transform -rotate-3 transition-transform duration-500 hover:rotate-0"
+									width={600}
+									height={600}
 								/>
 							</div>
 
@@ -672,7 +694,7 @@ const Tracking = () => {
 									<div className="flex items-center gap-6 mb-4">
 										<div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0">
 											<div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
-												<feature.icon className="w-7 h-7 text-[#678FCA]" />
+												<feature.icon className="w-6 h-6 text-[#678FCA]" />
 											</div>
 										</div>
 

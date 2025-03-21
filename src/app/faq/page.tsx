@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import {  ChevronDown, X, Car, Globe, BarChart3, CreditCard, Wrench, Search, ArrowRight, HelpCircle } from "lucide-react";
+import { ChevronDown, X, Car, Globe, BarChart3, CreditCard, Wrench, Search, ArrowRight, HelpCircle } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "@/components/Navigation";
 
@@ -63,7 +63,7 @@ const faqCategories: FAQCategory[] = [
 			},
 			{
 				id: "ai-analytics",
-				question: "Does RidesIQ provide AI-powered analytics?",
+				question: "Does RidesIQ provide Real-Time analytics?",
 				answer: "Yes, RidesIQ leverages advanced AI algorithms to provide predictive maintenance alerts, optimize routes, analyze driver behavior, and forecast fleet performance. Our AI system continuously learns from your fleet's data to deliver increasingly accurate insights and recommendations.",
 			},
 		],
@@ -166,7 +166,7 @@ const FAQ = () => {
 								transition={{ duration: 0.6, delay: 0.4 }}
 								className="text-xl text-white/90 leading-relaxed"
 							>
-							{"	Find answers to common questions about RidesIQ's fleet tracking solutions"}
+								{"	Find answers to common questions about RidesIQ's fleet tracking solutions"}
 							</motion.p>
 						</motion.div>
 					</div>

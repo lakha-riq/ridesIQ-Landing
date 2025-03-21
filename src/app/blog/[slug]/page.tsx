@@ -11,15 +11,15 @@ import { BlogSidebar } from "@/components/BlogSidebar";
 const blogPosts = [
 	{
 		slug: "maximizing-fleet-efficiency",
-		title: "Maximizing Fleet Efficiency with AI-Powered Analytics",
+		title: "Maximizing Fleet Efficiency with Real-Time Analytics",
 		content: `
-      Fleet management has evolved significantly in recent years, with artificial intelligence and machine learning leading the charge in operational optimization. This comprehensive guide explores how AI-powered analytics are transforming fleet operations and driving unprecedented levels of efficiency.
+      Fleet management has evolved significantly in recent years, with artificial intelligence and machine learning leading the charge in operational optimization. This comprehensive guide explores how Real-Time analytics are transforming fleet operations and driving unprecedented levels of efficiency.
 
       ## The Role of AI in Modern Fleet Management
 
       Artificial Intelligence is revolutionizing how fleet managers make decisions and optimize their operations. From predictive maintenance to route optimization, AI algorithms are processing vast amounts of data to deliver actionable insights in real-time.
 
-      ### Key Benefits of AI-Powered Analytics:
+      ### Key Benefits of Real-Time Analytics:
 
       1. Predictive Maintenance
       - Early detection of potential vehicle issues
@@ -38,7 +38,7 @@ const blogPosts = [
 
       ## Implementing AI Solutions in Your Fleet
 
-      The transition to AI-powered fleet management requires careful planning and execution. Here's a step-by-step approach to implementing these solutions effectively:
+      The transition to Real-Time fleet management requires careful planning and execution. Here's a step-by-step approach to implementing these solutions effectively:
 
       1. Assessment Phase
       - Evaluate current operations
@@ -57,7 +57,7 @@ const blogPosts = [
 
       ## Measuring Success
 
-      The impact of AI-powered analytics can be measured across various metrics:
+      The impact of Real-Time analytics can be measured across various metrics:
 
       - Reduced fuel consumption
       - Decreased maintenance costs
@@ -82,8 +82,8 @@ const blogPosts = [
 ];
 
 const BlogPost = async ({ params }: { params: Promise<{ slug: string }> }) => {
-	const {slug} = await params;
-	
+	const { slug } = await params;
+
 	const post = blogPosts.find((p) => p.slug === slug);
 
 	if (!post) {
@@ -227,16 +227,28 @@ const BlogPost = async ({ params }: { params: Promise<{ slug: string }> }) => {
 									Share
 								</span>
 								<div className="flex items-center gap-2">
-									<button className="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#678FCA]/10 text-gray-600 hover:text-[#678FCA] flex items-center justify-center transition-colors" aria-label="Share on Twitter">
+									<button
+										className="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#678FCA]/10 text-gray-600 hover:text-[#678FCA] flex items-center justify-center transition-colors"
+										aria-label="Share on Twitter"
+									>
 										<Twitter className="w-4 h-4" />
 									</button>
-									<button className="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#678FCA]/10 text-gray-600 hover:text-[#678FCA] flex items-center justify-center transition-colors" aria-label="Share on LinkedIn">
+									<button
+										className="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#678FCA]/10 text-gray-600 hover:text-[#678FCA] flex items-center justify-center transition-colors"
+										aria-label="Share on LinkedIn"
+									>
 										<Linkedin className="w-4 h-4" />
 									</button>
-									<button className="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#678FCA]/10 text-gray-600 hover:text-[#678FCA] flex items-center justify-center transition-colors" aria-label="Share on Facebook">
+									<button
+										className="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#678FCA]/10 text-gray-600 hover:text-[#678FCA] flex items-center justify-center transition-colors"
+										aria-label="Share on Facebook"
+									>
 										<Facebook className="w-4 h-4" />
 									</button>
-									<button className="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#678FCA]/10 text-gray-600 hover:text-[#678FCA] flex items-center justify-center transition-colors" aria-label="Share on Email">
+									<button
+										className="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#678FCA]/10 text-gray-600 hover:text-[#678FCA] flex items-center justify-center transition-colors"
+										aria-label="Share on Email"
+									>
 										<Mail className="w-4 h-4" />
 									</button>
 								</div>

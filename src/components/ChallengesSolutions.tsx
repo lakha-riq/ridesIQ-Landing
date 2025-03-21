@@ -91,7 +91,7 @@ export const ChallengesSolutions: React.FC<ChallengesSolutionsProps> = ({ challe
 					viewport={{ once: true }}
 					className="text-center mb-16"
 				>
-					{/* AI-Powered Solutions Badge */}
+					{/* Real-Time Solutions Badge */}
 					<div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 text-blue-600 text-sm font-medium mb-8">
 						<svg
 							className="w-4 h-4 mr-2"
@@ -121,14 +121,14 @@ export const ChallengesSolutions: React.FC<ChallengesSolutionsProps> = ({ challe
 								strokeLinejoin="round"
 							/>
 						</svg>
-						AI-Powered Solutions
+						Real-Time Solutions
 					</div>
 
 					<h2 className="text-4xl sm:text-5xl font-bold mb-6">
 						From <span className="text-[#678FCA]">Challenges</span> to <span className="text-[#99D5C9]">Solutions</span>
 					</h2>
 					<p className="text-xl text-gray-600 max-w-3xl mx-auto">
-						Fleet operators face increasingly complex challenges in {"today's"} fast-paced logistics landscape. Our AI-powered solutions transform these challenges into opportunities,
+						Fleet operators face increasingly complex challenges in {"today's"} fast-paced logistics landscape. Our Real-Time solutions transform these challenges into opportunities,
 						delivering measurable improvements in efficiency, cost savings, and operational excellence.
 					</p>
 				</motion.div>
