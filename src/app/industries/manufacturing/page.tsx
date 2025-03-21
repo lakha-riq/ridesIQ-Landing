@@ -4,7 +4,6 @@ import { IndustryTemplate } from "@/components/IndustryTemplate";
 import { IndustryKeyFeatures } from "@/components/IndustryKeyFeatures";
 import { Factory, Shield, BarChart3, Clock, AlertCircle, Settings2, Timer, TrendingUp, Target, LineChart, Truck, LucideIcon } from "lucide-react";
 
-
 type KeyFeature = {
 	icon: LucideIcon; // From lucide-react
 	title: string;
@@ -104,7 +103,7 @@ const manufacturingData: IndustryData = {
 		{
 			icon: Factory,
 			title: "Smart Operations",
-			description: "AI-driven optimization of manufacturing vehicle deployment and routing.",
+			description: "Real time optimization of manufacturing vehicle deployment and routing.",
 		},
 		{
 			icon: Shield,

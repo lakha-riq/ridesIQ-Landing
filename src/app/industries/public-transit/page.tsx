@@ -81,7 +81,7 @@ const publicTransitKeyFeatures: KeyFeature[] = [
 const publicTransitData: IndustryData = {
 	name: "Public Transit Solutions",
 	subtitle: "Smart Transit Operations",
-	description: "Transform public transportation with AI-driven scheduling, real-time tracking, and passenger analytics for improved service reliability.",
+	description: "Transform public transportation with Real time scheduling, real-time tracking, and passenger analytics for improved service reliability.",
 	heroImage: "/assets/public-transit/hero.png",
 	challenges: [
 		{

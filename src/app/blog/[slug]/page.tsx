@@ -15,9 +15,9 @@ const blogPosts = [
 		content: `
       Fleet management has evolved significantly in recent years, with artificial intelligence and machine learning leading the charge in operational optimization. This comprehensive guide explores how Real-Time analytics are transforming fleet operations and driving unprecedented levels of efficiency.
 
-      ## The Role of AI in Modern Fleet Management
+      ## The Role of Real time in Modern Fleet Management
 
-      Artificial Intelligence is revolutionizing how fleet managers make decisions and optimize their operations. From predictive maintenance to route optimization, AI algorithms are processing vast amounts of data to deliver actionable insights in real-time.
+      Artificial Intelligence is revolutionizing how fleet managers make decisions and optimize their operations. From predictive maintenance to route optimization, Real time algorithms are processing vast amounts of data to deliver actionable insights in real-time.
 
       ### Key Benefits of Real-Time Analytics:
 
@@ -36,7 +36,7 @@ const blogPosts = [
       - Fuel efficiency optimization
       - Performance monitoring
 
-      ## Implementing AI Solutions in Your Fleet
+      ## Implementing Real time Solutions in Your Fleet
 
       The transition to Real-Time fleet management requires careful planning and execution. Here's a step-by-step approach to implementing these solutions effectively:
 
@@ -46,7 +46,7 @@ const blogPosts = [
       - Define success metrics
 
       2. Technology Selection
-      - Choose appropriate AI solutions
+      - Choose appropriate Real time solutions
       - Ensure compatibility with existing systems
       - Consider scalability requirements
 
@@ -67,7 +67,7 @@ const blogPosts = [
 
       ## Looking Ahead
 
-      As AI technology continues to evolve, we can expect even more sophisticated solutions for fleet management. Stay ahead of the curve by keeping informed about the latest developments and being ready to adapt to new technologies as they emerge.
+      As Real time technology continues to evolve, we can expect even more sophisticated solutions for fleet management. Stay ahead of the curve by keeping informed about the latest developments and being ready to adapt to new technologies as they emerge.
     `,
 		image: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=2000&q=80",
 		author: {

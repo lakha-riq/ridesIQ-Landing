@@ -62,9 +62,9 @@ const faqCategories: FAQCategory[] = [
 				answer: "RidesIQ collects comprehensive vehicle data including: real-time location, speed, fuel consumption, engine diagnostics, driver behavior metrics, route history, and maintenance alerts. All data is encrypted and securely stored in compliance with industry standards.",
 			},
 			{
-				id: "ai-analytics",
+				id: "Real time analytics",
 				question: "Does RidesIQ provide Real-Time analytics?",
-				answer: "Yes, RidesIQ leverages advanced AI algorithms to provide predictive maintenance alerts, optimize routes, analyze driver behavior, and forecast fleet performance. Our AI system continuously learns from your fleet's data to deliver increasingly accurate insights and recommendations.",
+				answer: "Yes, RidesIQ leverages advanced Real time algorithms to provide predictive maintenance alerts, optimize routes, analyze driver behavior, and forecast fleet performance. Our Real time system continuously learns from your fleet's data to deliver increasingly accurate insights and recommendations.",
 			},
 		],
 	},

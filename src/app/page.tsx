@@ -39,7 +39,7 @@ function Home() {
 		{
 			icon: AlertCircle,
 			title: "Smart Maintenance",
-			description: "Prevent costly breakdowns with AI-driven maintenance predictions and automated scheduling.",
+			description: "Prevent costly breakdowns with Real time maintenance predictions and automated scheduling.",
 			details: {
 				stat: "45%",
 				statLabel: "Cost Reduction",
@@ -424,7 +424,7 @@ function Home() {
 									{/* Tag Buttons */}
 									<div className="flex flex-wrap justify-center gap-4">
 										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Fleet Tracking</div>
-										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">AI Insights</div>
+										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Real time Insights</div>
 										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Compliance</div>
 									</div>
 								</motion.div>

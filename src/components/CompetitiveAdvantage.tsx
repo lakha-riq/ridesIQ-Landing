@@ -58,12 +58,12 @@ const features: ComparisonFeature[] = [
 		name: "Real-Time Analytics",
 		ridesiq: {
 			supported: true,
-			detail: "Advanced AI for Predictive Insights",
+			detail: "Advanced Real time for Predictive Insights",
 		},
 		competitors: {
 			geotab: { supported: false, detail: "Basic Reports" },
-			zubie: { supported: false, detail: "No AI Features" },
-			ramtracking: { supported: false, detail: "No AI Features" },
+			zubie: { supported: false, detail: "No Real time Features" },
+			ramtracking: { supported: false, detail: "No Real time Features" },
 		},
 	},
 	{

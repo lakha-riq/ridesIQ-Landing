@@ -150,7 +150,7 @@ const Tracking = () => {
 				power: { icon: Zap, value: "OBD-II Port", description: "Direct vehicle power supply" },
 				bestFor: { icon: Truck, value: "All Vehicles", description: "Cars & light commercial vehicles" },
 				battery: { icon: Battery, value: "No Battery", description: "Continuous power from vehicle" },
-				connectivity: { icon: Wifi, value: "LTE Cat M1/NB1", description: "LTE-FDD B1/B2/B3/B4/B5/B8/B12/B13/B18/B19/B20/B25/B28" },
+				connectivity: { icon: Wifi, value: "LTE Cat M1/NB1", description: "LTE-FDD  " },
 				features: { icon: Shield, value: "Motion Detection", description: "3-axis accelerometer tracking" },
 			},
 		},

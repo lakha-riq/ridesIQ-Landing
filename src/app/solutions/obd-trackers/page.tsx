@@ -112,7 +112,7 @@ const Tracking = () => {
 				power: { icon: Zap, value: "OBD-II Port", description: "Direct vehicle power supply" },
 				bestFor: { icon: Truck, value: "All Vehicles", description: "Cars & light commercial vehicles" },
 				battery: { icon: Battery, value: "No Battery", description: "Continuous power from vehicle" },
-				connectivity: { icon: Wifi, value: "LTE Cat M1/NB1", description: "LTE-FDD B1/B2/B3/B4/B5/B8/B12/B13/B18/B19/B20/B25/B28" },
+				connectivity: { icon: Wifi, value: "LTE Cat M1/NB1", description: "LTE-FDD  " },
 				features: { icon: Shield, value: "Motion Detection", description: "3-axis accelerometer tracking" },
 			},
 		},
@@ -232,7 +232,9 @@ const Tracking = () => {
 									transition={{ duration: 0.6, delay: 0.4 }}
 									className="text-xl text-white/90 leading-relaxed"
 								>
-									Real-time tracking, Real-Time analytics, and predictive maintenance – all in one powerful tracking device.
+									Designed for fleets of all sizes, RidesIQ Tracker offers industry-leading accuracy with u-blox GNSS technology, real-time tracking, and comprehensive reporting
+									capabilities to enhance fleet efficiency and reduce downtime. Our solution provides reliable position tracking within 2.5m accuracy while supporting multiple
+									communication protocols for maximum reliability.
 								</motion.h2>
 
 								<motion.div
@@ -539,31 +541,32 @@ const Tracking = () => {
 								</h2>
 
 								<p className="text-lg text-black leading-relaxed">
-									Designed for fleets of all sizes, RidesIQ Tracker offers industry-leading accuracy, real-time tracking, and AI-driven analytics to enhance fleet efficiency and
-									reduce downtime. Our comprehensive solution helps you make data-driven decisions while ensuring maximum security and reliability.
+									Designed for fleets of all sizes, RidesIQ Tracker offers industry-leading accuracy with u-blox GNSS technology, real-time tracking, and comprehensive reporting
+									capabilities to enhance fleet efficiency and reduce downtime. Our solution provides reliable position tracking within 2.5m accuracy while supporting multiple
+									communication protocols for maximum reliability.
 								</p>
 
 								<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 									{[
 										{
 											icon: Navigation2,
-											title: "Real-Time GPS Tracking",
-											description: "Know your vehicle's location anytime with GPS updates, supporting real-time tracking by time interval and distance.",
+											title: "Intelligent Position Reporting",
+											description: "Report position and status at preset time intervals with adjustable reporting frequency based on conditions.",
 										},
 										{
 											icon: AlertCircle,
-											title: "Advanced Security Alerts",
-											description: "Stay informed with geo-fence alerts, tamper detection, speeding alarms, and impact notifications.",
+											title: "Power Management",
+											description: "Power saving mode for long standby time and continuous mode for emergency tracking with low power alerts.",
 										},
 										{
 											icon: FileText,
-											title: "Fleet Compliance & Reporting",
-											description: "Track mileage, fuel consumption, and engine status with automated reports for compliance and efficiency.",
+											title: "Motion Detection",
+											description: "Built-in 3-axis accelerometer for accurate motion detection and movement monitoring.",
 										},
 										{
 											icon: Activity,
-											title: "Comprehensive Telematics Data",
-											description: "Monitor harsh acceleration, braking, turning, idling, and fatigue driving with real-time analytics.",
+											title: "Multi-Protocol Support",
+											description: "TCP, UDP, and SMS transmission protocols with @Track protocol command set for reliable communication.",
 										},
 									].map((benefit, index) => (
 										<motion.div
@@ -637,33 +640,33 @@ const Tracking = () => {
 						{[
 							{
 								icon: MapPin,
-								title: "Real-Time Location Tracking",
-								description: "Monitor your fleet's exact location with live GPS updates every 10 seconds.",
+								title: "High-Precision GNSS",
+								description: "u-blox All-in-One GNSS receiver with position accuracy under 2.5m and -162 dBm tracking sensitivity.",
 							},
 							{
 								icon: BarChart3,
-								title: "Real-Time Analytics",
-								description: "Gain insights into vehicle performance, driving behavior, and fuel efficiency.",
+								title: "Intelligent Reporting",
+								description: "Scheduled timing reports with automatic frequency adjustment based on vehicle status.",
 							},
 							{
 								icon: Bell,
-								title: "Geofencing & Alerts",
-								description: "Set virtual boundaries and receive instant alerts for unauthorized movements.",
+								title: "Motion Detection",
+								description: "Built-in 3-axis accelerometer for accurate movement monitoring and status updates.",
 							},
 							{
 								icon: Tool,
-								title: "Predictive Maintenance",
-								description: "Prevent costly breakdowns with AI-driven diagnostics and maintenance scheduling.",
+								title: "Dual Working Modes",
+								description: "Power saving mode for long standby time and continuous mode for emergency tracking.",
 							},
 							{
 								icon: Lock,
-								title: "Secure Data Encryption",
-								description: "End-to-end encrypted tracking to ensure your fleet data remains protected.",
+								title: "Multi-Protocol Support",
+								description: "TCP, UDP, and SMS transmission protocols with @Track protocol command set.",
 							},
 							{
 								icon: Radio,
-								title: "Multi-Network Connectivity",
-								description: "Reliable tracking with 4G LTE & satellite backup for uninterrupted coverage.",
+								title: "Advanced Connectivity",
+								description: "LTE Cat M1/NB1 support with EGPRS 850/900/1800/1900 MHz multi-slot class 33 backup.",
 							},
 						].map((feature, index) => (
 							<motion.div
@@ -783,7 +786,7 @@ const Tracking = () => {
 												icon: Wifi,
 												name: "Network Support",
 												value: "LTE Cat M1/NB1",
-												description: "LTE-FDD B1/B2/B3/B4/B5/B8/B12/B13/B18/B19/B20/B25/B28",
+												description: "LTE-FDD  ",
 											},
 											{
 												icon: Power,

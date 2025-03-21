@@ -50,7 +50,7 @@ const fleetKeyFeatures: KeyFeature[] = [
 	{
 		icon: DollarSign,
 		title: "Lower Fuel & Maintenance Costs",
-		description: "Reduce operational expenses with AI-driven fuel optimization and predictive maintenance scheduling.",
+		description: "Reduce operational expenses with Real time fuel optimization and predictive maintenance scheduling.",
 		stat: "30%",
 		statLabel: "Average Cost Reduction",
 	},

@@ -46,7 +46,7 @@ const blogPosts = [
 	},
 ];
 
-const categories = ["Fleet Management", "Compliance", "Safety", "Telematics", "AI & Automation"];
+const categories = ["Fleet Management", "Compliance", "Safety", "Telematics", "Real time & Automation"];
 
 const tags = [
 	{ name: "Fleet Management", count: 24 },

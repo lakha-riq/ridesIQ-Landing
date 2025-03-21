@@ -477,7 +477,7 @@ const Tracking = () => {
 								</h2>
 
 								<p className="text-lg text-black leading-relaxed">
-									Designed for fleets of all sizes, RidesIQ Tracker offers industry-leading accuracy, real-time tracking, and AI-driven analytics to enhance fleet efficiency and
+									Designed for fleets of all sizes, RidesIQ Tracker offers industry-leading accuracy, real-time tracking, and Real time analytics to enhance fleet efficiency and
 									reduce downtime. Our comprehensive solution helps you make data-driven decisions while ensuring maximum security and reliability.
 								</p>
 
@@ -591,7 +591,7 @@ const Tracking = () => {
 							{
 								icon: Tool,
 								title: "Predictive Maintenance",
-								description: "Prevent costly breakdowns with AI-driven diagnostics and maintenance scheduling.",
+								description: "Prevent costly breakdowns with Real time diagnostics and maintenance scheduling.",
 							},
 							{
 								icon: Lock,
@@ -958,7 +958,7 @@ const Tracking = () => {
 									{/* Tag Buttons */}
 									<div className="flex flex-wrap justify-center gap-4">
 										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Fleet Tracking</div>
-										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">AI Insights</div>
+										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Real time Insights</div>
 										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Compliance</div>
 									</div>
 								</motion.div>
