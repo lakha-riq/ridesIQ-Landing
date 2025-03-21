@@ -344,12 +344,12 @@ export const Navigation = () => {
 							</AnimatePresence>
 						</div>
 
-						<Link
+						{/* <Link
 							href="/pricing"
 							className="text-gray-700 hover:text-[#678FCA] transition-colors"
 						>
 							Pricing
-						</Link>
+						</Link> */}
 
 						<Link
 							href="/resources"
@@ -487,7 +487,7 @@ export const Navigation = () => {
 								</motion.div>
 							</div>
 
-							<motion.div
+							{/* <motion.div
 								initial={{ opacity: 0, x: -10 }}
 								animate={{ opacity: 1, x: 0 }}
 								transition={{ delay: 0.4 }}
@@ -498,7 +498,7 @@ export const Navigation = () => {
 								>
 									Pricing
 								</Link>
-							</motion.div>
+							</motion.div> */}
 
 							<motion.div
 								initial={{ opacity: 0, x: -10 }}

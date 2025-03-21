@@ -69,14 +69,14 @@ const Tracking = () => {
 			// Only apply sticky behavior on desktop
 			if (window.innerWidth >= 1024) {
 				// Calculate the start and end points for the effect
-				const startPoint = containerRect.top - windowHeight * 0.5; // Start halfway through viewport
+				const startPoint = containerRect.top - windowHeight * 0.5;
 				const endPoint = containerRect.bottom - windowHeight;
 
 				// Calculate scroll progress (0 to 1)
 				const scrollProgress = Math.max(0, Math.min(1, -startPoint / (endPoint - startPoint)));
 
-				// Calculate maximum scroll distance (container height minus image height)
-				const maxScroll = container.offsetHeight - image.offsetHeight - 100; // Added 100px buffer
+				// Calculate maximum scroll distance
+				const maxScroll = container.offsetHeight - image.offsetHeight - 100;
 
 				// Apply the transform with easing
 				const scrollAmount = Math.min(maxScroll, scrollProgress * maxScroll);
@@ -90,7 +90,7 @@ const Tracking = () => {
 
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
+	}, []); 
 
 	const products: Products[] = [
 		{
@@ -1178,7 +1178,7 @@ const Tracking = () => {
 								>
 									<h4 className="text-lg font-semibold mb-4">Resources</h4>
 									<ul className="space-y-3">
-										<li className="flex items-center">
+										{/* <li className="flex items-center">
 											<a
 												href="#"
 												className="text-gray-400 hover:text-white transition-colors"
@@ -1186,7 +1186,7 @@ const Tracking = () => {
 												Blog
 											</a>
 											<span className="ml-2 text-xs bg-[#678FCA]/20 text-[#678FCA] px-2 py-0.5 rounded-full">Soon</span>
-										</li>
+										</li> */}
 										<li>
 											<a
 												href="#"
@@ -1195,7 +1195,7 @@ const Tracking = () => {
 												FAQs
 											</a>
 										</li>
-										<li className="flex items-center">
+										{/* <li className="flex items-center">
 											<a
 												href="#"
 												className="text-gray-400 hover:text-white transition-colors"
@@ -1203,7 +1203,7 @@ const Tracking = () => {
 												API Docs
 											</a>
 											<span className="ml-2 text-xs bg-[#678FCA]/20 text-[#678FCA] px-2 py-0.5 rounded-full">Soon</span>
-										</li>
+										</li> */}
 										<li>
 											<a
 												href="#"

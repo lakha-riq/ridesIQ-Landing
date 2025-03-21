@@ -1,5 +1,5 @@
 "use client";
-import React, { ForwardRefExoticComponent, RefAttributes, useState } from "react";
+import React, { ForwardRefExoticComponent, RefAttributes, useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import {
@@ -38,6 +38,7 @@ import {
 } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import Image from "next/image";
+
 interface Products {
 	id: string;
 	name: string;
@@ -50,9 +51,48 @@ interface Products {
 		};
 	};
 }
+
 const Tracking = () => {
 	const [activeProduct, setActiveProduct] = useState<string | null>(null);
 	const [activeFaq, setActiveFaq] = useState<number | null>(null);
+
+	const containerRef = useRef<HTMLDivElement>(null);
+	const imageRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (!containerRef.current || !imageRef.current) return;
+
+			const container = containerRef.current;
+			const image = imageRef.current;
+			const containerRect = container.getBoundingClientRect();
+			const windowHeight = window.innerHeight;
+
+			// Only apply sticky behavior on desktop
+			if (window.innerWidth >= 1024) {
+				// Calculate the start and end points for the effect
+				const startPoint = containerRect.top - windowHeight * 0.5;
+				const endPoint = containerRect.bottom - windowHeight;
+
+				// Calculate scroll progress (0 to 1)
+				const scrollProgress = Math.max(0, Math.min(1, -startPoint / (endPoint - startPoint)));
+
+				// Calculate maximum scroll distance
+				const maxScroll = container.offsetHeight - image.offsetHeight - 100;
+
+				// Apply the transform with easing
+				const scrollAmount = Math.min(maxScroll, scrollProgress * maxScroll);
+
+				// Only apply transform when container is in view
+				if (containerRect.top <= windowHeight && containerRect.bottom >= 0) {
+					image.style.transform = `translateY(${scrollAmount}px)`;
+				}
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
 
 	const products: Products[] = [
 		{
@@ -654,6 +694,7 @@ const Tracking = () => {
 			</section>
 
 			{/* Device Specifications Section */}
+
 			<section className="py-24 bg-gray-50/50 relative overflow-hidden">
 				<div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50/80" />
 				<div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23678FCA%22%20fill-opacity%3D%220.05%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-50" />
@@ -695,125 +736,165 @@ const Tracking = () => {
 						</motion.p>
 					</motion.div>
 
-					<div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-						{/* Specifications Table */}
-						<motion.div
-							initial={{ opacity: 0, x: -20 }}
-							whileInView={{ opacity: 1, x: 0 }}
-							viewport={{ once: true }}
-							className="bg-white rounded-2xl shadow-lg border border-gray-100"
-						>
-							<div className="divide-y divide-gray-100">
-								{[
-									{
-										icon: Ruler,
-										name: "Dimensions",
-										value: "110mm x 65mm x 30mm",
-										description: "Compact design for easy installation",
-									},
-									{
-										icon: Wifi,
-										name: "Connectivity",
-										value: "4G LTE with fallback",
-										description: "3G/2G network support",
-									},
-									{
-										icon: Power,
-										name: "Power Source",
-										value: "Multiple Options",
-										description: "Hard-wired / OBD Plug / Battery",
-									},
-									{
-										icon: Award,
-										name: "Certifications",
-										value: "FCC, CE, PTCRB Certified",
-										description: "Industry standard compliance",
-									},
-									{
-										icon: Battery,
-										name: "Battery Life",
-										value: "Up to 5 years",
-										description: "For asset tracking models",
-									},
-									{
-										icon: Database,
-										name: "Data Storage",
-										value: "Cloud + Local Backup",
-										description: "Secure data redundancy",
-									},
-									{
-										icon: Laptop,
-										name: "Software Compatibility",
-										value: "Universal Integration",
-										description: "Works with RidesIQ, GeoTab, and other fleet management platforms",
-									},
-									{
-										icon: Shield,
-										name: "Security",
-										value: "Enterprise Grade",
-										description: "End-to-end encryption for data protection",
-									},
-								].map((spec, index) => (
-									<motion.div
-										key={spec.name}
-										initial={{ opacity: 0, y: 10 }}
-										whileInView={{ opacity: 1, y: 0 }}
-										viewport={{ once: true }}
-										transition={{ delay: index * 0.1 }}
-										className="p-6 hover:bg-gray-50 transition-colors"
-									>
-										<div className="flex items-start gap-4">
-											<div className="w-10 h-10 rounded-lg bg-[#678FCA]/10 flex items-center justify-center flex-shrink-0">
-												<spec.icon className="w-5 h-5 text-[#678FCA]" />
-											</div>
-											<div className="flex-1">
-												<div className="text-sm font-medium text-gray-500">{spec.name}</div>
-												<div className="text-lg font-semibold text-gray-900 mt-1">{spec.value}</div>
-												<div className="text-sm text-gray-600 mt-1">{spec.description}</div>
-											</div>
-										</div>
-									</motion.div>
-								))}
-							</div>
-						</motion.div>
-
-						{/* Product Image */}
-						<motion.div
-							initial={{ opacity: 0, x: 20 }}
-							whileInView={{ opacity: 1, x: 0 }}
-							viewport={{ once: true }}
-							className="relative lg:mt-24"
-						>
-							<div className="relative max-w-md mx-auto lg:max-w-none">
-								<div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6" />
-								<Image
-									src="/assets/homepage/2.png"
-									alt="RidesIQ GPS Tracking Device"
-									className="relative z-10 rounded-3xl shadow-2xl transform -rotate-3 transition-transform duration-500 hover:rotate-0 w-full"
-									width={800}
-									height={800}
-								/>
-							</div>
-
-							{/* Certification Badge */}
-							<motion.div
-								initial={{ opacity: 0, scale: 0.9 }}
-								whileInView={{ opacity: 1, scale: 1 }}
-								viewport={{ once: true }}
-								transition={{ delay: 0.3 }}
-								className="absolute -right-4 top-1/4 bg-white p-4 rounded-xl shadow-lg"
-							>
-								<div className="flex items-center gap-3">
-									<div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-										<Award className="w-5 h-5 text-blue-600" />
+					{/* Product specs section with sticky image */}
+					<div
+						className="py-24 bg-white"
+						ref={containerRef}
+					>
+						<div className="container mx-auto px-4">
+							<div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+								{/* Specifications Table */}
+								<motion.div
+									initial={{ opacity: 0, x: -20 }}
+									whileInView={{ opacity: 1, x: 0 }}
+									viewport={{ once: true }}
+									className="bg-white rounded-2xl shadow-lg border border-gray-100 order-2 lg:order-1"
+								>
+									<div className="divide-y divide-gray-100">
+										{[
+											{
+												icon: Ruler,
+												name: "Dimensions",
+												value: "110mm x 65mm x 30mm",
+												description: "Compact design for easy installation",
+											},
+											{
+												icon: Wifi,
+												name: "Connectivity",
+												value: "4G LTE with fallback",
+												description: "3G/2G network support",
+											},
+											{
+												icon: Power,
+												name: "Power Source",
+												value: "Multiple Options",
+												description: "Hard-wired / OBD Plug / Battery",
+											},
+											{
+												icon: Award,
+												name: "Certifications",
+												value: "FCC, CE, PTCRB Certified",
+												description: "Industry standard compliance",
+											},
+											{
+												icon: Battery,
+												name: "Battery Life",
+												value: "Up to 5 years",
+												description: "For asset tracking models",
+											},
+											{
+												icon: Database,
+												name: "Data Storage",
+												value: "Cloud + Local Backup",
+												description: "Secure data redundancy",
+											},
+											{
+												icon: Laptop,
+												name: "Software Compatibility",
+												value: "Universal Integration",
+												description: "Works with RidesIQ, GeoTab, and other fleet management platforms",
+											},
+											{
+												icon: Shield,
+												name: "Security",
+												value: "Enterprise Grade",
+												description: "End-to-end encryption for data protection",
+											},
+											// Adding extra items to make the list longer
+											{
+												icon: Wifi,
+												name: "GPS Accuracy",
+												value: "±2 meters",
+												description: "Precise location tracking",
+											},
+											{
+												icon: Battery,
+												name: "Operating Temperature",
+												value: "-20°C to 60°C",
+												description: "Works in extreme conditions",
+											},
+											{
+												icon: Shield,
+												name: "Water Resistance",
+												value: "IP67 Rated",
+												description: "Protected against dust and water immersion",
+											},
+											{
+												icon: Database,
+												name: "Memory",
+												value: "8GB Flash Storage",
+												description: "For offline data logging",
+											},
+										].map((spec, index) => (
+											<motion.div
+												key={`${spec.name}-${index}`}
+												initial={{ opacity: 0, y: 10 }}
+												whileInView={{ opacity: 1, y: 0 }}
+												viewport={{ once: true }}
+												transition={{ delay: index * 0.1 }}
+												className="p-6 hover:bg-gray-50 transition-colors"
+											>
+												<div className="flex items-start gap-4">
+													<div className="w-10 h-10 rounded-lg bg-[#678FCA]/10 flex items-center justify-center flex-shrink-0">
+														<spec.icon className="w-5 h-5 text-[#678FCA]" />
+													</div>
+													<div className="flex-1">
+														<div className="text-sm font-medium text-gray-500">{spec.name}</div>
+														<div className="text-lg font-semibold text-gray-900 mt-1">{spec.value}</div>
+														<div className="text-sm text-gray-600 mt-1">{spec.description}</div>
+													</div>
+												</div>
+											</motion.div>
+										))}
 									</div>
-									<div>
-										<div className="text-sm font-medium text-gray-900">Certified Device</div>
-										<div className="text-xs text-gray-500">FCC, CE, PTCRB</div>
+								</motion.div>
+
+								{/* Product Image - Sticky Container */}
+								<div className="relative order-1 lg:order-2 lg:-mt-12">
+									<div
+										className="lg:sticky lg:top-24"
+										ref={imageRef}
+									>
+										<motion.div
+											initial={{ opacity: 0, x: 20 }}
+											whileInView={{ opacity: 1, x: 0 }}
+											viewport={{ once: true }}
+											className="relative"
+										>
+											<div className="relative max-w-md mx-auto lg:max-w-none">
+												<div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6" />
+												<Image
+													src="/assets/fleet-management/5.png"
+													alt="RidesIQ GPS Tracking Device"
+													className="relative z-10 rounded-3xl shadow-2xl transform -rotate-3 transition-transform duration-500 hover:rotate-0 w-full"
+													width={800}
+													height={800}
+												/>
+											</div>
+
+											{/* Certification Badge */}
+											<motion.div
+												initial={{ opacity: 0, scale: 0.9 }}
+												whileInView={{ opacity: 1, scale: 1 }}
+												viewport={{ once: true }}
+												transition={{ delay: 0.3 }}
+												className="absolute -right-4 top-1/4 bg-white p-4 rounded-xl shadow-lg"
+											>
+												<div className="flex items-center gap-3">
+													<div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+														<Award className="w-5 h-5 text-blue-600" />
+													</div>
+													<div>
+														<div className="text-sm font-medium text-gray-900">Certified Device</div>
+														<div className="text-xs text-gray-500">FCC, CE, PTCRB</div>
+													</div>
+												</div>
+											</motion.div>
+										</motion.div>
 									</div>
 								</div>
-							</motion.div>
-						</motion.div>
+							</div>
+						</div>
 					</div>
 
 					<motion.div
@@ -1098,7 +1179,7 @@ const Tracking = () => {
 								>
 									<h4 className="text-lg font-semibold mb-4">Resources</h4>
 									<ul className="space-y-3">
-										<li className="flex items-center">
+										{/* <li className="flex items-center">
 											<a
 												href="#"
 												className="text-gray-400 hover:text-white transition-colors"
@@ -1106,7 +1187,7 @@ const Tracking = () => {
 												Blog
 											</a>
 											<span className="ml-2 text-xs bg-[#678FCA]/20 text-[#678FCA] px-2 py-0.5 rounded-full">Soon</span>
-										</li>
+										</li> */}
 										<li>
 											<a
 												href="#"
@@ -1115,7 +1196,7 @@ const Tracking = () => {
 												FAQs
 											</a>
 										</li>
-										<li className="flex items-center">
+										{/* <li className="flex items-center">
 											<a
 												href="#"
 												className="text-gray-400 hover:text-white transition-colors"
@@ -1123,7 +1204,7 @@ const Tracking = () => {
 												API Docs
 											</a>
 											<span className="ml-2 text-xs bg-[#678FCA]/20 text-[#678FCA] px-2 py-0.5 rounded-full">Soon</span>
-										</li>
+										</li> */}
 										<li>
 											<a
 												href="#"
