@@ -707,7 +707,7 @@ const Contact = () => {
 								>
 									<h4 className="text-lg font-semibold mb-4">Resources</h4>
 									<ul className="space-y-3">
-										<li className="flex items-center">
+										{/* <li className="flex items-center">
 											<a
 												href="#"
 												className="text-gray-400 hover:text-white transition-colors"
@@ -715,7 +715,7 @@ const Contact = () => {
 												Blog
 											</a>
 											<span className="ml-2 text-xs bg-[#678FCA]/20 text-[#678FCA] px-2 py-0.5 rounded-full">Soon</span>
-										</li>
+										</li> */}
 										<li>
 											<a
 												href="#"
@@ -724,7 +724,7 @@ const Contact = () => {
 												FAQs
 											</a>
 										</li>
-										<li className="flex items-center">
+										{/* <li className="flex items-center">
 											<a
 												href="#"
 												className="text-gray-400 hover:text-white transition-colors"
@@ -732,7 +732,7 @@ const Contact = () => {
 												API Docs
 											</a>
 											<span className="ml-2 text-xs bg-[#678FCA]/20 text-[#678FCA] px-2 py-0.5 rounded-full">Soon</span>
-										</li>
+										</li> */}
 										<li>
 											<a
 												href="#"
