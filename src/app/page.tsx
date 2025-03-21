@@ -528,28 +528,28 @@ function Home() {
 									<h4 className="text-lg font-semibold mb-4">Solutions</h4>
 									<ul className="space-y-3">
 										<li>
-											<a
-												href="#"
+											<Link
+												href="/solutions/hard-wired-trackers"
 												className="text-gray-400 hover:text-white transition-colors"
 											>
 												Hard-Wired Trackers
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a
-												href="#"
+											<Link
+												href="/solutions/obd-trackers"
 												className="text-gray-400 hover:text-white transition-colors"
 											>
 												OBD Trackers
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a
-												href="#"
+											<Link
+												href="/solutions/asset-trackers"
 												className="text-gray-400 hover:text-white transition-colors"
 											>
 												Asset Trackers
-											</a>
+											</Link>
 										</li>
 									</ul>
 								</motion.div>

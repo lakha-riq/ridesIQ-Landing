@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { MenuIcon, X, ChevronRight, Truck, Construction, Bike, Bus, Factory, Ambulance, Warehouse, ChevronDown } from "lucide-react";
@@ -302,27 +302,42 @@ export const Navigation = () => {
 										aria-labelledby="solutions-menu"
 									>
 										<div className="p-4">
-											<Link
-												href="/hard-wired-trackers"
-												className="block px-4 py-2 text-sm text-gray-700 hover:text-[#678FCA] hover:bg-gray-50 rounded-lg transition-colors"
-												role="menuitem"
+											<motion.div
+												initial={{ opacity: 0, x: -10 }}
+												animate={{ opacity: 1, x: 0 }}
+												transition={{ delay: 0.3 }}
 											>
-												Hard-Wired Trackers
-											</Link>
-											<Link
-												href="/obd-trackers"
-												className="block px-4 py-2 text-sm text-gray-700 hover:text-[#678FCA] hover:bg-gray-50 rounded-lg transition-colors"
-												role="menuitem"
+												<Link
+													href="/solutions/hard-wired-trackers"
+													className="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
+												>
+													Hard-Wired Trackers
+												</Link>
+											</motion.div>
+											<motion.div
+												initial={{ opacity: 0, x: -10 }}
+												animate={{ opacity: 1, x: 0 }}
+												transition={{ delay: 0.33 }}
 											>
-												OBD Trackers
-											</Link>
-											<Link
-												href="/asset-trackers"
-												className="block px-4 py-2 text-sm text-gray-700 hover:text-[#678FCA] hover:bg-gray-50 rounded-lg transition-colors"
-												role="menuitem"
+												<Link
+													href="/solutions/obd-trackers"
+													className="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
+												>
+													OBD Trackers
+												</Link>
+											</motion.div>
+											<motion.div
+												initial={{ opacity: 0, x: -10 }}
+												animate={{ opacity: 1, x: 0 }}
+												transition={{ delay: 0.36 }}
 											>
-												Asset Trackers
-											</Link>
+												<Link
+													href="/solutions/asset-trackers"
+													className="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
+												>
+													Asset Trackers
+												</Link>
+											</motion.div>
 										</div>
 									</motion.div>
 								)}
@@ -440,7 +455,7 @@ export const Navigation = () => {
 									transition={{ delay: 0.3 }}
 								>
 									<Link
-										href="/hard-wired-trackers"
+										href="/solutions/hard-wired-trackers"
 										className="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
 									>
 										Hard-Wired Trackers
@@ -452,7 +467,7 @@ export const Navigation = () => {
 									transition={{ delay: 0.33 }}
 								>
 									<Link
-										href="/obd-trackers"
+										href="/solutions/obd-trackers"
 										className="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
 									>
 										OBD Trackers
@@ -464,7 +479,7 @@ export const Navigation = () => {
 									transition={{ delay: 0.36 }}
 								>
 									<Link
-										href="/asset-trackers"
+										href="/solutions/asset-trackers"
 										className="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
 									>
 										Asset Trackers
