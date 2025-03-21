@@ -2,7 +2,7 @@
 import React from "react";
 import { IndustryTemplate } from "@/components/IndustryTemplate";
 import { IndustryKeyFeatures } from "@/components/IndustryKeyFeatures";
-import { Truck, Shield, BarChart3, Clock, AlertCircle, Settings2, Timer, TrendingUp, Target, DollarSign, LineChart, LucideIcon } from "lucide-react";
+import { Truck, Shield,  Timer, TrendingUp, Target, DollarSign, LineChart, LucideIcon, Bell, Globe, Receipt, MapPin, FileCheck } from "lucide-react";
 
 type KeyFeature = {
 	icon: LucideIcon; // From lucide-react
@@ -79,43 +79,43 @@ const fleetKeyFeatures:KeyFeature[] = [
 	},
 ];
 
-const fleetManagementData:IndustryData = {
+const fleetManagementData: IndustryData = {
 	name: "Fleet Management Solutions",
 	subtitle: "Next-Gen Fleet Operations",
 	description: "Transform your fleet operations with AI-powered tracking and analytics that deliver real-time insights and maximize efficiency across your entire fleet.",
 	heroImage: "/assets/fleet-management/5.png",
 	challenges: [
 		{
-			icon: Clock,
-			title: "Time Management",
-			description: "Manual route planning and dispatch processes leading to inefficient fleet utilization and delayed deliveries.",
+			icon: Shield,
+			title: "Vehicle Theft",
+			description: "Rising vehicle theft rates and unauthorized usage leading to significant financial losses and security concerns.",
 		},
 		{
-			icon: AlertCircle,
-			title: "Vehicle Maintenance",
-			description: "Unexpected breakdowns and maintenance issues causing costly downtime and service disruptions.",
+			icon: Globe,
+			title: "International Border Transfer",
+			description: "Complex cross-border operations requiring precise tracking, documentation, and compliance management.",
 		},
 		{
-			icon: Settings2,
-			title: "Operational Efficiency",
-			description: "Lack of real-time visibility into fleet operations, making it difficult to optimize routes and reduce costs.",
+			icon: Receipt,
+			title: "Toll Management",
+			description: "Inefficient toll tracking and reporting systems resulting in unexpected expenses and administrative burden.",
 		},
 	],
 	solutions: [
 		{
-			icon: Truck,
-			title: "Intelligent Routing",
-			description: "AI-powered route optimization that considers traffic, weather, and historical data to ensure timely deliveries.",
+			icon: MapPin,
+			title: "Real-time Tracking",
+			description: "24/7 vehicle monitoring with instant alerts for unauthorized movement and geofence violations.",
 		},
 		{
-			icon: Shield,
-			title: "Predictive Maintenance",
-			description: "Advanced analytics that predict potential vehicle issues before they cause breakdowns.",
+			icon: FileCheck,
+			title: "Border Compliance",
+			description: "Automated documentation and real-time location tracking for seamless cross-border fleet operations.",
 		},
 		{
-			icon: BarChart3,
-			title: "Real-time Analytics",
-			description: "Comprehensive dashboard with live fleet metrics and actionable insights for better decision-making.",
+			icon: Bell,
+			title: "Automated Toll Reports",
+			description: "Comprehensive toll tracking with instant notifications and detailed expense reporting systems.",
 		},
 	],
 	stats: [

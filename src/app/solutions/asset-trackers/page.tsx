@@ -1,5 +1,5 @@
 "use client";
-import React, { ForwardRefExoticComponent, RefAttributes, useEffect, useRef, useState } from "react";
+import React, { ForwardRefExoticComponent, RefAttributes, useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import {
@@ -15,8 +15,7 @@ import {
 	Lock,
 	Radio,
 	Navigation2,
-	AlertCircle,
-	FileText,
+
 	Activity,
 	Ruler,
 	Wifi,
@@ -35,9 +34,12 @@ import {
 	HelpCircle,
 	ArrowRight,
 	LucideProps,
+	Thermometer,
+	Droplet,
 } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import Image from "next/image";
+
 interface Products {
 	id: string;
 	name: string;
@@ -50,11 +52,10 @@ interface Products {
 		};
 	};
 }
+
 const Tracking = () => {
 	const [activeProduct, setActiveProduct] = useState<string | null>(null);
 	const [activeFaq, setActiveFaq] = useState<number | null>(null);
-
-
 
 	const containerRef = useRef<HTMLDivElement>(null);
 	const imageRef = useRef<HTMLDivElement>(null);
@@ -94,20 +95,20 @@ const Tracking = () => {
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
-    const products: Products[] = [
-		{
-			id: "asset",
-			name: "Asset Tracker",
-			image: "/assets/fleet-management/4.png",
-			specs: {
-				installation: { icon: Wrench, value: "Magnetic Mount", description: "Quick attachment system" },
-				power: { icon: Zap, value: "Battery Powered", description: "Long-life battery pack" },
-				bestFor: { icon: Box, value: "Asset Tracking", description: "Trailers & equipment" },
-				battery: { icon: Battery, value: "5-Year Battery", description: "Extended battery life" },
-				connectivity: { icon: Wifi, value: "4G + Satellite", description: "Global coverage" },
-				features: { icon: Shield, value: "Weather Resistant", description: "IP67 rated protection" },
-			},
-		},
+	const products: Products[] = [
+{
+  id: "asset",
+  name: "Asset Tracker",
+  image: "/assets/fleet-management/4.png",
+  specs: {
+    installation: { icon: Wrench, value: "Compact Design", description: "64.6 x 51 x 20.9mm form factor" },
+    power: { icon: Zap, value: "Battery Powered", description: "2400mAh lithium battery" },
+    bestFor: { icon: Box, value: "Asset Tracking", description: "Vehicles & equipment monitoring" },
+    battery: { icon: Battery, value: "3-Year Battery", description: "With 1 report per day" },
+    connectivity: { icon: Wifi, value: "LTE Cat M1/NB2", description: "With 2G/3G fallback" },
+    features: { icon: Shield, value: "Weather Resistant", description: "IP67 rated protection" },
+  },
+},
 		{
 			id: "hardwired",
 			name: "Hard-Wired Tracker",
@@ -518,31 +519,42 @@ const Tracking = () => {
 								</h2>
 
 								<p className="text-lg text-black leading-relaxed">
-									Designed for fleets of all sizes, RidesIQ Tracker offers industry-leading accuracy, real-time tracking, and AI-driven analytics to enhance fleet efficiency and
-									reduce downtime. Our comprehensive solution helps you make data-driven decisions while ensuring maximum security and reliability.
+									{
+										"	Designed for fleets of all sizes, the RidesIQ Tracker provides advanced LTE Cat M1/NB2 connectivity, ensuring reliable and efficient real-time tracking. With industry-leading GNSS accuracy (<2m) and multiple transmission protocols (TCP, UDP, SMS), it enables seamless fleet monitoring and optimized performance."
+									}
 								</p>
 
 								<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 									{[
 										{
-											icon: Navigation2,
-											title: "Real-Time GPS Tracking",
-											description: "Know your vehicle's location anytime with GPS updates every 10 seconds.",
+											icon: MapPin,
+											title: "Real-Time GNSS Tracking",
+											description: "Track your fleet with high-precision GNSS, featuring <2m accuracy and intelligent frequency adjustment.",
 										},
 										{
-											icon: AlertCircle,
-											title: "Predictive Maintenance",
-											description: "Reduce unexpected breakdowns with AI-powered maintenance predictions.",
+											icon: BarChart3,
+											title: "Real time Analytics",
+											description: "Leverage advanced data insights for route optimization, asset utilization, and operational efficiency.",
 										},
 										{
-											icon: FileText,
-											title: "Fleet Compliance",
-											description: "Ensure adherence to industry regulations with automated reporting.",
+											icon: Bell,
+											title: "Geofencing & Smart Alerts",
+											description: "Define virtual zones and receive instant alerts for movement, low battery, and scheduled reports.",
 										},
 										{
-											icon: Activity,
-											title: "Telematics Data",
-											description: "Gain insights into driver behavior and vehicle performance.",
+											icon: Tool,
+											title: "Intelligent Power Management",
+											description: "Optimize battery life with power-saving modes and smart wake-up intervals.",
+										},
+										{
+											icon: Lock,
+											title: "Secure Communication",
+											description: "Data transmission via TCP, UDP, and SMS with encryption for enhanced security.",
+										},
+										{
+											icon: Radio,
+											title: "LTE & BLE 5.2 Connectivity",
+											description: "Reliable real-time tracking with LTE Cat M1/NB2 and BLE 5.2 support for seamless communication.",
 										},
 									].map((benefit, index) => (
 										<motion.div
@@ -616,33 +628,33 @@ const Tracking = () => {
 						{[
 							{
 								icon: MapPin,
-								title: "Real-Time Location Tracking",
-								description: "Monitor your fleet's exact location with live GPS updates every 10 seconds.",
+								title: "Real-Time GNSS Tracking",
+								description: "Track your fleet with high-precision GNSS, featuring <2m accuracy and intelligent frequency adjustment.",
 							},
 							{
 								icon: BarChart3,
-								title: "AI-Powered Analytics",
-								description: "Gain insights into vehicle performance, driving behavior, and fuel efficiency.",
+								title: "Comprehensive Analytics",
+								description: "Leverage advanced data insights for route optimization, asset utilization, and operational efficiency.",
 							},
 							{
 								icon: Bell,
-								title: "Geofencing & Alerts",
-								description: "Set virtual boundaries and receive instant alerts for unauthorized movements.",
+								title: "Geofencing & Smart Alerts",
+								description: "Define virtual zones and receive instant alerts for movement, low battery, and scheduled reports.",
 							},
 							{
 								icon: Tool,
-								title: "Predictive Maintenance",
-								description: "Prevent costly breakdowns with AI-driven diagnostics and maintenance scheduling.",
+								title: "Intelligent Power Management",
+								description: "Optimize battery life with power-saving modes and smart wake-up intervals.",
 							},
 							{
 								icon: Lock,
-								title: "Secure Data Encryption",
-								description: "End-to-end encrypted tracking to ensure your fleet data remains protected.",
+								title: "Secure Communication",
+								description: "Data transmission via TCP, UDP, and SMS with encryption for enhanced security.",
 							},
 							{
 								icon: Radio,
-								title: "Multi-Network Connectivity",
-								description: "Reliable tracking with 4G LTE & satellite backup for uninterrupted coverage.",
+								title: "LTE & BLE 5.2 Connectivity",
+								description: "Reliable real-time tracking with LTE Cat M1/NB2 and BLE 5.2 support for seamless communication.",
 							},
 						].map((feature, index) => (
 							<motion.div
@@ -755,75 +767,74 @@ const Tracking = () => {
 											{
 												icon: Ruler,
 												name: "Dimensions",
-												value: "110mm x 65mm x 30mm",
-												description: "Compact design for easy installation",
+												value: "64.6mm x 51mm x 20.9mm",
+												description: "2.54(L) x 2.0(W) x 0.82(H) inches",
 											},
 											{
 												icon: Wifi,
 												name: "Connectivity",
-												value: "4G LTE with fallback",
-												description: "3G/2G network support",
+												value: "LTE Cat M1/NB2",
+												description: "EGPRS 850/900/1800/1900 MHz fallback",
 											},
 											{
 												icon: Power,
 												name: "Power Source",
-												value: "Multiple Options",
-												description: "Hard-wired / OBD Plug / Battery",
+												value: "Lithium Battery",
+												description: "2400mAh lithium manganese dioxide battery",
 											},
 											{
 												icon: Award,
 												name: "Certifications",
-												value: "FCC, CE, PTCRB Certified",
-												description: "Industry standard compliance",
+												value: "IP67 Compliant",
+												description: "Protected against dust and water immersion",
 											},
 											{
 												icon: Battery,
 												name: "Battery Life",
-												value: "Up to 5 years",
-												description: "For asset tracking models",
+												value: "Up to 3 years",
+												description: "With 1 report per day in standby mode",
 											},
 											{
 												icon: Database,
 												name: "Data Storage",
-												value: "Cloud + Local Backup",
-												description: "Secure data redundancy",
+												value: "10,000 Buffer Messages",
+												description: "Local data storage capacity",
 											},
 											{
 												icon: Laptop,
-												name: "Software Compatibility",
-												value: "Universal Integration",
-												description: "Works with RidesIQ, GeoTab, and other fleet management platforms",
+												name: "Software Protocol",
+												value: "@Track Protocol",
+												description: "Supports TCP, UDP, and SMS transmission",
 											},
 											{
 												icon: Shield,
 												name: "Security",
-												value: "Enterprise Grade",
-												description: "End-to-end encryption for data protection",
+												value: "Internal SIM",
+												description: "eSFF SIM for secure connectivity",
 											},
-											// Adding extra items to make the list longer
 											{
-												icon: Wifi,
+												icon: Navigation2,
 												name: "GPS Accuracy",
-												value: "±2 meters",
-												description: "Precise location tracking",
+												value: "< 2 meters",
+												description: "All-in-One GNSS receiver with high sensitivity",
 											},
 											{
-												icon: Battery,
+												icon: Thermometer,
 												name: "Operating Temperature",
-												value: "-20°C to 60°C",
+												value: "-20°C to +60°C",
 												description: "Works in extreme conditions",
 											},
 											{
-												icon: Shield,
+												icon: Droplet,
 												name: "Water Resistance",
-												value: "IP67 Rated",
+												value: "IP67 Compliant",
 												description: "Protected against dust and water immersion",
 											},
 											{
-												icon: Database,
-												name: "Memory",
-												value: "8GB Flash Storage",
-												description: "For offline data logging",
+												icon: Activity,
+												name: "Motion Detection",
+												value: "3-axis Accelerometer",
+												description: "Intelligent motion detection with reporting frequency adjustment",
 											},
 										].map((spec, index) => (
 											<motion.div
@@ -1040,7 +1051,7 @@ const Tracking = () => {
 									{/* Tag Buttons */}
 									<div className="flex flex-wrap justify-center gap-4">
 										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Fleet Tracking</div>
-										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">AI Insights</div>
+										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Real Insights</div>
 										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Compliance</div>
 									</div>
 								</motion.div>

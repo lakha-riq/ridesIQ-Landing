@@ -125,38 +125,38 @@ const Tracking = () => {
 			name: "Asset Tracker",
 			image: "/assets/fleet-management/4.png",
 			specs: {
-				installation: { icon: Wrench, value: "Magnetic Mount", description: "Quick attachment system" },
-				power: { icon: Zap, value: "Battery Powered", description: "Long-life battery pack" },
-				bestFor: { icon: Box, value: "Asset Tracking", description: "Trailers & equipment" },
-				battery: { icon: Battery, value: "5-Year Battery", description: "Extended battery life" },
-				connectivity: { icon: Wifi, value: "4G + Satellite", description: "Global coverage" },
+				installation: { icon: Wrench, value: "Compact Design", description: "64.6 x 51 x 20.9mm form factor" },
+				power: { icon: Zap, value: "Battery Powered", description: "2400mAh lithium battery" },
+				bestFor: { icon: Box, value: "Asset Tracking", description: "Vehicles & equipment monitoring" },
+				battery: { icon: Battery, value: "3-Year Battery", description: "With 1 report per day" },
+				connectivity: { icon: Wifi, value: "LTE Cat M1/NB2", description: "With 2G/3G fallback" },
 				features: { icon: Shield, value: "Weather Resistant", description: "IP67 rated protection" },
 			},
 		},
 	];
 
-	const faqs = [
-		{
-			question: "How accurate is the GPS tracking?",
-			answer: "Our GPS tracking provides accuracy within 2-3 meters in optimal conditions. The system updates every 10 seconds to ensure real-time location data.",
-		},
-		{
-			question: "What is the battery life of the tracking devices?",
-			answer: "Battery life varies by model. Hard-wired devices use vehicle power, OBD trackers are port-powered, and asset trackers can last up to 5 years on a single charge.",
-		},
-		{
-			question: "Is the tracking data secure?",
-			answer: "Yes, all data is encrypted end-to-end and stored in secure cloud servers. We comply with industry standards for data protection and privacy.",
-		},
-		{
-			question: "Can I integrate the tracking system with my existing fleet management software?",
-			answer: "Yes, our API allows integration with most major fleet management platforms. Our team can assist with custom integration solutions.",
-		},
-		{
-			question: "What kind of support do you offer?",
-			answer: "We provide 24/7 technical support via phone, email, and chat. Our team of experts is always available to help with any issues or questions.",
-		},
-	];
+const faqs = [
+	{
+		question: "How accurate is the GPS tracking?",
+		answer: "Our GPS tracking provides accuracy within 2 meters (CEP) in optimal conditions. The system uses an All-in-One GNSS receiver with high sensitivity (-148 dBm autonomous, -165 dBm tracking).",
+	},
+	{
+		question: "What is the battery life of the tracking devices?",
+		answer: "Battery life varies by reporting frequency. With the 2400mAh lithium manganese dioxide battery, you can get up to 3 years with 1 report per day, 300 days with 4 reports per day, or 5 days with 5-minute reporting intervals.",
+	},
+	{
+		question: "Is the device weather-resistant?",
+		answer: "Yes, our tracking device is IP67 compliant, providing complete protection against dust ingress and protection against water immersion between 15cm and 1m for up to 30 minutes.",
+	},
+	{
+		question: "What connectivity options does the device support?",
+		answer: "The device supports LTE Cat M1/NB2 with multiple frequency bands (B1/B2/B3/B4/B5/B8/B12/B13/B18/B19/B20/B25/B26/B28/B66/B85) and EGPRS 850/900/1800/1900 MHz fallback.",
+	},
+	{
+		question: "What operating conditions can the device handle?",
+		answer: "The device operates in temperatures ranging from -20°C to +60°C, making it suitable for a wide range of environmental conditions. It weighs only 78g (2.75oz) and includes BLE 5.2 protocol support.",
+	},
+];
 
 	return (
 		<div className="min-h-screen bg-white">
