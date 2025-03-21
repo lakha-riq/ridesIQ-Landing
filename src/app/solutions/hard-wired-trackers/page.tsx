@@ -43,6 +43,11 @@ interface Products {
 	id: string;
 	name: string;
 	image: string;
+	imageProps?: {
+		width: number;
+		height: number;
+		className?: string;
+	};
 	specs: {
 		[key: string]: {
 			icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>;
@@ -99,6 +104,11 @@ const Tracking = () => {
 			id: "hardwired",
 			name: "Hard-Wired Tracker",
 			image: "/devices/hardware_tracker.svg",
+			imageProps: {
+				width: 450,
+				height: 300,
+				className: "object-contain p-4",
+			},
 			specs: {
 				installation: { icon: Wrench, value: "Professional Installation", description: "Requires certified technician" },
 				power: { icon: Zap, value: "Direct Vehicle Power", description: "Continuous power supply (DC 9-100V/1.5A)" },
@@ -113,6 +123,11 @@ const Tracking = () => {
 			id: "obd",
 			name: "OBD Tracker",
 			image: "/devices/OBD_tracker.png",
+			imageProps: {
+				width: 250,
+				height: 250,
+				className: "object-contain p-4",
+			},
 			specs: {
 				installation: { icon: Wrench, value: "Plug & Play", description: "Self-installation in minutes" },
 				power: { icon: Zap, value: "OBD-II Port", description: "Vehicle diagnostic port" },
@@ -126,6 +141,11 @@ const Tracking = () => {
 			id: "asset",
 			name: "Asset Tracker",
 			image: "/devices/asset_tracker.png",
+			imageProps: {
+				width: 250,
+				height: 250,
+				className: "object-contain p-4",
+			},
 			specs: {
 				installation: { icon: Wrench, value: "Compact Design", description: "64.6 x 51 x 20.9mm form factor" },
 				power: { icon: Zap, value: "Battery Powered", description: "2400mAh lithium battery" },
@@ -361,12 +381,12 @@ const Tracking = () => {
 										className="bg-white p-6"
 									>
 										<div className="text-center">
-											<img
+											<Image
 												src={product.image}
 												alt={product.name}
-												className="w-full h-32 object-cover rounded-lg mb-4"
+												{...product.imageProps}
+												priority
 											/>
-											<h3 className="text-lg font-semibold text-gray-900">{product.name}</h3>
 										</div>
 									</div>
 								))}
@@ -477,10 +497,13 @@ const Tracking = () => {
 						>
 							<div className="relative">
 								<div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6" />
-								<img
-									src="/assets/homepage/1.png"
-									alt="RidesIQ GPS Tracking Device"
-									className="relative z-10 rounded-3xl shadow-2xl transform -rotate-3 transition-transform duration-500 hover:rotate-0"
+								<Image
+									src="/assets/fleet-management/3.png"
+									alt="RidesIQ Hard-Wired GPS Tracking Device"
+									className="relative z-10 rounded-3xl shadow-2xl transform -rotate-3 transition-transform duration-500 hover:rotate-0 w-full"
+									width={600}
+									height={600}
+									style={{ maxWidth: "100%", height: "auto" }}
 								/>
 							</div>
 
@@ -618,7 +641,7 @@ const Tracking = () => {
 							{
 								icon: MapPin,
 								title: "Real-Time Location Tracking",
-								description: "Monitor your fleet’s exact location with live GPS updates, tracking by time interval and distance.",
+								description: "Monitor your fleet's exact location with live GPS updates, tracking by time interval and distance.",
 							},
 							{
 								icon: BarChart3,
@@ -864,11 +887,12 @@ const Tracking = () => {
 											<div className="relative max-w-md mx-auto lg:max-w-none">
 												<div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6" />
 												<Image
-													src="/assets/fleet-management/5.png"
-													alt="RidesIQ GPS Tracking Device"
+													src={`/assets/fleet-management/5.png`}
+													alt={products[0].name}
 													className="relative z-10 rounded-3xl shadow-2xl transform -rotate-3 transition-transform duration-500 hover:rotate-0 w-full"
 													width={800}
 													height={800}
+													priority
 												/>
 											</div>
 

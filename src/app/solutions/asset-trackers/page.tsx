@@ -386,7 +386,6 @@ const Tracking = () => {
 												{...product.imageProps}
 												priority
 											/>
-											<h3 className="text-lg font-semibold text-gray-900">{product.name}</h3>
 										</div>
 									</div>
 								))}
