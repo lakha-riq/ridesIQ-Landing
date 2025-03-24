@@ -1,4 +1,4 @@
-"use client";   
+"use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight, Sparkles, MapPin, Mail, Clock, Building2, ChevronDown, X, ArrowRight, Check } from "lucide-react";
@@ -48,7 +48,6 @@ const Contact = () => {
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
 
-		// Basic validation
 		const errors = {
 			fullName: !formData.fullName,
 			email: !formData.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email),
@@ -58,9 +57,29 @@ const Contact = () => {
 		setFormErrors(errors);
 
 		if (!Object.values(errors).some((error) => error)) {
-			// Form is valid
+			// Aggregate all page data
+			const pageData = {
+				contactForm: {
+					...formData,
+					submittedAt: new Date().toISOString(),
+				},
+				activeAccordion:
+					activeAccordion !== null
+						? {
+								question: faqItems[activeAccordion].question,
+								answer: faqItems[activeAccordion].answer,
+						  }
+						: null,
+				location: {
+					offices: ["Toronto, ON", "Buffalo, NY", "Lewes, DE"],
+					supportEmail: "support@ridesiq.com",
+					businessHours: "9 AM - 5 PM EST",
+				},
+			};
+
+			console.log("Page Data:", pageData);
+
 			setFormSubmitted(true);
-			// Reset form
 			setFormData({
 				fullName: "",
 				email: "",
@@ -83,6 +102,39 @@ const Contact = () => {
 				[name]: false,
 			}));
 		}
+	};
+
+	// Add handlers for CTA buttons
+	const handleDemoRequest = () => {
+		const pageData = {
+			action: "demo_request",
+			timestamp: new Date().toISOString(),
+			contactForm: formData,
+			activeAccordion:
+				activeAccordion !== null
+					? {
+							question: faqItems[activeAccordion].question,
+							answer: faqItems[activeAccordion].answer,
+					  }
+					: null,
+		};
+		console.log("Demo Request Data:", pageData);
+	};
+
+	const handleExpertTalk = () => {
+		const pageData = {
+			action: "expert_talk",
+			timestamp: new Date().toISOString(),
+			contactForm: formData,
+			activeAccordion:
+				activeAccordion !== null
+					? {
+							question: faqItems[activeAccordion].question,
+							answer: faqItems[activeAccordion].answer,
+					  }
+					: null,
+		};
+		console.log("Expert Talk Data:", pageData);
 	};
 
 	return (
@@ -562,12 +614,18 @@ const Contact = () => {
 									transition={{ delay: 0.2 }}
 									className="flex flex-col sm:flex-row gap-4 justify-center"
 								>
-									<button className="bg-white text-[#678FCA] px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/90 transition-all duration-300 transform hover:scale-105 flex items-center group">
+									<button
+										onClick={handleDemoRequest}
+										className="bg-white text-[#678FCA] px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/90 transition-all duration-300 transform hover:scale-105 flex items-center group"
+									>
 										Request a Demo
 										<ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
 									</button>
 
-									<button className="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all duration-300 transform hover:scale-105 flex items-center group">
+									<button
+										onClick={handleExpertTalk}
+										className="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all duration-300 transform hover:scale-105 flex items-center group"
+									>
 										Talk to an Expert
 										<ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
 									</button>
