@@ -202,8 +202,14 @@ export const IndustryTemplate: React.FC<IndustryTemplateProps> = ({ industry, ke
 
 			{/* Challenges & Solutions Section */}
 			<ChallengesSolutions
-				challenges={industry.challenges}
-				solutions={industry.solutions}
+				challenges={industry.challenges.map((challenge) => ({
+					...challenge,
+					icon: challenge.icon as typeof LucideIcon,
+				}))}
+				solutions={industry.solutions.map((solution) => ({
+					...solution,
+					icon: solution.icon as typeof LucideIcon,
+				}))}
 			/>
 
 			{keyFeatures}
