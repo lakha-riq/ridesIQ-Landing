@@ -4,8 +4,8 @@ import { sendEmail, StoreEmail } from "@/actions/smtp";
 export async function POST(request: Request) {
 	try {
 		const body = await request.json();
-    const { firstName, lastName, email, companyName, phone, interest, vehicleCount, trackingType, features, region, existingCustomer } = body;
-    const html = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		const { firstName, lastName, email, companyName, phone, interest, vehicleCount, trackingType, features, region, existingCustomer } = body;
+		const html = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html dir="ltr" lang="en">
   <head>
     <meta name="viewport" content="width=device-width" />
@@ -42,7 +42,7 @@ export async function POST(request: Request) {
       id="__react-email-preview">
       Confirmation Email
       <div>
-         ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿
+         ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿
       </div>
     </div>
     <table
@@ -157,13 +157,103 @@ export async function POST(request: Request) {
 	Required Features: ${JSON.stringify(features)} \n
 		`;
 
+		// Create HTML template for RidesIQ team email
+		const teamEmailHtml = `
+		<html>
+		<head>
+		  <style>
+			body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+			.container { max-width: 600px; margin: 0 auto; padding: 20px; }
+			.section { margin-bottom: 20px; }
+			.section-title { 
+			  background-color: #678FCA; 
+			  color: white; 
+			  padding: 8px 16px; 
+			  border-radius: 4px;
+			  margin-bottom: 12px;
+			}
+			.info-row {
+			  display: flex;
+			  margin: 8px 0;
+			  border-bottom: 1px solid #eee;
+			  padding-bottom: 8px;
+			}
+			.label { font-weight: bold; width: 150px; }
+			.value { flex: 1; }
+			.list-item { margin: 4px 0 4px 20px; }
+		  </style>
+		</head>
+		<body>
+		  <div class="container">
+			<h2>New Quote Request</h2>
+			
+			<div class="section">
+			  <div class="section-title">Contact Information</div>
+			  <div class="info-row">
+				<div class="label">Name:</div>
+				<div class="value">${firstName} ${lastName}</div>
+			  </div>
+			  <div class="info-row">
+				<div class="label">Email:</div>
+				<div class="value">${email}</div>
+			  </div>
+			  <div class="info-row">
+				<div class="label">Company:</div>
+				<div class="value">${companyName}</div>
+			  </div>
+			  <div class="info-row">
+				<div class="label">Phone:</div>
+				<div class="value">${phone}</div>
+			  </div>
+			  <div class="info-row">
+				<div class="label">Region:</div>
+				<div class="value">${region}</div>
+			  </div>
+			  <div class="info-row">
+				<div class="label">Existing Customer:</div>
+				<div class="value">${existingCustomer}</div>
+			  </div>
+			</div>
+
+			<div class="section">
+			  <div class="section-title">Fleet Information</div>
+			  <div class="info-row">
+				<div class="label">Interest:</div>
+				<div class="value">${interest}</div>
+			  </div>
+			  <div class="info-row">
+				<div class="label">Vehicle Count:</div>
+				<div class="value">${vehicleCount}</div>
+			  </div>
+			  <div class="info-row">
+				<div class="label">Vehicle Types:</div>
+				<div class="value">
+				  <ul>
+					${trackingType.map((type :string) => `<li class="list-item">${type}</li>`).join("")}
+				  </ul>
+				</div>
+			  </div>
+			  <div class="info-row">
+				<div class="label">Required Features:</div>
+				<div class="value">
+				  <ul>
+					${features.map((feature :string) => `<li class="list-item">${feature}</li>`).join("")}
+				  </ul>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</body>
+		</html>`;
+
 		// Send to RidesIQ team
 		const StoreEmailResult = await StoreEmail({
 			to: [email],
 			from: process.env.AWS_SES_VERIFIED_EMAIL!,
 			subject: `Quote Request from ${firstName} ${lastName}`,
 			name: `${firstName} ${lastName}`,
-			text,
+			text: text,
+			html: teamEmailHtml,
 		});
 		if (!StoreEmailResult.success) {
 			return NextResponse.json({ error: "Failed to store email" }, { status: 500 });
