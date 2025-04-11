@@ -67,7 +67,7 @@ export async function StoreEmail({ to, from, subject, text, name} : SendEmailPar
 
 				const command = new SendEmailCommand({
 					Destination: {
-						ToAddresses:[ `info@ridesiq.com` , `aryan@ridesiq.com`],
+						ToAddresses:[ `info@ridesiq.com`],
 					},
 					Message: {
 						Body: {
