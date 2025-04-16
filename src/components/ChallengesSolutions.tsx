@@ -170,8 +170,7 @@ export const ChallengesSolutions: React.FC<ChallengesSolutionsProps> = ({ challe
 						From <span className="text-[#678FCA]">Challenges</span> to <span className="text-[#99D5C9]">Solutions</span>
 					</h2>
 					<p className="text-xl text-gray-600 max-w-3xl mx-auto">
-						Fleet operators face increasingly complex challenges in {"today's"} fast-paced logistics landscape. Our Real-Time solutions transform these challenges into opportunities,
-						delivering measurable improvements in efficiency, cost savings, and operational excellence.
+					Car rental operators face daily challenges managing vehicles, minimizing risk, and maintaining operational efficiency. {" RidesIQ's"} real-time GPS tracking and fleet intelligence platform turns these roadblocks into scalable, revenue-driving solutions.
 					</p>
 				</motion.div>
 

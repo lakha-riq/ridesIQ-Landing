@@ -15,31 +15,25 @@ const industries: Industry[] = [
 	{
 		icon: Truck,
 		title: "Logistics & Transportation",
-		description: "Real-time tracking & route optimization for trucking and logistics fleets.",
+		description: "Reduce idle time and keep cargo moving with live tracking and maintenance alerts.",
 		link: "/industries/logistics",
 	},
 	{
 		icon: Construction,
 		title: "Construction Fleets",
-		description: "Monitor heavy equipment and vehicles to improve productivity and prevent theft.",
+		description: "Monitor equipment, prevent fuel misuse, and get alerts when vehicles leave geofenced zones.",
 		link: "/industries/construction",
 	},
 	{
 		icon: Bike,
 		title: "Food Delivery",
-		description: "Ensure on-time deliveries with temperature monitoring and route efficiency.",
+		description: "Ensure on-time deliveries with GPS tracking, route visibility, and vehicle condition alerts.",
 		link: "/industries/food-delivery",
-	},
-	{
-		icon: Bus,
-		title: "Public Transit",
-		description: "Improve transit efficiency with automated scheduling and vehicle health tracking.",
-		link: "/industries/public-transit",
 	},
 	{
 		icon: Car,
 		title: "Car Rental",
-		description: "Streamline rental operations with automated booking and fleet management solutions.",
+		description: "Recover stolen vehicles, track tolls, and automate billing with GPS built for rental fleets.",
 		link: "/industries/car-rental",
 	},
 ];
@@ -48,19 +42,19 @@ const additionalIndustries: Industry[] = [
 	{
 		icon: Factory,
 		title: "Manufacturing",
-		description: "Optimize supply chain logistics and material transport operations.",
+		description: "Improve logistics visibility and reduce delays with real-time vehicle tracking.",
 		link: "/industries/manufacturing",
 	},
 	{
 		icon: Ambulance,
 		title: "Emergency Services",
-		description: "Critical response fleet management for emergency vehicles.",
+		description: "Track and maintain response vehicles with GPS monitoring and service alerts.",
 		link: "/industries/emergency-services",
 	},
 	{
 		icon: Warehouse,
 		title: "Distribution",
-		description: "Streamline warehouse and distribution fleet operations.",
+		description: "Streamline routes and automate vehicle upkeep for faster, more efficient delivery.",
 		link: "/industries/distribution",
 	},
 ];
@@ -188,7 +182,7 @@ export const IndustrySolutions = () => {
 						href="/industries"
 						className="inline-flex items-center bg-[#678FCA] text-white px-8 py-4 rounded-full hover:bg-[#678FCA]/90 transition-all group"
 					>
-						Explore Industry Solutions
+						Choose the Solution That Fits Your Fleet
 						<ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
 					</Link>
 				</motion.div>

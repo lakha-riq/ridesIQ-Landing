@@ -103,7 +103,7 @@ export const IndustryTemplate: React.FC<IndustryTemplateProps> = ({ industry, ke
 									transition={{ duration: 0.6, delay: 0.3 }}
 									className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]"
 								>
-									<span className="text-white">Intelligent </span>
+									<span className="text-white">Smarter</span>
 									<span className="bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent">{industry.name}</span>
 								</motion.h1>
 
@@ -158,7 +158,7 @@ export const IndustryTemplate: React.FC<IndustryTemplateProps> = ({ industry, ke
 						</div>
 
 						{/* Right Content - Product Image */}
-						<motion.div
+						{/* <motion.div
 							initial={{ opacity: 0, scale: 0.95 }}
 							animate={{ opacity: 1, scale: 1 }}
 							transition={{ duration: 0.8, delay: 0.4 }}
@@ -173,10 +173,10 @@ export const IndustryTemplate: React.FC<IndustryTemplateProps> = ({ industry, ke
 									width={800}
 									height={800}
 								/>
-							</div>
+							</div> */}
 
 							{/* Floating Stats */}
-							<motion.div
+							{/* <motion.div
 								initial={{ opacity: 0, y: 20 }}
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ duration: 0.6, delay: 0.8 }}
@@ -192,7 +192,7 @@ export const IndustryTemplate: React.FC<IndustryTemplateProps> = ({ industry, ke
 									</div>
 								</div>
 							</motion.div>
-						</motion.div>
+						</motion.div> */}
 					</div>
 				</div>
 
@@ -343,7 +343,7 @@ export const IndustryTemplate: React.FC<IndustryTemplateProps> = ({ industry, ke
 									viewport={{ once: true }}
 									className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8"
 								>
-									Ready to Transform Your Fleet?
+									Transform Your Fleet with Real-Time GPS Tracking
 								</motion.h2>
 
 								<motion.p
@@ -353,7 +353,7 @@ export const IndustryTemplate: React.FC<IndustryTemplateProps> = ({ industry, ke
 									transition={{ delay: 0.1 }}
 									className="text-xl text-white/90 mb-12"
 								>
-									Join thousands of fleet managers who trust RidesIQ
+									Join 1,000+ fleet managers who rely on RidesIQ to improve vehicle tracking, reduce costs, and boost rental efficiency.
 								</motion.p>
 
 								<motion.div
@@ -364,15 +364,15 @@ export const IndustryTemplate: React.FC<IndustryTemplateProps> = ({ industry, ke
 									className="space-y-8"
 								>
 									<button className="bg-white text-[#678FCA] px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group">
-										Get Started Today
+									Get Started with RidesIQ
 										<ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
 									</button>
 
 									{/* Tag Buttons */}
 									<div className="flex flex-wrap justify-center gap-4">
-										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Fleet Tracking</div>
-										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Real time Insights</div>
-										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Compliance</div>
+										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">GPS Fleet Tracking</div>
+										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Vehicle Utilization</div>
+										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Telematics Compliance</div>
 									</div>
 								</motion.div>
 							</div>

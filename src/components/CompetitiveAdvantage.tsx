@@ -25,77 +25,89 @@ const features: ComparisonFeature[] = [
 			detail: "Industry-Leading 99% Accuracy",
 		},
 		competitors: {
-			geotab: { supported: false, detail: "Standard GPS" },
-			zubie: { supported: false, detail: "Standard GPS" },
-			ramtracking: { supported: false, detail: "Standard GPS" },
+			CompetitorA: { supported: false, detail: "Delayed or standard GPS refresh rates" },
+			CompetitorB: { supported: false, detail: "Standard GPS" },
+			CompetitorC: { supported: false, detail: "Standard GPS" },
 		},
 	},
 	{
-		name: "Seamless API Integrations",
+		name: "Automated Toll Tracking",
 		ridesiq: {
 			supported: true,
-			detail: "Plug & Play API with Customization",
+			detail: "Real-time & automated toll alerts, nationwide",
 		},
 		competitors: {
-			geotab: { supported: false, detail: "Limited API" },
-			zubie: { supported: true, detail: "Basic API" },
-			ramtracking: { supported: false, detail: "Limited API" },
+			CompetitorA: { supported: false, detail: "Often requires manual entry or third-party tools" },
+			CompetitorB: { supported: false, detail: "Basic API" },
+			CompetitorC: { supported: false, detail: "Limited API" },
 		},
 	},
 	{
-		name: "Cost-Effectiveness",
+		name: "Stolen Vehicle Recovery (SVR)",
 		ridesiq: {
 			supported: true,
-			detail: "Competitive Pricing for Fleets",
+			detail: "Hidden backup tracker activates if tampered with",
 		},
 		competitors: {
-			geotab: { supported: false, detail: "Expensive" },
-			zubie: { supported: false, detail: "Monthly Fees" },
-			ramtracking: { supported: false, detail: "Pricey Contracts" },
+			CompetitorA: { supported: false, detail: "No built-in recovery fallback" },
+			CompetitorB: { supported: false, detail: "Monthly Fees" },
+			CompetitorC: { supported: false, detail: "Pricey Contracts" },
 		},
 	},
 	{
-		name: "Real-Time Analytics",
+		name: "Device Flexibility",
 		ridesiq: {
 			supported: true,
-			detail: "Advanced Real time for Predictive Insights",
+			detail: "OBD, Hardwired, and Asset Tracker",
 		},
 		competitors: {
-			geotab: { supported: false, detail: "Basic Reports" },
-			zubie: { supported: false, detail: "No Real time Features" },
-			ramtracking: { supported: false, detail: "No Real time Features" },
+			CompetitorA: { supported: false, detail: "Typically only one or two device options" },
+			CompetitorB: { supported: false, detail: "No Real time Features" },
+			CompetitorC: { supported: false, detail: "No Real time Features" },
 		},
 	},
 	{
-		name: "24/7 Customer Support",
+		name: "Rental-Fleet Features",
 		ridesiq: {
 			supported: true,
-			detail: "Live Chat, Phone & Email Support",
+			detail: "Allows Toll billing, border alerts, hidden installs",
 		},
 		competitors: {
-			geotab: { supported: false, detail: "Email Only" },
-			zubie: { supported: false, detail: "Limited Hours" },
-			ramtracking: { supported: false, detail: "Delayed Responses" },
+			CompetitorA: { supported: false, detail: "General fleet use — not rental-focused" },
+			CompetitorB: { supported: false, detail: "Limited Hours" },
+			CompetitorC: { supported: false, detail: "Delayed Responses" },
 		},
 	},
 	{
-		name: "Enterprise-Grade Security",
+		name: "Geofencing & Driving Alerts",
 		ridesiq: {
 			supported: true,
-			detail: "End-to-End Data Encryption",
+			detail: "Instant alerts (Web, Email, SMS)",
 		},
 		competitors: {
-			geotab: { supported: false, detail: "Basic Security" },
-			zubie: { supported: false, detail: "No Encryption" },
-			ramtracking: { supported: false, detail: "Basic Encryption" },
+			CompetitorA: { supported: false, detail: "Alerts are often delayed or limited" },
+			CompetitorB: { supported: false, detail: "No Encryption" },
+			CompetitorC: { supported: false, detail: "Basic Encryption" },
+		},
+	},
+	{
+		name: "Fleet Scalability",
+		ridesiq: {
+			supported: true,
+			detail: "1–10,000+ vehicles supported",
+		},
+		competitors: {
+			CompetitorA: { supported: false, detail: "Often built for mid-sized fleets only" },
+			CompetitorB: { supported: false, detail: "No Encryption" },
+			CompetitorC: { supported: false, detail: "Basic Encryption" },
 		},
 	},
 ];
 
 const competitors = [
-	{ id: "geotab", name: "Geotab" },
-	{ id: "zubie", name: "Zubie" },
-	{ id: "ramtracking", name: "RamTracking" },
+	{ id: "CompetitorA", name: "Competitor A" },
+	{ id: "CompetitorB", name: "Competitor B" },
+	{ id: "CompetitorC", name: "Competitor C" },
 ];
 
 export const CompetitiveAdvantage = () => {

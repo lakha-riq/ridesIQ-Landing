@@ -55,7 +55,7 @@ export const IndustryKeyFeatures: React.FC<IndustryKeyFeaturesProps> = ({ indust
 						viewport={{ once: true }}
 						className="text-xl text-gray-600 max-w-2xl mx-auto"
 					>
-						Industry-leading solutions designed for efficiency, cost savings, and operational excellence in {industryName}
+						Powerful vehicle tracking solutions built to scale your rental business, cut operational costs, and maximize profitability.
 					</motion.p>
 				</motion.div>
 

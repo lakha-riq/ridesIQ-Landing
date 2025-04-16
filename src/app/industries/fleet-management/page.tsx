@@ -78,10 +78,10 @@ const fleetKeyFeatures: KeyFeature[] = [
 ];
 
 const fleetManagementData: IndustryData = {
-	name: "GPS Fleet Tracking Solutions",
+	name: " GPS Fleet Tracking for Logistics & Transportation",
 	subtitle: "Professional Vehicle Monitoring Systems",
-	description: "Comprehensive fleet management solutions featuring advanced GPS tracking devices, fuel monitoring systems, and real-time vehicle diagnostics.",
-	heroImage: "/assets/fleet-management/3.png",
+	description: "Optimize routes, reduce fuel costs, and increase fleet productivity with real-time tracking designed for logistics and delivery operations.",
+	heroImage: "/assets/fleet-management/RidesIQIQ120.jpg",
 	challenges: [
 		{
 			icon: Shield,
