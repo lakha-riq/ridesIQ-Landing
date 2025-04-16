@@ -55,7 +55,7 @@ export const IndustryKeyFeatures: React.FC<IndustryKeyFeaturesProps> = ({ indust
 						viewport={{ once: true }}
 						className="text-xl text-gray-600 max-w-2xl mx-auto"
 					>
-						Powerful vehicle tracking solutions built to scale your rental business, cut operational costs, and maximize profitability.
+						Advanced fleet tracking solutions built to streamline logistics operations, reduce downtime, cut fuel costs, and boost delivery efficiency.
 					</motion.p>
 				</motion.div>
 

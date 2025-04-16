@@ -111,11 +111,11 @@ const Tracking = () => {
 			},
 			specs: {
 				installation: { icon: Wrench, value: "Professional Installation", description: "Requires certified technician" },
-				power: { icon: Zap, value: "Direct Vehicle Power", description: "Continuous power supply (DC 9-100V/1.5A)" },
-				bestFor: { icon: Truck, value: "Large Fleets", description: "Commercial vehicles & trucks" },
-				battery: { icon: Battery, value: "Backup Battery", description: "120mAh backup battery" },
+				power: { icon: Zap, value: "9–100V Direct Vehicle Power", description: "Wide voltage range for trucks, buses, and EVs" },
+				bestFor: { icon: Truck, value: "Large Fleets", description: "Ideal for commercial vehicles and trucks" },
+				battery: { icon: Battery, value: "Backup Battery", description: "120mAh backup ensures continued tracking if power is cut" },
 				connectivity: { icon: Wifi, value: "4G LTE + GPS + GSM", description: "Supports LTE-FDD & GSM bands" },
-				features: { icon: Shield, value: "Advanced Security", description: "Tamper detection, geo-fence, impact alerts, and remote fuel/electricity cut-off" },
+				features: { icon: Shield, value: "Advanced Security", description: "Tamper detection, geo-fence, impact alerts, remote fuel cut-off, and FOTA" },
 			},
 		},
 
@@ -160,23 +160,43 @@ const Tracking = () => {
 	const faqs = [
 		{
 			question: "How accurate is the GPS tracking?",
-			answer: "Our GPS tracking provides accuracy within 2-3 meters in optimal conditions. The system updates every 10 seconds to ensure real-time location data.",
+			answer: "Our GPS provides real-time location tracking with ±2-meter accuracy, using GPS, BDS, and Glonass satellites for high precision—even in dense urban or remote areas.",
 		},
 		{
-			question: "What is the battery life of the tracking devices?",
-			answer: "Battery life varies by model. Hard-wired devices use vehicle power, OBD trackers are port-powered, and asset trackers can last up to 5 years on a single charge.",
+			question: "How often does the tracking system update location data?",
+			answer: "Location data is updated multiple times within a minute, for real-time data.",
 		},
 		{
-			question: "Is the tracking data secure?",
-			answer: "Yes, all data is encrypted end-to-end and stored in secure cloud servers. We comply with industry standards for data protection and privacy.",
+			question: "Will this work across regions or international borders?",
+			answer: "Yes. Our multi-network SIMs and dual-server architecture ensure uninterrupted tracking across cities, provinces, and borders.",
 		},
 		{
-			question: "Can I integrate the tracking system with my existing fleet management software?",
-			answer: "Yes, our API allows integration with most major fleet management platforms. Our team can assist with custom integration solutions.",
+			question: "How long does it take to install the tracker?",
+			answer: "Professional hardwired installation takes approximately 10-15 minutes per vehicle. Plug-and-play options install in under 5 minutes via OBD-II port.",
 		},
 		{
-			question: "What kind of support do you offer?",
-			answer: "We provide 24/7 technical support via phone, email, and chat. Our team of experts is always available to help with any issues or questions.",
+			question: "What happens if the vehicle loses power or signal?",
+			answer: "The built-in battery backup and 16MB flash memory ensure tracking continues and data is logged, even during power loss or in no-signal zones.",
+		},
+		{
+			question: "Can I set up alerts for speeding, idling, or geofencing?",
+			answer: "Absolutely. You can configure real-time alerts for speeding, harsh braking, long idling, geofence breaches, and more—all from the dashboard.",
+		},
+		{
+			question: "How secure is the data collected by the tracking system?",
+			answer: "Data security is paramount. Our system uses encrypted connections and secure servers to protect your fleet's information. ",
+		},
+		{
+			question: "Can I integrate this with my current fleet management software?",
+			answer: "Yes. Our system offers universal compatibility with major fleet platforms and APIs for easy integration.",
+		},
+		{
+			question: "What kind of reports can I generate?",
+			answer: "You can generate automated reports for mileage, fuel usage, engine health, driving behavior, and more—customizable to your operations.",
+		},
+		{
+			question: "What support is available after purchase?",
+			answer: "We offer 24/7 expert support, onboarding assistance, and dedicated customer success teams to ensure your fleet is fully optimized from day one.",
 		},
 	];
 
@@ -189,7 +209,7 @@ const Tracking = () => {
 				{/* Background Image & Overlays */}
 				<div className="absolute inset-0">
 					<Image
-						src="/assets/homepage/2.png"
+						src="/assets/fleet-management/RidesIQIQ120.jpg"
 						alt="GPS Tracking Device"
 						className="w-full h-full object-cover"
 						width={1920}
@@ -225,8 +245,8 @@ const Tracking = () => {
 									transition={{ duration: 0.6, delay: 0.3 }}
 									className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]"
 								>
-									<span className="text-white">Optimize Your Fleet with </span>
-									<span className="bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent">Advanced GPS Tracking</span>
+									<span className="text-white">Smarter Fleet Tracking </span>
+									<span className="bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent">Starts Here</span>
 								</motion.h1>
 
 								<motion.h2
@@ -235,7 +255,7 @@ const Tracking = () => {
 									transition={{ duration: 0.6, delay: 0.4 }}
 									className="text-xl text-white/90 leading-relaxed"
 								>
-									Real-time tracking, Real-Time analytics, and predictive maintenance – all in one powerful tracking device.
+									Track vehicles in real time, get instant alerts, and automate reporting—all in one seamless GPS solution built for modern fleets.
 								</motion.h2>
 
 								<motion.div
@@ -291,7 +311,7 @@ const Tracking = () => {
 						</div>
 
 						{/* Right Content - Product Image */}
-						<motion.div
+						{/* <motion.div
 							initial={{ opacity: 0, scale: 0.95 }}
 							animate={{ opacity: 1, scale: 1 }}
 							transition={{ duration: 0.8, delay: 0.4 }}
@@ -306,10 +326,10 @@ const Tracking = () => {
 									width={800}
 									height={533}
 								/>
-							</div>
+							</div> */}
 
 							{/* Floating Stats */}
-							<motion.div
+							{/* <motion.div
 								initial={{ opacity: 0, y: 20 }}
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ duration: 0.6, delay: 0.8 }}
@@ -325,12 +345,246 @@ const Tracking = () => {
 									</div>
 								</div>
 							</motion.div>
-						</motion.div>
+						</motion.div> */}
 					</div>
 				</div>
 
 				{/* Hero Bottom Gradient */}
 				<div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
+			</section>
+			{/* Overview Section */}
+			<section className="py-24 relative overflow-hidden bg-gray-50/50">
+				<div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50/80" />
+				<div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23678FCA%22%20fill-opacity%3D%220.05%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-50" />
+
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+					<div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+						{/* Left Column - Product Image */}
+						<motion.div
+							initial={{ opacity: 0, x: -20 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							viewport={{ once: true }}
+							className="relative"
+						>
+							<div className="relative">
+								<div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6" />
+								<Image
+									src="/assets/fleet-management/3.png"
+									alt="RidesIQ Hard-Wired GPS Tracking Device"
+									className="relative z-10 rounded-3xl shadow-2xl transform -rotate-3 transition-transform duration-500 hover:rotate-0 w-full"
+									width={600}
+									height={600}
+									style={{ maxWidth: "100%", height: "auto" }}
+								/>
+							</div>
+
+							{/* Floating Stats Card */}
+							<motion.div
+								initial={{ opacity: 0, y: 20 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								viewport={{ once: true }}
+								transition={{ delay: 0.3 }}
+								className="absolute -right-4 top-1/4 bg-white p-4 rounded-xl shadow-lg"
+							>
+								<div className="flex items-center gap-3">
+									<div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+										<Navigation2 className="w-5 h-5 text-green-600" />
+									</div>
+									<div>
+										<div className="text-sm font-medium text-gray-900">Live Tracking</div>
+										<div className="text-xs text-gray-500">10-second updates</div>
+									</div>
+								</div>
+							</motion.div>
+						</motion.div>
+
+						{/* Right Column - Content */}
+						<div>
+							<motion.div
+								initial={{ opacity: 0, y: 20 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								viewport={{ once: true }}
+								className="space-y-6"
+							>
+								<h2 className="text-3xl sm:text-4xl font-bold text-black">
+								Advanced GPS Tracking Built for 
+									<br />
+									<span className="bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent">Modern Fleets</span>
+								</h2>
+
+								<p className="text-lg text-black leading-relaxed">
+								Whether you manage 5 vehicles or 5,000, our GPS tracking solution delivers industry-leading accuracy, zero-delay location updates, and real-time analytics to boost fleet efficiency, reduce downtime, and improve decision-making. Engineered for reliability and built for scale.
+								</p>
+
+								<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+									{[
+										{
+											icon: Navigation2,
+											title: "Real-Time GPS Tracking",
+											description: "Know your fleet’s location 24/7 with GPS updates by distance or time—no delays, ever.",
+										},
+										{
+											icon: AlertCircle,
+											title: "Advanced Security Alerts",
+											description: "Get instant notifications for geofence breaches, tampering, speeding, and impact events.",
+										},
+										{
+											icon: FileText,
+											title: "Fleet Compliance & Reporting",
+											description: "Automate mileage, fuel, and engine reports to simplify compliance and reduce manual work.",
+										},
+										{
+											icon: Activity,
+											title: "Comprehensive Telematics Data",
+											description: "Monitor driver behavior like braking, acceleration, idling, and fatigue in real time.",
+										},
+									].map((benefit, index) => (
+										<motion.div
+											key={benefit.title}
+											initial={{ opacity: 0, y: 20 }}
+											whileInView={{ opacity: 1, y: 0 }}
+											viewport={{ once: true }}
+											transition={{ duration: 0.5, delay: index * 0.1 }}
+											className="flex items-start gap-4"
+										>
+											<div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0">
+												<div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
+													<benefit.icon className="w-6 h-6 text-[#678FCA]" />
+												</div>
+											</div>
+											<div>
+												<h3 className="text-lg font-semibold mb-1 text-gray-900">{benefit.title}</h3>
+												<p className="text-sm text-gray-600">{benefit.description}</p>
+											</div>
+										</motion.div>
+									))}
+								</div>
+
+								<div className="pt-6">
+									<button className="bg-[#678FCA] text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-[#678FCA]/90 transition-all duration-300 transform hover:scale-105 flex items-center group">
+										Learn More About Features
+										<ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+									</button>
+								</div>
+							</motion.div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Key Features Section */}
+			<section className="py-24 relative overflow-hidden">
+				<div className="absolute inset-0 bg-[#678FCA]/[0.02] hero-pattern opacity-50" />
+				<div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
+
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						className="text-center mb-16"
+					>
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							className="inline-flex items-center px-4 py-2 rounded-full bg-[#678FCA]/10 text-[#678FCA] text-sm font-medium mb-6"
+						>
+							<Sparkles className="w-4 h-4 mr-2" />
+							Key Features
+						</motion.div>
+
+						<motion.h2
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							className="text-4xl font-bold mb-6"
+						>
+							Key Features That Power 
+							<br />
+							<span className="bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent">Smarter Fleet Operations</span>
+						</motion.h2>
+					</motion.div>
+
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+						{[
+							{
+								icon: MapPin,
+								title: "Real-Time Location Tracking",
+								description: "Track your fleet’s precise location with live GPS updates based on distance or time. Instantly know where every vehicle is—no lag, no guesswork.",
+							},
+							{
+								icon: BarChart3,
+								title: "Real-Time Telematics",
+								description: "Monitor fuel usage, driver behavior, and vehicle performance using actionable telematics data to improve efficiency and safety.",
+							},
+							{
+								icon: Bell,
+								title: "Geofencing & Alerts",
+								description: "Set virtual zones and receive instant alerts for unauthorized movement, harsh driving, or boundary breaches.",
+							},
+							{
+								icon: Tool,
+								title: "Advanced Maintenance Alerts",
+								description: "Reduce costly breakdowns with proactive alerts for engine health, battery levels, and harsh braking or acceleration.",
+							},
+							{
+								icon: Lock,
+								title: "Secure Data Transmission",
+								description: "End-to-end encrypted GPS tracking with multi-server failover ensures secure and reliable data flow—no matter the conditions.",
+							},
+							{
+								icon: Radio,
+								title: "Multi-Network Connectivity",
+								description: "Track across regions with LTE-FDD & GSM network support, keeping your fleet connected even in remote or high-traffic zones.",
+							},
+						].map((feature, index) => (
+							<motion.div
+								key={feature.title}
+								initial={{ opacity: 0, y: 20 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.5, delay: index * 0.1 }}
+								className="relative group h-full"
+							>
+								<div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/5 to-[#99D5C9]/5 rounded-2xl transform transition-all duration-300 group-hover:scale-[1.02]" />
+
+								<div className="relative h-full bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 group-hover:shadow-xl border border-gray-100/50 flex flex-col">
+									<div className="flex items-center gap-6 mb-4">
+										<div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0">
+											<div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
+												<feature.icon className="w-7 h-7 text-[#678FCA]" />
+											</div>
+										</div>
+
+										<h3 className="text-xl font-semibold text-gray-900 flex-1">{feature.title}</h3>
+									</div>
+
+									<p className="text-gray-600 leading-relaxed flex-1">{feature.description}</p>
+
+									<div className="mt-6 pt-6 border-t border-gray-100">
+										<button className="text-[#678FCA] font-medium flex items-center text-sm group/btn">
+											Learn more
+											<ChevronRight className="ml-1 w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+										</button>
+									</div>
+								</div>
+							</motion.div>
+						))}
+					</div>
+
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						className="mt-16 text-center"
+					>
+						<button className="bg-[#678FCA] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#678FCA]/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group">
+						Explore Fleet Capabilities
+							<ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+						</button>
+					</motion.div>
+				</div>
 			</section>
 
 			{/* Product Comparison Section */}
@@ -361,9 +615,9 @@ const Tracking = () => {
 							viewport={{ once: true }}
 							className="text-4xl font-bold mb-6"
 						>
-							Choose the Right
+							Choose the Right Tracking Solution for
 							<br />
-							<span className="bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent">Tracking Solution</span>
+							<span className="bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent">Your Fleet</span>
 						</motion.h2>
 					</motion.div>
 
@@ -481,242 +735,6 @@ const Tracking = () => {
 				</div>
 			</section>
 
-			{/* Overview Section */}
-			<section className="py-24 relative overflow-hidden bg-gray-50/50">
-				<div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50/80" />
-				<div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23678FCA%22%20fill-opacity%3D%220.05%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-50" />
-
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-					<div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-						{/* Left Column - Product Image */}
-						<motion.div
-							initial={{ opacity: 0, x: -20 }}
-							whileInView={{ opacity: 1, x: 0 }}
-							viewport={{ once: true }}
-							className="relative"
-						>
-							<div className="relative">
-								<div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6" />
-								<Image
-									src="/assets/fleet-management/3.png"
-									alt="RidesIQ Hard-Wired GPS Tracking Device"
-									className="relative z-10 rounded-3xl shadow-2xl transform -rotate-3 transition-transform duration-500 hover:rotate-0 w-full"
-									width={600}
-									height={600}
-									style={{ maxWidth: "100%", height: "auto" }}
-								/>
-							</div>
-
-							{/* Floating Stats Card */}
-							<motion.div
-								initial={{ opacity: 0, y: 20 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								viewport={{ once: true }}
-								transition={{ delay: 0.3 }}
-								className="absolute -right-4 top-1/4 bg-white p-4 rounded-xl shadow-lg"
-							>
-								<div className="flex items-center gap-3">
-									<div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
-										<Navigation2 className="w-5 h-5 text-green-600" />
-									</div>
-									<div>
-										<div className="text-sm font-medium text-gray-900">Live Tracking</div>
-										<div className="text-xs text-gray-500">10-second updates</div>
-									</div>
-								</div>
-							</motion.div>
-						</motion.div>
-
-						{/* Right Column - Content */}
-						<div>
-							<motion.div
-								initial={{ opacity: 0, y: 20 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								viewport={{ once: true }}
-								className="space-y-6"
-							>
-								<h2 className="text-3xl sm:text-4xl font-bold text-black">
-									Advanced GPS Tracking for
-									<br />
-									<span className="bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent">Modern Fleet Management</span>
-								</h2>
-
-								<p className="text-lg text-black leading-relaxed">
-									Designed for fleets of all sizes, RidesIQ Tracker offers industry-leading accuracy, real-time tracking, and Real time analytics to enhance fleet efficiency and
-									reduce downtime. Our comprehensive solution helps you make data-driven decisions while ensuring maximum security and reliability.
-								</p>
-
-								<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-									{[
-										{
-											icon: Navigation2,
-											title: "Real-Time GPS Tracking",
-											description: "Know your vehicle's location anytime with GPS updates, supporting real-time tracking by time interval and distance.",
-										},
-										{
-											icon: AlertCircle,
-											title: "Advanced Security Alerts",
-											description: "Stay informed with geo-fence alerts, tamper detection, speeding alarms, and impact notifications.",
-										},
-										{
-											icon: FileText,
-											title: "Fleet Compliance & Reporting",
-											description: "Track mileage, fuel consumption, and engine status with automated reports for compliance and efficiency.",
-										},
-										{
-											icon: Activity,
-											title: "Comprehensive Telematics Data",
-											description: "Monitor harsh acceleration, braking, turning, idling, and fatigue driving with real-time analytics.",
-										},
-									].map((benefit, index) => (
-										<motion.div
-											key={benefit.title}
-											initial={{ opacity: 0, y: 20 }}
-											whileInView={{ opacity: 1, y: 0 }}
-											viewport={{ once: true }}
-											transition={{ duration: 0.5, delay: index * 0.1 }}
-											className="flex items-start gap-4"
-										>
-											<div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0">
-												<div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
-													<benefit.icon className="w-6 h-6 text-[#678FCA]" />
-												</div>
-											</div>
-											<div>
-												<h3 className="text-lg font-semibold mb-1 text-gray-900">{benefit.title}</h3>
-												<p className="text-sm text-gray-600">{benefit.description}</p>
-											</div>
-										</motion.div>
-									))}
-								</div>
-
-								<div className="pt-6">
-									<button className="bg-[#678FCA] text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-[#678FCA]/90 transition-all duration-300 transform hover:scale-105 flex items-center group">
-										Learn More About Features
-										<ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-									</button>
-								</div>
-							</motion.div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			{/* Key Features Section */}
-			<section className="py-24 relative overflow-hidden">
-				<div className="absolute inset-0 bg-[#678FCA]/[0.02] hero-pattern opacity-50" />
-				<div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
-
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						viewport={{ once: true }}
-						className="text-center mb-16"
-					>
-						<motion.div
-							initial={{ opacity: 0, y: 20 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
-							className="inline-flex items-center px-4 py-2 rounded-full bg-[#678FCA]/10 text-[#678FCA] text-sm font-medium mb-6"
-						>
-							<Sparkles className="w-4 h-4 mr-2" />
-							Key Features
-						</motion.div>
-
-						<motion.h2
-							initial={{ opacity: 0, y: 20 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
-							className="text-4xl font-bold mb-6"
-						>
-							Advanced Features for
-							<br />
-							<span className="bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent">Modern Fleet Management</span>
-						</motion.h2>
-					</motion.div>
-
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-						{[
-							{
-								icon: MapPin,
-								title: "Real-Time Location Tracking",
-								description: "Monitor your fleet's exact location with live GPS updates, tracking by time interval and distance.",
-							},
-							{
-								icon: BarChart3,
-								title: "Real-Time Telematics",
-								description: "Gain insights into vehicle performance, driver behavior, and fuel efficiency using real-time data.",
-							},
-							{
-								icon: Bell,
-								title: "Geofencing & Alerts",
-								description: "Set virtual boundaries and receive alerts for unauthorized movements, speeding, and harsh driving.",
-							},
-							{
-								icon: Tool,
-								title: "Advanced Maintenance Alerts",
-								description: "Prevent costly repairs with alerts for battery levels, engine status, and harsh acceleration or braking.",
-							},
-							{
-								icon: Lock,
-								title: "Secure Data Transmission",
-								description: "End-to-end encrypted GPS tracking with multi-server support for data security and reliability.",
-							},
-							{
-								icon: Radio,
-								title: "Multi-Network Connectivity",
-								description: "Reliable tracking with LTE-FDD & GSM support, ensuring uninterrupted coverage across networks.",
-							},
-						].map((feature, index) => (
-							<motion.div
-								key={feature.title}
-								initial={{ opacity: 0, y: 20 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								viewport={{ once: true }}
-								transition={{ duration: 0.5, delay: index * 0.1 }}
-								className="relative group h-full"
-							>
-								<div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/5 to-[#99D5C9]/5 rounded-2xl transform transition-all duration-300 group-hover:scale-[1.02]" />
-
-								<div className="relative h-full bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 group-hover:shadow-xl border border-gray-100/50 flex flex-col">
-									<div className="flex items-center gap-6 mb-4">
-										<div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0">
-											<div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
-												<feature.icon className="w-7 h-7 text-[#678FCA]" />
-											</div>
-										</div>
-
-										<h3 className="text-xl font-semibold text-gray-900 flex-1">{feature.title}</h3>
-									</div>
-
-									<p className="text-gray-600 leading-relaxed flex-1">{feature.description}</p>
-
-									<div className="mt-6 pt-6 border-t border-gray-100">
-										<button className="text-[#678FCA] font-medium flex items-center text-sm group/btn">
-											Learn more
-											<ChevronRight className="ml-1 w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
-										</button>
-									</div>
-								</div>
-							</motion.div>
-						))}
-					</div>
-
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						viewport={{ once: true }}
-						className="mt-16 text-center"
-					>
-						<button className="bg-[#678FCA] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#678FCA]/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group">
-							Learn More
-							<ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-						</button>
-					</motion.div>
-				</div>
-			</section>
-
 			{/* Device Specifications Section */}
 
 			<section className="py-24 bg-gray-50/50 relative overflow-hidden">
@@ -746,7 +764,7 @@ const Tracking = () => {
 							viewport={{ once: true }}
 							className="text-4xl font-bold mb-6"
 						>
-							Device Specifications & Details
+							Technical Specifications & Details
 						</motion.h2>
 
 						<motion.p
@@ -755,8 +773,7 @@ const Tracking = () => {
 							viewport={{ once: true }}
 							className="text-xl text-gray-600 max-w-3xl mx-auto"
 						>
-							Explore the technical specifications of RidesIQ Tracker and see how it fits into your fleet management needs. Engineered for accuracy, durability, and seamless integration
-							with leading telematics platforms.
+							Built for demanding fleet operations, this GPS tracker combines rugged durability, precision positioning, and multi-network compatibility. Engineered for seamless integration with leading telematics platforms and extreme on-road conditions.
 						</motion.p>
 					</motion.div>
 
@@ -779,20 +796,20 @@ const Tracking = () => {
 											{
 												icon: Ruler,
 												name: "Dimensions",
-												value: "90mm x 33.87mm x 17mm",
-												description: "Compact design with IP66 waterproof protection",
+												value: "3.5in x 1.3in x 0.5in",
+												description: "Compact, waterproof housing with built-in status LEDs.",
 											},
 											{
 												icon: Wifi,
 												name: "Connectivity",
 												value: "4G LTE + GSM",
-												description: "Supports LTE-FDD & GSM (850/900/1800/1900MHz) for multi-network coverage",
+												description: "Supports LTE-FDD bands B1–B8/B20/B28/B66 and GSM fallback for global coverage.",
 											},
 											{
 												icon: Power,
 												name: "Power Source",
 												value: "DC 9V - 100V / 1.5A",
-												description: "Hard-wired for continuous power with backup battery support",
+												description: "Wide input range compatible with light and heavy-duty vehicles.",
 											},
 											{
 												icon: Award,
@@ -814,9 +831,9 @@ const Tracking = () => {
 											},
 											{
 												icon: Laptop,
-												name: "Software Compatibility",
-												value: "Universal Integration",
-												description: "Works with various fleet management platforms",
+												name: "Weight",
+												value: "~45g",
+												description: "Lightweight for easy installation and mounting flexibility.",
 											},
 											{
 												icon: Shield,
@@ -928,7 +945,7 @@ const Tracking = () => {
 						className="mt-16 text-center"
 					>
 						<button className="bg-[#678FCA] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#678FCA]/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group">
-							Download Full Specifications
+							Contact a Specialist
 							<ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
 						</button>
 					</motion.div>
@@ -1009,7 +1026,7 @@ const Tracking = () => {
 						viewport={{ once: true }}
 						className="mt-12 text-center"
 					>
-						<p className="text-gray-600 mb-6">Still have questions? we are here to help.</p>
+						<p className="text-gray-600 mb-6">Still have questions? We are here to help.</p>
 						<button className="bg-[#678FCA] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#678FCA]/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group">
 							Contact Support
 							<ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -1036,7 +1053,7 @@ const Tracking = () => {
 									viewport={{ once: true }}
 									className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8"
 								>
-									Ready to Transform Your Fleet?
+									Ready to Track Smarter, Safer, and in Real Time?
 								</motion.h2>
 
 								<motion.p
@@ -1046,7 +1063,7 @@ const Tracking = () => {
 									transition={{ delay: 0.1 }}
 									className="text-xl text-white/90 mb-12"
 								>
-									Join thousands of fleet managers who trust RidesIQ
+									Join thousands of fleet managers using our GPS platform to reduce downtime, recover vehicles faster, and automate compliance—all with zero-delay tracking.
 								</motion.p>
 
 								<motion.div
@@ -1064,8 +1081,8 @@ const Tracking = () => {
 									{/* Tag Buttons */}
 									<div className="flex flex-wrap justify-center gap-4">
 										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Fleet Tracking</div>
-										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Comprehensive Insights</div>
-										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Compliance</div>
+										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Cross-Border Coverage</div>
+										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Real-Time Alerts</div>
 									</div>
 								</motion.div>
 							</div>

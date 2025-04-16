@@ -51,70 +51,70 @@ const constructionKeyFeatures: KeyFeature[] = [
 	{
 		icon: Tool,
 		title: "Equipment Optimization",
-		description: "Maximize equipment utilization and reduce idle time with smart scheduling and tracking.",
+		description: "Boost utilization and reduce idle time with smart GPS tracking and intelligent usage scheduling.",
 		stat: "35%",
 		statLabel: "Improved Utilization",
 	},
 	{
 		icon: Shield,
 		title: "Site Safety & Security",
-		description: "Monitor equipment location and usage to prevent theft and ensure workplace safety compliance.",
+		description: "Prevent unauthorized use and theft with 24/7 GPS monitoring, geofencing, and real-time alerts.",
 		stat: "75%",
 		statLabel: "Theft Prevention",
 	},
 	{
 		icon: DollarSign,
 		title: "Cost Control",
-		description: "Reduce operational costs through efficient resource allocation and maintenance planning.",
+		description: "Lower fuel and maintenance expenses with optimized routes and predictive equipment upkeep.",
 		stat: "25%",
 		statLabel: "Cost Savings",
 	},
 	{
 		icon: LineChart,
 		title: "Project Analytics",
-		description: "Track project progress and equipment performance with detailed analytics and reporting.",
+		description: "Gain operational clarity with real-time equipment data, job site performance metrics, and custom reports.",
 		stat: "3x",
 		statLabel: "Productivity Gain",
 	},
 ];
 
 const constructionData: IndustryData = {
-	name: "Construction Equipment GPS Tracking",
-	subtitle: "Heavy Equipment Monitoring Solutions",
-	description: "Professional GPS tracking devices for construction equipment, including heavy machinery, vehicles, and valuable assets on construction sites.",
-	heroImage: "/assets/fleet-management/3.png",
+	name: " GPS Tracking for Construction Fleets",
+	subtitle: "Construction Fleet GPS Tracking",
+	description: "Track heavy machinery, vehicles, and on-site equipment in real-time with RidesIQ’s rugged GPS tracking solutions built for the construction industry.",
+	heroImage: "/assets/fleet-management/RidesIQIQ120.jpg",
 	challenges: [
 		{
 			icon: Clock,
 			title: "Equipment Location",
-			description: "Tracking heavy machinery and equipment across multiple construction sites with GPS devices.",
+			description: "Difficulty tracking equipment across multiple job sites leads to inefficiencies and delays.",
 		},
 		{
 			icon: AlertCircle,
 			title: "Asset Security",
-			description: "Protecting valuable construction equipment with real-time GPS monitoring and alerts.",
+			description: "Unattended machines are at high risk of theft, misuse, or unauthorized movement.",
 		},
 		{
 			icon: Settings2,
-			title: "Equipment Maintenance",
-			description: "Managing maintenance schedules and preventing equipment downtime with digital tracking.",
+			title: "Unplanned Downtime",
+			description: "Breakdowns and missed maintenance windows result in costly project delays.",
 		},
 	],
 	solutions: [
 		{
 			icon: ConstructionIcon,
 			title: "Heavy-Duty GPS Trackers",
-			description: "Rugged GPS tracking devices designed for construction equipment and harsh environments.",
+			description: "Rugged, construction-grade GPS devices provide real-time location tracking in any terrain.",
 		},
 		{
 			icon: Shield,
 			title: "Security Monitoring",
-			description: "24/7 equipment tracking with theft prevention alerts and geofencing capabilities.",
+			description: "24/7 asset protection with tamper alerts, geofencing, and unauthorized movement detection.",
 		},
 		{
 			icon: BarChart3,
-			title: "Digital Maintenance System",
-			description: "Electronic maintenance tracking with service history and scheduling features.",
+			title: "Equipment Maintenance",
+			description: "Schedule preventive maintenance with automated alerts and minimize unscheduled outages.",
 		},
 	],
 	stats: [
@@ -144,7 +144,7 @@ const constructionData: IndustryData = {
 		},
 	],
 	testimonial: {
-		quote: "The construction fleet management system has revolutionized how we track and maintain our equipment fleet. The ROI has been remarkable.",
+		quote: "RidesIQ’s fleet tracking platform has completely transformed how we manage our construction equipment. Real-time insights and maintenance alerts have made our operations significantly more efficient — and the ROI speaks for itself.",
 		author: "Michael Chen",
 		role: "Operations Director",
 		company: "BuildTech Construction",
@@ -152,19 +152,19 @@ const constructionData: IndustryData = {
 	},
 	products: [
 		{
-			title: "Construction Asset Tracker",
-			image: "/assets/homepage/2.png",
-			features: ["Rugged GPS hardware", "Real-time tracking", "Geofencing", "Theft alerts"],
+			title: "Hardwired GPS Tracker",
+			image: "/assets/devices/IQ120.png",
+			features: ["Installed & hidden from drivers", "Real-time GPS via direct power", "Real-time GPS via direct power", "Ideal for long-term use"],
 		},
 		{
-			title: "Equipment Monitor",
-			image: "/assets/homepage/3.png",
-			features: ["Usage tracking", "Maintenance scheduling", "Location history", "Status reports"],
+			title: "OBD Plug & Play Tracker",
+			image: "/assets/fleet-management/3.png",
+			features: ["Installs in seconds (OBD-II)", "Tracks GPS, speed & diagnostics", "Best for short-term rentals", "Swaps easily between vehicles"],
 		},
 		{
-			title: "Site Manager Pro",
+			title: "Asset Tracker (SVR)",
 			image: "/assets/fleet-management/4.png",
-			features: ["Multi-site tracking", "Equipment logs", "Utilization reports", "Mobile access"],
+			features: ["Battery-powered with long life", "Auto-activates if main tracker is removed", "Weatherproof & discreet", "Acts as backup theft recovery"],
 		},
 	],
 };

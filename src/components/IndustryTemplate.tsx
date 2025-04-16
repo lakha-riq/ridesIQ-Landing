@@ -343,7 +343,7 @@ export const IndustryTemplate: React.FC<IndustryTemplateProps> = ({ industry, ke
 									viewport={{ once: true }}
 									className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8"
 								>
-									Transform Your Fleet with Real-Time GPS Tracking
+									Optimize Your Fleet with Real-Time GPS Tracking
 								</motion.h2>
 
 								<motion.p
@@ -353,7 +353,7 @@ export const IndustryTemplate: React.FC<IndustryTemplateProps> = ({ industry, ke
 									transition={{ delay: 0.1 }}
 									className="text-xl text-white/90 mb-12"
 								>
-									Join 1,000+ fleet managers who rely on RidesIQ to improve vehicle tracking, reduce costs, and boost rental efficiency.
+									Join 1,000+ fleet operators using RidesIQ to streamline logistics, boost vehicle uptime, and cut operational costs with advanced telematics.
 								</motion.p>
 
 								<motion.div
@@ -370,9 +370,9 @@ export const IndustryTemplate: React.FC<IndustryTemplateProps> = ({ industry, ke
 
 									{/* Tag Buttons */}
 									<div className="flex flex-wrap justify-center gap-4">
-										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">GPS Fleet Tracking</div>
-										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Vehicle Utilization</div>
-										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Telematics Compliance</div>
+										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Fleet Tracking Solutions</div>
+										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">GPS Vehicle Monitoring</div>
+										<div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">Real-Time Telematics Insights</div>
 									</div>
 								</motion.div>
 							</div>

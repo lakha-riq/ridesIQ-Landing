@@ -49,71 +49,71 @@ type IndustryData = {
 const foodDeliveryKeyFeatures: KeyFeature[] = [
 	{
 		icon: Thermometer,
-		title: "Temperature Monitoring",
-		description: "Real-time temperature tracking for food safety compliance and quality assurance.",
-		stat: "99.9%",
-		statLabel: "Temperature Compliance",
+		title: "Smart Fleet Tracking",
+		description: "Monitor every vehicle in real-time to reduce idle time, improve delivery accuracy, and boost customer satisfaction.",
+		stat: "98%",
+		statLabel: "On-Time Delivery Rate",
 	},
 	{
 		icon: Clock,
-		title: "Delivery Time Optimization",
-		description: "Real-Time route optimization for faster, more efficient deliveries.",
+		title: "Driver Accountability",
+		description: "Enhance performance with driver behavior monitoring, helping reduce risky driving, fuel waste, and late deliveries.",
+		stat: "70%",
+		statLabel: "Increased Safer Driving Scores",
+	},
+	{
+		icon: Shield,
+		title: "Optimized Route Planning",
+		description: "Minimize delivery times and maximize efficiency with GPS-based route optimization and real-time traffic data.",
 		stat: "45%",
 		statLabel: "Faster Deliveries",
 	},
 	{
-		icon: Shield,
-		title: "Food Safety Compliance",
-		description: "Automated monitoring and reporting for food safety regulations.",
-		stat: "100%",
-		statLabel: "Safety Compliance",
-	},
-	{
 		icon: LineChart,
 		title: "Performance Analytics",
-		description: "Comprehensive delivery analytics for operational optimization.",
+		description: "Get actionable insights into delivery performance and operations with real-time analytics dashboards.",
 		stat: "3x",
-		statLabel: "Efficiency Gain",
+		statLabel: "Operational Efficiency",
 	},
 ];
 
 const foodDeliveryData: IndustryData = {
-	name: "Food Delivery GPS Tracking",
-	subtitle: "Delivery Vehicle Monitoring & Temperature Control",
-	description: "Professional GPS tracking devices for food delivery fleets, with integrated temperature monitoring and real-time location tracking.",
-	heroImage: "/assets/fleet-management/1.png",
+	name: " GPS Tracking for Food Delivery",
+	subtitle: "Food Delivery GPS Tracking & Temperature Monitoring",
+	description: "Real-time vehicle tracking and temperature monitoring for food delivery fleets. Ensure on-time arrivals, route visibility, and compliance with cold chain standards.",
+	heroImage: "/assets/fleet-management/RidesIQIQ120.jpg",
 	challenges: [
 		{
 			icon: Clock,
-			title: "Vehicle Tracking",
-			description: "Monitoring delivery vehicle locations with GPS devices for timely deliveries.",
+			title: "Delivery Delays During Peak Hours",
+			description: "High traffic and unpredictable road conditions during lunch and dinner rush can cause late deliveries and lost revenue.",
 		},
 		{
 			icon: AlertCircle,
-			title: "Temperature Monitoring",
-			description: "Tracking food temperature with specialized monitoring devices during transit.",
+			title: "Inconsistent Driver Performance",
+			description: "Lack of visibility into driving behavior can lead to safety risks, vehicle wear, and poor customer experience.",
 		},
 		{
 			icon: Settings2,
-			title: "Route Management",
-			description: "Optimizing delivery routes with GPS tracking and navigation systems.",
+			title: "Lack of Delivery Insights for Operations",
+			description: "Without visibility into delivery metrics, it’s difficult to identify performance gaps or optimize for efficiency.",
 		},
 	],
 	solutions: [
 		{
 			icon: Bike,
-			title: "Delivery GPS Trackers",
-			description: "Compact GPS tracking devices designed for delivery vehicles and bikes.",
+			title: "Real-Time Traffic Rerouting",
+			description: "Automatically reroutes drivers using real-time traffic data, ensuring faster deliveries even during peak congestion.",
 		},
 		{
 			icon: Thermometer,
-			title: "Temperature Sensors",
-			description: "Professional temperature monitoring devices for food transport vehicles.",
+			title: "Driver Behavior Monitoring",
+			description: "Track speeding, harsh braking, and idling with behavior insights that improve safety, efficiency, and driver accountability.",
 		},
 		{
 			icon: MapPin,
-			title: "Route Planning System",
-			description: "GPS-based route optimization and tracking for delivery fleets.",
+			title: "Delivery Analytics Dashboard",
+			description: "Access delivery times, idle durations, and route history in one centralized platform to make data-driven operational decisions.",
 		},
 	],
 	stats: [
@@ -143,7 +143,7 @@ const foodDeliveryData: IndustryData = {
 		},
 	],
 	testimonial: {
-		quote: "The food delivery tracking system has transformed our operations. We've seen a dramatic improvement in delivery times and customer satisfaction.",
+		quote: "RidesIQ’s delivery tracking system has completely streamlined how we manage our fleet. We’ve seen faster turnaround times, fewer missed deliveries, and significantly higher customer satisfaction.",
 		author: "David Kim",
 		role: "Operations Director",
 		company: "FastFood Express",
@@ -151,19 +151,19 @@ const foodDeliveryData: IndustryData = {
 	},
 	products: [
 		{
-			title: "Delivery Vehicle Tracker",
-			image: "/assets/homepage/2.png",
-			features: ["GPS tracking", "Temperature monitoring", "Route planning", "Delivery status"],
+			title: "Hardwired GPS Tracker",
+			image: "/assets/devices/IQ120.png",
+			features: ["Installed & hidden from drivers", "Real-time GPS via direct power", "Real-time GPS via direct power", "Ideal for long-term use"],
 		},
 		{
-			title: "Temperature Monitor Pro",
-			image: "/assets/homepage/3.png",
-			features: ["Temperature logging", "Location tracking", "Alert system", "Compliance reporting"],
-		},
-		{
-			title: "Fleet Control Center",
+			title: "OBD Plug & Play Tracker",
 			image: "/assets/fleet-management/3.png",
-			features: ["Multi-vehicle tracking", "Route management", "Performance monitoring", "Mobile access"],
+			features: ["Installs in seconds (OBD-II)", "Tracks GPS, speed & diagnostics", "Best for short-term rentals", "Swaps easily between vehicles"],
+		},
+		{
+			title: "Asset Tracker (SVR)",
+			image: "/assets/fleet-management/4.png",
+			features: ["Battery-powered with long life", "Auto-activates if main tracker is removed", "Weatherproof & discreet", "Acts as backup theft recovery"],
 		},
 	],
 };
