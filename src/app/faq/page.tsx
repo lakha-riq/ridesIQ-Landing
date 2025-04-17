@@ -24,13 +24,48 @@ const faqCategories: FAQCategory[] = [
 		questions: [
 			{
 				id: "install",
-				question: "How do I install a RidesIQ tracker?",
-				answer: "RidesIQ offers multiple installation options. For hard-wired devices, we provide professional installation through our certified technicians. For OBD trackers, it is a simple plug-and-play solution that you can install yourself in minutes. Our team will guide you through the best option based on your fleet's needs.",
+				question: "How is the RidesIQ OBD tracker installed?",
+				answer: "The RidesIQ OBD tracker is a plug-and-play device. Simply insert it into your vehicle’s OBD-II port—no tools or professional installation required.",
 			},
 			{
 				id: "compatibility",
-				question: "What devices are compatible with RidesIQ?",
-				answer: "RidesIQ is compatible with most modern vehicles manufactured after 2008. Our OBD trackers work with any vehicle with an OBD-II port, while our hard-wired solutions can be installed in virtually any vehicle. We also offer specialized solutions for electric vehicles and heavy machinery.",
+				question: "Is the tracker compatible with all vehicles?",
+				answer: "The OBD is compatible with most vehicles manufactured that have a standard OBD-II port. For vehicles without an OBD-II port, alternative solutions are available.",
+			},
+			{
+				id: "",
+				question: "Can the tracker be used in electric or hybrid vehicles?",
+				answer: "Yes, the tracker is compatible with most electric and hybrid vehicles equipped with an OBD-II port.",
+			},
+			{
+				id: "",
+				question: "What happens if the tracker is unplugged?",
+				answer: "If the tracker is disconnected, you'll receive an immediate tamper alert. Additionally, depending on the device, certain ones have backup battery that allows it to continue transmitting data for a limited time.",
+			},
+			{
+				id: "",
+				question: "Can I transfer the tracker between vehicles?",
+				answer: "Yes, the plug-and-play nature of the tracker allows for easy transfer between vehicles. However, ensure that the new vehicle is compatible and update the vehicle information in your fleet management system.",
+			},
+			{
+				id: "",
+				question: "What is a hardwired GPS tracker?",
+				answer: "A hardwired GPS tracker is a device permanently installed into a vehicle's electrical system, providing continuous power and real-time tracking without relying on batteries.​",
+			},
+			{
+				id: "",
+				question: "How is a hardwired GPS tracker installed?",
+				answer: "Installation involves connecting the device directly to the vehicle's power source, typically by wiring it to the ignition and battery. It's recommended to have a professional technician perform the installation to ensure accuracy and safety.",
+			},
+			{
+				id: "",
+				question: "Where is the best place to install the tracker?",
+				answer: "The optimal location is under the dashboard, away from metal obstructions, to ensure strong GPS signal reception and to keep the device concealed.​",
+			},
+			{
+				id: "",
+				question: "Can I install the tracker myself?",
+				answer: "While self-installation is possible for those with automotive electrical knowledge, professional installation is advised to guarantee proper functionality and to avoid potential vehicle system interference.",
 			},
 		],
 	},
@@ -48,6 +83,11 @@ const faqCategories: FAQCategory[] = [
 				id: "multiple-fleets",
 				question: "Can I track multiple fleets in different locations?",
 				answer: "Absolutely! RidesIQ's platform is designed to handle multiple fleets across different locations. You can organize vehicles into groups, assign different administrators, and manage permissions for each fleet separately. Our multi-fleet management features make it easy to oversee operations across various locations from a single dashboard.",
+			},
+			{
+				id: "",
+				question: "",
+				answer: "",
 			},
 		],
 	},
