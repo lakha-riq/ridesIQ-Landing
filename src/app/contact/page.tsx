@@ -28,20 +28,36 @@ const Contact = () => {
 
 	const faqItems: FAQItem[] = [
 		{
-			question: "How is RidesIQ Tracker installed?",
-			answer: "RidesIQ offers multiple installation options. For hard-wired devices, we provide professional installation through our certified technicians. For OBD trackers, it's a simple plug-and-play solution that you can install yourself in minutes. Our team will guide you through the best option based on your fleet's needs.",
+			question: "How can I reach your team for general questions or technical support?",
+			answer: "You can email us at support@ridesiq.com. We typically respond within 24 hours during business hours.",
 		},
 		{
-			question: "Does it work internationally?",
-			answer: "Yes, RidesIQ Tracker works globally through our multi-network connectivity solution. Our devices support 4G LTE with automatic fallback to 3G/2G networks where needed. We maintain partnerships with leading telecom providers worldwide to ensure consistent coverage across international borders.",
+			question: "What are your customer support hours?",
+			answer: "Our standard support is available Monday–Friday from 9 AM to 5 PM EST. Emergency support is available 24/7 for active clients.",
 		},
 		{
-			question: "What fleet sizes is this tracker best for?",
-			answer: "RidesIQ Tracker is designed to scale with your business. Our solution works effectively for small businesses with just a few vehicles, mid-sized fleets of 50-200 vehicles, and enterprise operations with 1000+ vehicles. Our flexible platform adapts to your fleet size and management needs.",
+			question: "Can I schedule a product demo or consultation?",
+			answer: "Absolutely. You can book a live demo with one of our fleet specialists to see how RidesIQ works for your needs.",
 		},
 		{
-			question: "What industries use this tracking system?",
-			answer: "RidesIQ serves a wide range of industries including logistics and delivery, construction, utilities, government fleets, emergency services, waste management, and field service operations. Our customizable solution can be tailored to meet specific industry requirements and compliance standards.",
+			question: "Where are your offices located?",
+			answer: "We operate out of Toronto (ON), Buffalo (NY), and Lewes (DE), with support available across North America.",
+		},
+		{
+			question: "Do you offer onboarding or training for new clients?",
+			answer: "Yes — every new customer receives personalized onboarding support to ensure smooth installation and system adoption.",
+		},
+		{
+			question: "How quickly will I receive a response after submitting an inquiry?",
+			answer: "We aim to reply within one business day. High-priority or active support tickets may be responded to faster.",
+		},
+		{
+			question: "What information should I include when contacting support?",
+			answer: "To help us assist you faster, please include your name, company name, contact info, and a brief description of your question or issue.",
+		},
+		{
+			question: "Do you offer technical support for installation or setup?",
+			answer: "Yes — our support team can guide you through plug-and-play or hardwired setup and ensure your system is working correctly.",
 		},
 	];
 
@@ -266,7 +282,7 @@ const Contact = () => {
 												<Mail className="w-4 h-4 mr-2" />
 												support@ridesiq.com
 											</a>
-											<p className="text-sm text-gray-600">We typically respond within 24 hours</p>
+											<p className="text-sm text-gray-600">We respond within 24 hours!</p>
 										</div>
 									</div>
 								</div>
@@ -296,7 +312,7 @@ const Contact = () => {
 										<div className="space-y-2">
 											<p className="text-gray-600">Monday - Friday</p>
 											<p className="text-gray-600">9 AM - 5 PM EST</p>
-											<p className="text-sm text-gray-500 mt-2">24/7 emergency support available</p>
+											<p className="text-sm text-gray-500 mt-2"></p>
 										</div>
 									</div>
 								</div>

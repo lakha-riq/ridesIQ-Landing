@@ -39,11 +39,11 @@ const initialFormData: FormData = {
 const interestOptions = [
 	{ icon: Truck, title: "Vehicle Tracking", value: "vehicle-tracking" },
 	{ icon: Camera, title: "Commercial Dash Cams", value: "dash-cams" },
-	{ icon: Briefcase, title: "Job Management Software", value: "job-management" },
-	{ icon: Clock, title: "Electronic Logging Devices (ELDs)", value: "elds" },
+	// { icon: Briefcase, title: "Job Management Software", value: "job-management" },
+	// { icon: Clock, title: "Electronic Logging Devices (ELDs)", value: "elds" },
 ];
 
-const vehicleCountOptions = ["1-2", "3-9", "10-24", "25-49", "50+"];
+const vehicleCountOptions = ["1 - 50", "51 - 100", "101 - 250", "251 - 500", "501 +"];
 
 const trackingTypeOptions = [
 	{ icon: Truck, title: "Vans / Trucks", value: "vans-trucks" },
@@ -60,7 +60,7 @@ const featureOptions = [
 	{ icon: BarChart3, title: "Reporting", value: "reporting" },
 	{ icon: Truck, title: "Driver behavior analytics", value: "driver-analytics" },
 	{ icon: MapPin, title: "Proof of attendance", value: "attendance" },
-	{ icon: DollarSign, title: "Expense monitoring", value: "expenses" },
+	// { icon: DollarSign, title: "Expense monitoring", value: "expenses" },
 	{ icon: Video, title: "Dash cams", value: "dash-cams" },
 	{ icon: HelpCircle, title: "I don't know", value: "unknown" },
 ];
