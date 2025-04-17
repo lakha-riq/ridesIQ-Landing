@@ -50,7 +50,10 @@ export function PrivacyContent() {
 			{/* Content Section */}
 			<section className="py-12 relative">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="max-w-3xl mx-auto prose prose-lg">{/* Add your privacy policy content here */}</div>
+					<div className="max-w-3xl mx-auto prose prose-lg">
+						
+
+					</div>
 				</div>
 			</section>
 		</>
