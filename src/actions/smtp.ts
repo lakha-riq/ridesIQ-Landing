@@ -75,7 +75,6 @@ export async function StoreEmail({
       Destination: {
         ToAddresses: [
           process.env.AWS_SES_VERIFIED_EMAIL ?? 'noreply@ridesiq.com',
-          'aman@ridesiq.com',
         ],
       },
       Message: {

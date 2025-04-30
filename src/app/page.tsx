@@ -23,6 +23,7 @@ import { CompetitiveAdvantage } from '@/components/CompetitiveAdvantage';
 import { IndustrySolutions } from '@/components/IndustrySolutions';
 import Image from 'next/image';
 import { Navigation } from '@/components/Navigation';
+import { clarity } from 'clarity-js';
 
 function Home() {
   // const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,6 +51,12 @@ function Home() {
   };
 
   useEffect(() => {
+    // if (
+    //   typeof window !== 'undefined' &&
+    //   process.env.NODE_ENV === 'production'
+    // ) {
+    //   clarity.init(process.env.NEXT_PUBLIC_CLARITY_ID!);
+    // }
     const ref = containerRef.current;
     if (ref) ref.addEventListener('scroll', handleScroll);
     return () => ref?.removeEventListener('scroll', handleScroll);

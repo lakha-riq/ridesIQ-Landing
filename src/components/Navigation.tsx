@@ -480,7 +480,7 @@ export const Navigation = ({ customColor = 'text-gray-700' }) => {
                   exit={{ rotate: 90, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <X className='w-6 h-6' />
+                  <X className={`w-6 ${navLinkColor} h-6`} />
                 </motion.div>
               ) : (
                 <motion.div
@@ -490,7 +490,7 @@ export const Navigation = ({ customColor = 'text-gray-700' }) => {
                   exit={{ rotate: -90, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <MenuIcon className='w-6 h-6' />
+                  <MenuIcon className={`w-6 ${navLinkColor} h-6`} />
                 </motion.div>
               )}
             </AnimatePresence>

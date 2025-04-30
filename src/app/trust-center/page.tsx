@@ -7,7 +7,7 @@ import TrustCenter from '@/components/trust-center/TrustCenter';
 export default function ResponsibleDisclosure() {
   return (
     <div className='min-h-screen bg-white'>
-      <Navigation />
+      <Navigation customColor='text-white' />
       <TrustCenter />
       <ContactCTA
         title='Have Security Concerns?'
