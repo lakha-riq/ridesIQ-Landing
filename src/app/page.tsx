@@ -88,7 +88,7 @@ function Home() {
       details: {
         stat: '45%',
         statLabel: 'Cost Reduction',
-        image: '/assets/homepage/test2.jpeg',
+        image: '/assets/homepage/test2.png',
         points: [
           'Predictive maintenance scheduling',
           'Automated service reminders',
