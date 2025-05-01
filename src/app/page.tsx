@@ -71,7 +71,7 @@ function Home() {
       details: {
         stat: '98%',
         statLabel: 'Accuracy Rate',
-        image: '/assets/homepage/1.png',
+        image: '/assets/homepage/test.jpeg',
         points: [
           'Instant GPS vehicle tracking',
           'Real-time vehicle monitoring',
@@ -88,7 +88,7 @@ function Home() {
       details: {
         stat: '45%',
         statLabel: 'Cost Reduction',
-        image: '/assets/homepage/2.png',
+        image: '/assets/homepage/test2.jpeg',
         points: [
           'Predictive maintenance scheduling',
           'Automated service reminders',

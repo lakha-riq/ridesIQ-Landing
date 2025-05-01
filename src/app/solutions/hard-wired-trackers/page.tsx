@@ -114,7 +114,7 @@ const Tracking = () => {
     {
       id: 'hardwired',
       name: 'Hard-Wired Tracker',
-      image: '/devices/hardware_tracker.svg',
+      image: '/assets/devices/hardware_tracker.svg',
       imageProps: {
         width: 450,
         height: 300,
@@ -159,7 +159,7 @@ const Tracking = () => {
     {
       id: 'obd',
       name: 'OBD Tracker',
-      image: '/devices/OBD_tracker.png',
+      image: '/assets/devices/OBD_tracker.png',
       imageProps: {
         width: 250,
         height: 250,
@@ -201,7 +201,7 @@ const Tracking = () => {
     {
       id: 'asset',
       name: 'Asset Tracker',
-      image: '/devices/asset_tracker.png',
+      image: '/assets/devices/asset_tracker.png',
       imageProps: {
         width: 250,
         height: 250,
@@ -1065,14 +1065,17 @@ const Tracking = () => {
 
                 {/* Product Image - Sticky Container */}
                 <div className='relative order-1 lg:order-2 lg:-mt-12'>
-                  <div className='lg:sticky lg:top-24' ref={imageRef}>
+                  <div
+                    className='lg:sticky lg:top-1/2 lg:transform lg:-translate-y-1/2'
+                    ref={imageRef}
+                  >
                     <motion.div
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       className='relative'
                     >
-                      <div className='relative max-w-md mx-auto lg:max-w-none'>
+                      <div className='relative mt-25 max-w-md mx-auto lg:max-w-none'>
                         <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6' />
                         <Image
                           src={`/assets/fleet-management/5.png`}
