@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 const Footer = () => {
+  const [email, setEmail] = useState<string>('');
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); // Prevent page refresh
+    console.log('Subscribed Email:', email); // Log email to console
+    setEmail(''); // Reset input field
+  };
   return (
     <div>
       <footer className='bg-gray-900 text-white pt-16 pb-30 sm:pb-8 px-4 relative'>
@@ -28,10 +37,15 @@ const Footer = () => {
                     <input
                       type='email'
                       placeholder='Enter email address...'
+                      value={email}
+                      onChange={handleEmailChange}
                       className='w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#678FCA] focus:border-transparent transition-all'
                     />
                   </div>
-                  <button className='w-full bg-[#678FCA] text-white px-6 py-3 rounded-lg hover:bg-[#678FCA]/90 transition-all flex items-center justify-center group'>
+                  <button
+                    onClick={handleSubmit}
+                    className='w-full bg-[#678FCA] text-white px-6 py-3 rounded-lg hover:bg-[#678FCA]/90 transition-all flex items-center justify-center group'
+                  >
                     Subscribe
                     <ArrowRight className='ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform' />
                   </button>

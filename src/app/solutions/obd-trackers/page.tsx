@@ -463,7 +463,7 @@ const Tracking = () => {
         </div>
 
         {/* Hero Bottom Gradient */}
-        <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent' />
+        <div className='absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent' />
       </section>
 
       {/* Overview Section */}
@@ -785,6 +785,9 @@ const Tracking = () => {
                         src={product.image}
                         alt={product.name}
                         {...product.imageProps}
+                        width={180}
+                        height={180}
+                        className='object-contain mx-auto'
                         priority
                       />
                     </div>

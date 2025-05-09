@@ -12,6 +12,8 @@ import {
   Search,
   ArrowRight,
   HelpCircle,
+  Contact,
+  PcCase,
 } from 'lucide-react';
 import Link from 'next/link';
 import { Navigation } from '@/components/Navigation';
@@ -107,11 +109,6 @@ const faqCategories: FAQCategory[] = [
         answer:
           "Absolutely! RidesIQ's platform is designed to handle multiple fleets across different locations. You can organize vehicles into groups, assign different administrators, and manage permissions for each fleet separately. Our multi-fleet management features make it easy to oversee operations across various locations from a single dashboard.",
       },
-      {
-        id: '',
-        question: '',
-        answer: '',
-      },
     ],
   },
   {
@@ -168,6 +165,232 @@ const faqCategories: FAQCategory[] = [
         question: 'How do I reset my device?',
         answer:
           'To reset your RidesIQ device: 1) Locate the reset button on the device, 2) Press and hold for 10 seconds until the LED indicator flashes, 3) Wait for the device to restart (approximately 2 minutes), 4) Verify connection in your dashboard. For OBD devices, simply unplug and reconnect after 30 seconds.',
+      },
+    ],
+  },
+  {
+    id: 'asset-tracker',
+    icon: PcCase,
+    title: 'Assest Tracker',
+    questions: [
+      {
+        id: 'how-accurate-is-the-gps-tracking',
+        question: 'How accurate is the GPS tracking?',
+        answer:
+          'Our GPS tracking provides accuracy within 2-3 meters in optimal conditions. The system updates every 10 seconds to ensure real-time location data.',
+      },
+      {
+        id: 'what-is-the-battery-life-of-the-tracking-devices',
+        question: 'What is the battery life of the tracking devices?',
+        answer:
+          'Battery life varies by model. Hard-wired devices use vehicle power, OBD trackers are port-powered, and asset trackers can last up to 5 years on a single charge.',
+      },
+      {
+        id: 'is-the-tracking-data-secure',
+        question: 'Is the tracking data secure?',
+        answer:
+          'Yes, all data is encrypted end-to-end and stored in secure cloud servers. We comply with industry standards for data protection and privacy.',
+      },
+      {
+        id: 'can-i-integrate-the-tracking-system-with-my-existing-fleet-management-software',
+        question:
+          'Can I integrate the tracking system with my existing fleet management software?',
+        answer:
+          'Yes, our API allows integration with most major fleet management platforms. Our team can assist with custom integration solutions.',
+      },
+      {
+        id: 'what-kind-of-support-do-you-offer',
+        question: 'What kind of support do you offer?',
+        answer:
+          'We provide 24/7 technical support via phone, email, and chat. Our team of experts is always available to help with any issues or questions.',
+      },
+    ],
+  },
+  {
+    id: 'faqs-hardwired',
+    icon: PcCase,
+    title: 'Hard Wired Trackers',
+    questions: [
+      {
+        id: 'how-accurate-is-the-gps-tracking',
+        question: 'How accurate is the GPS tracking?',
+        answer:
+          'Our GPS provides real-time location tracking with ±2-meter accuracy, using GPS, BDS, and Glonass satellites for high precision—even in dense urban or remote areas.',
+      },
+      {
+        id: 'how-often-does-the-tracking-system-update-location-data',
+        question: 'How often does the tracking system update location data?',
+        answer:
+          'Location data is updated multiple times within a minute, for real-time data.',
+      },
+      {
+        id: 'will-this-work-across-regions-or-international-borders',
+        question: 'Will this work across regions or international borders?',
+        answer:
+          'Yes. Our multi-network SIMs and dual-server architecture ensure uninterrupted tracking across cities, provinces, and borders.',
+      },
+      {
+        id: 'how-long-does-it-take-to-install-the-tracker',
+        question: 'How long does it take to install the tracker?',
+        answer:
+          'Professional hardwired installation takes approximately 10-15 minutes per vehicle. Plug-and-play options install in under 5 minutes via OBD-II port.',
+      },
+      {
+        id: 'what-happens-if-the-vehicle-loses-power-or-signal',
+        question: 'What happens if the vehicle loses power or signal?',
+        answer:
+          'The built-in battery backup and 16MB flash memory ensure tracking continues and data is logged, even during power loss or in no-signal zones.',
+      },
+      {
+        id: 'can-i-set-up-alerts-for-speeding-idling-or-geofencing',
+        question: 'Can I set up alerts for speeding, idling, or geofencing?',
+        answer:
+          'Absolutely. You can configure real-time alerts for speeding, harsh braking, long idling, geofence breaches, and more—all from the dashboard.',
+      },
+      {
+        id: 'how-secure-is-the-data-collected-by-the-tracking-system',
+        question: 'How secure is the data collected by the tracking system?',
+        answer:
+          "Data security is paramount. Our system uses encrypted connections and secure servers to protect your fleet's information. ",
+      },
+      {
+        id: 'can-i-integrate-this-with-my-current-fleet-management-software',
+        question:
+          'Can I integrate this with my current fleet management software?',
+        answer:
+          'Yes. Our system offers universal compatibility with major fleet platforms and APIs for easy integration.',
+      },
+      {
+        id: 'what-kind-of-reports-can-i-generate',
+        question: 'What kind of reports can I generate?',
+        answer:
+          'You can generate automated reports for mileage, fuel usage, engine health, driving behavior, and more—customizable to your operations.',
+      },
+      {
+        id: 'what-support-is-available-after-purchase',
+        question: 'What support is available after purchase?',
+        answer:
+          'We offer 24/7 expert support, onboarding assistance, and dedicated customer success teams to ensure your fleet is fully optimized from day one.',
+      },
+    ],
+  },
+  {
+    id: 'faqs-obd',
+    icon: PcCase,
+    title: 'OBD Trackers',
+    questions: [
+      {
+        id: 'how-easy-is-it-to-install-the-obd-gps-tracker',
+        question: 'How easy is it to install the OBD GPS tracker?',
+        answer:
+          'Installation is plug-and-play. Simply insert the device into your vehicle’s OBD-II port—no tools, technicians, or downtime required.',
+      },
+      {
+        id: 'does-the-tracker-pull-engine-diagnostics-or-vehicle-health-data',
+        question:
+          'Does the tracker pull engine diagnostics or vehicle health data?',
+        answer:
+          'Yes, the RidesIQ OBD tracker reads data directly from the OBD-II port, allowing you to monitor engine status, battery voltage, and vehicle health alerts in real time.',
+      },
+      {
+        id: 'how-accurate-is-the-gps-location-tracking',
+        question: 'How accurate is the GPS location tracking?',
+        answer:
+          'Our OBD tracker uses a high-sensitivity GNSS receiver with autonomous positioning accuracy of under 2.5 meters and tracking sensitivity down to -162 dBm.',
+      },
+      {
+        id: 'what-happens-if-the-tracker-is-unplugged-or-loses-power',
+        question: 'What happens if the tracker is unplugged or loses power?',
+        answer:
+          'You’ll receive an immediate tamper or power disconnection alert. A built-in backup battery allows limited reporting even if the device is unplugged.',
+      },
+      {
+        id: 'can-i-track-driving-behavior-with-the-obd-tracker',
+        question: 'Can I track driving behavior with the OBD tracker?',
+        answer:
+          'Yes. The device can detect harsh acceleration, braking, and sharp turns using its built-in 3-axis accelerometer, helping you manage driver safety and compliance.',
+      },
+      {
+        id: 'how-often-does-the-device-update-its-location',
+        question: 'How often does the device update its location?',
+        answer:
+          'Location updates can be customized by time interval, movement, or status changes. This allows for real-time visibility without draining network or power resources.',
+      },
+      {
+        id: 'does-this-tracker-work-across-borders-or-in-multiple-countries',
+        question:
+          'Does this tracker work across borders or in multiple countries?',
+        answer:
+          'Yes. With LTE Cat M1/NB1 and 2G fallback, the tracker ensures reliable multi-band connectivity across North America and many international regions.',
+      },
+      {
+        id: 'can-i-set-up-alerts-for-geofencing-or-unauthorized-use',
+        question: 'Can I set up alerts for geofencing or unauthorized use?',
+        answer:
+          'Absolutely. Set custom geofences and receive instant alerts when a vehicle enters or exits a designated zone or is powered on outside working hours.',
+      },
+      {
+        id: 'what-kind-of-support-and-warranty-is-included',
+        question: 'What kind of support and warranty is included?',
+        answer:
+          'RidesIQ provides 24/7 expert support and full onboarding assistance. All devices include a standard manufacturer warranty and options for extended coverage.',
+      },
+    ],
+  },
+  {
+    id: 'contact',
+    icon: Contact,
+    title: 'Contact',
+    questions: [
+      {
+        id: 'how-can-i-reach-your-team-for-general-questions-or-technical-support',
+        question:
+          'How can I reach your team for general questions or technical support?',
+        answer:
+          'You can email us at support@ridesiq.com. We typically respond within 24 hours during business hours.',
+      },
+      {
+        id: 'what-are-your-customer-support-hours',
+        question: 'What are your customer support hours?',
+        answer:
+          'Our standard support is available Monday–Friday from 9 AM to 5 PM EST. Emergency support is available 24/7 for active clients.',
+      },
+      {
+        id: 'can-i-schedule-a-product-demo-or-consultation',
+        question: 'Can I schedule a product demo or consultation?',
+        answer:
+          'Absolutely. You can book a live demo with one of our fleet specialists to see how RidesIQ works for your needs.',
+      },
+      {
+        id: 'where-are-your-offices-located',
+        question: 'Where are your offices located?',
+        answer:
+          'We operate out of Toronto (ON), Buffalo (NY), and Lewes (DE), with support available across North America.',
+      },
+      {
+        id: 'do-you-offer-onboarding-or-training-for-new-clients',
+        question: 'Do you offer onboarding or training for new clients?',
+        answer:
+          'Yes — every new customer receives personalized onboarding support to ensure smooth installation and system adoption.',
+      },
+      {
+        id: 'how-quickly-will-i-receive-a-response-after-submitting-an-inquiry',
+        question:
+          'How quickly will I receive a response after submitting an inquiry?',
+        answer:
+          'We aim to reply within one business day. High-priority or active support tickets may be responded to faster.',
+      },
+      {
+        id: 'what-information-should-i-include-when-contacting-support',
+        question: 'What information should I include when contacting support?',
+        answer:
+          'To help us assist you faster, please include your name, company name, contact info, and a brief description of your question or issue.',
+      },
+      {
+        id: 'do-you-offer-technical-support-for-installation-or-setup',
+        question: 'Do you offer technical support for installation or setup?',
+        answer:
+          'Yes — our support team can guide you through plug-and-play or hardwired setup and ensure your system is working correctly.',
       },
     ],
   },

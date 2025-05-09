@@ -114,7 +114,7 @@ const Tracking = () => {
   const products: Products[] = [
     {
       id: 'asset',
-      name: 'Asset Tracker',
+      name: 'Asset GPS Tracker',
       image: '/assets/devices/asset_tracker.png',
       imageProps: {
         width: 300,
@@ -124,39 +124,43 @@ const Tracking = () => {
       specs: {
         installation: {
           icon: Wrench,
-          value: 'Compact Design',
-          description: '64.6 x 51 x 20.9mm form factor',
+          value: 'Compact, Easy Installation',
+          description:
+            'Lightweight 64.6 x 51 x 20.9mm GPS tracker for equipment and assets.',
         },
         power: {
           icon: Zap,
-          value: 'Battery Powered',
-          description: '2400mAh lithium battery',
+          value: 'Long-Life Battery Powered',
+          description:
+            'Equipped with a 2400mAh lithium battery for long-term tracking.',
         },
         bestFor: {
           icon: Box,
-          value: 'Asset Tracking',
-          description: 'Vehicles & equipment monitoring',
+          value: 'Equipment & Asset Monitoring',
+          description:
+            'Ideal for non-powered equipment and remote asset tracking.',
         },
         battery: {
           icon: Battery,
-          value: '3-Year Battery',
-          description: 'With 1 report per day',
+          value: '3-Year Battery Life',
+          description: 'Up to 3 years with one GPS report per day.',
         },
         connectivity: {
           icon: Wifi,
-          value: 'LTE Cat M1/NB2',
-          description: 'With 2G/3G fallback',
+          value: 'LTE Cat M1/NB2 + 2G/3G',
+          description: 'Reliable cellular coverage with fallback connectivity.',
         },
         features: {
           icon: Shield,
-          value: 'Weather Resistant',
-          description: 'IP67 rated protection',
+          value: 'Weather-Resistant IP67',
+          description:
+            'Built for outdoor use with waterproof and dustproof protection.',
         },
       },
     },
     {
       id: 'hardwired',
-      name: 'Hard-Wired Tracker',
+      name: 'Hard-Wired Fleet Tracker',
       image: '/assets/devices/hardware_tracker.svg',
       imageProps: {
         width: 280,
@@ -166,40 +170,45 @@ const Tracking = () => {
       specs: {
         installation: {
           icon: Wrench,
-          value: 'Professional Installation',
-          description: 'Requires certified technician',
+          value: 'Professional Installation Required',
+          description:
+            'Installed by certified technicians for permanent placement.',
         },
         power: {
           icon: Zap,
-          value: 'Direct Vehicle Power',
-          description: 'Continuous power supply (DC 9-100V/1.5A)',
+          value: 'Direct Vehicle Power Supply',
+          description:
+            'Powered by DC 9–100V/1.5A, ideal for commercial vehicles.',
         },
         bestFor: {
           icon: Truck,
-          value: 'Large Fleets',
-          description: 'Commercial vehicles & trucks',
+          value: 'Enterprise Fleet Management',
+          description:
+            'Best GPS tracker for trucks, heavy vehicles, and large fleets.',
         },
         battery: {
           icon: Battery,
-          value: 'Backup Battery',
-          description: '120mAh backup battery',
+          value: 'Backup Battery Support',
+          description:
+            'Includes 120mAh battery to maintain tracking during power loss.',
         },
         connectivity: {
           icon: Wifi,
           value: '4G LTE + GPS + GSM',
-          description: 'Supports LTE-FDD & GSM bands',
+          description:
+            'Wide-band connectivity with real-time location tracking.',
         },
         features: {
           icon: Shield,
-          value: 'Advanced Security',
+          value: 'Advanced Fleet Security',
           description:
-            'Tamper detection, geo-fence, impact alerts, and remote fuel/electricity cut-off',
+            'Includes tamper alerts, impact detection, geofencing, and remote shutdown capabilities.',
         },
       },
     },
     {
       id: 'obd',
-      name: 'OBD Tracker',
+      name: 'OBD Plug-and-Play GPS Tracker',
       image: '/assets/devices/OBD_tracker.png',
       imageProps: {
         width: 250,
@@ -209,33 +218,37 @@ const Tracking = () => {
       specs: {
         installation: {
           icon: Wrench,
-          value: 'Plug & Play',
-          description: 'Self-installation in OBD-II port',
+          value: 'Plug-and-Play Setup',
+          description:
+            'Easily installs in seconds via OBD-II port—no tools required.',
         },
         power: {
           icon: Zap,
-          value: 'OBD-II Port',
-          description: 'Direct vehicle power supply',
+          value: 'Powered by OBD-II Port',
+          description: 'Utilizes the vehicle’s built-in power source.',
         },
         bestFor: {
           icon: Truck,
-          value: 'All Vehicles',
-          description: 'Cars & light commercial vehicles',
+          value: 'Small to Medium Fleets',
+          description:
+            'Perfect for cars, vans, and light-duty commercial vehicles.',
         },
         battery: {
           icon: Battery,
-          value: 'No Battery',
-          description: 'Continuous power from vehicle',
+          value: 'No Internal Battery',
+          description: 'Continuously powered through the vehicle’s OBD port.',
         },
         connectivity: {
           icon: Wifi,
           value: 'LTE Cat M1/NB1',
-          description: 'LTE-FDD  ',
+          description:
+            'Real-time GPS tracking with LTE and fallback connectivity.',
         },
         features: {
           icon: Shield,
-          value: 'Motion Detection',
-          description: '3-axis accelerometer tracking',
+          value: 'Motion Detection Sensor',
+          description:
+            'Integrated 3-axis accelerometer for movement and impact tracking.',
         },
       },
     },
@@ -243,30 +256,30 @@ const Tracking = () => {
 
   const faqs = [
     {
-      question: 'How accurate is the GPS tracking?',
+      question: 'How accurate is the RidesIQ GPS tracking system?',
       answer:
-        'Our GPS tracking provides accuracy within 2-3 meters in optimal conditions. The system updates every 10 seconds to ensure real-time location data.',
+        'RidesIQ GPS trackers offer high-precision tracking with location accuracy within 2–3 meters. With updates every 10 seconds, fleet managers always have access to live, real-time GPS data.',
     },
     {
-      question: 'What is the battery life of the tracking devices?',
+      question: 'What is the battery life of each GPS tracking device?',
       answer:
-        'Battery life varies by model. Hard-wired devices use vehicle power, OBD trackers are port-powered, and asset trackers can last up to 5 years on a single charge.',
+        'Battery life depends on the model. Asset GPS trackers can last up to 3–5 years on a single charge, OBD trackers are powered by the vehicle’s OBD-II port, and hard-wired trackers use direct vehicle power with a backup battery.',
     },
     {
-      question: 'Is the tracking data secure?',
+      question: 'Is my GPS tracking data secure with RidesIQ?',
       answer:
-        'Yes, all data is encrypted end-to-end and stored in secure cloud servers. We comply with industry standards for data protection and privacy.',
+        'Yes. RidesIQ ensures your fleet tracking data is fully encrypted with end-to-end security protocols. All data is securely stored on compliant cloud infrastructure for maximum privacy and protection.',
     },
     {
       question:
-        'Can I integrate the tracking system with my existing fleet management software?',
+        'Can RidesIQ GPS tracking integrate with my fleet management software?',
       answer:
-        'Yes, our API allows integration with most major fleet management platforms. Our team can assist with custom integration solutions.',
+        'Absolutely. RidesIQ offers a robust API for seamless integration with major fleet management platforms. Our technical team can assist with custom GPS software integrations for enterprise needs.',
     },
     {
-      question: 'What kind of support do you offer?',
+      question: 'What kind of technical support does RidesIQ provide?',
       answer:
-        'We provide 24/7 technical support via phone, email, and chat. Our team of experts is always available to help with any issues or questions.',
+        'RidesIQ offers 24/7 technical support via phone, email, and live chat. Our expert support team is available anytime to help resolve GPS device issues, setup concerns, and software troubleshooting.',
     },
   ];
 
@@ -439,174 +452,7 @@ const Tracking = () => {
         </div>
 
         {/* Hero Bottom Gradient */}
-        <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent' />
-      </section>
-
-      {/* Product Comparison Section */}
-      <section className='py-24 relative overflow-hidden bg-gray-50'>
-        <div className='absolute inset-0 bg-gradient-to-br from-white to-gray-50/80' />
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23678FCA%22%20fill-opacity%3D%220.05%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-50" />
-
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative'>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className='text-center mb-16'
-          >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className='inline-flex items-center px-4 py-2 rounded-full bg-[#678FCA]/10 text-[#678FCA] text-sm font-medium mb-6'
-            >
-              <Sparkles className='w-4 h-4 mr-2' />
-              Compare Products
-            </motion.div>
-
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className='text-4xl font-bold mb-6'
-            >
-              Choose the Right Tracking Solution for
-              <br />
-              <span className='bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent'>
-                Your Fleet
-              </span>
-            </motion.h2>
-          </motion.div>
-
-          {/* Desktop Comparison Table */}
-          <div className='hidden lg:block'>
-            <div className='bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden'>
-              {/* Header Row */}
-              <div className='grid grid-cols-4 gap-0.5 bg-gray-100 p-0.5'>
-                <div className='bg-white p-6'>
-                  <div className='font-semibold text-gray-500'>Features</div>
-                </div>
-                {products.map((product) => (
-                  <div key={product.id} className='bg-white p-6'>
-                    <div className='text-center'>
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        {...product.imageProps}
-                        priority
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Comparison Rows */}
-              {Object.entries(products[0].specs).map(([key, spec]) => (
-                <div
-                  key={key}
-                  className='grid grid-cols-4 gap-0.5 bg-gray-100 p-0.5'
-                >
-                  <div className='bg-white p-6'>
-                    <div className='flex items-center gap-3'>
-                      <spec.icon className='w-5 h-5 text-[#678FCA]' />
-                      <span className='font-medium text-gray-900 capitalize'>
-                        {key}
-                      </span>
-                    </div>
-                  </div>
-                  {products.map((product) => (
-                    <div key={`${product.id}-${key}`} className='bg-white p-6'>
-                      <div className='text-center'>
-                        <div className='font-medium text-gray-900'>
-                          {product.specs[key].value}
-                        </div>
-                        <div className='text-sm text-gray-500 mt-1'>
-                          {product.specs[key].description}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Mobile Accordion */}
-          <div className='lg:hidden space-y-4'>
-            {products.map((product) => (
-              <motion.div
-                key={product.id}
-                initial={false}
-                animate={{
-                  height: activeProduct === product.id ? 'auto' : 'auto',
-                }}
-                className='bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden'
-              >
-                <button
-                  onClick={() =>
-                    setActiveProduct(
-                      activeProduct === product.id ? null : product.id
-                    )
-                  }
-                  className='w-full p-6 flex items-center justify-between'
-                >
-                  <div className='flex items-center gap-4'>
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className='w-16 h-16 object-cover rounded-lg'
-                    />
-                    <h3 className='text-lg font-semibold text-gray-900'>
-                      {product.name}
-                    </h3>
-                  </div>
-                  {activeProduct === product.id ? (
-                    <X className='w-5 h-5 text-gray-500' />
-                  ) : (
-                    <ChevronDown className='w-5 h-5 text-gray-500' />
-                  )}
-                </button>
-
-                {activeProduct === product.id && (
-                  <div className='px-6 pb-6 space-y-4'>
-                    {Object.entries(product.specs).map(([key, spec]) => (
-                      <div key={key} className='flex items-start gap-3'>
-                        <div className='w-8 h-8 rounded-lg bg-[#678FCA]/10 flex items-center justify-center flex-shrink-0'>
-                          <spec.icon className='w-4 h-4 text-[#678FCA]' />
-                        </div>
-                        <div>
-                          <div className='font-medium text-gray-900 capitalize'>
-                            {key}
-                          </div>
-                          <div className='text-sm text-gray-500'>
-                            {spec.value}
-                          </div>
-                          <div className='text-xs text-gray-400'>
-                            {spec.description}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className='mt-12 text-center'
-          >
-            <Link href='/contact'>
-              <button className='bg-[#678FCA] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#678FCA]/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group'>
-                Request Custom Quote
-                <ChevronRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
-              </button>
-            </Link>
-          </motion.div>
-        </div>
+        <div className='absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent' />
       </section>
 
       {/* Overview Section */}
@@ -878,6 +724,176 @@ const Tracking = () => {
             <Link href='/contact'>
               <button className='bg-[#678FCA] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#678FCA]/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group'>
                 Learn More
+                <ChevronRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
+              </button>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Product Comparison Section */}
+      <section className='py-24 relative overflow-hidden bg-gray-50'>
+        <div className='absolute inset-0 bg-gradient-to-br from-white to-gray-50/80' />
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23678FCA%22%20fill-opacity%3D%220.05%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-50" />
+
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className='inline-flex items-center px-4 py-2 rounded-full bg-[#678FCA]/10 text-[#678FCA] text-sm font-medium mb-6'
+            >
+              <Sparkles className='w-4 h-4 mr-2' />
+              Compare Products
+            </motion.div>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className='text-4xl font-bold mb-6'
+            >
+              Choose the Right Tracking Solution for
+              <br />
+              <span className='bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent'>
+                Your Fleet
+              </span>
+            </motion.h2>
+          </motion.div>
+
+          {/* Desktop Comparison Table */}
+          <div className='hidden lg:block'>
+            <div className='bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden'>
+              {/* Header Row */}
+              <div className='grid grid-cols-4 gap-0.5 bg-gray-100 p-0.5'>
+                <div className='bg-white p-6'>
+                  <div className='font-semibold text-gray-500'>Features</div>
+                </div>
+                {products.map((product) => (
+                  <div key={product.id} className='bg-white p-6'>
+                    <div className='text-center'>
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        {...product.imageProps}
+                        width={180}
+                        height={180}
+                        className='object-contain mx-auto'
+                        priority
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Comparison Rows */}
+              {Object.entries(products[0].specs).map(([key, spec]) => (
+                <div
+                  key={key}
+                  className='grid grid-cols-4 gap-0.5 bg-gray-100 p-0.5'
+                >
+                  <div className='bg-white p-6'>
+                    <div className='flex items-center gap-3'>
+                      <spec.icon className='w-5 h-5 text-[#678FCA]' />
+                      <span className='font-medium text-gray-900 capitalize'>
+                        {key}
+                      </span>
+                    </div>
+                  </div>
+                  {products.map((product) => (
+                    <div key={`${product.id}-${key}`} className='bg-white p-6'>
+                      <div className='text-center'>
+                        <div className='font-medium text-gray-900'>
+                          {product.specs[key].value}
+                        </div>
+                        <div className='text-sm text-gray-500 mt-1'>
+                          {product.specs[key].description}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Mobile Accordion */}
+          <div className='lg:hidden space-y-4'>
+            {products.map((product) => (
+              <motion.div
+                key={product.id}
+                initial={false}
+                animate={{
+                  height: activeProduct === product.id ? 'auto' : 'auto',
+                }}
+                className='bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden'
+              >
+                <button
+                  onClick={() =>
+                    setActiveProduct(
+                      activeProduct === product.id ? null : product.id
+                    )
+                  }
+                  className='w-full p-6 flex items-center justify-between'
+                >
+                  <div className='flex items-center gap-4'>
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className='w-16 h-16 object-cover rounded-lg'
+                    />
+                    <h3 className='text-lg font-semibold text-gray-900'>
+                      {product.name}
+                    </h3>
+                  </div>
+                  {activeProduct === product.id ? (
+                    <X className='w-5 h-5 text-gray-500' />
+                  ) : (
+                    <ChevronDown className='w-5 h-5 text-gray-500' />
+                  )}
+                </button>
+
+                {activeProduct === product.id && (
+                  <div className='px-6 pb-6 space-y-4'>
+                    {Object.entries(product.specs).map(([key, spec]) => (
+                      <div key={key} className='flex items-start gap-3'>
+                        <div className='w-8 h-8 rounded-lg bg-[#678FCA]/10 flex items-center justify-center flex-shrink-0'>
+                          <spec.icon className='w-4 h-4 text-[#678FCA]' />
+                        </div>
+                        <div>
+                          <div className='font-medium text-gray-900 capitalize'>
+                            {key}
+                          </div>
+                          <div className='text-sm text-gray-500'>
+                            {spec.value}
+                          </div>
+                          <div className='text-xs text-gray-400'>
+                            {spec.description}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className='mt-12 text-center'
+          >
+            <Link href='/contact'>
+              <button className='bg-[#678FCA] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#678FCA]/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group'>
+                Request Custom Quote
                 <ChevronRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
               </button>
             </Link>
@@ -1285,9 +1301,11 @@ const Tracking = () => {
 
       {/* Mobile CTA */}
       <div className='fixed bottom-0 left-0 right-0 p-4 bg-white shadow-lg md:hidden'>
-        <button className='w-full bg-[#678FCA] text-white py-3 rounded-full flex items-center justify-center'>
-          Get a Demo <ChevronRight className='ml-2 w-5 h-5' />
-        </button>
+        <Link href='/contact'>
+          <button className='w-full bg-[#678FCA] text-white py-3 rounded-full flex items-center justify-center'>
+            Get a Demo <ChevronRight className='ml-2 w-5 h-5' />
+          </button>
+        </Link>
       </div>
     </div>
   );

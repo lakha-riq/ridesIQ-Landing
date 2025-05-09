@@ -114,7 +114,7 @@ const Tracking = () => {
   const products: Products[] = [
     {
       id: 'hardwired',
-      name: 'Hard-Wired Tracker',
+      name: 'Hard-Wired GPS Fleet Tracker',
       image: '/assets/devices/hardware_tracker.svg',
       imageProps: {
         width: 450,
@@ -124,42 +124,45 @@ const Tracking = () => {
       specs: {
         installation: {
           icon: Wrench,
-          value: 'Professional Installation',
-          description: 'Requires certified technician',
+          value: 'Professional Hardwired Installation',
+          description:
+            'Installed by certified technicians for secure, permanent deployment in commercial vehicles.',
         },
         power: {
           icon: Zap,
           value: '9–100V Direct Vehicle Power',
-          description: 'Wide voltage range for trucks, buses, and EVs',
+          description:
+            'Supports a wide voltage range for trucks, buses, and electric vehicles.',
         },
         bestFor: {
           icon: Truck,
-          value: 'Large Fleets',
-          description: 'Ideal for commercial vehicles and trucks',
+          value: 'Heavy-Duty Fleet Tracking',
+          description:
+            'Ideal for large commercial fleets, trucking companies, and logistics operations.',
         },
         battery: {
           icon: Battery,
-          value: 'Backup Battery',
+          value: 'Integrated Backup Battery',
           description:
-            '120mAh backup ensures continued tracking if power is cut',
+            '120mAh battery ensures uninterrupted tracking even during power loss or tampering.',
         },
         connectivity: {
           icon: Wifi,
-          value: '4G LTE + GPS + GSM',
-          description: 'Supports LTE-FDD & GSM bands',
+          value: '4G LTE + GPS + GSM Support',
+          description:
+            'Multi-band coverage ensures fast, reliable, and continuous GPS location tracking.',
         },
         features: {
           icon: Shield,
-          value: 'Advanced Security',
+          value: 'Advanced Fleet Security',
           description:
-            'Tamper detection, geo-fence, impact alerts, remote fuel cut-off, and FOTA',
+            'Includes tamper detection, geofence alerts, crash detection, remote fuel cut-off, and over-the-air updates (FOTA).',
         },
       },
     },
-
     {
       id: 'obd',
-      name: 'OBD Tracker',
+      name: 'OBD Plug-and-Play GPS Tracker',
       image: '/assets/devices/OBD_tracker.png',
       imageProps: {
         width: 250,
@@ -169,39 +172,45 @@ const Tracking = () => {
       specs: {
         installation: {
           icon: Wrench,
-          value: 'Plug & Play',
-          description: 'Self-installation in OBD-II port',
+          value: 'Plug & Play GPS Installation',
+          description:
+            'Easily connects to your vehicle’s OBD-II port with no tools required.',
         },
         power: {
           icon: Zap,
-          value: 'OBD-II Port',
-          description: 'Direct vehicle power supply',
+          value: 'Vehicle-Powered via OBD-II',
+          description:
+            'Continuously powered by the vehicle for maintenance-free operation.',
         },
         bestFor: {
           icon: Truck,
-          value: 'All Vehicles',
-          description: 'Cars & light commercial vehicles',
+          value: 'Cars & Light Commercial Vehicles',
+          description:
+            'Perfect for small to mid-size business fleets and service vehicles.',
         },
         battery: {
           icon: Battery,
-          value: 'No Battery',
-          description: 'Continuous power from vehicle',
+          value: 'No Internal Battery Required',
+          description:
+            'Draws power directly from the OBD port for uninterrupted tracking.',
         },
         connectivity: {
           icon: Wifi,
-          value: 'LTE Cat M1/NB1',
-          description: 'LTE-FDD  ',
+          value: 'LTE Cat M1/NB1 Connectivity',
+          description:
+            'Supports fast and secure real-time tracking over LTE networks.',
         },
         features: {
           icon: Shield,
-          value: 'Motion Detection',
-          description: '3-axis accelerometer tracking',
+          value: 'Motion & Impact Detection',
+          description:
+            'Built-in 3-axis accelerometer for detecting movement, harsh braking, and collisions.',
         },
       },
     },
     {
       id: 'asset',
-      name: 'Asset Tracker',
+      name: 'Battery-Powered Asset GPS Tracker',
       image: '/assets/devices/asset_tracker.png',
       imageProps: {
         width: 250,
@@ -211,33 +220,39 @@ const Tracking = () => {
       specs: {
         installation: {
           icon: Wrench,
-          value: 'Compact Design',
-          description: '64.6 x 51 x 20.9mm form factor',
+          value: 'Compact & Portable Design',
+          description:
+            'Measures just 64.6 x 51 x 20.9mm—ideal for equipment, trailers, and containers.',
         },
         power: {
           icon: Zap,
-          value: 'Battery Powered',
-          description: '2400mAh lithium battery',
+          value: '2400mAh Battery Powered',
+          description:
+            'Long-life lithium battery for years of maintenance-free GPS asset tracking.',
         },
         bestFor: {
           icon: Box,
-          value: 'Asset Tracking',
-          description: 'Vehicles & equipment monitoring',
+          value: 'Equipment & Asset Monitoring',
+          description:
+            'Ideal for non-powered assets and remote location tracking.',
         },
         battery: {
           icon: Battery,
-          value: '3-Year Battery',
-          description: 'With 1 report per day',
+          value: '3-Year Battery Life',
+          description:
+            'Delivers 3+ years of tracking at 1 report per day frequency.',
         },
         connectivity: {
           icon: Wifi,
-          value: 'LTE Cat M1/NB2',
-          description: 'With 2G/3G fallback',
+          value: 'LTE Cat M1/NB2 + 2G/3G Fallback',
+          description:
+            'Ensures dependable signal in rural, urban, and cross-border areas.',
         },
         features: {
           icon: Shield,
-          value: 'Weather Resistant',
-          description: 'IP67 rated protection',
+          value: 'IP67 Weatherproof Rating',
+          description:
+            'Waterproof, dustproof, and built to withstand harsh outdoor conditions.',
         },
       },
     },
@@ -245,55 +260,57 @@ const Tracking = () => {
 
   const faqs = [
     {
-      question: 'How accurate is the GPS tracking?',
+      question: 'How accurate is the RidesIQ GPS tracking system?',
       answer:
-        'Our GPS provides real-time location tracking with ±2-meter accuracy, using GPS, BDS, and Glonass satellites for high precision—even in dense urban or remote areas.',
+        'RidesIQ GPS trackers offer ±2-meter accuracy in real-time, leveraging GPS, BDS, and Glonass satellite systems. This ensures precise tracking even in urban canyons and remote environments.',
     },
     {
-      question: 'How often does the tracking system update location data?',
+      question: 'How often does RidesIQ update GPS location data?',
       answer:
-        'Location data is updated multiple times within a minute, for real-time data.',
-    },
-    {
-      question: 'Will this work across regions or international borders?',
-      answer:
-        'Yes. Our multi-network SIMs and dual-server architecture ensure uninterrupted tracking across cities, provinces, and borders.',
-    },
-    {
-      question: 'How long does it take to install the tracker?',
-      answer:
-        'Professional hardwired installation takes approximately 10-15 minutes per vehicle. Plug-and-play options install in under 5 minutes via OBD-II port.',
-    },
-    {
-      question: 'What happens if the vehicle loses power or signal?',
-      answer:
-        'The built-in battery backup and 16MB flash memory ensure tracking continues and data is logged, even during power loss or in no-signal zones.',
-    },
-    {
-      question: 'Can I set up alerts for speeding, idling, or geofencing?',
-      answer:
-        'Absolutely. You can configure real-time alerts for speeding, harsh braking, long idling, geofence breaches, and more—all from the dashboard.',
-    },
-    {
-      question: 'How secure is the data collected by the tracking system?',
-      answer:
-        "Data security is paramount. Our system uses encrypted connections and secure servers to protect your fleet's information. ",
+        'Our system delivers real-time updates every few seconds, with multiple data points per minute for responsive fleet monitoring and driver behavior tracking.',
     },
     {
       question:
-        'Can I integrate this with my current fleet management software?',
+        'Does RidesIQ GPS tracking work across provinces or international borders?',
       answer:
-        'Yes. Our system offers universal compatibility with major fleet platforms and APIs for easy integration.',
+        'Yes. Our dual-server infrastructure and multi-network SIMs support seamless cross-border GPS tracking throughout North America and beyond.',
     },
     {
-      question: 'What kind of reports can I generate?',
+      question: 'How long does installation take for the GPS trackers?',
       answer:
-        'You can generate automated reports for mileage, fuel usage, engine health, driving behavior, and more—customizable to your operations.',
+        'Hardwired devices take 10–15 minutes to install per vehicle by a professional. OBD GPS trackers can be installed by anyone in under 5 minutes—no tools or technical skills needed.',
     },
     {
-      question: 'What support is available after purchase?',
+      question: 'What if the vehicle loses power or cellular signal?',
       answer:
-        'We offer 24/7 expert support, onboarding assistance, and dedicated customer success teams to ensure your fleet is fully optimized from day one.',
+        'Each device includes backup power and flash memory to store GPS data offline. This ensures no loss of tracking during signal outages or intentional power cuts.',
+    },
+    {
+      question:
+        'Can I receive alerts for speeding, idling, and geofence breaches?',
+      answer:
+        'Yes. RidesIQ lets you set real-time alerts for speeding, harsh braking, unauthorized movement, idling, and custom geofence violations—all visible on your dashboard or via SMS/email.',
+    },
+    {
+      question: 'Is the fleet tracking data secure?',
+      answer:
+        'Absolutely. RidesIQ uses encrypted communications and secure cloud hosting to protect all GPS data in transit and at rest, meeting strict data privacy standards.',
+    },
+    {
+      question:
+        'Can RidesIQ integrate with our current fleet management software?',
+      answer:
+        'Yes. Our API supports seamless integration with most leading fleet management platforms, including custom enterprise solutions.',
+    },
+    {
+      question: 'What reports can I generate with RidesIQ?',
+      answer:
+        'Generate customizable reports for mileage, fuel consumption, engine diagnostics, idle time, driver behavior, and more—automated to your preferred schedule.',
+    },
+    {
+      question: 'What support does RidesIQ offer after purchasing a tracker?',
+      answer:
+        'We provide 24/7 support via phone, chat, and email. Our onboarding specialists and dedicated customer success team ensure a smooth setup and long-term fleet optimization.',
     },
   ];
 
@@ -463,7 +480,7 @@ const Tracking = () => {
         </div>
 
         {/* Hero Bottom Gradient */}
-        <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent' />
+        <div className='absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent' />
       </section>
       {/* Overview Section */}
       <section className='py-24 relative overflow-hidden bg-gray-50/50'>
@@ -783,6 +800,9 @@ const Tracking = () => {
                         src={product.image}
                         alt={product.name}
                         {...product.imageProps}
+                        width={180}
+                        height={180}
+                        className='object-contain mx-auto'
                         priority
                       />
                     </div>
@@ -900,7 +920,6 @@ const Tracking = () => {
       </section>
 
       {/* Device Specifications Section */}
-
       <section className='py-24 bg-gray-50/50 relative overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-white to-gray-50/80' />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23678FCA%22%20fill-opacity%3D%220.05%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-50" />
@@ -1310,9 +1329,11 @@ const Tracking = () => {
 
       {/* Mobile CTA */}
       <div className='fixed bottom-0 left-0 right-0 p-4 bg-white shadow-lg md:hidden'>
-        <button className='w-full bg-[#678FCA] text-white py-3 rounded-full flex items-center justify-center'>
-          Get a Demo <ChevronRight className='ml-2 w-5 h-5' />
-        </button>
+        <Link href='/contact'>
+          <button className='w-full bg-[#678FCA] text-white py-3 rounded-full flex items-center justify-center'>
+            Get a Demo <ChevronRight className='ml-2 w-5 h-5' />
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -1,14 +1,70 @@
-'use client';
-
 import { motion } from 'framer-motion';
-import { Shield } from 'lucide-react';
+import { ChevronRight, Shield } from 'lucide-react';
 import React from 'react';
+import Link from 'next/link';
+import { Navigation } from '../Navigation';
 
-const TrustCenter = () => {
+export const TrustCenter = () => {
+  const sections = [
+    {
+      id: 'security',
+      title: 'Security',
+      content: `We take a proactive and multi-layered approach to security:
+
+• Encryption in Transit & at Rest: All data is encrypted using industry-standard SSL/TLS and AES-256 encryption.
+• Access Controls: Internal access to customer data is limited based on the principle of least privilege.
+• Infrastructure Security: Our systems are hosted with enterprise-grade cloud providers with SOC 2, ISO 27001, and PCI DSS certifications.
+• Monitoring & Alerts: Real-time monitoring, logging, and intrusion detection help us respond quickly to any unusual activity.
+• Penetration Testing: Regular vulnerability assessments and third-party penetration tests are conducted to strengthen our defenses.
+        
+See our Responsible Disclosure Policy if you're a security researcher.`,
+    },
+    {
+      id: 'privacy',
+      title: 'Privacy',
+      content: `We are committed to data transparency and user control. Our Privacy Policy outlines exactly how we collect, use, and safeguard your information:
+
+• Global Compliance: We comply with GDPR, CCPA, and PIPEDA.
+• Consent-Based Tracking: Cookie consent is required for data collection across our website.
+• No Selling of Data: We do not sell or share user data with third parties for marketing purposes.
+• Data Minimization: We only collect data necessary for providing services and improving your experience.`,
+    },
+  ];
+
+  const renderContent = (content: string) => {
+    return content.split('\n\n').map((block, i) => {
+      if (block.includes('•')) {
+        const [intro, ...items] = block.split('\n');
+        return (
+          <div key={i} className='mb-4'>
+            {intro && (
+              <p className='text-gray-600 leading-relaxed mb-2'>{intro}</p>
+            )}
+            <ul className='list-disc pl-4 space-y-2'>
+              {items.map((item, j) => (
+                <li key={j} className='text-gray-600'>
+                  {item.replace('• ', '')}
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      }
+      return (
+        <p key={i} className='mb-4 text-gray-600 leading-relaxed'>
+          {block}
+        </p>
+      );
+    });
+  };
+
   return (
-    <>
+    <div className='min-h-screen bg-white'>
+      <Navigation />
+
       {/* Hero Section */}
       <section className='relative min-h-[40vh] flex items-center justify-center overflow-hidden'>
+        {/* Background & Overlays */}
         <div className='absolute inset-0'>
           <div className='absolute inset-0 bg-gradient-to-r from-gray-900/95 to-gray-900/70' />
           <div className='absolute inset-0 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:32px_32px] opacity-10' />
@@ -50,154 +106,105 @@ const TrustCenter = () => {
         <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent' />
       </section>
 
-      {/* Content Section */}
+      {/* Table of Contents */}
       <section className='py-12 relative'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-3xl mx-auto prose prose-lg space-y-8'>
-            <p>
-              At <strong>RidesIQ</strong>, trust is at the core of everything we
-              do. From real-time GPS tracking to vehicle behavior insights, we
-              know that our users rely on us for accurate data, system uptime,
-              and protection of their most valuable assets. The RidesIQ Trust
-              Center brings together key information about our commitment to
-              security, privacy, compliance, and system reliability.
-            </p>
-
-            <h2>🔒 Security</h2>
-            <p>We take a proactive and multi-layered approach to security:</p>
-            <ul>
-              <li>
-                Encryption in Transit & at Rest: All data is encrypted using
-                industry-standard SSL/TLS and AES-256 encryption.
-              </li>
-              <li>
-                Access Controls: Internal access to customer data is limited
-                based on the principle of least privilege.
-              </li>
-              <li>
-                Infrastructure Security: Our systems are hosted with
-                enterprise-grade cloud providers with SOC 2, ISO 27001, and PCI
-                DSS certifications.
-              </li>
-              <li>
-                Monitoring & Alerts: Real-time monitoring, logging, and
-                intrusion detection help us respond quickly to any unusual
-                activity.
-              </li>
-              <li>
-                Penetration Testing: Regular vulnerability assessments and
-                third-party penetration tests are conducted to strengthen our
-                defenses.
-              </li>
-            </ul>
-            <p>
-              See our Responsible Disclosure Policy if you're a security
-              researcher.
-            </p>
-
-            <h2>🛡️ Privacy</h2>
-            <p>
-              We are committed to data transparency and user control. Our
-              Privacy Policy outlines exactly how we collect, use, and safeguard
-              your information.
-            </p>
-            <ul>
-              <li>Global Compliance: We comply with GDPR, CCPA, and PIPEDA.</li>
-              <li>
-                Consent-Based Tracking: Cookie consent is required for data
-                collection across our website.
-              </li>
-              <li>
-                No Selling of Data: We do not sell or share user data with third
-                parties for marketing purposes.
-              </li>
-              <li>
-                Data Minimization: We only collect the data we need to provide
-                our services effectively.
-              </li>
-            </ul>
-
-            <h2>📜 Compliance</h2>
-            <p>
-              RidesIQ adheres to industry-leading privacy and data security
-              frameworks:
-            </p>
-            <ul>
-              <li>GDPR (EU)</li>
-              <li>PIPEDA (Canada)</li>
-              <li>CCPA (California)</li>
-              <li>Delaware Online Privacy and Protection Act</li>
-            </ul>
-            <p>
-              We maintain Data Processing Agreements (DPAs) with third-party
-              vendors and follow secure data handling practices throughout the
-              lifecycle of your data.
-            </p>
-
-            <h2>⚙️ Reliability & Uptime</h2>
-            <p>
-              Fleet tracking requires constant availability — and we deliver:
-            </p>
-            <ul>
-              <li>
-                Real-Time Data Processing: Event alerts and location updates are
-                streamed with minimal latency.
-              </li>
-              <li>
-                Uptime Commitment: We monitor uptime 24/7 and aim for 99.9%
-                service availability.
-              </li>
-              <li>
-                Redundancy & Backups: Mission-critical systems are deployed in
-                redundant configurations with regular backups.
-              </li>
-              <li>
-                Status Page: Coming soon — a public service status page to keep
-                you updated during maintenance or outages.
-              </li>
-            </ul>
-
-            <h2>🔄 Data Handling & Retention</h2>
-            <ul>
-              <li>
-                Retention Period: Data is retained for up to 3 years unless
-                otherwise requested or required by law.
-              </li>
-              <li>
-                User Requests: You can request access, correction, or deletion
-                of your data at any time via{' '}
-                <a href='mailto:info@ridesiq.com'>info@ridesiq.com</a>.
-              </li>
-              <li>
-                Data Portability: We can provide a machine-readable export of
-                your data upon request.
-              </li>
-            </ul>
-
-            <h2>🤝 Our Promise</h2>
-            <p>We don’t just track vehicles — we earn your trust.</p>
-            <p>
-              RidesIQ is built for transparency, accountability, and security at
-              scale. Whether you're managing 1 vehicle or 10,000, your data is
-              safe, your devices are reliable, and your business is supported by
-              a platform built to perform.
-            </p>
-
-            <h2>📬 Questions?</h2>
-            <p>
-              We're here to help.
-              <br />
-              Email us at <a href='mailto:info@ridesiq.com'>
-                info@ridesiq.com
-              </a>{' '}
-              or visit our Privacy Policy, Terms of Service, and Responsible
-              Disclosure pages for more.
-            </p>
+          <div className='max-w-3xl mx-auto'>
+            <div className='bg-gray-50 rounded-2xl p-6 mb-12'>
+              <h2 className='text-2xl font-bold mb-4'>Table of Contents</h2>
+              <ul className='space-y-2'>
+                {sections.map((section) => (
+                  <li key={section.id}>
+                    <a
+                      href={`#${section.id}`}
+                      className='text-[#678FCA] hover:text-[#678FCA]/80 transition-colors flex items-center group'
+                    >
+                      <ChevronRight className='w-4 h-4 mr-2 transition-transform group-hover:translate-x-1' />
+                      {section.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
-    </>
+
+      {/* Content Sections */}
+      <section className='py-12 relative'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-3xl mx-auto'>
+            {sections.map((section, index) => (
+              <motion.div
+                key={section.id}
+                id={section.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className='mb-12 scroll-mt-32'
+              >
+                <h2 className='text-2xl font-bold mb-4'>{section.title}</h2>
+                <div className='prose prose-lg'>
+                  {renderContent(section.content)}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className='py-24'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#678FCA] via-[#99D5C9] to-[#678FCA] shadow-2xl'>
+            <div className='absolute inset-0'>
+              <div className='absolute inset-0 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] opacity-10' />
+              <div className='absolute inset-0 bg-gradient-to-br from-black/5 to-transparent' />
+            </div>
+
+            <div className='relative px-6 py-20 sm:px-12 sm:py-28'>
+              <div className='max-w-3xl mx-auto text-center'>
+                <motion.h2
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className='text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8'
+                >
+                  Have Questions About Your Privacy?
+                </motion.h2>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                  className='text-xl text-white/90 mb-12'
+                >
+                  Our team is here to help you understand how we protect your
+                  data
+                </motion.p>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className='flex flex-col sm:flex-row gap-4 justify-center'
+                >
+                  <Link
+                    href='/contact'
+                    className='bg-white text-[#678FCA] px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/90 transition-all duration-300 transform hover:scale-105 flex items-center justify-center group'
+                  >
+                    Contact Us
+                    <ChevronRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                  </Link>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
-
-export default TrustCenter;
