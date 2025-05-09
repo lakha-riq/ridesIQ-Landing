@@ -214,10 +214,13 @@ function Home() {
               </p>
 
               <div className='flex justify-center lg:justify-start mb-12'>
-                <button className='bg-[#678FCA] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#678FCA]/90 transition-all duration-300 transform hover:scale-105 flex items-center group shadow-xl shadow-[#678FCA]/10'>
+                <Link
+                  href='/contact'
+                  className='bg-[#678FCA] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#678FCA]/90 transition-all duration-300 transform hover:scale-105 flex items-center group shadow-xl shadow-[#678FCA]/10'
+                >
                   Book a Free Demo
                   <ChevronRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
-                </button>
+                </Link>
               </div>
 
               {/* Stats */}
@@ -432,7 +435,7 @@ function Home() {
             </motion.p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-full mx-auto'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-2 max-w-full mx-auto'>
             {features.map((feature, index) => (
               <FeatureCard
                 key={feature.title}
@@ -499,31 +502,30 @@ function Home() {
             </motion.p>
           </motion.div>
           {/* Product Grid */}
-          <div
-            ref={containerRef}
-            className='w-full overflow-x-auto scroll-smooth custom-scrollbar-hide px-4 py-6'
-          >
+          <div className='w-full px-4 py-6 overflow-hidden'>
             <div
-              className='grid grid-flow-col gap-6 sm:gap-28 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-center'
-              style={{
-                width: `${
-                  productsData.length * 300 + (productsData.length - 1) * 24
-                }px`,
-              }}
+              ref={containerRef}
+              className='flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory custom-scrollbar-hide'
             >
               {productsData.map((product, index) => (
-                <div key={index} className='w-[300px] flex-shrink-0 mx-auto'>
-                  <ProductCard
-                    title={product.title}
-                    image={product.image}
-                    features={product.features}
-                    link={product.link}
-                    index={index}
-                  />
+                <div
+                  key={index}
+                  className='w-full sm:w-[80%] md:w-[calc(100%/3-1.5rem)] flex-shrink-0 snap-start'
+                >
+                  <div className='h-full'>
+                    <ProductCard
+                      title={product.title}
+                      image={product.image}
+                      features={product.features}
+                      link={product.link}
+                      index={index}
+                    />
+                  </div>
                 </div>
               ))}
             </div>
           </div>
+
           {/* Scroll Indicator Dots */}
           <div className='flex justify-center mt-4 gap-2'>
             {Array.from({ length: totalDots }).map((_, i) => (
@@ -579,10 +581,13 @@ function Home() {
                   transition={{ delay: 0.2 }}
                   className='space-y-8'
                 >
-                  <button className='bg-white text-[#678FCA] px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group'>
+                  <Link
+                    href='/contact'
+                    className='bg-white w-[80%] sm:w-[32%] text-[#678FCA] px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group'
+                  >
                     Get Started Today
                     <ChevronRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
-                  </button>
+                  </Link>
 
                   {/* Tag Buttons */}
                   <div className='flex flex-wrap justify-center gap-4'>
@@ -604,7 +609,7 @@ function Home() {
       </section>
 
       {/* Footer */}
-      <footer className='bg-gray-900 text-white pt-16 pb-8 px-4 relative'>
+      <footer className='bg-gray-900 text-white pt-16 pb-30 sm:pb-8 px-4 relative'>
         <div className='max-w-7xl mx-auto'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12'>
             {/* Email Signup Section */}
@@ -651,10 +656,10 @@ function Home() {
                   <ul className='space-y-3'>
                     <li>
                       <Link
-                        href='/industries/fleet-management'
+                        href='/industries/logistics-transportation'
                         className='text-gray-400 hover:text-white transition-colors'
                       >
-                        Fleet Management
+                        Logistics & Transportation
                       </Link>
                     </li>
                     <li>

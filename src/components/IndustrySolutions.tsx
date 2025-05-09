@@ -36,7 +36,7 @@ const industries: Industry[] = [
     title: 'Logistics & Transportation',
     description:
       'Reduce idle time and keep cargo moving with live tracking and maintenance alerts.',
-    link: '/industries/logistics',
+    link: '/industries/logistics-transportation',
   },
   {
     icon: Construction,

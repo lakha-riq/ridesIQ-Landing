@@ -26,10 +26,16 @@ interface IndustryLink {
 
 const industryLinks: IndustryLink[] = [
   {
+    icon: Car,
+    title: 'Car Rental',
+    description: 'Smart solutions for car rental fleet management',
+    href: '/industries/car-rental',
+  },
+  {
     icon: Truck,
     title: 'Logistics & Transportation',
     description: 'Fleet solutions for trucking and delivery companies',
-    href: '/industries/fleet-management',
+    href: '/industries/logistics-transportation',
   },
   {
     icon: Construction,
@@ -67,12 +73,6 @@ const industryLinks: IndustryLink[] = [
   //   description: 'Manage warehouse and logistics fleets',
   //   href: '/industries/distribution',
   // },
-  {
-    icon: Car,
-    title: 'Car Rental',
-    description: 'Smart solutions for car rental fleet management',
-    href: '/industries/car-rental',
-  },
 ];
 
 export const Navigation = ({ customColor = 'text-gray-700' }) => {
@@ -336,11 +336,7 @@ export const Navigation = ({ customColor = 'text-gray-700' }) => {
                         Solutions We Provide
                       </h3>
                       <div className='grid grid-cols-2 gap-4'>
-                        <motion.div
-                          initial={{ opacity: 0, x: -10 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: 0.3 }}
-                        >
+                        <motion.div>
                           <Link
                             href='/solutions/hard-wired-trackers'
                             className='flex items-start p-3 rounded-xl hover:bg-gray-50 transition-colors group'
@@ -368,11 +364,7 @@ export const Navigation = ({ customColor = 'text-gray-700' }) => {
                           </Link>
                         </motion.div>
 
-                        <motion.div
-                          initial={{ opacity: 0, x: -10 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: 0.33 }}
-                        >
+                        <motion.div>
                           <Link
                             href='/solutions/obd-trackers'
                             className='flex items-start p-3 rounded-xl hover:bg-gray-50 transition-colors group'
@@ -400,11 +392,7 @@ export const Navigation = ({ customColor = 'text-gray-700' }) => {
                           </Link>
                         </motion.div>
 
-                        <motion.div
-                          initial={{ opacity: 0, x: -10 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: 0.36 }}
-                        >
+                        <motion.div>
                           <Link
                             href='/solutions/asset-trackers'
                             className='flex items-start p-3 rounded-xl hover:bg-gray-50 transition-colors group'
@@ -458,7 +446,7 @@ export const Navigation = ({ customColor = 'text-gray-700' }) => {
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
             >
-              Get a Demo
+              <Link href='/contact'>Get a Demo</Link>
             </motion.button>
           </div>
 

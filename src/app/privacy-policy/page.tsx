@@ -4,6 +4,7 @@ import React from 'react';
 import { Navigation } from '@/components/Navigation';
 import { PrivacyContent } from '@/components/privacy/PrivacyContent';
 import { ContactCTA } from '@/components/shared/ContactCTA';
+import Footer from '@/components/Footer';
 
 export default function PrivacyPolicy() {
   return (
@@ -16,6 +17,7 @@ export default function PrivacyPolicy() {
         buttonText='Contact Us'
         buttonLink='/contact'
       />
+      <Footer />
     </div>
   );
 }

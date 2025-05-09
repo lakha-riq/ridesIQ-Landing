@@ -59,6 +59,7 @@ type IndustryData = {
     title: string;
     image: string;
     features: string[];
+    link: string;
   }[];
   ctaData: {
     heading: string;
@@ -130,7 +131,8 @@ const constructionData: IndustryData = {
         'Breakdowns and missed maintenance windows result in costly project delays.',
     },
   ],
-  challengePara: 'Hey This is Construction Page',
+  challengePara:
+    'Monitor heavy equipment, reduce downtime, and optimize logistics across multiple job sites using rugged vehicle telematics built for the construction industry. ',
   solutions: [
     {
       icon: ConstructionIcon,
@@ -195,6 +197,7 @@ const constructionData: IndustryData = {
         'Real-time GPS via direct power',
         'Ideal for long-term use',
       ],
+      link: '/solutions/hard-wired-trackers',
     },
     {
       title: 'OBD Plug & Play Tracker',
@@ -205,6 +208,7 @@ const constructionData: IndustryData = {
         'Best for short-term rentals',
         'Swaps easily between vehicles',
       ],
+      link: '/solutions/obd-trackers',
     },
     {
       title: 'Asset Tracker (SVR)',
@@ -215,14 +219,16 @@ const constructionData: IndustryData = {
         'Weatherproof & discreet',
         'Acts as backup theft recovery',
       ],
+      link: '/solutions/asset-trackers',
     },
   ],
   ctaData: {
-    heading: 'Heading',
-    description: 'This is description',
-    tag1: 'Hee',
-    tag2: 'gee',
-    tag3: 'hee',
+    heading: 'Smarter Construction Fleet Tracking with RidesIQ ',
+    description:
+      'Boost job site efficiency, reduce equipment downtime, and ensure real-time visibility across your construction vehicles and heavy machinery. ',
+    tag1: '#Equipment Monitoring',
+    tag2: '#Fuel & Idle Reports',
+    tag3: '#Job Site Geofencing',
   },
 };
 

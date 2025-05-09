@@ -59,6 +59,7 @@ type IndustryData = {
     title: string;
     image: string;
     features: string[];
+    link: string;
   }[];
   ctaData: {
     heading: string;
@@ -129,7 +130,8 @@ const fleetManagementData: IndustryData = {
         'Unplanned breakdowns lead to missed deliveries and added costs.',
     },
   ],
-  challengePara: 'Hey, this is Fleet Management Page',
+  challengePara:
+    'Track vehicles in real time, prevent theft, reduce costs, and boost delivery accuracy using GPS tracking, geofencing, and automated alerts—purpose-built for logistics and transportation companies. ',
   solutions: [
     {
       icon: MapPin,
@@ -194,6 +196,7 @@ const fleetManagementData: IndustryData = {
         'Real-time GPS via direct power',
         'Ideal for long-term use',
       ],
+      link: '/solutions/hard-wired-trackers',
     },
     {
       title: 'OBD Plug & Play Tracker',
@@ -204,6 +207,7 @@ const fleetManagementData: IndustryData = {
         'Best for short-term rentals',
         'Swaps easily between vehicles',
       ],
+      link: '/solutions/obd-trackers',
     },
     {
       title: 'Asset Tracker (SVR)',
@@ -214,14 +218,16 @@ const fleetManagementData: IndustryData = {
         'Weatherproof & discreet',
         'Acts as backup theft recovery',
       ],
+      link: '/solutions/asset-trackers',
     },
   ],
   ctaData: {
-    heading: 'Heading',
-    description: 'This is description',
-    tag1: 'Hee',
-    tag2: 'gee',
-    tag3: 'hee',
+    heading: 'Take Control of Your Fleet in Real-Time ',
+    description:
+      'Discover how RidesIQ’s vehicle telematics platform helps businesses track, manage, and protect their fleets with precision. ',
+    tag1: '#FleetManagement',
+    tag2: '#GPSFleetTracking',
+    tag3: ' #VehicleTelematics',
   },
 };
 

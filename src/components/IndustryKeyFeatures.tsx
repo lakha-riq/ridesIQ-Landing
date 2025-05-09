@@ -84,7 +84,7 @@ export const IndustryKeyFeatures: React.FC<IndustryKeyFeaturesProps> = ({
                 {/* FLEX CHANGE */}
                 <div className='flex flex-row md:flex-row items-start md:items-start gap-6 md:gap-8'>
                   {/* Icon Section */}
-                  <div className=' mt-3 md:mt-0 md:w-17 md:h-7/12 w-12 h-12 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] flex items-center justify-center flex-shrink-0'>
+                  <div className=' mt-3 md:mt-0 md:w-17 md:h-17 w-12 h-12 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] flex items-center justify-center flex-shrink-0'>
                     <div className='md:w-16 md:h-16 w-11 h-11 rounded-xl bg-white flex items-center justify-center'>
                       <feature.icon className='w-8 h-8 text-[#678FCA]' />
                     </div>

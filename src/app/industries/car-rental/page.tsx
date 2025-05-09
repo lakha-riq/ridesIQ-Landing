@@ -55,6 +55,7 @@ type IndustryData = {
     title: string;
     image: string;
     features: string[];
+    link: string;
   }[];
   ctaData: {
     heading: string;
@@ -125,7 +126,8 @@ const carRentalData: IndustryData = {
         'Unattended or off-rental vehicles are vulnerable to theft, tampering, and unauthorized usage.',
     },
   ],
-  challengePara: 'Hey, This is Car Rental Page..',
+  challengePara:
+    'Gain full visibility over your rental fleet with GPS tracking, automated alerts, and usage insights—improving turnaround time, reducing risk, and maximizing fleet utilization.',
   solutions: [
     {
       icon: Settings2,
@@ -190,6 +192,7 @@ const carRentalData: IndustryData = {
         'Real-time GPS via direct power',
         'Ideal for long-term use',
       ],
+      link: '/solutions/hard-wired-trackers',
     },
     {
       title: 'OBD Plug & Play Tracker',
@@ -200,6 +203,7 @@ const carRentalData: IndustryData = {
         'Best for short-term rentals',
         'Swaps easily between vehicles',
       ],
+      link: '/solutions/obd-trackers',
     },
     {
       title: 'Asset Tracker (SVR)',
@@ -210,14 +214,16 @@ const carRentalData: IndustryData = {
         'Weatherproof & discreet',
         'Acts as backup theft recovery',
       ],
+      link: '/solutions/asset-trackers',
     },
   ],
   ctaData: {
-    heading: 'Heading',
-    description: 'This is description',
-    tag1: 'Hee',
-    tag2: 'gee',
-    tag3: 'hee',
+    heading: 'Smarter Car Rental Tracking Starts Here',
+    description:
+      ' Streamline fleet operations with real-time GPS telematics built for car rental businesses. Prevent loss, optimize usage, and monitor every vehicle from one platform.',
+    tag1: '#CarRental',
+    tag2: '#FleetTracking',
+    tag3: '#VehicleTelematics',
   },
 };
 

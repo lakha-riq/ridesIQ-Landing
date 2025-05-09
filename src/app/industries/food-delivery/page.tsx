@@ -57,6 +57,7 @@ type IndustryData = {
     title: string;
     image: string;
     features: string[];
+    link: string;
   }[];
   ctaData: {
     heading: string;
@@ -128,7 +129,8 @@ const foodDeliveryData: IndustryData = {
         'Without visibility into delivery metrics, it’s difficult to identify performance gaps or optimize for efficiency.',
     },
   ],
-  challengePara: 'Hey, this is Food-Delivery page..',
+  challengePara:
+    'RidesIQ helps food delivery businesses reduce delays, reroute drivers instantly, and ensure fresh, on-time deliveries using GPS tracking and advanced telematics solutions. ',
   solutions: [
     {
       icon: Bike,
@@ -193,6 +195,7 @@ const foodDeliveryData: IndustryData = {
         'Real-time GPS via direct power',
         'Ideal for long-term use',
       ],
+      link: '/solutions/hard-wired-trackers',
     },
     {
       title: 'OBD Plug & Play Tracker',
@@ -203,6 +206,7 @@ const foodDeliveryData: IndustryData = {
         'Best for short-term rentals',
         'Swaps easily between vehicles',
       ],
+      link: '/solutions/obd-trackers',
     },
     {
       title: 'Asset Tracker (SVR)',
@@ -213,14 +217,17 @@ const foodDeliveryData: IndustryData = {
         'Weatherproof & discreet',
         'Acts as backup theft recovery',
       ],
+      link: '/solutions/asset-trackers',
     },
   ],
   ctaData: {
-    heading: 'Heading',
-    description: 'This is description',
-    tag1: 'Hee',
-    tag2: 'gee',
-    tag3: 'hee',
+    heading:
+      'Optimize Every Delivery With RidesIQ,Track drivers, reroute faster, and deliver on time—every time. ',
+    description:
+      'Get real-time insights and smarter routes with RidesIQ’s vehicle telematics tailored for food delivery businesses. ',
+    tag1: '#DeliveryTracking',
+    tag2: '#Real-TimeGPS',
+    tag3: '#FoodDeliveryInsights',
   },
 };
 

@@ -3,6 +3,7 @@ import React from 'react';
 import { Navigation } from '@/components/Navigation';
 import { ContactCTA } from '@/components/shared/ContactCTA';
 import TrustCenter from '@/components/trust-center/TrustCenter';
+import Footer from '@/components/Footer';
 
 export default function ResponsibleDisclosure() {
   return (
@@ -15,6 +16,7 @@ export default function ResponsibleDisclosure() {
         buttonText='Contact Security Team'
         buttonLink='/contact'
       />
+      <Footer />
     </div>
   );
 }
