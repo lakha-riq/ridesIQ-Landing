@@ -9,9 +9,9 @@ const Footer = () => {
     setEmail(e.target.value);
   };
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(); // Prevent page refresh
-    console.log('Subscribed Email:', email); // Log email to console
-    setEmail(''); // Reset input field
+    e.preventDefault();
+    console.log('Subscribed Email:', email);
+    setEmail('');
   };
   return (
     <div>
