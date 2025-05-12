@@ -176,13 +176,13 @@ export const CompetitiveAdvantage = () => {
         <div className='overflow-x-auto'>
           <table className='w-full border border-gray-100 min-w-[600px] sm:min-w-[800px]'>
             <thead>
-              <tr>
-                <th className='sm:p-4 p-2 text-left text-gray-600 font-medium'>
+              <tr className='border-b-1 border-gray-100'>
+                <th className='sm:p-4 text-sm sm:text-lg p-2 text-left text-gray-600 font-medium'>
                   Features
                 </th>
-                <th className='p-4 text-left'>
+                <th className='sm:p-4 p-2 text-left'>
                   <div className='bg-[#678FCA]/5 rounded-xl p-4'>
-                    <div className='text-[#678FCA] font-bold sm:text-lg'>
+                    <div className='text-[#678FCA] text-sm font-bold sm:text-lg'>
                       RidesIQ
                     </div>
                     <div className='text-sm text-gray-600'>Industry Leader</div>
@@ -190,7 +190,7 @@ export const CompetitiveAdvantage = () => {
                 </th>
                 {competitors.map((competitor) => (
                   <th key={competitor.id} className='p-4 text-left'>
-                    <div className='p-4'>
+                    <div className='sm:p-4 p-2'>
                       <div className='text-gray-900 sm:text-lg font-bold'>
                         {competitor.name}
                       </div>
@@ -210,12 +210,12 @@ export const CompetitiveAdvantage = () => {
                   transition={{ delay: index * 0.1 }}
                   className='group hover:bg-gray-50/50'
                 >
-                  <td className='p-4'>
+                  <td className='sm:p-4 p-2'>
                     <div className='font-medium text-sm sm:text-lg text-gray-900'>
                       {feature.name}
                     </div>
                   </td>
-                  <td className='p-4'>
+                  <td className='sm:p-4 p-2'>
                     <div className='bg-[#678FCA]/5 group-hover:bg-[#678FCA]/10 rounded-xl p-4 transition-colors'>
                       <div className='flex items-start gap-3'>
                         <div className='w-6 h-6 rounded-full bg-[#678FCA]/10 flex items-center justify-center flex-shrink-0'>
@@ -228,7 +228,7 @@ export const CompetitiveAdvantage = () => {
                     </div>
                   </td>
                   {competitors.map((competitor) => (
-                    <td key={competitor.id} className='p-4'>
+                    <td key={competitor.id} className='sm:p-4 p-2'>
                       <div className='p-4'>
                         <div className='flex items-start gap-3'>
                           <div
