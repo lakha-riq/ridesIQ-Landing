@@ -67,6 +67,14 @@ const Footer = () => {
                   <ul className='space-y-3'>
                     <li>
                       <a
+                        href='/industries/car-rental'
+                        className='text-gray-400 hover:text-white transition-colors'
+                      >
+                        Car Rental
+                      </a>
+                    </li>
+                    <li>
+                      <a
                         href='/industries/logistics-transportation'
                         className='text-gray-400 hover:text-white transition-colors'
                       >
@@ -87,14 +95,6 @@ const Footer = () => {
                         className='text-gray-400 hover:text-white transition-colors'
                       >
                         Food Delivery
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href='/industries/car-rental'
-                        className='text-gray-400 hover:text-white transition-colors'
-                      >
-                        Car Rental
                       </a>
                     </li>
                   </ul>
@@ -196,24 +196,24 @@ const Footer = () => {
                 >
                   Privacy Policy
                 </Link>
-                <Link
+                {/* <Link
                   href='/responsible-disclosure'
                   className='hover:text-white transition-colors'
                 >
                   Responsible Disclosure
-                </Link>
+                </Link> */}
                 {/* <Link
                   href='terms-of-service'
                   className='hover:text-white transition-colors'
                 >
                   Terms of Service
                 </Link> */}
-                <Link
+                {/* <Link
                   href='/trust-center'
                   className='hover:text-white transition-colors'
                 >
                   Trust Center
-                </Link>
+                </Link> */}
               </div>
 
               {/* Social Links */}

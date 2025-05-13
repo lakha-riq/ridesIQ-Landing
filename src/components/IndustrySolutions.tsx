@@ -127,54 +127,98 @@ export const IndustrySolutions = () => {
 
         {/* Industry Grid */}
         <div className='grid gap-6 mb-12'>
-          {industries.length > 0 && (
+          <div className='grid grid-cols-1 md:grid-cols-10 gap-6'>
+            {/* Card 1 - 70% on desktop */}
             <motion.div
               key={industries[0].title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0 }}
-              className='relative group md:col-span-full'
+              className='relative group md:col-span-6'
             >
               <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/5 to-[#99D5C9]/5 rounded-2xl transform transition-all duration-300 group-hover:scale-[1.02]' />
               <Link
                 href={industries[0].link}
-                className='relative block bg-white rounded-2xl p-5 sm:p-10 shadow-lg transition-all duration-300 group-hover:shadow-xl border border-gray-100/50'
+                className='relative block bg-white rounded-2xl p-5 sm:p-10 shadow-lg transition-all duration-300 group-hover:shadow-xl border border-gray-100/50 h-full'
               >
-                <div className='flex items-start gap-6'>
-                  <div className='sm:w-20 w-14 h-14 sm:h-20 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0'>
-                    <div className='w-full h-full rounded-xl bg-white flex items-center justify-center'>
-                      {React.createElement(industries[0].icon, {
-                        className: 'sm:w-10 w-6 sm:h-10 h-6 text-[#678FCA]',
-                      })}
+                <div className='flex flex-col h-full'>
+                  <div className='flex items-start gap-4'>
+                    <div className='sm:w-20 w-14 h-14 sm:h-20 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0'>
+                      <div className='w-full h-full rounded-xl bg-white flex items-center justify-center'>
+                        {React.createElement(industries[0].icon, {
+                          className: 'sm:w-10 w-6 sm:h-10 h-6 text-[#678FCA]',
+                        })}
+                      </div>
+                    </div>
+                    <div className='flex-1'>
+                      <h3 className='text-xl lg:text-3xl font-semibold mb-3 text-gray-900 group-hover:text-[#678FCA] transition-colors'>
+                        {industries[0].title}
+                      </h3>
+                      <p className='text-gray-600 mb-4 text-sm lg:text-base'>
+                        {industries[0].description}
+                      </p>
                     </div>
                   </div>
-                  <div className='flex-1'>
-                    <h3 className='text-xl sm:text-3xl font-semibold mb-3 text-gray-900 group-hover:text-[#678FCA] transition-colors'>
-                      {industries[0].title}
-                    </h3>
-                    <p className='text-gray-600 mb-4 text-sm sm:text-base'>
-                      {industries[0].description}
-                    </p>
-                    <div className=' sm:text-sm text-sm flex items-center text-[#678FCA] font-medium group/link'>
-                      Learn More
-                      <ChevronRight className='ml-1 w-4 h-4 transition-transform group-hover/link:translate-x-1' />
-                    </div>
+                  <div className='text-sm lg:text-base flex items-start text-[#678FCA] font-medium group/link'>
+                    Learn More
+                    <ChevronRight className='ml-1 w-4 h-4 transition-transform group-hover/link:translate-x-1' />
                   </div>
                 </div>
               </Link>
             </motion.div>
-          )}
 
-          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch'>
-            {industries.slice(1).map((industry, index) => (
+            {/* Card 2 - 30% on desktop */}
+            <motion.div
+              key={industries[1].title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className='relative group md:col-span-4'
+            >
+              <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/5 to-[#99D5C9]/5 rounded-2xl transform transition-all duration-300 group-hover:scale-[1.02]' />
+              <Link
+                href={industries[1].link}
+                className='relative block bg-white rounded-2xl p-6 shadow-lg transition-all duration-300 group-hover:shadow-xl border border-gray-100/50 h-full'
+              >
+                <div className='flex flex-col h-full'>
+                  <div className='flex items-start gap-4'>
+                    <div className='w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0'>
+                      <div className='w-full h-full rounded-xl bg-white flex items-center justify-center'>
+                        {React.createElement(industries[1].icon, {
+                          className: 'w-6 h-6 text-[#678FCA]',
+                        })}
+                      </div>
+                    </div>
+                    <div className='flex-1'>
+                      <h3 className='text-lg lg:text-xl font-semibold mb-2 text-gray-900 group-hover:text-[#678FCA] transition-colors'>
+                        {industries[1].title}
+                      </h3>
+                      <p className='text-gray-600 mb-3 text-sm lg:text-base'>
+                        {industries[1].description}
+                      </p>
+                    </div>
+                  </div>
+                  <div className='mt-auto flex items-center text-[#678FCA] font-medium group/link text-sm'>
+                    Learn More
+                    <ChevronRight className='ml-1 w-4 h-4 transition-transform group-hover/link:translate-x-1' />
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          </div>
+
+          {/* Bottom Row: Card 3 & 4 - 50/50 on desktop */}
+          <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
+            {industries.slice(2).map((industry, index) => (
               <motion.div
                 key={industry.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: (index + 1) * 0.1 }}
-                className='relative group h-full'
+                transition={{ delay: (index + 2) * 0.1 }}
+                className='relative group'
               >
                 <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/5 to-[#99D5C9]/5 rounded-2xl transform transition-all duration-300 group-hover:scale-[1.02]' />
                 <Link
@@ -191,10 +235,10 @@ export const IndustrySolutions = () => {
                         </div>
                       </div>
                       <div className='flex-1'>
-                        <h3 className='text-xl font-semibold mb-2 text-gray-900 group-hover:text-[#678FCA] transition-colors'>
+                        <h3 className='text-lg lg:text-xl font-semibold mb-2 text-gray-900 group-hover:text-[#678FCA] transition-colors'>
                           {industry.title}
                         </h3>
-                        <p className='text-gray-600 mb-3 text-sm'>
+                        <p className='text-gray-600 mb-3 text-sm lg:text-base'>
                           {industry.description}
                         </p>
                       </div>

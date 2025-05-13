@@ -216,7 +216,7 @@ export const ChallengesSolutions: React.FC<ChallengesSolutionsProps> = ({
             hidden: {},
             visible: { transition: { staggerChildren: 0.2 } },
           }}
-          className='hidden md:grid md:grid-cols-2 md:gap-10'
+          className='hidden sm:grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10'
         >
           {/* Challenges Column */}
           <div className='space-y-6'>
@@ -228,7 +228,7 @@ export const ChallengesSolutions: React.FC<ChallengesSolutionsProps> = ({
                   variants={cardVariants('left')}
                   className='relative group'
                 >
-                  <div className='bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300'>
+                  <div className='bg-white md:h-45 lg:h-33 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300'>
                     <div className='flex items-start gap-4'>
                       <div className='w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0'>
                         <div className='w-full h-full rounded-xl bg-white flex items-center justify-center'>
@@ -283,7 +283,7 @@ export const ChallengesSolutions: React.FC<ChallengesSolutionsProps> = ({
                   whileHover={{ scale: 1.03 }}
                   className='relative z-10 transition-all duration-300'
                 >
-                  <div className='bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300'>
+                  <div className='bg-white md:h-45 lg:h-33 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300'>
                     <div className='flex items-start gap-4'>
                       <div className='w-14 h-14 rounded-xl bg-gradient-to-br from-[#99D5C9] to-[#678FCA] p-0.5 flex-shrink-0'>
                         <div className='w-full h-full rounded-xl bg-white flex items-center justify-center'>

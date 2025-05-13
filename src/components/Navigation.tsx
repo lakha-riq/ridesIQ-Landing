@@ -439,15 +439,16 @@ export const Navigation = ({ customColor = 'text-gray-700' }) => {
             >
               Resources
             </Link> */}
-
-            <motion.button
-              className='bg-[#678FCA] text-white px-6 py-2.5 rounded-full hover:bg-[#678FCA]/90 transition-colors'
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Link href='/contact'>Get a Demo</Link>
-            </motion.button>
+            <Link href='/contact'>
+              <motion.button
+                className='bg-[#678FCA] cursor-pointer text-white px-6 py-2.5 rounded-full hover:bg-[#678FCA]/90 transition-colors'
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+              >
+                Get a Demo
+              </motion.button>
+            </Link>
           </div>
 
           <motion.button

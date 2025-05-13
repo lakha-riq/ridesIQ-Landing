@@ -593,13 +593,13 @@ function Home() {
                   {/* Tag Buttons */}
                   <div className='flex flex-wrap justify-center gap-4'>
                     <div className='px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium'>
-                      Fleet Tracking
+                      #Fleet Tracking
                     </div>
                     <div className='px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium'>
-                      Real time Insights
+                      #Real time Insights
                     </div>
                     <div className='px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium'>
-                      Compliance
+                      #Compliance
                     </div>
                   </div>
                 </motion.div>

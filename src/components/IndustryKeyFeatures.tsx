@@ -66,7 +66,7 @@ export const IndustryKeyFeatures: React.FC<IndustryKeyFeaturesProps> = ({
           </motion.p>
         </motion.div>
 
-        <div className='grid grid-cols md:grid-cols-2 gap-6 sm:gap-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8'>
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -80,28 +80,27 @@ export const IndustryKeyFeatures: React.FC<IndustryKeyFeaturesProps> = ({
               <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/5 to-[#99D5C9]/5 rounded-2xl transform transition-all duration-300 group-hover:scale-[1.02]' />
 
               {/* Main Card */}
-              <div className='relative bg-white rounded-2xl p-6 md:p-8 shadow-lg transition-all duration-300 group-hover:shadow-xl border border-gray-100/50'>
-                {/* FLEX CHANGE */}
-                <div className='flex flex-row md:flex-row items-start md:items-start gap-6 md:gap-8'>
+              <div className='relative md:h-[100%] h-33  bg-white rounded-2xl p-6 md:p-8 shadow-lg transition-all duration-300 group-hover:shadow-xl border border-gray-100/50 flex flex-col'>
+                <div className='flex flex-col md:flex-row items-start gap-6 flex-grow'>
                   {/* Icon Section */}
-                  <div className=' mt-3 md:mt-0 md:w-17 md:h-17 w-12 h-12 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] flex items-center justify-center flex-shrink-0'>
-                    <div className='md:w-16 md:h-16 w-11 h-11 rounded-xl bg-white flex items-center justify-center'>
-                      <feature.icon className='w-8 h-8 text-[#678FCA]' />
+                  <div className='w-14 h-14 md:w-16 md:h-16 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] flex items-center justify-center flex-shrink-0'>
+                    <div className='w-11 h-11 md:w-12 md:h-12 rounded-xl bg-white flex items-center justify-center'>
+                      <feature.icon className='w-7 h-7 md:w-8 md:h-8 text-[#678FCA]' />
                     </div>
                   </div>
 
                   {/* Text Section */}
-                  <div className='flex-1 text-start md:text-left'>
-                    <h3 className='md:text-2xl font-semibold mb-2 text-gray-900'>
+                  <div className='flex-1 text-start'>
+                    <h3 className='text-lg md:text-2xl font-semibold mb-2 text-gray-900'>
                       {feature.title}
                     </h3>
-                    <p className='text-gray-600 text-[13px] md:text-md text-start md:leading-relaxed mb-4'>
+                    <p className='text-gray-600 text-sm md:text-base leading-relaxed mb-4'>
                       {feature.description}
                     </p>
 
                     {feature.stat && (
-                      <div className='flex flex-row items-center md:items-start gap-2 mt-4 pt-4 border-t border-gray-100'>
-                        <div className='text-3xl font-bold text-[#678FCA]'>
+                      <div className='flex items-center gap-2 mt-auto pt-4 border-t border-gray-100'>
+                        <div className='text-2xl md:text-3xl font-bold text-[#678FCA]'>
                           {feature.stat}
                         </div>
                         {feature.statLabel && (

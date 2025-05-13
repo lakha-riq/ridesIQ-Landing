@@ -226,9 +226,9 @@ const constructionData: IndustryData = {
     heading: 'Smarter Construction Fleet Tracking with RidesIQ ',
     description:
       'Boost job site efficiency, reduce equipment downtime, and ensure real-time visibility across your construction vehicles and heavy machinery. ',
-    tag1: '#Equipment Monitoring',
-    tag2: '#Fuel & Idle Reports',
-    tag3: '#Job Site Geofencing',
+    tag1: '#EquipmentMonitoring',
+    tag2: '#Fuel&Idle Reports',
+    tag3: '#JobSiteGeofencing',
   },
 };
 

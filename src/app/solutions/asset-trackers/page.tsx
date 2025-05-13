@@ -288,7 +288,7 @@ const Tracking = () => {
       <Navigation customColor='text-white' />
 
       {/* Hero Section */}
-      <section className='relative min-h-[90vh] flex items-center justify-center overflow-hidden'>
+      <section className='relative min-h-[110vh] flex items-center justify-center overflow-hidden'>
         {/* Background Image & Overlays */}
         <div className='absolute inset-0'>
           <Image
@@ -370,9 +370,11 @@ const Tracking = () => {
                       <div className='w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center'>
                         <Shield className='w-6 h-6 text-white' />
                       </div>
-                      <div>
-                        <div className='text-2xl font-bold text-white'>98%</div>
-                        <div className='text-sm text-white/70'>
+                      <div className=''>
+                        <div className='text-2xl text-start sm:text-center font-bold text-white'>
+                          98%
+                        </div>
+                        <div className='text-sm text-start sm:text-center text-white/70'>
                           Customer Satisfaction
                         </div>
                       </div>
@@ -382,10 +384,10 @@ const Tracking = () => {
                         <Truck className='w-6 h-6 text-white' />
                       </div>
                       <div>
-                        <div className='text-2xl font-bold text-white'>
+                        <div className='text-2xl text-start sm:text-center font-bold text-white'>
                           50K+
                         </div>
-                        <div className='text-sm text-white/70'>
+                        <div className='text-sm text-start sm:text-center text-white/70'>
                           Active Vehicles
                         </div>
                       </div>
@@ -395,10 +397,10 @@ const Tracking = () => {
                         <Clock className='w-6 h-6 text-white' />
                       </div>
                       <div>
-                        <div className='text-2xl font-bold text-white'>
+                        <div className='text-2xl text-start sm:text-center font-bold text-white'>
                           24/7
                         </div>
-                        <div className='text-sm text-white/70'>
+                        <div className='text-sm text-start sm:text-center text-white/70'>
                           Expert Support
                         </div>
                       </div>
