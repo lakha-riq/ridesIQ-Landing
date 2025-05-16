@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@aws-sdk/client-ses": "^3.772.0",
+    "@aws-sdk/client-sesv2": "^3.810.0",
     "@next/third-parties": "^15.3.1",
     "@vercel/speed-insights": "^1.2.0",
+    "aws-sdk": "^2.1692.0",
     "clarity-js": "^0.8.6",
     "country-state-city": "^3.2.1",
     "date-fns": "^4.1.0",

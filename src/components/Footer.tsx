@@ -1,17 +1,49 @@
-import React, { useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 const Footer = () => {
   const [email, setEmail] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
-  const handleSubmit = (e: React.FormEvent) => {
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Subscribed Email:', email);
-    setEmail('');
+    setIsLoading(true);
+    setMessage('');
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus('success');
+        setMessage(data.message);
+        setEmail('');
+      } else {
+        setStatus('error');
+        setMessage(data.message || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      setStatus('error');
+      setMessage('Network error. Please try again later.');
+      console.log('Error Aaya');
+    } finally {
+      setIsLoading(false);
+    }
   };
   return (
     <div>
@@ -32,7 +64,7 @@ const Footer = () => {
                   Your one-stop shop for Telematics news you need to know each
                   month.
                 </p>
-                <form className='space-y-3'>
+                <form className='space-y-3' onSubmit={handleSubmit}>
                   <div className='relative'>
                     <input
                       type='email'
@@ -43,7 +75,7 @@ const Footer = () => {
                     />
                   </div>
                   <button
-                    onClick={handleSubmit}
+                    type='submit'
                     className='w-full bg-[#678FCA] text-white px-6 py-3 rounded-lg hover:bg-[#678FCA]/90 transition-all flex items-center justify-center group'
                   >
                     Subscribe
