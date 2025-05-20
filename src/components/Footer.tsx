@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from 'react';
+import React, { FormEvent, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -35,22 +35,35 @@ const Footer = () => {
         setEmail('');
       } else {
         setStatus('error');
+        setEmail('');
         setMessage(data.message || 'Something went wrong. Please try again.');
       }
     } catch (error) {
       setStatus('error');
       setMessage('Network error. Please try again later.');
-      console.log('Error Aaya');
+      setEmail('');
     } finally {
       setIsLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (message) {
+      const timer = setTimeout(() => {
+        setMessage('');
+        setStatus('idle');
+      }, 5000); // 5000ms = 5 seconds
+
+      return () => clearTimeout(timer); // cleanup timer
+    }
+  }, [message]);
+
   return (
     <div>
       <footer className='bg-gray-900 text-white pt-16 pb-30 sm:pb-8 px-4 relative'>
         <div className='max-w-7xl mx-auto'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12'>
-            {/* Email Signup Section */}
+            {/* Email Signup */}
             <div className='lg:col-span-4'>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -72,15 +85,26 @@ const Footer = () => {
                       value={email}
                       onChange={handleEmailChange}
                       className='w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#678FCA] focus:border-transparent transition-all'
+                      required
                     />
                   </div>
                   <button
                     type='submit'
                     className='w-full bg-[#678FCA] text-white px-6 py-3 rounded-lg hover:bg-[#678FCA]/90 transition-all flex items-center justify-center group'
+                    disabled={isLoading}
                   >
-                    Subscribe
+                    {isLoading ? 'Subscribing...' : 'Subscribe'}
                     <ArrowRight className='ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform' />
                   </button>
+                  {message && (
+                    <p
+                      className={`text-sm ${
+                        status === 'success' ? 'text-green-500' : 'text-red-500'
+                      }`}
+                    >
+                      {message}
+                    </p>
+                  )}
                 </form>
               </motion.div>
             </div>

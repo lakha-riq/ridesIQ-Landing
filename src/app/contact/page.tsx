@@ -15,10 +15,10 @@ import {
 } from 'lucide-react';
 import { Navigation } from '@/components/Navigation';
 import { MultiStepForm } from '@/components/MultiStepForm';
-import Link from 'next/link';
 import { Country, State } from 'country-state-city';
 import Select, { SingleValue } from 'react-select';
 import Footer from '@/components/Footer';
+import { toast, Toaster } from 'react-hot-toast';
 
 interface FAQItem {
   question: string;
@@ -155,10 +155,8 @@ const Contact = () => {
         },
       };
 
-      console.log('Page Data:', pageData);
-
       setFormSubmitted(true);
-      console.log(FormData);
+      toast.success('Thank You for Contacting Us!');
       setFormData({
         fullName: '',
         email: '',
@@ -177,7 +175,6 @@ const Contact = () => {
       ...prev,
       [name]: value,
     }));
-    // Clear error when user starts typing
     if (formErrors[name as keyof typeof formErrors]) {
       setFormErrors((prev) => ({
         ...prev,
@@ -221,6 +218,7 @@ const Contact = () => {
 
   return (
     <div className='min-h-screen bg-white'>
+      <Toaster position='top-center' />
       <Navigation customColor='text-white' />
 
       {/* Hero Section */}
@@ -400,6 +398,7 @@ const Contact = () => {
       </section>
 
       {/* Multi-Step Form Section */}
+
       <section className='py-24 bg-gray-50/50 relative overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-white to-gray-50/80' />
         <div className='absolute inset-0 hero-pattern opacity-10' />

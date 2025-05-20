@@ -25,6 +25,7 @@ import Image from 'next/image';
 import { Navigation } from '@/components/Navigation';
 import { clarity } from 'clarity-js';
 import Footer from '@/components/Footer';
+import { Toaster } from 'react-hot-toast';
 
 function Home() {
   // const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -184,6 +185,7 @@ function Home() {
 
   return (
     <div className='min-h-screen bg-white'>
+      <Toaster position='top-center' />
       {/* Navigation */}
       <Navigation />
       {/* Hero Section */}
