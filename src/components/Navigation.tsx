@@ -14,6 +14,9 @@ import {
   Warehouse,
   ChevronDown,
   Car,
+  Battery,
+  BatteryCharging,
+  PcCase,
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -343,14 +346,15 @@ export const Navigation = ({ customColor = 'text-gray-700' }) => {
                             role='menuitem'
                           >
                             <div className='w-10 h-10 rounded-lg bg-[#678FCA]/10 flex items-center justify-center flex-shrink-0'>
-                              <svg
+                              {/* <svg
                                 className='w-5 h-5 text-[#678FCA]'
                                 fill='currentColor'
                                 viewBox='0 0 20 20'
                                 aria-hidden='true'
                               >
                                 <path d='M4 3a1 1 0 000 2h12a1 1 0 100-2H4zM3 7a1 1 0 011-1h12a1 1 0 011 1v9a2 2 0 01-2 2H5a2 2 0 01-2-2V7z' />
-                              </svg>
+                              </svg> */}
+                              <Battery className='transform rotate-180 text-[#678FCA]' />
                             </div>
                             <div className='ml-4'>
                               <div className='text-sm font-medium text-gray-900 group-hover:text-[#678FCA] transition-colors'>
@@ -399,14 +403,15 @@ export const Navigation = ({ customColor = 'text-gray-700' }) => {
                             role='menuitem'
                           >
                             <div className='w-10 h-10 rounded-lg bg-[#678FCA]/10 flex items-center justify-center flex-shrink-0'>
-                              <svg
+                              {/* <svg
                                 className='w-5 h-5 text-[#678FCA]'
                                 fill='currentColor'
                                 viewBox='0 0 20 20'
                                 aria-hidden='true'
                               >
                                 <path d='M10 2a1 1 0 00-1 1v2H4a1 1 0 100 2h5v2H4a1 1 0 100 2h5v2H4a1 1 0 100 2h5v2a1 1 0 102 0v-2h5a1 1 0 100-2h-5v-2h5a1 1 0 100-2h-5V7h5a1 1 0 100-2h-5V3a1 1 0 00-1-1z' />
-                              </svg>
+                              </svg> */}
+                              <PcCase className='text-[#678FCA]' />
                             </div>
                             <div className='ml-4'>
                               <div className='text-sm font-medium text-gray-900 group-hover:text-[#678FCA] transition-colors'>

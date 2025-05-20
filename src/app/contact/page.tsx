@@ -109,7 +109,7 @@ const Contact = () => {
     if (select) {
       setSelectedCountry(select);
 
-      const states = State.getStatesOfCountry(select.value).map((s) => ({
+      const states = State.getStatesOfCountry(select.label).map((s) => ({
         value: s.isoCode,
         label: s.name,
         data: s,
@@ -133,7 +133,7 @@ const Contact = () => {
     setFormErrors(errors);
 
     if (!Object.values(errors).some((error) => error)) {
-      // Aggregate all page data
+      // ✅ Build pageData correctly
       const pageData = {
         contactForm: {
           ...formData,
@@ -156,7 +156,6 @@ const Contact = () => {
       };
 
       setFormSubmitted(true);
-      toast.success('Thank You for Contacting Us!');
       setFormData({
         fullName: '',
         email: '',
@@ -164,6 +163,8 @@ const Contact = () => {
         message: '',
         country: '',
       });
+      setSelectedCountry(null); // Reset selected country
+      setSelectedState(null); // Reset selected state
     }
   };
 
@@ -182,6 +183,8 @@ const Contact = () => {
       }));
     }
   };
+
+  // toast.success('Thank You for Contacting Us!');
 
   // Add handlers for CTA buttons
   const handleDemoRequest = () => {

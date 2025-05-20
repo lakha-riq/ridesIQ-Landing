@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Select from 'react-select';
 import {
@@ -15,6 +15,7 @@ import {
   DollarSign,
   Video,
   HelpCircle,
+  X,
 } from 'lucide-react';
 import { z } from 'zod';
 import { Country, State } from 'country-state-city';
@@ -29,8 +30,18 @@ const formSchema = z.object({
   vehicleCount: z.string().min(1),
   trackingType: z.array(z.string()).min(1),
   features: z.array(z.string()).min(1),
-  country: z.string().min(1),
-  region: z.string().min(1),
+  country: z
+    .object({
+      label: z.string(),
+      value: z.string(),
+    })
+    .nullable(),
+  region: z
+    .object({
+      label: z.string(),
+      value: z.string(),
+    })
+    .nullable(),
   firstName: z.string().min(1),
   lastName: z.string().min(1),
   companyName: z.string().min(1),
@@ -46,8 +57,8 @@ const initialFormData: FormData = {
   vehicleCount: '',
   trackingType: [],
   features: [],
-  country: '',
-  region: '',
+  country: null,
+  region: null,
   firstName: '',
   lastName: '',
   companyName: '',
@@ -106,6 +117,7 @@ const featureOptions = [
 export const MultiStepForm: React.FC = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState<FormData>(initialFormData);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const updateFormData = (
     field: keyof FormData,
@@ -117,7 +129,7 @@ export const MultiStepForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (formSchema.safeParse(formData).success) {
-      // console.log(formData);
+      console.log(formData);
       try {
         const res = await fetch('/api/mail', {
           method: 'POST',
@@ -125,6 +137,7 @@ export const MultiStepForm: React.FC = () => {
           body: JSON.stringify(formData),
         });
         if (res.ok) {
+          setIsSuccess(true);
           setFormData(initialFormData);
           setStep(1);
         } else {
@@ -139,6 +152,13 @@ export const MultiStepForm: React.FC = () => {
         formSchema.safeParse(formData).error
       );
     }
+
+    useEffect(() => {
+      if (isSuccess) {
+        const timer = setTimeout(() => setIsSuccess(false), 5000); // 5 seconds
+        return () => clearTimeout(timer);
+      }
+    }, [isSuccess]);
   };
 
   const renderStep = () => {
@@ -297,6 +317,14 @@ export const MultiStepForm: React.FC = () => {
         );
 
       case 5:
+        const selectedCountryCode = formData.country?.value || '';
+        const stateOptions = State.getStatesOfCountry(selectedCountryCode).map(
+          (s) => ({
+            label: s.name,
+            value: s.isoCode,
+          })
+        );
+
         return (
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -310,15 +338,11 @@ export const MultiStepForm: React.FC = () => {
               </label>
               <Select
                 options={countryOptions}
-                value={
-                  countryOptions.find((c) => c.value === formData.country) ||
-                  null
-                }
+                value={formData.country}
                 onChange={(option) => {
-                  updateFormData('country', option?.value || '');
-                  updateFormData('region', '');
+                  updateFormData('country', option || { label: '', value: '' });
+                  updateFormData('region', { label: '', value: '' });
                 }}
-                className='text-base'
                 placeholder='Select a country...'
               />
             </div>
@@ -327,27 +351,19 @@ export const MultiStepForm: React.FC = () => {
                 State / Region
               </label>
               <Select
-                options={State.getStatesOfCountry(formData.country).map(
-                  (s) => ({ label: s.name, value: s.isoCode })
-                )}
-                value={
-                  State.getStatesOfCountry(formData.country)
-                    .map((s) => ({ label: s.name, value: s.isoCode }))
-                    .find((r) => r.value === formData.region) || null
-                }
-                onChange={(option) =>
-                  updateFormData('region', option?.value || '')
-                }
-                className='text-base'
+                options={stateOptions}
+                value={formData.region}
+                onChange={(option) => {
+                  updateFormData('region', option || { label: '', value: '' });
+                }}
                 placeholder='Select a region...'
-                isDisabled={!formData.country}
+                isDisabled={!selectedCountryCode}
               />
             </div>
             <div className='flex justify-end'>
               <button
                 onClick={() => setStep(6)}
                 className='bg-[#678FCA] text-white px-6 py-3 rounded-full hover:bg-[#678FCA]/90 transition-all'
-                disabled={!formData.region}
               >
                 Next Step
               </button>
@@ -484,6 +500,26 @@ export const MultiStepForm: React.FC = () => {
       </div>
 
       <AnimatePresence mode='wait'>{renderStep()}</AnimatePresence>
+      {isSuccess && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.3 }}
+          className='bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4'
+        >
+          <strong className='font-bold'>Success!</strong>
+          <span className='block sm:inline ml-2'>
+            Form submitted successfully.
+          </span>
+          <button
+            onClick={() => setIsSuccess(false)}
+            className='absolute top-0 right-0 px-4 py-3'
+          >
+            <X className='h-5 w-5 text-green-700' />
+          </button>
+        </motion.div>
+      )}
     </div>
   );
 };
