@@ -15,6 +15,7 @@ export async function POST(request: Request) {
       trackingType,
       features,
       region,
+      country,
       existingCustomer,
     } = body;
     const html = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -161,7 +162,8 @@ export async function POST(request: Request) {
 	Email: ${email}\n
 	Company: ${companyName}\n
 	Phone: ${phone}\n
-	Region: ${region}\n
+	Region: ${region.lable}\n
+	Country: ${country.lable}\n
 	Existing Customer: ${existingCustomer}\n
 
 	Fleet Information:\n
@@ -222,7 +224,11 @@ export async function POST(request: Request) {
 			  </div>
 			  <div class="info-row">
 				<div class="label">Region:</div>
-				<div class="value">${region}</div>
+				<div class="value">${region.lable}</div>
+			  </div> 
+        <div class="info-row">
+				<div class="label">Region:</div>
+				<div class="value">${country.lable}</div>
 			  </div>
 			  <div class="info-row">
 				<div class="label">Existing Customer:</div>

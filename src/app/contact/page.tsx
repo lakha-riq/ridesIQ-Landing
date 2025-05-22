@@ -18,7 +18,6 @@ import { MultiStepForm } from '@/components/MultiStepForm';
 import { Country, State } from 'country-state-city';
 import Select, { SingleValue } from 'react-select';
 import Footer from '@/components/Footer';
-import { toast, Toaster } from 'react-hot-toast';
 
 interface FAQItem {
   question: string;
@@ -184,8 +183,6 @@ const Contact = () => {
     }
   };
 
-  // toast.success('Thank You for Contacting Us!');
-
   // Add handlers for CTA buttons
   const handleDemoRequest = () => {
     const pageData = {
@@ -221,7 +218,6 @@ const Contact = () => {
 
   return (
     <div className='min-h-screen bg-white'>
-      <Toaster position='top-center' />
       <Navigation customColor='text-white' />
 
       {/* Hero Section */}
