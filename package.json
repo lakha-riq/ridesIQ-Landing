@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path .eslintignore",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix --ignore-path .eslintignore"
   },
   "dependencies": {
     "@aws-sdk/client-ses": "^3.772.0",
@@ -37,6 +38,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
+    "eslint-config-prettier": "^10.1.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
