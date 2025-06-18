@@ -14,6 +14,15 @@ importers:
       '@aws-sdk/client-sesv2':
         specifier: ^3.810.0
         version: 3.810.0
+      '@fontsource-variable/inter':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/manrope':
+        specifier: ^5.0.18
+        version: 5.2.5
+      '@fontsource/space-grotesk':
+        specifier: ^5.0.16
+        version: 5.2.8
       '@next/third-parties':
         specifier: ^15.3.1
         version: 15.3.1(next@15.3.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)
@@ -442,6 +451,15 @@ packages:
 
   '@floating-ui/utils@0.2.9':
     resolution: {integrity: sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==}
+
+  '@fontsource-variable/inter@5.2.5':
+    resolution: {integrity: sha512-TrWffUAFOnT8zroE9YmGybagoOgM/HjRqMQ8k9R0vVgXlnUh/vnpbGPAS/Caz1KIlOPnPGh6fvJbb7DHbFCncA==}
+
+  '@fontsource/manrope@5.2.5':
+    resolution: {integrity: sha512-4mYUAhsuF8KoXseG8T9woWUc/foznUVluFtE6fCKAqe76WM3kmDNedaINWjzWB73+wly0duFvVpDBma3NXXT0g==}
+
+  '@fontsource/space-grotesk@5.2.8':
+    resolution: {integrity: sha512-8rlIzpX+lo36y0g77OlwjeBj2DPo9XOwrzqKRLHYZcWcsj73SlkVI6UdXxDCZGLO7oQti1q9QPXzMBYbzSz60w==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -3463,6 +3481,12 @@ snapshots:
       '@floating-ui/utils': 0.2.9
 
   '@floating-ui/utils@0.2.9': {}
+
+  '@fontsource-variable/inter@5.2.5': {}
+
+  '@fontsource/manrope@5.2.5': {}
+
+  '@fontsource/space-grotesk@5.2.8': {}
 
   '@humanfs/core@0.19.1': {}
 

@@ -73,7 +73,7 @@ function Home() {
       details: {
         stat: '98%',
         statLabel: 'Accuracy Rate',
-        image: '/assets/homepage/test.jpeg',
+        image: '/assets/homepage/RealTimeFleetIntelligence.png',
         points: [
           'Instant GPS vehicle tracking',
           'Real-time vehicle monitoring',
@@ -90,7 +90,7 @@ function Home() {
       details: {
         stat: '45%',
         statLabel: 'Cost Reduction',
-        image: '/assets/homepage/test2.png',
+        image: '/assets/homepage/SmartMaintenance.png',
         points: [
           'Predictive maintenance scheduling',
           'Automated service reminders',
@@ -107,7 +107,7 @@ function Home() {
       details: {
         stat: '2.5x',
         statLabel: 'ROI Increase',
-        image: '/assets/homepage/3.png',
+        image: '/assets/homepage/AdvancedAnalytics.png',
         points: [
           'Custom report generation',
           'Exportable data for external analysis',
@@ -121,7 +121,7 @@ function Home() {
   const productsData = [
     {
       title: 'Hard-Wired Tracker',
-      image: '/assets/homepage/2.png',
+      image: '/assets/devices/HardWiredNoBKGD.png',
       features: [
         'Professionally installed and discreet',
         'Hidden from drivers for added control',
@@ -133,7 +133,7 @@ function Home() {
     },
     {
       title: 'OBD Tracker',
-      image: '/assets/homepage/3.png',
+      image: '/assets/devices/OBDNoBKGD.png',
       features: [
         'Plug-and-play via vehicle’s OBD-II port',
         'Best for company fleets',
@@ -145,7 +145,7 @@ function Home() {
     },
     {
       title: 'Asset Tracker',
-      image: '/assets/homepage/1.png',
+      image: '/assets/devices/AssetTrackerNoBKGD.png',
       features: [
         'Long-life, battery-powered design',
         'Rugged, weather-resistant casing',
@@ -261,7 +261,7 @@ function Home() {
                 {/* Main Product Image */}
                 <div className='product-render relative z-20 transform hover:scale-105 transition-transform duration-500'>
                   <Image
-                    src='/assets/IoTRides.png'
+                    src='/assets/6.png'
                     width={600}
                     height={600}
                     alt='Fleet vehicle GPS tracking dashboard – RidesIQe'
@@ -595,10 +595,10 @@ function Home() {
                   {/* Tag Buttons */}
                   <div className='flex flex-wrap justify-center gap-4'>
                     <div className='px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium'>
-                      #Fleet Tracking
+                      #FleetTracking
                     </div>
                     <div className='px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium'>
-                      #Real time Insights
+                      #RealtimeInsights
                     </div>
                     <div className='px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium'>
                       #Compliance

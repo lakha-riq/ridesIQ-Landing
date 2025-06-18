@@ -115,7 +115,7 @@ const Tracking = () => {
     {
       id: 'hardwired',
       name: 'Hard-Wired GPS Fleet Tracker',
-      image: '/assets/devices/hardware_tracker.svg',
+      image: '/assets/devices/HardWiredNoBKGD.png',
       imageProps: {
         width: 450,
         height: 300,
@@ -126,44 +126,44 @@ const Tracking = () => {
           icon: Wrench,
           value: 'Professional Hardwired Installation',
           description:
-            'Installed by certified technicians for secure, permanent deployment in commercial vehicles.',
+            'Secure, permanent install for commercial fleets.',
         },
         power: {
           icon: Zap,
           value: '9–100V Direct Vehicle Power',
           description:
-            'Supports a wide voltage range for trucks, buses, and electric vehicles.',
+            'Compatible with trucks, buses, and EVs.',
         },
         bestFor: {
           icon: Truck,
           value: 'Heavy-Duty Fleet Tracking',
           description:
-            'Ideal for large commercial fleets, trucking companies, and logistics operations.',
+            'Ideal for trucking, logistics, and large vehicles.',
         },
         battery: {
           icon: Battery,
           value: 'Integrated Backup Battery',
           description:
-            '120mAh battery ensures uninterrupted tracking even during power loss or tampering.',
+            'Keeps tracking active during power loss or tampering.',
         },
         connectivity: {
           icon: Wifi,
-          value: '4G LTE + GPS + GSM Support',
+          value: '4G LTE + GPS + GSM',
           description:
-            'Multi-band coverage ensures fast, reliable, and continuous GPS location tracking.',
+            'Reliable real-time tracking across networks.',
         },
         features: {
           icon: Shield,
           value: 'Advanced Fleet Security',
           description:
-            'Includes tamper detection, geofence alerts, crash detection, remote fuel cut-off, and over-the-air updates (FOTA).',
+            'Tamper, crash, and geofence alerts with OTA updates.',
         },
       },
     },
     {
       id: 'obd',
       name: 'OBD Plug-and-Play GPS Tracker',
-      image: '/assets/devices/OBD_tracker.png',
+      image: '/assets/devices/OBDNoBKGD.png',
       imageProps: {
         width: 250,
         height: 250,
@@ -174,44 +174,44 @@ const Tracking = () => {
           icon: Wrench,
           value: 'Plug & Play GPS Installation',
           description:
-            'Easily connects to your vehicle’s OBD-II port with no tools required.',
+            'Connects directly to your vehicle’s OBD-II port—no tools needed.',
         },
         power: {
           icon: Zap,
           value: 'Vehicle-Powered via OBD-II',
           description:
-            'Continuously powered by the vehicle for maintenance-free operation.',
+            'Runs directly off the vehicle’s power source.',
         },
         bestFor: {
           icon: Truck,
           value: 'Cars & Light Commercial Vehicles',
           description:
-            'Perfect for small to mid-size business fleets and service vehicles.',
+            'Ideal for small fleets, service vehicles, and daily-use cars.',
         },
         battery: {
           icon: Battery,
           value: 'No Internal Battery Required',
           description:
-            'Draws power directly from the OBD port for uninterrupted tracking.',
+            'Draws constant power from the OBD port.',
         },
         connectivity: {
           icon: Wifi,
           value: 'LTE Cat M1/NB1 Connectivity',
           description:
-            'Supports fast and secure real-time tracking over LTE networks.',
+            'Reliable real-time tracking via cellular LTE.',
         },
         features: {
           icon: Shield,
           value: 'Motion & Impact Detection',
           description:
-            'Built-in 3-axis accelerometer for detecting movement, harsh braking, and collisions.',
+            'Detects sudden movement, braking, or collisions.',
         },
       },
     },
     {
       id: 'asset',
       name: 'Battery-Powered Asset GPS Tracker',
-      image: '/assets/devices/asset_tracker.png',
+      image: '/assets/devices/AssetTrackerNoBKGD.png',
       imageProps: {
         width: 250,
         height: 250,
@@ -222,37 +222,37 @@ const Tracking = () => {
           icon: Wrench,
           value: 'Compact & Portable Design',
           description:
-            'Measures just 64.6 x 51 x 20.9mm—ideal for equipment, trailers, and containers.',
+            'Small form factor, ideal for trailers and containers.',
         },
         power: {
           icon: Zap,
           value: '2400mAh Battery Powered',
           description:
-            'Long-life lithium battery for years of maintenance-free GPS asset tracking.',
+            'Built-in 2400mAh battery for extended tracking.',
         },
         bestFor: {
           icon: Box,
           value: 'Equipment & Asset Monitoring',
           description:
-            'Ideal for non-powered assets and remote location tracking.',
+            'Great for trailers, containers, and non-powered assets.',
         },
         battery: {
           icon: Battery,
           value: '3-Year Battery Life',
           description:
-            'Delivers 3+ years of tracking at 1 report per day frequency.',
+            'Up to 3 years with variable frequency.',
         },
         connectivity: {
           icon: Wifi,
-          value: 'LTE Cat M1/NB2 + 2G/3G Fallback',
+          value: 'LTE + 2G/3G Backup',
           description:
-            'Ensures dependable signal in rural, urban, and cross-border areas.',
+            'Reliable tracking with fallback coverage in rural zones.',
         },
         features: {
           icon: Shield,
-          value: 'IP67 Weatherproof Rating',
+          value: 'Weatherproof & Rugged',
           description:
-            'Waterproof, dustproof, and built to withstand harsh outdoor conditions.',
+            'Waterproof and built to withstand harsh outdoor conditions.',
         },
       },
     },
@@ -511,7 +511,7 @@ const Tracking = () => {
               </div>
 
               {/* Floating Stats Card */}
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -531,7 +531,7 @@ const Tracking = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </motion.div> */}
             </motion.div>
 
             {/* Right Column - Content */}
@@ -664,37 +664,37 @@ const Tracking = () => {
                 icon: MapPin,
                 title: 'Real-Time Location Tracking',
                 description:
-                  'Track your fleet’s precise location with live GPS updates based on distance or time. Instantly know where every vehicle is—no lag, no guesswork.',
+                  'See your fleet’s exact location with live GPS data.',
               },
               {
                 icon: BarChart3,
                 title: 'Real-Time Telematics',
                 description:
-                  'Monitor fuel usage, driver behavior, and vehicle performance using actionable telematics data to improve efficiency and safety.',
+                  'Track fuel, speed, and driver behavior in real time.',
               },
               {
                 icon: Bell,
                 title: 'Geofencing & Alerts',
                 description:
-                  'Set virtual zones and receive instant alerts for unauthorized movement, harsh driving, or boundary breaches.',
+                  'Get alerts when vehicles leave set zones or drive harshly.',
               },
               {
                 icon: Tool,
                 title: 'Advanced Maintenance Alerts',
                 description:
-                  'Reduce costly breakdowns with proactive alerts for engine health, battery levels, and harsh braking or acceleration.',
+                  'Catch issues early with engine and battery warnings.',
               },
               {
                 icon: Lock,
                 title: 'Secure Data Transmission',
                 description:
-                  'End-to-end encrypted GPS tracking with multi-server failover ensures secure and reliable data flow—no matter the conditions.',
+                  'Encrypted GPS data with reliable cloud delivery.',
               },
               {
                 icon: Radio,
                 title: 'Multi-Network Connectivity',
                 description:
-                  'Track across regions with LTE-FDD & GSM network support, keeping your fleet connected even in remote or high-traffic zones.',
+                  'Stay connected with LTE and GSM support across regions.',
               },
             ].map((feature, index) => (
               <motion.div
@@ -1104,11 +1104,11 @@ const Tracking = () => {
                       className='relative'
                     >
                       <div className='relative mt-20 max-w-md mx-auto lg:max-w-none'>
-                        <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6' />
+                        {/* <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6' /> */}
                         <Image
-                          src={`/assets/fleet-management/5.png`}
+                          src={`/assets/devices/HardWiredNoBKGD.png`}
                           alt={products[0].name}
-                          className='relative z-10 rounded-3xl shadow-2xl transform -rotate-3 transition-transform duration-500 hover:rotate-0 w-full'
+                          // className='relative z-10 rounded-3xl shadow-2xl transform -rotate-3 transition-transform duration-500 hover:rotate-0 w-full'
                           width={800}
                           height={800}
                           priority
@@ -1116,7 +1116,7 @@ const Tracking = () => {
                       </div>
 
                       {/* Certification Badge */}
-                      <motion.div
+                      {/* <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
@@ -1136,7 +1136,7 @@ const Tracking = () => {
                             </div>
                           </div>
                         </div>
-                      </motion.div>
+                      </motion.div> */}
                     </motion.div>
                   </div>
                 </div>

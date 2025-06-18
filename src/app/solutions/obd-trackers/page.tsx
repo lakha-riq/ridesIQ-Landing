@@ -112,136 +112,147 @@ const Tracking = () => {
   const products: Products[] = [
     {
       id: 'obd',
-      name: 'OBD Tracker',
-      image: '/assets/devices/OBD_tracker.png',
+      name: 'OBD Plug-and-Play GPS Tracker',
+      image: '/assets/devices/OBDNoBKGD.png',
       imageProps: {
         width: 250,
         height: 250,
         className: 'object-contain p-4',
       },
       specs: {
-        installation: {
-          icon: Wrench,
-          value: 'Plug & Play',
-          description:
-            'Installs instantly via OBD-II port (no tools or wiring required)',
-        },
-        power: {
-          icon: Zap,
-          value: 'OBD-II Port',
-          description:
-            "Draws power directly from the vehicle's diagnostic port",
-        },
-        bestFor: {
-          icon: Truck,
-          value: 'Cars & Light Commercial Vehicles',
-          description: 'Ideal for rentals, dealerships, and fleet cars',
-        },
-        battery: {
-          icon: Battery,
-          value: 'No Battery',
-          description:
-            'Continuous power from vehicle; includes low-power sleep mode',
-        },
-        connectivity: {
-          icon: Wifi,
-          value: 'LTE Cat M1/NB1',
-          description:
-            'Supports LTE-M/NB-IoT with fallback to EGPRS (2G) for wide coverage',
-        },
-        features: {
-          icon: Shield,
-          value: 'Motion Detection',
-          description:
-            'Engine Diagnostics, Driving Behavior Alerts, Tow Alarm, and Crash Detection',
-        },
-      },
+              installation: {
+                icon: Wrench,
+                value: 'Plug & Play GPS Installation',
+                description:
+                  'Connects directly to your vehicle’s OBD-II port—no tools needed.',
+              },
+              power: {
+                icon: Zap,
+                value: 'Vehicle-Powered via OBD-II',
+                description:
+                  'Runs directly off the vehicle’s power source.',
+              },
+              bestFor: {
+                icon: Truck,
+                value: 'Cars & Light Commercial Vehicles',
+                description:
+                  'Ideal for small fleets, service vehicles, and daily-use cars.',
+              },
+              battery: {
+                icon: Battery,
+                value: 'No Internal Battery Required',
+                description:
+                  'Draws constant power from the OBD port.',
+              },
+              connectivity: {
+                icon: Wifi,
+                value: 'LTE Cat M1/NB1 Connectivity',
+                description:
+                  'Reliable real-time tracking via cellular LTE.',
+              },
+              features: {
+                icon: Shield,
+                value: 'Motion & Impact Detection',
+                description:
+                  'Detects sudden movement, braking, or collisions.',
+              },
+            },
     },
     {
       id: 'hardwired',
-      name: 'Hard-Wired Tracker',
-      image: '/assets/devices/hardware_tracker.svg',
+      name: 'Hard-Wired GPS Fleet Tracker',
+      image: '/assets/devices/HardWiredNoBKGD.png',
       imageProps: {
         width: 450,
         height: 300,
         className: 'object-contain p-4',
       },
       specs: {
-        installation: {
-          icon: Wrench,
-          value: 'Professional Installation',
-          description: 'Requires certified technician',
-        },
-        power: {
-          icon: Zap,
-          value: '9–100V Direct Vehicle Power',
-          description: 'Wide voltage range for trucks, buses, and EVs',
-        },
-        bestFor: {
-          icon: Truck,
-          value: 'Large Fleets',
-          description: 'Ideal for commercial vehicles and trucks',
-        },
-        battery: {
-          icon: Battery,
-          value: 'Backup Battery',
-          description:
-            '120mAh backup ensures continued tracking if power is cut',
-        },
-        connectivity: {
-          icon: Wifi,
-          value: '4G LTE + GPS + GSM',
-          description: 'Supports LTE-FDD & GSM bands',
-        },
-        features: {
-          icon: Shield,
-          value: 'Advanced Security',
-          description:
-            'Tamper detection, geo-fence, impact alerts, remote fuel cut-off, and FOTA',
-        },
-      },
+              installation: {
+                icon: Wrench,
+                value: 'Professional Hardwired Installation',
+                description:
+                  'Secure, permanent install for commercial fleets.',
+              },
+              power: {
+                icon: Zap,
+                value: '9–100V Direct Vehicle Power',
+                description:
+                  'Compatible with trucks, buses, and EVs.',
+              },
+              bestFor: {
+                icon: Truck,
+                value: 'Heavy-Duty Fleet Tracking',
+                description:
+                  'Ideal for trucking, logistics, and large vehicles.',
+              },
+              battery: {
+                icon: Battery,
+                value: 'Integrated Backup Battery',
+                description:
+                  'Keeps tracking active during power loss or tampering.',
+              },
+              connectivity: {
+                icon: Wifi,
+                value: '4G LTE + GPS + GSM',
+                description:
+                  'Reliable real-time tracking across networks.',
+              },
+              features: {
+                icon: Shield,
+                value: 'Advanced Fleet Security',
+                description:
+                  'Tamper, crash, and geofence alerts with OTA updates.',
+              },
+            },
     },
     {
       id: 'asset',
-      name: 'Asset Tracker',
-      image: '/assets/devices/asset_tracker.png',
+      name: 'Battery-Powered Asset GPS Tracker',
+      image: '/assets/devices/AssetTrackerNoBKGD.png',
       imageProps: {
         width: 250,
         height: 250,
         className: 'object-contain p-4',
       },
       specs: {
-        installation: {
-          icon: Wrench,
-          value: 'Compact Design',
-          description: '64.6 x 51 x 20.9mm form factor',
-        },
-        power: {
-          icon: Zap,
-          value: 'Battery Powered',
-          description: '2400mAh lithium battery',
-        },
-        bestFor: {
-          icon: Box,
-          value: 'Asset Tracking',
-          description: 'Vehicles & equipment monitoring',
-        },
-        battery: {
-          icon: Battery,
-          value: '3-Year Battery',
-          description: 'With 1 report per day',
-        },
-        connectivity: {
-          icon: Wifi,
-          value: 'LTE Cat M1/NB2',
-          description: 'With 2G/3G fallback',
-        },
-        features: {
-          icon: Shield,
-          value: 'Weather Resistant',
-          description: 'IP67 rated protection',
-        },
-      },
+              installation: {
+                icon: Wrench,
+                value: 'Compact & Portable Design',
+                description:
+                  'Small form factor, ideal for trailers and containers.',
+              },
+              power: {
+                icon: Zap,
+                value: '2400mAh Battery Powered',
+                description:
+                  'Built-in 2400mAh battery for extended tracking.',
+              },
+              bestFor: {
+                icon: Box,
+                value: 'Equipment & Asset Monitoring',
+                description:
+                  'Great for trailers, containers, and non-powered assets.',
+              },
+              battery: {
+                icon: Battery,
+                value: '3-Year Battery Life',
+                description:
+                  'Up to 3 years with variable frequency.',
+              },
+              connectivity: {
+                icon: Wifi,
+                value: 'LTE + 2G/3G Backup',
+                description:
+                  'Reliable tracking with fallback coverage in rural zones.',
+              },
+              features: {
+                icon: Shield,
+                value: 'Weatherproof & Rugged',
+                description:
+                  'Waterproof and built to withstand harsh outdoor conditions.',
+              },
+            },
     },
   ];
 
@@ -649,37 +660,37 @@ const Tracking = () => {
                 icon: MapPin,
                 title: 'Real-Time GNSS Tracking',
                 description:
-                  'High-sensitivity positioning with <2.5m accuracy for precise fleet location at all times.',
+                  'Live location with <2.5m accuracy for precise fleet visibility.',
               },
               {
                 icon: BarChart3,
                 title: 'Adaptive Reporting',
                 description:
-                  'Automatically adjusts update frequency based on vehicle movement, ignition, and speed to reduce data usage and ensure tracking efficiency.',
+                  'Smart update frequency based on speed and ignition status.',
               },
               {
                 icon: Bell,
                 title: 'Motion & Impact Alerts',
                 description:
-                  '3-axis accelerometer detects motion, harsh events, and unauthorized use while parked or in motion.',
+                  'Detects harsh driving and unauthorized use via 3-axis sensor.',
               },
               {
                 icon: Tool,
                 title: 'Vehicle Data via OBD-II',
                 description:
-                  'Reads diagnostics like RPM, battery voltage, DTC codes, and fuel levels for smarter maintenance decisions.',
+                  'Reads RPM, battery voltage, DTC codes, and fuel levels.',
               },
               {
                 icon: Lock,
                 title: 'Multi-Channel Communication',
                 description:
-                  'Supports TCP, UDP, and SMS with fallback protocols to ensure uninterrupted GPS data transmission.',
+                  'SUses TCP, UDP, and SMS with failover for data continuity.',
               },
               {
                 icon: Radio,
                 title: 'LTE Cat M1/NB-IoT Connectivity',
                 description:
-                  'Connects reliably on LTE-M and NB-IoT networks with 2G fallback for global coverage and extended service life.',
+                  'Reliable LTE-M/NB-IoT with 2G fallback for extended coverage.',
               },
             ].map((feature, index) => (
               <motion.div
@@ -966,86 +977,86 @@ const Tracking = () => {
                       {
                         icon: Ruler,
                         name: 'Dimensions',
-                        value: '1.95” x 1.91” x 0.86”',
+                        value: '1.95in x 1.91in x 0.86in',
                         description:
                           'Compact, low-profile design for direct OBD-II installation.',
                       },
                       {
                         icon: Wifi,
                         name: 'Connectivity',
-                        value: 'LTE Cat M1/NB1 + EGPRS',
+                        value: 'LTE Cat M1/NB1 + 2G',
                         description:
-                          'Supports LTE-FDD Bands B1–B5, B8, B12, B13, B18–B20, B25, B28 with 2G fallback (850/900/1800/1900 MHz).',
+                          'Supports global LTE-FDD bands with 2G fallback for stable coverage.',
                       },
                       {
                         icon: Power,
                         name: 'Power Source',
-                        value: '8V – 32V DC via OBD-II',
+                        value: '8V–32V via OBD-II',
                         description:
-                          'Directly powered by the vehicle’s diagnostic port.',
+                          'Draws power directly from the vehicle’s diagnostic port.',
                       },
                       {
                         icon: Award,
                         name: 'Certifications',
                         value: 'Industry Compliant',
                         description:
-                          'Compatible with legislated OBD-II protocols (ISO 15765)',
+                          'Fully compatible with OBD-II standards (ISO 15765).',
                       },
                       {
                         icon: Battery,
                         name: 'Data Storage',
                         value: 'Internal Flash Memory',
                         description:
-                          'Stores position, event, and diagnostic data when offline.',
+                          'Stores GPS and diagnostic data offline for uninterrupted logging.',
                       },
                       {
                         icon: Database,
                         name: 'Software Compatibility',
                         value: 'Universal Telematics Integration',
                         description:
-                          'Works seamlessly with leading fleet management platforms.',
+                          'Works seamlessly with API integrations.',
                       },
                       {
                         icon: Laptop,
                         name: 'Working Modes',
                         value: 'Dual Mode',
                         description:
-                          'Power saving and continuous tracking modes',
+                          'Switches between power-saving and continuous tracking.',
                       },
                       {
                         icon: Shield,
                         name: 'Security',
                         value: 'Tamper & OBD Disconnection Alerts',
                         description:
-                          'Triggers alerts for unauthorized device removal or power cut.',
+                          'Sends alerts if the device is unplugged or tampered with.',
                       },
                       {
                         icon: Wifi,
                         name: 'GPS Accuracy',
                         value: '< 2.5m CEP',
                         description:
-                          'Autonomous positioning with u-blox GNSS; tracking sensitivity down to -162 dBm.',
+                          'High-sensitivity u-blox GNSS for precise vehicle positioning.',
                       },
                       {
                         icon: Battery,
                         name: 'Operating Temperature',
                         value: '-30°C to +80°C',
                         description:
-                          'Built for performance in extreme driving conditions.',
+                          'Performs reliably in extreme heat and cold.',
                       },
                       {
                         icon: Shield,
                         name: 'Water Resistance',
-                        value: 'IPX5 Rated',
+                        value: 'Waterproof',
                         description:
-                          'Protected from limited water exposure inside the vehicle cabin.',
+                          'Resistant to light water exposure inside the cabin.',
                       },
                       {
                         icon: Database,
                         name: 'Memory',
                         value: 'Internal Flash Storage',
                         description:
-                          'Supports event buffering and power-on reporting.',
+                          'Stores key tracking data during power cycles.',
                       },
                     ].map((spec, index) => (
                       <motion.div
@@ -1090,11 +1101,11 @@ const Tracking = () => {
                       className='relative'
                     >
                       <div className='relative mt-20 max-w-md mx-auto lg:max-w-none'>
-                        <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6' />
+                        {/* <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6' /> */}
                         <Image
-                          src={`/assets/fleet-management/5.png`}
+                          src={`/assets/devices/OBDNoBKGD.png`}
                           alt={products[0].name}
-                          className='relative z-10 rounded-3xl shadow-2xl transform -rotate-3 transition-transform duration-500 hover:rotate-0 w-full'
+                          // className='relative z-10 rounded-3xl shadow-2xl transform -rotate-3 transition-transform duration-500 hover:rotate-0 w-full'
                           width={800}
                           height={800}
                           priority
@@ -1102,7 +1113,7 @@ const Tracking = () => {
                       </div>
 
                       {/* Certification Badge */}
-                      <motion.div
+                      {/* <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
@@ -1122,7 +1133,7 @@ const Tracking = () => {
                             </div>
                           </div>
                         </div>
-                      </motion.div>
+                      </motion.div> */}
                     </motion.div>
                   </div>
                 </div>
@@ -1136,10 +1147,12 @@ const Tracking = () => {
             viewport={{ once: true }}
             className='mt-16 text-center'
           >
-            <button className='bg-[#678FCA] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#678FCA]/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group'>
-              Download Full Specifications
-              <ChevronRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
-            </button>
+            <Link href='/contact'>
+              <button className='bg-[#678FCA] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#678FCA]/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group'>
+                Contact a Specialist
+                <ChevronRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
+              </button>
+            </Link>
           </motion.div>
         </div>
       </section>
