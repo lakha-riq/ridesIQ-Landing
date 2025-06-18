@@ -67,8 +67,8 @@ export async function POST(req: NextRequest) {
         { message: 'Email already subscribed..' },
         { status: 409 }
       );
-    } catch (err: any) {
-      if (err.name !== 'NotFoundException') {
+    } catch (err: unknown) {
+      if (err instanceof Error && err.name !== 'NotFoundException') {
         console.error('Error checking contact existence:', err);
         return NextResponse.json(
           { message: 'Error checking contact in SES' },
@@ -91,7 +91,7 @@ export async function POST(req: NextRequest) {
                   <html>
                     <body>
                       <h1>Thanks for Subscribing</h1>
-                      <p>We’ll keep you posted with updates and features.</p>
+                      <p>We'll keep you posted with updates and features.</p>
                                  <hr
               style="width:100%;border:none;border-top:1px solid #eaeaea;margin-top:32px;margin-bottom:32px" />
             <h1
@@ -149,8 +149,8 @@ export async function POST(req: NextRequest) {
           UnsubscribeAll: false,
         })
       );
-    } catch (err: any) {
-      if (err.name !== 'AlreadyExistsException') {
+    } catch (err: unknown) {
+      if (err instanceof Error && err.name !== 'AlreadyExistsException') {
         console.error('Failed to add to contact list:', err);
         return NextResponse.json(
           { message: 'Subscribed but failed to add to contact list.' },
@@ -163,7 +163,7 @@ export async function POST(req: NextRequest) {
       message:
         'Subscribed successfully! Please check your email for confirmation.',
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error:', error);
     return NextResponse.json({ message: 'Server error' }, { status: 500 });
   }

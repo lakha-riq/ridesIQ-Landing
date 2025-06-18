@@ -10,13 +10,11 @@ import {
   Building2,
   ChevronDown,
   X,
-  ArrowRight,
-  Check,
 } from 'lucide-react';
 import { Navigation } from '@/components/Navigation';
 import { MultiStepForm } from '@/components/MultiStepForm';
 import { Country, State } from 'country-state-city';
-import Select, { SingleValue } from 'react-select';
+import { SingleValue } from 'react-select';
 import Footer from '@/components/Footer';
 
 interface FAQItem {
@@ -88,7 +86,7 @@ const Contact = () => {
   type CountryOption = {
     value: string;
     label: string;
-    data: any;
+    data: unknown;
   };
 
   const countryOptions: CountryOption[] = useMemo(() => {
@@ -217,32 +215,32 @@ const Contact = () => {
   };
 
   return (
-    <div className='min-h-screen bg-white'>
-      <Navigation customColor='text-white' />
+    <div className="min-h-screen bg-white">
+      <Navigation customColor="text-white" />
 
       {/* Hero Section */}
-      <section className='relative min-h-[60vh] flex items-center justify-center overflow-hidden'>
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         {/* Background & Overlays */}
-        <div className='absolute inset-0'>
-          <div className='absolute inset-0 bg-gradient-to-r from-gray-900/95 to-gray-900/70' />
-          <div className='absolute inset-0 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:32px_32px] opacity-10' />
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 to-gray-900/70" />
+          <div className="absolute inset-0 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:32px_32px] opacity-10" />
         </div>
 
-        <div className='relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32'>
-          <div className='max-w-3xl mx-auto text-center'>
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+          <div className="max-w-3xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className='space-y-8'
+              className="space-y-8"
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-white text-sm font-medium'
+                className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-white text-sm font-medium"
               >
-                <Sparkles className='w-4 h-4 mr-2' />
+                <Sparkles className="w-4 h-4 mr-2" />
                 24/7 Support Available
               </motion.div>
 
@@ -250,10 +248,10 @@ const Contact = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className='text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]'
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]"
               >
-                <span className='text-white'>Get in Touch with </span>
-                <span className='bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent'>
+                <span className="text-white">Get in Touch with </span>
+                <span className="bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent">
                   RidesIQ
                 </span>
               </motion.h1>
@@ -262,7 +260,7 @@ const Contact = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className='text-xl text-white/90 leading-relaxed'
+                className="text-xl text-white/90 leading-relaxed"
               >
                 Have questions? Need a demo? Our team is here to help you with
                 all your fleet tracking needs.
@@ -272,48 +270,48 @@ const Contact = () => {
         </div>
 
         {/* Hero Bottom Gradient */}
-        <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent' />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
 
       {/* Quick Contact Information */}
-      <section className='py-24 relative overflow-hidden'>
-        <div className='absolute inset-0 bg-[#678FCA]/[0.02] hero-pattern opacity-50' />
-        <div className='absolute inset-0 bg-gradient-to-b from-white via-transparent to-white' />
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#678FCA]/[0.02] hero-pattern opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
 
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8'>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Office Locations */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className='relative group h-full'
+              className="relative group h-full"
             >
-              <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/5 to-[#99D5C9]/5 rounded-2xl transform transition-all duration-300 group-hover:scale-[1.02]' />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/5 to-[#99D5C9]/5 rounded-2xl transform transition-all duration-300 group-hover:scale-[1.02]" />
 
-              <div className='relative h-full bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 group-hover:shadow-xl border border-gray-100/50'>
-                <div className='flex items-start gap-6'>
-                  <div className='w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0'>
-                    <div className='w-full h-full rounded-xl bg-white flex items-center justify-center'>
-                      <Building2 className='w-7 h-7 text-[#678FCA]' />
+              <div className="relative h-full bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 group-hover:shadow-xl border border-gray-100/50">
+                <div className="flex items-start gap-6">
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0">
+                    <div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
+                      <Building2 className="w-7 h-7 text-[#678FCA]" />
                     </div>
                   </div>
 
                   <div>
-                    <h3 className='text-xl font-semibold mb-4 text-gray-900'>
+                    <h3 className="text-xl font-semibold mb-4 text-gray-900">
                       Office Locations
                     </h3>
-                    <ul className='space-y-3'>
-                      <li className='flex items-center text-gray-600'>
-                        <MapPin className='w-4 h-4 mr-2 text-[#678FCA]' />
+                    <ul className="space-y-3">
+                      <li className="flex items-center text-gray-600">
+                        <MapPin className="w-4 h-4 mr-2 text-[#678FCA]" />
                         Toronto, ON
                       </li>
-                      <li className='flex items-center text-gray-600'>
-                        <MapPin className='w-4 h-4 mr-2 text-[#678FCA]' />
+                      <li className="flex items-center text-gray-600">
+                        <MapPin className="w-4 h-4 mr-2 text-[#678FCA]" />
                         Buffalo, NY
                       </li>
-                      <li className='flex items-center text-gray-600'>
-                        <MapPin className='w-4 h-4 mr-2 text-[#678FCA]' />
+                      <li className="flex items-center text-gray-600">
+                        <MapPin className="w-4 h-4 mr-2 text-[#678FCA]" />
                         Lewes, DE
                       </li>
                     </ul>
@@ -328,31 +326,31 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className='relative group h-full'
+              className="relative group h-full"
             >
-              <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/5 to-[#99D5C9]/5 rounded-2xl transform transition-all duration-300 group-hover:scale-[1.02]' />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/5 to-[#99D5C9]/5 rounded-2xl transform transition-all duration-300 group-hover:scale-[1.02]" />
 
-              <div className='relative bg-white h-full rounded-2xl p-8 shadow-lg transition-all duration-300 group-hover:shadow-xl border border-gray-100/50'>
-                <div className='flex items-start gap-6'>
-                  <div className='w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0'>
-                    <div className='w-full h-full rounded-xl bg-white flex items-center justify-center'>
-                      <Mail className='w-7 h-7 text-[#678FCA]' />
+              <div className="relative bg-white h-full rounded-2xl p-8 shadow-lg transition-all duration-300 group-hover:shadow-xl border border-gray-100/50">
+                <div className="flex items-start gap-6">
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0">
+                    <div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
+                      <Mail className="w-7 h-7 text-[#678FCA]" />
                     </div>
                   </div>
 
                   <div>
-                    <h3 className='text-xl font-semibold mb-4 text-gray-900'>
+                    <h3 className="text-xl font-semibold mb-4 text-gray-900">
                       Email Support
                     </h3>
-                    <div className='space-y-2'>
+                    <div className="space-y-2">
                       <a
-                        href='mailto:support@ridesiq.com'
-                        className='text-[#678FCA] hover:underline flex items-center'
+                        href="mailto:support@ridesiq.com"
+                        className="text-[#678FCA] hover:underline flex items-center"
                       >
-                        <Mail className='w-4 h-4 mr-2' />
+                        <Mail className="w-4 h-4 mr-2" />
                         support@ridesiq.com
                       </a>
-                      <p className='text-sm text-gray-600'>
+                      <p className="text-sm text-gray-600">
                         We respond within 24 hours!
                       </p>
                     </div>
@@ -367,26 +365,26 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className='relative group h-full'
+              className="relative group h-full"
             >
-              <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/5 to-[#99D5C9]/5 rounded-2xl transform transition-all duration-300 group-hover:scale-[1.02]' />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/5 to-[#99D5C9]/5 rounded-2xl transform transition-all duration-300 group-hover:scale-[1.02]" />
 
-              <div className='relative bg-white h-full rounded-2xl p-8 shadow-lg transition-all duration-300 group-hover:shadow-xl border border-gray-100/50'>
-                <div className='flex items-start gap-6'>
-                  <div className='w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0'>
-                    <div className='w-full h-full rounded-xl bg-white flex items-center justify-center'>
-                      <Clock className='w-7 h-7 text-[#678FCA]' />
+              <div className="relative bg-white h-full rounded-2xl p-8 shadow-lg transition-all duration-300 group-hover:shadow-xl border border-gray-100/50">
+                <div className="flex items-start gap-6">
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0">
+                    <div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
+                      <Clock className="w-7 h-7 text-[#678FCA]" />
                     </div>
                   </div>
 
                   <div>
-                    <h3 className='text-xl font-semibold mb-4 text-gray-900'>
+                    <h3 className="text-xl font-semibold mb-4 text-gray-900">
                       Business Hours
                     </h3>
-                    <div className='space-y-2'>
-                      <p className='text-gray-600'>Monday - Friday</p>
-                      <p className='text-gray-600'>9 AM - 5 PM EST</p>
-                      <p className='text-sm text-gray-500 mt-2'></p>
+                    <div className="space-y-2">
+                      <p className="text-gray-600">Monday - Friday</p>
+                      <p className="text-gray-600">9 AM - 5 PM EST</p>
+                      <p className="text-sm text-gray-500 mt-2"></p>
                     </div>
                   </div>
                 </div>
@@ -398,25 +396,25 @@ const Contact = () => {
 
       {/* Multi-Step Form Section */}
 
-      <section className='py-24 bg-gray-50/50 relative overflow-hidden'>
-        <div className='absolute inset-0 bg-gradient-to-br from-white to-gray-50/80' />
-        <div className='absolute inset-0 hero-pattern opacity-10' />
+      <section className="py-24 bg-gray-50/50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50/80" />
+        <div className="absolute inset-0 hero-pattern opacity-10" />
 
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative'>
-          <div className='max-w-3xl mx-auto'>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className='text-center mb-12'
+              className="text-center mb-12"
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className='inline-flex items-center px-4 py-2 rounded-full bg-[#678FCA]/10 text-[#678FCA] text-sm font-medium mb-6'
+                className="inline-flex items-center px-4 py-2 rounded-full bg-[#678FCA]/10 text-[#678FCA] text-sm font-medium mb-6"
               >
-                <Sparkles className='w-4 h-4 mr-2' />
+                <Sparkles className="w-4 h-4 mr-2" />
                 Get Started
               </motion.div>
 
@@ -424,7 +422,7 @@ const Contact = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className='text-3xl sm:text-4xl font-bold mb-4'
+                className="text-3xl sm:text-4xl font-bold mb-4"
               >
                 Get a Quote
               </motion.h2>
@@ -433,7 +431,7 @@ const Contact = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className='text-lg text-gray-600'
+                className="text-lg text-gray-600"
               >
                 Tell us about your fleet tracking needs
               </motion.p>
@@ -654,24 +652,24 @@ const Contact = () => {
       </section> */}
 
       {/* FAQ Section */}
-      <section className='py-24 relative overflow-hidden'>
-        <div className='absolute inset-0 bg-[#678FCA]/[0.02] hero-pattern opacity-50' />
-        <div className='absolute inset-0 bg-gradient-to-b from-white via-transparent to-white' />
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#678FCA]/[0.02] hero-pattern opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
 
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative'>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className='text-center mb-16'
+            className="text-center mb-16"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className='inline-flex items-center px-4 py-2 rounded-full bg-[#678FCA]/10 text-[#678FCA] text-sm font-medium mb-6'
+              className="inline-flex items-center px-4 py-2 rounded-full bg-[#678FCA]/10 text-[#678FCA] text-sm font-medium mb-6"
             >
-              <Sparkles className='w-4 h-4 mr-2' />
+              <Sparkles className="w-4 h-4 mr-2" />
               FAQ
             </motion.div>
 
@@ -679,13 +677,13 @@ const Contact = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className='text-3xl sm:text-4xl font-bold mb-4'
+              className="text-3xl sm:text-4xl font-bold mb-4"
             >
               Frequently Asked Questions
             </motion.h2>
           </motion.div>
 
-          <div className='max-w-3xl mx-auto space-y-4'>
+          <div className="max-w-3xl mx-auto space-y-4">
             {faqItems.map((item, index) => (
               <motion.div
                 key={index}
@@ -693,27 +691,27 @@ const Contact = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className='bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden'
+                className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
               >
                 <button
                   onClick={() =>
                     setActiveAccordion(activeAccordion === index ? null : index)
                   }
-                  className='w-full px-6 py-4 text-left flex items-center justify-between'
+                  className="w-full px-6 py-4 text-left flex items-center justify-between"
                 >
-                  <h3 className='text-lg font-semibold text-gray-900'>
+                  <h3 className="text-lg font-semibold text-gray-900">
                     {item.question}
                   </h3>
                   {activeAccordion === index ? (
-                    <X className='w-5 h-5 text-gray-500' />
+                    <X className="w-5 h-5 text-gray-500" />
                   ) : (
-                    <ChevronDown className='w-5 h-5 text-gray-500' />
+                    <ChevronDown className="w-5 h-5 text-gray-500" />
                   )}
                 </button>
 
                 {activeAccordion === index && (
-                  <div className='px-6 pb-4'>
-                    <p className='text-gray-600'>{item.answer}</p>
+                  <div className="px-6 pb-4">
+                    <p className="text-gray-600">{item.answer}</p>
                   </div>
                 )}
               </motion.div>
@@ -723,22 +721,22 @@ const Contact = () => {
       </section>
 
       {/* CTA Section */}
-      <section className='py-24'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#678FCA] via-[#99D5C9] to-[#678FCA] shadow-2xl'>
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#678FCA] via-[#99D5C9] to-[#678FCA] shadow-2xl">
             {/* Background Pattern */}
-            <div className='absolute inset-0'>
-              <div className='absolute inset-0 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] opacity-10' />
-              <div className='absolute inset-0 bg-gradient-to-br from-black/5 to-transparent' />
+            <div className="absolute inset-0">
+              <div className="absolute inset-0 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] opacity-10" />
+              <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent" />
             </div>
 
-            <div className='relative px-6 py-20 sm:px-12 sm:py-28'>
-              <div className='max-w-3xl mx-auto text-center'>
+            <div className="relative px-6 py-20 sm:px-12 sm:py-28">
+              <div className="max-w-3xl mx-auto text-center">
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className='text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8'
+                  className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8"
                 >
                   Upgrade Your Fleet Tracking Today
                 </motion.h2>
@@ -748,7 +746,7 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 }}
-                  className='text-xl text-white/90 mb-12'
+                  className="text-xl text-white/90 mb-12"
                 >
                   Join thousands of fleet managers who trust RidesIQ
                 </motion.p>
@@ -758,22 +756,22 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
-                  className='flex flex-col sm:flex-row gap-4 justify-center'
+                  className="flex flex-col sm:flex-row gap-4 justify-center"
                 >
                   <button
                     onClick={handleDemoRequest}
-                    className='bg-white text-[#678FCA] px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/90 transition-all duration-300 transform hover:scale-105 flex items-center group'
+                    className="bg-white text-[#678FCA] px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/90 transition-all duration-300 transform hover:scale-105 flex items-center group"
                   >
                     Request a Demo
-                    <ChevronRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                    <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
 
                   <button
                     onClick={handleExpertTalk}
-                    className='bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all duration-300 transform hover:scale-105 flex items-center group'
+                    className="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all duration-300 transform hover:scale-105 flex items-center group"
                   >
                     Talk to an Expert
-                    <ChevronRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                    <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </motion.div>
               </div>
@@ -786,9 +784,9 @@ const Contact = () => {
       <Footer />
 
       {/* Mobile CTA */}
-      <div className='fixed bottom-0 left-0 right-0 p-4 bg-white shadow-lg md:hidden'>
-        <button className='w-full bg-[#678FCA] text-white py-3 rounded-full flex items-center justify-center'>
-          Contact Us <ChevronRight className='ml-2 w-5 h-5' />
+      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white shadow-lg md:hidden">
+        <button className="w-full bg-[#678FCA] text-white py-3 rounded-full flex items-center justify-center">
+          Contact Us <ChevronRight className="ml-2 w-5 h-5" />
         </button>
       </div>
     </div>
