@@ -189,7 +189,7 @@ const carRentalData: IndustryData = {
       features: [
         'Installed & hidden from drivers',
         'Real-time GPS via direct power',
-        'Real-time GPS via direct power',
+        'Remote Immobilization',
         'Ideal for long-term use',
       ],
       link: '/solutions/hard-wired-trackers',

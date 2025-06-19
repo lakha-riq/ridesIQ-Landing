@@ -259,10 +259,10 @@ function Home() {
                 {/* Main Product Image */}
                 <div className="product-render relative z-20 transform hover:scale-105 transition-transform duration-500">
                   <Image
-                    src='/assets/6.png'
+                    src='/assets/homepage/Dashboard.png'
                     width={600}
                     height={600}
-                    alt="Fleet vehicle GPS tracking dashboard – RidesIQe"
+                    alt="Fleet vehicle GPS tracking dashboard – RidesIQ"
                     className="w-full h-auto rounded-2xl shadow-2xl"
                   />
 
