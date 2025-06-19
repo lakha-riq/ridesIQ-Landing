@@ -291,9 +291,9 @@ const Tracking = () => {
         {/* Background Image & Overlays */}
         <div className="absolute inset-0">
           <Image
-            src="/assets/homepage/2.png"
-            alt="GPS Tracking Device"
-            className="w-full h-full object-cover"
+            src='/assets/fleet-management/RidesIQIQ120.jpg'
+            alt='GPS Tracking Device'
+            className='w-full h-full object-cover'
             width={1920}
             height={1080}
           />
@@ -339,8 +339,7 @@ const Tracking = () => {
                   transition={{ duration: 0.6, delay: 0.4 }}
                   className="text-xl text-white/90 leading-relaxed"
                 >
-                  Real-time tracking, Real-Time analytics, and predictive
-                  maintenance – all in one powerful tracking device.
+                  Reliable hardwired GPS tracker for real-time vehicle location, driver behavior monitoring, and predictive maintenance—built for trucks, logistics, and enterprise fleets.
                 </motion.h2>
 
                 <motion.div
@@ -410,14 +409,14 @@ const Tracking = () => {
             </div>
 
             {/* Right Content - Product Image */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="hidden lg:block relative"
-            >
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6" />
+              className='hidden lg:block relative'
+            > */}
+              {/* <div className='relative'>
+                <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6' />
                 <Image
                   src="/assets/homepage/3.png"
                   alt="GPS Tracking Device"
@@ -425,10 +424,10 @@ const Tracking = () => {
                   width={800}
                   height={533}
                 />
-              </div>
+              </div> */}
 
               {/* Floating Stats */}
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
@@ -447,8 +446,8 @@ const Tracking = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </motion.div>
+              </motion.div> */}
+            {/* </motion.div> */}
           </div>
         </div>
 
@@ -523,7 +522,7 @@ const Tracking = () => {
 
                 <p className="text-lg text-black leading-relaxed">
                   {
-                    '	Designed for fleets of all sizes, the RidesIQ Tracker provides advanced LTE Cat M1/NB2 connectivity, ensuring reliable and efficient real-time tracking. With industry-leading GNSS accuracy (<2m) and multiple transmission protocols (TCP, UDP, SMS), it enables seamless fleet monitoring and optimized performance.'
+                    '	RidesIQ OBD GPS trackers deliver plug-and-play convenience with real-time tracking, precision GNSS, and adaptive data reporting. With LTE Cat M1/NB2 and BLE 5.2 connectivity, it is the ideal solution for connected vehicle monitoring.'
                   }
                 </p>
 
@@ -533,37 +532,37 @@ const Tracking = () => {
                       icon: MapPin,
                       title: 'Real-Time GNSS Tracking',
                       description:
-                        'Track your fleet with high-precision GNSS, featuring <2m accuracy and intelligent frequency adjustment.',
+                        'Accurate fleet location with <2m precision.',
                     },
                     {
                       icon: BarChart3,
                       title: 'Real time Analytics',
                       description:
-                        'Leverage advanced data insights for route optimization, asset utilization, and operational efficiency.',
+                        'Track routes, vehicle use, and performance.',
                     },
                     {
                       icon: Bell,
                       title: 'Geofencing & Smart Alerts',
                       description:
-                        'Define virtual zones and receive instant alerts for movement, low battery, and scheduled reports.',
+                        'Get alerts for movement, low battery, and boundary breaches.',
                     },
                     {
                       icon: Tool,
                       title: 'Intelligent Power Management',
                       description:
-                        'Optimize battery life with power-saving modes and smart wake-up intervals.',
+                        'Save battery with smart sleep modes and auto wake.',
                     },
                     {
                       icon: Lock,
                       title: 'Secure Communication',
                       description:
-                        'Data transmission via TCP, UDP, and SMS with encryption for enhanced security.',
+                        'Encrypted data over TCP, UDP, and SMS protocols.',
                     },
                     {
                       icon: Radio,
                       title: 'LTE & BLE 5.2 Connectivity',
                       description:
-                        'Reliable real-time tracking with LTE Cat M1/NB2 and BLE 5.2 support for seamless communication.',
+                        'Reliable coverage with LTE-M, NB-IoT, and Bluetooth.',
                     },
                   ].map((benefit, index) => (
                     <motion.div
@@ -645,37 +644,37 @@ const Tracking = () => {
                 icon: MapPin,
                 title: 'Real-Time GNSS Tracking',
                 description:
-                  'Track your fleet with high-precision GNSS, featuring <2m accuracy and intelligent frequency adjustment.',
+                  'Precision GPS with <2m accuracy and smart update intervals.',
               },
               {
                 icon: BarChart3,
                 title: 'Comprehensive Analytics',
                 description:
-                  'Leverage advanced data insights for route optimization, asset utilization, and operational efficiency.',
+                  'Gain insights to optimize routes, reduce idle time, and increase efficiency.',
               },
               {
                 icon: Bell,
                 title: 'Geofencing & Smart Alerts',
                 description:
-                  'Define virtual zones and receive instant alerts for movement, low battery, and scheduled reports.',
+                  'Create custom zones and get alerts for movement, tampering, and low battery.',
               },
               {
                 icon: Tool,
                 title: 'Intelligent Power Management',
                 description:
-                  'Optimize battery life with power-saving modes and smart wake-up intervals.',
+                  'Extend battery life with adaptive wake-up and sleep modes.',
               },
               {
                 icon: Lock,
                 title: 'Secure Communication',
                 description:
-                  'Data transmission via TCP, UDP, and SMS with encryption for enhanced security.',
+                  'Encrypted data transfer via TCP, UDP, and SMS for reliable connectivity.',
               },
               {
                 icon: Radio,
                 title: 'LTE & BLE 5.2 Connectivity',
                 description:
-                  'Reliable real-time tracking with LTE Cat M1/NB2 and BLE 5.2 support for seamless communication.',
+                  'Dual-network support for consistent tracking and seamless integration.',
               },
             ].map((feature, index) => (
               <motion.div

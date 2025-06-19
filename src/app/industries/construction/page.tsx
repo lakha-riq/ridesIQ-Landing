@@ -190,18 +190,18 @@ const constructionData: IndustryData = {
   products: [
     {
       title: 'Hardwired GPS Tracker',
-      image: '/assets/devices/IQ120.png',
+      image: '/assets/devices/HardWiredNoBKGD.png',
       features: [
         'Installed & hidden from drivers',
         'Real-time GPS via direct power',
-        'Real-time GPS via direct power',
+        'Remote Immobilization',
         'Ideal for long-term use',
       ],
       link: '/solutions/hard-wired-trackers',
     },
     {
       title: 'OBD Plug & Play Tracker',
-      image: '/assets/fleet-management/3.png',
+      image: '/assets/devices/OBDNoBKGD.png',
       features: [
         'Installs in seconds (OBD-II)',
         'Tracks GPS, speed & diagnostics',
@@ -212,7 +212,7 @@ const constructionData: IndustryData = {
     },
     {
       title: 'Asset Tracker (SVR)',
-      image: '/assets/fleet-management/4.png',
+      image: '/assets/devices/AssetTrackerNoBKGD.png',
       features: [
         'Battery-powered with long life',
         'Auto-activates if main tracker is removed',
