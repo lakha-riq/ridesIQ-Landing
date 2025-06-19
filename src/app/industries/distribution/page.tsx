@@ -15,6 +15,8 @@ import {
   Box,
   LucideIcon,
   MapPin,
+  ConstructionIcon,
+  BarChart3,
 } from 'lucide-react';
 type KeyFeature = {
   icon: LucideIcon; // From lucide-react
@@ -103,179 +105,91 @@ const distributionKeyFeatures: KeyFeature[] = [
 ];
 
 const distributionData: IndustryData = {
-	name: " GPS Tracking for Auto Dealerships",
-	subtitle: "Dealership Vehicle Tracking",
-	description: "Protect your lot, reduce vehicle misuse, and streamline test-drive tracking with GPS solutions designed for dealerships. Get real-time visibility across every vehicle—on or off the lot.",
-	heroImage: "/assets/fleet-management/RidesIQIQ120.jpg",
-	challenges: [
-		{
-			icon: Clock,
-			title: "Lot Transfers & Inventory Audits",
-			description: "Manual tracking of transfers and off-site storage vehicles creates delays and miscounts.",
-		},
-		{
-			icon: AlertCircle,
-			title: "Unauthorized/Off-Hour Use",
-			description: "Prevent misuse with ignition alerts, after-hours movement notifications, and custom driving rules.",
-		},
-		{
-			icon: Settings2,
-			title: "Stolen Vehicle Risk",
-			description: "Dealerships lose thousands each year to theft—often after hours or during extended test drives.",
-		},
-	],
-	solutions: [
-		{
-			icon: Warehouse,
-			title: "Multi-Lot Tracking",
-			description: "Monitor vehicle movement across all locations and reduce manual data entry with automatic logging.",
-		},
-		{
-			icon: Shield,
-			title: "Demo Vehicle Monitoring",
-			description: "Track test drives, limit use zones, and get real-time alerts for aggressive driving or off-route activity.",
-		},
-		{
-			icon: MapPin,
-			title: "Theft Recovery & Alerts",
-			description: "Get instant tamper alerts, disable ignition remotely, and increase recovery speed with precision tracking.",
-		},
-	],
-	stats: [
-		{
-			icon: Box,
-			value: 40,
-			suffix: "k+",
-			label: "Vehicles Tracked",
-		},
-		{
-			icon: Timer,
-			value: 96,
-			suffix: "%",
-			label: "On-Time Rate",
-		},
-		{
-			icon: TrendingUp,
-			value: 2.7,
-			suffix: "x",
-			label: "Efficiency Gain",
-		},
-		{
-			icon: Target,
-			value: 99.8,
-			suffix: "%",
-			label: "GPS Accuracy",
-		},
-	],
-	testimonial: {
-		quote: "RidesIQ gives us complete visibility over our lot and loaner fleet. We’ve reduced test-drive misuse, recovered a stolen demo unit, and no longer waste time doing manual lot walks.",
-		author: "Jessica Ramirez",
-		role: "Fleet Operations Manager",
-		company: "Horizon Auto Group",
-		image: "/assets/fleet-management/3.png",
-	},
-	products: [
-		{
-			title: "Hardwired GPS Tracker",
-			image: "/assets/devices/HardWiredNoBKGD.png",
-			features: ["Installed & hidden from drivers", "Real-time GPS via direct power", "Real-time GPS via direct power", "Ideal for long-term use"],
-		},
-		{
-			title: "OBD Plug & Play Tracker",
-			image: "/assets/devices/OBDNoBKGD.png",
-			features: ["Installs in seconds (OBD-II)", "Tracks GPS, speed & diagnostics", "Best for short-term rentals", "Swaps easily between vehicles"],
-		},
-		{
-			title: "Asset Tracker (SVR)",
-			image: "/assets/devices/AssetTrackerNoBKGD.png",
-			features: ["Battery-powered with long life", "Auto-activates if main tracker is removed", "Weatherproof & discreet", "Acts as backup theft recovery"],
-		},
-	],
-  name: ' GPS Tracking for Auto Dealerships',
-  subtitle: 'Dealership Vehicle Tracking',
+  name: ' GPS Tracking for Construction Fleets',
+  subtitle: 'Construction Fleet GPS Tracking',
   description:
-    'Protect your lot, reduce vehicle misuse, and streamline test-drive tracking with GPS solutions designed for dealerships. Get real-time visibility across every vehicle—on or off the lot.',
+    'Track heavy machinery, vehicles, and on-site equipment in real-time with RidesIQ’s rugged GPS tracking solutions built for the construction industry.',
   heroImage: '/assets/fleet-management/RidesIQIQ120.jpg',
   challenges: [
     {
       icon: Clock,
-      title: 'Lot Transfers & Inventory Audits',
+      title: 'Equipment Location',
       description:
-        'Manual tracking of transfers and off-site storage vehicles creates delays and miscounts.',
+        'Difficulty tracking equipment across multiple job sites leads to inefficiencies and delays.',
     },
     {
       icon: AlertCircle,
-      title: 'Unauthorized/Off-Hour Use',
+      title: 'Asset Security',
       description:
-        'Prevent misuse with ignition alerts, after-hours movement notifications, and custom driving rules.',
+        'Unattended machines are at high risk of theft, misuse, or unauthorized movement.',
     },
     {
       icon: Settings2,
-      title: 'Stolen Vehicle Risk',
+      title: 'Unplanned Downtime',
       description:
-        'Dealerships lose thousands each year to theft—often after hours or during extended test drives.',
+        'Breakdowns and missed maintenance windows result in costly project delays.',
     },
   ],
   challengePara:
-    'Gain full visibility over your rental fleet with GPS tracking, automated alerts, and usage insights—improving turnaround time, reducing risk, and maximizing fleet utilization.',
+    'Monitor heavy equipment, reduce downtime, and optimize logistics across multiple job sites using rugged vehicle telematics built for the construction industry. ',
   solutions: [
     {
-      icon: Warehouse,
-      title: 'Multi-Lot Tracking',
+      icon: ConstructionIcon,
+      title: 'Heavy-Duty GPS Trackers',
       description:
-        'Monitor vehicle movement across all locations and reduce manual data entry with automatic logging.',
+        'Rugged, construction-grade GPS devices provide real-time location tracking in any terrain.',
     },
     {
       icon: Shield,
-      title: 'Demo Vehicle Monitoring',
+      title: 'Security Monitoring',
       description:
-        'Track test drives, limit use zones, and get real-time alerts for aggressive driving or off-route activity.',
+        '24/7 asset protection with tamper alerts, geofencing, and unauthorized movement detection.',
     },
     {
-      icon: MapPin,
-      title: 'Theft Recovery & Alerts',
+      icon: BarChart3,
+      title: 'Equipment Maintenance',
       description:
-        'Get instant tamper alerts, disable ignition remotely, and increase recovery speed with precision tracking.',
+        'Schedule preventive maintenance with automated alerts and minimize unscheduled outages.',
     },
   ],
   stats: [
     {
-      icon: Box,
-      value: 40,
+      icon: ConstructionIcon,
+      value: 15,
       suffix: 'k+',
-      label: 'Vehicles Tracked',
+      label: 'Equipment Tracked',
     },
     {
       icon: Timer,
-      value: 96,
+      value: 95,
       suffix: '%',
-      label: 'On-Time Rate',
+      label: 'Equipment Uptime',
     },
     {
       icon: TrendingUp,
-      value: 2.7,
+      value: 3,
       suffix: 'x',
-      label: 'Efficiency Gain',
+      label: 'Efficiency Increase',
     },
     {
       icon: Target,
-      value: 99.8,
+      value: 99.5,
       suffix: '%',
-      label: 'GPS Accuracy',
+      label: 'Location Accuracy',
     },
   ],
   testimonial: {
     quote:
-      'RidesIQ gives us complete visibility over our lot and loaner fleet. We’ve reduced test-drive misuse, recovered a stolen demo unit, and no longer waste time doing manual lot walks.',
-    author: 'Jessica Ramirez',
-    role: 'Fleet Operations Manager',
-    company: 'Horizon Auto Group',
-    image: '/assets/fleet-management/3.png',
+      'RidesIQ’s fleet tracking platform has completely transformed how we manage our construction equipment. Real-time insights and maintenance alerts have made our operations significantly more efficient — and the ROI speaks for itself.',
+    author: 'Michael Chen',
+    role: 'Operations Director',
+    company: 'BuildTech Construction',
+    image: '/assets/fleet-management/1.png',
   },
   products: [
     {
       title: 'Hardwired GPS Tracker',
-      image: '/assets/devices/IQ120.png',
+      image: '/assets/devices/HardWiredNoBKGD.png',
       features: [
         'Installed & hidden from drivers',
         'Real-time GPS via direct power',
@@ -286,48 +200,49 @@ const distributionData: IndustryData = {
     },
     {
       title: 'OBD Plug & Play Tracker',
-      image: '/assets/fleet-management/3.png',
+      image: '/assets/devices/OBDNoBKGD.png',
       features: [
         'Installs in seconds (OBD-II)',
         'Tracks GPS, speed & diagnostics',
         'Best for short-term rentals',
         'Swaps easily between vehicles',
       ],
-      link: '/solutions/hard-wired-trackers',
+      link: '/solutions/obd-trackers',
     },
     {
       title: 'Asset Tracker (SVR)',
-      image: '/assets/fleet-management/4.png',
+      image: '/assets/devices/AssetTrackerNoBKGD.png',
       features: [
         'Battery-powered with long life',
         'Auto-activates if main tracker is removed',
         'Weatherproof & discreet',
         'Acts as backup theft recovery',
       ],
-      link: '/solutions/hard-wired-trackers',
+      link: '/solutions/asset-trackers',
     },
   ],
   ctaData: {
-    heading: 'Smarter Car Rental Tracking Starts Here',
+    heading: 'Smarter Construction Fleet Tracking with RidesIQ ',
     description:
-      ' Streamline fleet operations with real-time GPS telematics built for car rental businesses. Prevent loss, optimize usage, and monitor every vehicle from one platform.',
-    tag1: '#CarRental',
-    tag2: '#FleetTracking',
-    tag3: '#VehicleTelematics',
+      'Boost job site efficiency, reduce equipment downtime, and ensure real-time visibility across your construction vehicles and heavy machinery. ',
+    tag1: '#EquipmentMonitoring',
+    tag2: '#Fuel&Idle Reports',
+    tag3: '#JobSiteGeofencing',
   },
 };
 
 const Distribution = () => {
   return (
-    <IndustryTemplate
-      industry={distributionData}
-      keyFeatures={
-        <IndustryKeyFeatures
-          industryName="Distribution"
-          features={distributionKeyFeatures}
-        />
-      }
-    />
+    // <IndustryTemplate
+    //   industry={distributionData}
+    //   keyFeatures={
+    //     <IndustryKeyFeatures
+    //       industryName="Distribution"
+    //       features={distributionKeyFeatures}
+    //     />
+    //   }
+    // />
+    <h1>this is distribution page</h1>
   );
 };
 
