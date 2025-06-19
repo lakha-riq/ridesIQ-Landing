@@ -751,7 +751,7 @@ const Contact = () => {
                   Join thousands of fleet managers who trust RidesIQ
                 </motion.p>
 
-                <motion.div
+                {/* <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -773,7 +773,7 @@ const Contact = () => {
                     Talk to an Expert
                     <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
-                </motion.div>
+                </motion.div> */}
               </div>
             </div>
           </div>
