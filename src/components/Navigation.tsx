@@ -436,6 +436,7 @@ export const Navigation = ({ customColor = 'text-gray-700' }) => {
                 <div className="px-4 py-2 text-sm font-medium text-gray-500">
                   Solutions
                 </div>
+
                 <motion.div
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -443,11 +444,17 @@ export const Navigation = ({ customColor = 'text-gray-700' }) => {
                 >
                   <Link
                     href="/solutions/hard-wired-trackers"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
+                    className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
                   >
-                    Hard-Wired Trackers
+                    <div className="w-7 h-7 rounded-md bg-[#678FCA]/10 flex items-center justify-center">
+                      <Battery className="w-4 h-4 transform rotate-180 text-[#678FCA]" />
+                    </div>
+                    <span className="text-sm font-medium">
+                      Hard-Wired Trackers
+                    </span>
                   </Link>
                 </motion.div>
+
                 <motion.div
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -455,11 +462,22 @@ export const Navigation = ({ customColor = 'text-gray-700' }) => {
                 >
                   <Link
                     href="/solutions/obd-trackers"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
+                    className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
                   >
-                    OBD Trackers
+                    <div className="w-7 h-7 rounded-md bg-[#678FCA]/10 flex items-center justify-center">
+                      <svg
+                        className="w-4 h-4 text-[#678FCA]"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        aria-hidden="true"
+                      >
+                        <path d="M6 3a1 1 0 00-1 1v1h10V4a1 1 0 00-1-1H6zM4 7h12v8a2 2 0 01-2 2H6a2 2 0 01-2-2V7z" />
+                      </svg>
+                    </div>
+                    <span className="text-sm font-medium">OBD Trackers</span>
                   </Link>
                 </motion.div>
+
                 <motion.div
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -467,29 +485,15 @@ export const Navigation = ({ customColor = 'text-gray-700' }) => {
                 >
                   <Link
                     href="/solutions/asset-trackers"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
+                    className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
                   >
-                    Asset Trackers
+                    <div className="w-7 h-7 rounded-md bg-[#678FCA]/10 flex items-center justify-center">
+                      <PcCase className="w-4 h-4 text-[#678FCA]" />
+                    </div>
+                    <span className="text-sm font-medium">Asset Trackers</span>
                   </Link>
                 </motion.div>
               </div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-              >
-                <Link href="/contact">
-                  <motion.button
-                    className="w-full mt-4 bg-[#678FCA] text-white px-6 py-3 rounded-full"
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.97 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    Get a Demo
-                  </motion.button>
-                </Link>
-              </motion.div>
             </motion.div>
           </motion.div>
         )}
