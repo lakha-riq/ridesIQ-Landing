@@ -108,7 +108,7 @@ const foodDeliveryData: IndustryData = {
   subtitle: 'Food Delivery GPS Tracking & Temperature Monitoring',
   description:
     'Real-time vehicle tracking and temperature monitoring for food delivery fleets. Ensure on-time arrivals, route visibility, and compliance with cold chain standards.',
-  heroImage: '/assets/fleet-management/RidesIQIQ120.jpg',
+  heroImage: '/assets/universal/installation.jpg',
   challenges: [
     {
       icon: Clock,

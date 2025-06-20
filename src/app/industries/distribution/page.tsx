@@ -106,7 +106,7 @@ const distributionData: IndustryData = {
 	name: " GPS Tracking for Auto Dealerships",
 	subtitle: "Dealership Vehicle Tracking",
 	description: "Protect your lot, reduce vehicle misuse, and streamline test-drive tracking with GPS solutions designed for dealerships. Get real-time visibility across every vehicle—on or off the lot.",
-	heroImage: "/assets/fleet-management/RidesIQIQ120.jpg",
+	heroImage: "/assets/universal/installation.jpg",
 	challenges: [
 		{
 			icon: Clock,
@@ -195,7 +195,7 @@ const distributionData: IndustryData = {
   subtitle: 'Dealership Vehicle Tracking',
   description:
     'Protect your lot, reduce vehicle misuse, and streamline test-drive tracking with GPS solutions designed for dealerships. Get real-time visibility across every vehicle—on or off the lot.',
-  heroImage: '/assets/fleet-management/RidesIQIQ120.jpg',
+  heroImage: '/assets/universal/installation.jpg',
   challenges: [
     {
       icon: Clock,

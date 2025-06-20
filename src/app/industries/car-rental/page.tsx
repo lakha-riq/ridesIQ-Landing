@@ -105,7 +105,7 @@ const carRentalData: IndustryData = {
   subtitle: 'Advanced Vehicle Tracking & Management',
   description:
     'Boost vehicle recovery, reduce misuse, and simplify operations with real-time GPS tracking, geofencing, and automated alerts—trusted by 50,000+ active vehicles.',
-  heroImage: '/assets/fleet-management/RidesIQIQ120.jpg',
+  heroImage: '/assets/universal/Installation.jpg',
   challenges: [
     {
       icon: Car,
@@ -180,7 +180,7 @@ const carRentalData: IndustryData = {
     author: 'Bruno Fernandes',
     role: 'Operations Director',
     company: 'RidesIQ Team',
-    image: '/assets/fleet-management/Bruno_Fernandes Headshot.png',
+    image: '/assets/headshots/Bruno_Fernandes Headshot.png',
   },
   products: [
     {

@@ -291,7 +291,7 @@ const Tracking = () => {
         {/* Background Image & Overlays */}
         <div className="absolute inset-0">
           <Image
-            src='/assets/fleet-management/RidesIQIQ120.jpg'
+            src='/assets/universal/installation.jpg'
             alt='GPS Tracking Device'
             className='w-full h-full object-cover'
             width={1920}
