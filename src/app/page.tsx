@@ -153,30 +153,6 @@ function Home() {
       link: '/solutions/asset-trackers',
       index: 2,
     },
-    {
-      title: 'Asset Tracker',
-      image: '/assets/homepage/1.png',
-      features: [
-        'Long-life, battery-powered design',
-        'Rugged, weather-resistant casing',
-        'Tracks non-powered assets like trailers',
-        'Hidden SVR backup if main tracker is removed',
-      ],
-      link: '/solutions/asset-trackers',
-      index: 2,
-    },
-    {
-      title: 'Asset Tracker',
-      image: '/assets/homepage/1.png',
-      features: [
-        'Long-life, battery-powered design',
-        'Rugged, weather-resistant casing',
-        'Tracks non-powered assets like trailers',
-        'Hidden SVR backup if main tracker is removed',
-      ],
-      link: '/solutions/asset-trackers',
-      index: 2,
-    },
   ];
 
   const totalDots = Math.ceil(productsData.length / 3);
@@ -528,16 +504,18 @@ function Home() {
           </div>
 
           {/* Scroll Indicator Dots */}
-          <div className="flex justify-center mt-4 gap-2">
-            {Array.from({ length: totalDots }).map((_, i) => (
-              <div
-                key={i}
-                className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 ${
-                  i === activeIndex ? 'bg-[#678FCA]' : 'bg-gray-300'
-                }`}
-              />
-            ))}
-          </div>
+          {totalDots > 3 && (
+            <div className="flex justify-center mt-4 gap-2">
+              {Array.from({ length: totalDots }).map((_, i) => (
+                <div
+                  key={i}
+                  className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 ${
+                    i === activeIndex ? 'bg-[#678FCA]' : 'bg-gray-300'
+                  }`}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

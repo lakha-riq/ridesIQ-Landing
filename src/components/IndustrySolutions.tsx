@@ -80,24 +80,24 @@ const additionalIndustries: Industry[] = [
 
 export const IndustrySolutions = () => {
   return (
-    <section className='py-24 relative overflow-hidden'>
-      <div className='absolute inset-0 bg-[#678FCA]/[0.02] hero-pattern opacity-50' />
-      <div className='absolute inset-0 bg-gradient-to-b from-white via-transparent to-white' />
+    <section className="py-24 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[#678FCA]/[0.02] hero-pattern opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
 
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative'>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className='text-center mb-16'
+          className="text-center mb-16"
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className='inline-flex items-center px-4 py-2 rounded-full bg-[#678FCA]/10 text-[#678FCA] text-sm font-medium mb-6'
+            className="inline-flex items-center px-4 py-2 rounded-full bg-[#678FCA]/10 text-[#678FCA] text-sm font-medium mb-6"
           >
-            <Sparkles className='w-4 h-4 mr-2' />
+            <Sparkles className="w-4 h-4 mr-2" />
             Industry Solutions
           </motion.div>
 
@@ -105,10 +105,10 @@ export const IndustrySolutions = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className='text-4xl sm:text-5xl font-bold mb-6 text-black'
+            className="text-4xl sm:text-5xl font-bold mb-6 text-black"
           >
             Built for Every Industry –{' '}
-            <span className='bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent'>
+            <span className="bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent">
               Optimized for Efficiency
             </span>
           </motion.h2>
@@ -117,7 +117,7 @@ export const IndustrySolutions = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className='text-xl text-black max-w-3xl mx-auto'
+            className="text-xl text-black max-w-3xl mx-auto"
           >
             RidesIQ offers tailored fleet tracking solutions to meet the unique
             needs of different industries. No matter your fleet size, we help
@@ -126,132 +126,51 @@ export const IndustrySolutions = () => {
         </motion.div>
 
         {/* Industry Grid */}
-        <div className='grid gap-6 mb-12'>
-          <div className='grid grid-cols-1 md:grid-cols-10 gap-6'>
-            {/* Card 1 - 70% on desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+          {industries.slice(0, 4).map((industry, index) => (
             <motion.div
-              key={industries[0].title}
+              key={industry.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0 }}
-              className='relative group md:col-span-6'
+              transition={{ delay: index * 0.1 }}
+              className="relative group"
             >
-              <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/5 to-[#99D5C9]/5 rounded-2xl transform transition-all duration-300 group-hover:scale-[1.02]' />
+              {/* Hover gradient background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/5 to-[#99D5C9]/5 rounded-2xl transform transition-all duration-300 group-hover:scale-[1.02]" />
+
+              {/* Card content */}
               <Link
-                href={industries[0].link}
-                className='relative block bg-white rounded-2xl p-5 sm:p-10 shadow-lg transition-all duration-300 group-hover:shadow-xl border border-gray-100/50 h-full'
+                href={industry.link}
+                className="relative block bg-white rounded-2xl p-6 shadow-md transition-all duration-300 group-hover:shadow-lg border border-gray-100/50 h-full"
               >
-                <div className='flex flex-col h-full'>
-                  <div className='flex items-start gap-4'>
-                    <div className='sm:w-20 w-14 h-14 sm:h-20 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0'>
-                      <div className='w-full h-full rounded-xl bg-white flex items-center justify-center'>
-                        {React.createElement(industries[0].icon, {
-                          className: 'sm:w-10 w-6 sm:h-10 h-6 text-[#678FCA]',
+                <div className="flex flex-col h-full">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0">
+                      <div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
+                        {React.createElement(industry.icon, {
+                          className: 'w-6 h-6 sm:w-7 sm:h-7 text-[#678FCA]',
                         })}
                       </div>
                     </div>
-                    <div className='flex-1'>
-                      <h3 className='text-xl lg:text-3xl font-semibold mb-3 text-gray-900 group-hover:text-[#678FCA] transition-colors'>
-                        {industries[0].title}
+
+                    <div className="flex-1">
+                      <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 group-hover:text-[#678FCA] transition-colors">
+                        {industry.title}
                       </h3>
-                      <p className='text-gray-600 mb-4 text-sm lg:text-base'>
-                        {industries[0].description}
+                      <p className="text-sm text-gray-600 mb-2">
+                        {industry.description}
                       </p>
+                      <div className="text-sm text-[#678FCA] font-medium flex items-center group/link">
+                        Learn More
+                        <ChevronRight className="ml-1 w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                      </div>
                     </div>
-                  </div>
-                  <div className='text-sm lg:text-base flex items-start text-[#678FCA] font-medium group/link'>
-                    Learn More
-                    <ChevronRight className='ml-1 w-4 h-4 transition-transform group-hover/link:translate-x-1' />
                   </div>
                 </div>
               </Link>
             </motion.div>
-
-            {/* Card 2 - 30% on desktop */}
-            <motion.div
-              key={industries[1].title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className='relative group md:col-span-4'
-            >
-              <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/5 to-[#99D5C9]/5 rounded-2xl transform transition-all duration-300 group-hover:scale-[1.02]' />
-              <Link
-                href={industries[1].link}
-                className='relative block bg-white rounded-2xl p-6 shadow-lg transition-all duration-300 group-hover:shadow-xl border border-gray-100/50 h-full'
-              >
-                <div className='flex flex-col h-full'>
-                  <div className='flex items-start gap-4'>
-                    <div className='w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0'>
-                      <div className='w-full h-full rounded-xl bg-white flex items-center justify-center'>
-                        {React.createElement(industries[1].icon, {
-                          className: 'w-6 h-6 text-[#678FCA]',
-                        })}
-                      </div>
-                    </div>
-                    <div className='flex-1'>
-                      <h3 className='text-lg lg:text-xl font-semibold mb-2 text-gray-900 group-hover:text-[#678FCA] transition-colors'>
-                        {industries[1].title}
-                      </h3>
-                      <p className='text-gray-600 mb-3 text-sm lg:text-base'>
-                        {industries[1].description}
-                      </p>
-                    </div>
-                  </div>
-                  <div className='mt-auto flex items-center text-[#678FCA] font-medium group/link text-sm'>
-                    Learn More
-                    <ChevronRight className='ml-1 w-4 h-4 transition-transform group-hover/link:translate-x-1' />
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
-          </div>
-
-          {/* Bottom Row: Card 3 & 4 - 50/50 on desktop */}
-          <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
-            {industries.slice(2).map((industry, index) => (
-              <motion.div
-                key={industry.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: (index + 2) * 0.1 }}
-                className='relative group'
-              >
-                <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/5 to-[#99D5C9]/5 rounded-2xl transform transition-all duration-300 group-hover:scale-[1.02]' />
-                <Link
-                  href={industry.link}
-                  className='relative block h-full bg-white rounded-2xl p-6 shadow-lg transition-all duration-300 group-hover:shadow-xl border border-gray-100/50'
-                >
-                  <div className='flex flex-col h-full'>
-                    <div className='flex items-start gap-4'>
-                      <div className='w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0'>
-                        <div className='w-full h-full rounded-xl bg-white flex items-center justify-center'>
-                          {React.createElement(industry.icon, {
-                            className: 'w-6 h-6 text-[#678FCA]',
-                          })}
-                        </div>
-                      </div>
-                      <div className='flex-1'>
-                        <h3 className='text-lg lg:text-xl font-semibold mb-2 text-gray-900 group-hover:text-[#678FCA] transition-colors'>
-                          {industry.title}
-                        </h3>
-                        <p className='text-gray-600 mb-3 text-sm lg:text-base'>
-                          {industry.description}
-                        </p>
-                      </div>
-                    </div>
-                    <div className='mt-auto flex items-center text-[#678FCA] font-medium group/link text-sm'>
-                      Learn More
-                      <ChevronRight className='ml-1 w-4 h-4 transition-transform group-hover/link:translate-x-1' />
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+          ))}
         </div>
 
         {/* Additional Industries Slider */}
@@ -294,14 +213,14 @@ export const IndustrySolutions = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className='mt-12 text-center'
+          className="mt-12 text-center"
         >
           <Link
-            href='/contact'
-            className='inline-flex items-center bg-[#678FCA] text-white px-8 py-4 rounded-full hover:bg-[#678FCA]/90 transition-all group'
+            href="/contact"
+            className="inline-flex items-center bg-[#678FCA] text-white px-8 py-4 rounded-full hover:bg-[#678FCA]/90 transition-all group"
           >
             Choose the Solution That Fits Your Fleet
-            <ChevronRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
+            <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>
       </div>

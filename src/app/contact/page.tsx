@@ -273,6 +273,54 @@ const Contact = () => {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
 
+      {/* Multi-Step Form Section */}
+
+      <section className="py-24 bg-gray-50/50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50/80" />
+        <div className="absolute inset-0 hero-pattern opacity-10" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-3xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="inline-flex items-center px-4 py-2 rounded-full bg-[#678FCA]/10 text-[#678FCA] text-sm font-medium mb-6"
+              >
+                <Sparkles className="w-4 h-4 mr-2" />
+                Get Started
+              </motion.div>
+
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-3xl sm:text-4xl font-bold mb-4"
+              >
+                Get a Quote
+              </motion.h2>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-lg text-gray-600"
+              >
+                Tell us about your fleet tracking needs
+              </motion.p>
+            </motion.div>
+
+            <MultiStepForm />
+          </div>
+        </div>
+      </section>
+
       {/* Quick Contact Information */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-[#678FCA]/[0.02] hero-pattern opacity-50" />
@@ -390,54 +438,6 @@ const Contact = () => {
                 </div>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Multi-Step Form Section */}
-
-      <section className="py-24 bg-gray-50/50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50/80" />
-        <div className="absolute inset-0 hero-pattern opacity-10" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-3xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="inline-flex items-center px-4 py-2 rounded-full bg-[#678FCA]/10 text-[#678FCA] text-sm font-medium mb-6"
-              >
-                <Sparkles className="w-4 h-4 mr-2" />
-                Get Started
-              </motion.div>
-
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="text-3xl sm:text-4xl font-bold mb-4"
-              >
-                Get a Quote
-              </motion.h2>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="text-lg text-gray-600"
-              >
-                Tell us about your fleet tracking needs
-              </motion.p>
-            </motion.div>
-
-            <MultiStepForm />
           </div>
         </div>
       </section>
@@ -751,7 +751,7 @@ const Contact = () => {
                   Join thousands of fleet managers who trust RidesIQ
                 </motion.p>
 
-                <motion.div
+                {/* <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -773,7 +773,7 @@ const Contact = () => {
                     Talk to an Expert
                     <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
-                </motion.div>
+                </motion.div> */}
               </div>
             </div>
           </div>

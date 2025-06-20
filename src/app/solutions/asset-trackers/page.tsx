@@ -114,7 +114,7 @@ const Tracking = () => {
     {
       id: 'asset',
       name: 'Asset GPS Tracker',
-      image: '/assets/devices/asset_tracker.png',
+      image: '/assets/devices/AssetTrackerNoBKGD.png',
       imageProps: {
         width: 300,
         height: 300,
@@ -160,7 +160,7 @@ const Tracking = () => {
     {
       id: 'hardwired',
       name: 'Hard-Wired Fleet Tracker',
-      image: '/assets/devices/hardware_tracker.svg',
+      image: '/assets/devices/HardWiredNoBKGD.png',
       imageProps: {
         width: 280,
         height: 280,
@@ -208,7 +208,7 @@ const Tracking = () => {
     {
       id: 'obd',
       name: 'OBD Plug-and-Play GPS Tracker',
-      image: '/assets/devices/OBD_tracker.png',
+      image: '/assets/devices/OBDNoBKGD.png',
       imageProps: {
         width: 250,
         height: 250,
@@ -339,7 +339,9 @@ const Tracking = () => {
                   transition={{ duration: 0.6, delay: 0.4 }}
                   className="text-xl text-white/90 leading-relaxed"
                 >
-                  Reliable hardwired GPS tracker for real-time vehicle location, driver behavior monitoring, and predictive maintenance—built for trucks, logistics, and enterprise fleets.
+                  Reliable hardwired GPS tracker for real-time vehicle location,
+                  driver behavior monitoring, and predictive maintenance—built
+                  for trucks, logistics, and enterprise fleets.
                 </motion.h2>
 
                 <motion.div
@@ -415,7 +417,7 @@ const Tracking = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className='hidden lg:block relative'
             > */}
-              {/* <div className='relative'>
+            {/* <div className='relative'>
                 <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6' />
                 <Image
                   src="/assets/homepage/3.png"
@@ -426,8 +428,8 @@ const Tracking = () => {
                 />
               </div> */}
 
-              {/* Floating Stats */}
-              {/* <motion.div
+            {/* Floating Stats */}
+            {/* <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
@@ -1080,11 +1082,10 @@ const Tracking = () => {
                       className="relative"
                     >
                       <div className="relative mt-20 max-w-md mx-auto lg:max-w-none">
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6" />
+                        {/* <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6' /> */}
                         <Image
-                          src={`/assets/fleet-management/5.png`}
+                          src={`/assets/devices/OBDNoBKGD.png`}
                           alt={products[0].name}
-                          className="relative z-10 rounded-3xl shadow-2xl transform -rotate-3 transition-transform duration-500 hover:rotate-0 w-full"
                           width={800}
                           height={800}
                           priority
@@ -1092,7 +1093,7 @@ const Tracking = () => {
                       </div>
 
                       {/* Certification Badge */}
-                      <motion.div
+                      {/* <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
@@ -1112,7 +1113,7 @@ const Tracking = () => {
                             </div>
                           </div>
                         </div>
-                      </motion.div>
+                      </motion.div> */}
                     </motion.div>
                   </div>
                 </div>
