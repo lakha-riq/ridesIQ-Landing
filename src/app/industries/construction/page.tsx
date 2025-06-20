@@ -185,7 +185,7 @@ const constructionData: IndustryData = {
     author: 'Michael Chen',
     role: 'Operations Director',
     company: 'BuildTech Construction',
-    image: '/assets/fleet-management/1.png',
+    image: '/assets/headshots/Michael_Chen Headshot.png',
   },
   products: [
     {

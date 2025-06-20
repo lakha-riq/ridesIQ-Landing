@@ -184,7 +184,7 @@ const fleetManagementData: IndustryData = {
     author: 'Sarah Johnson',
     role: 'Fleet Operations Lead',
     company: 'National Freight Group',
-    image: '/assets/fleet-management/1.png',
+    image: '/assets/headshots/Sarah_Johnson Headshot.png',
   },
   products: [
     {

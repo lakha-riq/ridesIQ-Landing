@@ -183,7 +183,7 @@ const foodDeliveryData: IndustryData = {
     author: 'David Kim',
     role: 'Operations Director',
     company: 'FastFood Express',
-    image: '/assets/food-delivery/testimonial.png',
+    image: '/assets/headshots/David_Kim Headshot.png',
   },
   products: [
     {

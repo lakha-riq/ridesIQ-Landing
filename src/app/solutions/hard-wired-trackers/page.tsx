@@ -1252,7 +1252,7 @@ const Tracking = () => {
             </p>
             <Link href="/contact">
               <button className="bg-[#678FCA] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#678FCA]/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group">
-                Contact Support
+                Contact a Specialist
                 <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </Link>
@@ -1311,13 +1311,13 @@ const Tracking = () => {
                   {/* Tag Buttons */}
                   <div className="flex flex-wrap justify-center gap-4">
                     <div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">
-                      Fleet Tracking
+                      #FleetTracking
                     </div>
                     <div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">
-                      Cross-Border Coverage
+                      #Cross-BorderCoverage
                     </div>
                     <div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">
-                      Real-Time Alerts
+                      #Real-TimeAlerts
                     </div>
                   </div>
                 </motion.div>
