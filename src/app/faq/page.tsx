@@ -49,43 +49,43 @@ const faqCategories: FAQCategory[] = [
           'The OBD is compatible with most vehicles manufactured that have a standard OBD-II port. For vehicles without an OBD-II port, alternative solutions are available.',
       },
       {
-        id: '',
+        id: 'ev-hybrid-compatibility',
         question: 'Can the tracker be used in electric or hybrid vehicles?',
         answer:
           'Yes, the tracker is compatible with most electric and hybrid vehicles equipped with an OBD-II port.',
       },
       {
-        id: '',
+        id: 'tamper-alert',
         question: 'What happens if the tracker is unplugged?',
         answer:
-          "If the tracker is disconnected, you'll receive an immediate tamper alert. Additionally, depending on the device, certain ones have backup battery that allows it to continue transmitting data for a limited time.",
+          "If the tracker is disconnected, you'll receive an immediate tamper alert. Additionally, depending on the device, certain ones have a backup battery that allows it to continue transmitting data for a limited time.",
       },
       {
-        id: '',
+        id: 'transfer-between-vehicles',
         question: 'Can I transfer the tracker between vehicles?',
         answer:
           'Yes, the plug-and-play nature of the tracker allows for easy transfer between vehicles. However, ensure that the new vehicle is compatible and update the vehicle information in your fleet management system.',
       },
       {
-        id: '',
+        id: 'what-is-hardwired-gps',
         question: 'What is a hardwired GPS tracker?',
         answer:
           "A hardwired GPS tracker is a device permanently installed into a vehicle's electrical system, providing continuous power and real-time tracking without relying on batteries.​",
       },
       {
-        id: '',
+        id: 'hardwired-gps-installation',
         question: 'How is a hardwired GPS tracker installed?',
         answer:
           "Installation involves connecting the device directly to the vehicle's power source, typically by wiring it to the ignition and battery. It's recommended to have a professional technician perform the installation to ensure accuracy and safety.",
       },
       {
-        id: '',
+        id: 'hardwired-gps-placement',
         question: 'Where is the best place to install the tracker?',
         answer:
           'The optimal location is under the dashboard, away from metal obstructions, to ensure strong GPS signal reception and to keep the device concealed.​',
       },
       {
-        id: '',
+        id: 'can-i-install-myself',
         question: 'Can I install the tracker myself?',
         answer:
           'While self-installation is possible for those with automotive electrical knowledge, professional installation is advised to guarantee proper functionality and to avoid potential vehicle system interference.',
@@ -399,14 +399,9 @@ const faqCategories: FAQCategory[] = [
 const FAQ = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [activeQuestions, setActiveQuestions] = useState<string[]>([]);
-
-  const toggleQuestion = (questionId: string) => {
-    setActiveQuestions((prev) =>
-      prev.includes(questionId)
-        ? prev.filter((id) => id !== questionId)
-        : [...prev, questionId]
-    );
+  const [activeQuestions, setActiveQuestions] = useState<string | null>(null);
+  const toggleQuestion = (id: string) => {
+    setActiveQuestions((prev) => (prev === id ? null : id));
   };
 
   const filteredCategories = faqCategories
@@ -421,32 +416,32 @@ const FAQ = () => {
     .filter((category) => category.questions.length > 0);
 
   return (
-    <div className='min-h-screen bg-white'>
-      <Navigation />
+    <div className="min-h-screen bg-white">
+      <Navigation customColor="text-white" />
 
       {/* Hero Section */}
-      <section className='relative min-h-[40vh] flex items-center justify-center overflow-hidden'>
+      <section className="relative min-h-[40vh] flex items-center justify-center overflow-hidden">
         {/* Background & Overlays */}
-        <div className='absolute inset-0'>
-          <div className='absolute inset-0 bg-gradient-to-r from-gray-900/95 to-gray-900/70' />
-          <div className='absolute inset-0 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:32px_32px] opacity-10' />
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 to-gray-900/70" />
+          <div className="absolute inset-0 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:32px_32px] opacity-10" />
         </div>
 
-        <div className='relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24'>
-          <div className='max-w-3xl mx-auto text-center'>
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="max-w-3xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className='space-y-8'
+              className="space-y-8"
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-white text-sm font-medium'
+                className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-white text-sm font-medium"
               >
-                <HelpCircle className='w-4 h-4 mr-2' />
+                <HelpCircle className="w-4 h-4 mr-2" />
                 Help Center
               </motion.div>
 
@@ -454,10 +449,10 @@ const FAQ = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className='text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]'
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]"
               >
-                <span className='text-white'>Frequently Asked </span>
-                <span className='bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent'>
+                <span className="text-white">Frequently Asked </span>
+                <span className="bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent">
                   Questions
                 </span>
               </motion.h1>
@@ -466,7 +461,7 @@ const FAQ = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className='text-xl text-white/90 leading-relaxed'
+                className="text-xl text-white/90 leading-relaxed"
               >
                 {
                   "	Find answers to common questions about RidesIQ's fleet tracking solutions"
@@ -477,21 +472,21 @@ const FAQ = () => {
         </div>
 
         {/* Hero Bottom Gradient */}
-        <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent' />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
 
       {/* Search Section */}
-      <section className='py-12 relative'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-3xl mx-auto'>
-            <div className='relative'>
-              <Search className='absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400' />
+      <section className="py-12 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input
-                type='text'
-                placeholder='Search questions...'
+                type="text"
+                placeholder="Search questions..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className='w-full pl-12 pr-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#678FCA] focus:border-transparent'
+                className="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#678FCA] focus:border-transparent"
               />
             </div>
           </div>
@@ -499,16 +494,16 @@ const FAQ = () => {
       </section>
 
       {/* FAQ Categories */}
-      <section className='py-12 relative'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-3xl mx-auto'>
+      <section className="py-12 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
             {filteredCategories.map((category) => (
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className='mb-8'
+                className="mb-8"
               >
                 <button
                   onClick={() =>
@@ -516,13 +511,13 @@ const FAQ = () => {
                       activeCategory === category.id ? null : category.id
                     )
                   }
-                  className='w-full flex items-center justify-between bg-gray-50 p-6 rounded-xl hover:bg-gray-100 transition-colors'
+                  className="w-full flex items-center justify-between bg-gray-50 p-6 rounded-xl hover:bg-gray-100 transition-colors"
                 >
-                  <div className='flex items-center gap-4'>
-                    <div className='w-12 h-12 rounded-xl bg-[#678FCA]/10 flex items-center justify-center'>
-                      <category.icon className='w-6 h-6 text-[#678FCA]' />
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-[#678FCA]/10 flex items-center justify-center">
+                      <category.icon className="w-6 h-6 text-[#678FCA]" />
                     </div>
-                    <h2 className='text-xl font-semibold text-gray-900'>
+                    <h2 className="text-xl font-semibold text-gray-900">
                       {category.title}
                     </h2>
                   </div>
@@ -543,31 +538,31 @@ const FAQ = () => {
                       height: 'auto',
                       transition: { duration: 0.3 },
                     }}
-                    className='mt-4'
+                    className="mt-4"
                   >
                     <button
                       onClick={() => toggleQuestion(question.id)}
-                      className='w-full bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-gray-100'
+                      className="w-full bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-gray-100"
                     >
-                      <div className='flex items-center justify-between'>
-                        <h3 className='text-lg font-semibold text-gray-900 text-left'>
+                      <div className="flex items-center justify-between">
+                        <h3 className="text-lg font-semibold text-gray-900 text-left">
                           {question.question}
                         </h3>
-                        {activeQuestions.includes(question.id) ? (
-                          <X className='w-5 h-5 text-gray-500' />
+                        {activeQuestions === question.id ? (
+                          <X className="w-5 h-5 text-gray-500" />
                         ) : (
-                          <ChevronDown className='w-5 h-5 text-gray-500' />
+                          <ChevronDown className="w-5 h-5 text-gray-500" />
                         )}
                       </div>
 
-                      {activeQuestions.includes(question.id) && (
+                      {activeQuestions === question.id && (
                         <motion.div
                           initial={{ opacity: 0, y: -10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.2 }}
-                          className='mt-4 text-left'
+                          className="mt-4 text-left"
                         >
-                          <p className='text-gray-600'>{question.answer}</p>
+                          <p className="text-gray-600">{question.answer}</p>
                         </motion.div>
                       )}
                     </button>
@@ -580,21 +575,21 @@ const FAQ = () => {
       </section>
 
       {/* CTA Section */}
-      <section className='py-24'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#678FCA] via-[#99D5C9] to-[#678FCA] shadow-2xl'>
-            <div className='absolute inset-0'>
-              <div className='absolute inset-0 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] opacity-10' />
-              <div className='absolute inset-0 bg-gradient-to-br from-black/5 to-transparent' />
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#678FCA] via-[#99D5C9] to-[#678FCA] shadow-2xl">
+            <div className="absolute inset-0">
+              <div className="absolute inset-0 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] opacity-10" />
+              <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent" />
             </div>
 
-            <div className='relative px-6 py-20 sm:px-12 sm:py-28'>
-              <div className='max-w-3xl mx-auto text-center'>
+            <div className="relative px-6 py-20 sm:px-12 sm:py-28">
+              <div className="max-w-3xl mx-auto text-center">
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className='text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8'
+                  className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8"
                 >
                   Still Have Questions?
                 </motion.h2>
@@ -604,7 +599,7 @@ const FAQ = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 }}
-                  className='text-xl text-white/90 mb-12'
+                  className="text-xl text-white/90 mb-12"
                 >
                   Our support team is here to help you 24/7
                 </motion.p>
@@ -614,14 +609,14 @@ const FAQ = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
-                  className='flex flex-col sm:flex-row gap-4 justify-center'
+                  className="flex flex-col sm:flex-row gap-4 justify-center"
                 >
                   <Link
-                    href='/contact'
-                    className='bg-white text-[#678FCA] px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/90 transition-all duration-300 transform hover:scale-105 flex items-center justify-center group'
+                    href="/contact"
+                    className="bg-white text-[#678FCA] px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/90 transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"
                   >
                     Contact Support
-                    <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </motion.div>
               </div>

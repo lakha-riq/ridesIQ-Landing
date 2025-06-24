@@ -1081,10 +1081,10 @@ const Tracking = () => {
                       viewport={{ once: true }}
                       className="relative"
                     >
-                      <div className="relative mt-20 max-w-md mx-auto lg:max-w-none">
+                      <div className="relative mb-40 max-w-lg mx-auto lg:max-w-none">
                         {/* <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6' /> */}
                         <Image
-                          src={`/assets/devices/OBDNoBKGD.png`}
+                          src={`/assets/devices/AssetTrackerNoBKGD.png`}
                           alt={products[0].name}
                           width={800}
                           height={800}

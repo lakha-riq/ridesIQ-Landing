@@ -259,18 +259,17 @@ export const MultiStepForm: React.FC = () => {
 
   const renderNavigationButtons = () => (
     <div className="flex justify-between items-center mt-8">
-      <button
-        onClick={handleBack}
-        disabled={step === 1}
-        className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all ${
-          step === 1
-            ? 'text-gray-400 cursor-not-allowed'
-            : 'text-[#678FCA] hover:bg-[#678FCA]/10'
-        }`}
-      >
-        <ChevronLeft className="w-4 h-4" />
-        Back
-      </button>
+      {step >= 2 ? (
+        <button
+          onClick={handleBack}
+          className="flex items-center gap-2 text-[#678FCA] hover:bg-[#678FCA]/10 px-6 py-3 rounded-full transition-all"
+        >
+          <ChevronLeft className="w-4 h-4" />
+          Back
+        </button>
+      ) : (
+        <div />
+      )}
 
       {step < 6 ? (
         <button

@@ -119,43 +119,39 @@ const Tracking = () => {
         className: 'object-contain p-4',
       },
       specs: {
-              installation: {
-                icon: Wrench,
-                value: 'Plug & Play GPS Installation',
-                description:
-                  'Connects directly to your vehicle’s OBD-II port—no tools needed.',
-              },
-              power: {
-                icon: Zap,
-                value: 'Vehicle-Powered via OBD-II',
-                description:
-                  'Runs directly off the vehicle’s power source.',
-              },
-              bestFor: {
-                icon: Truck,
-                value: 'Cars & Light Commercial Vehicles',
-                description:
-                  'Ideal for small fleets, service vehicles, and daily-use cars.',
-              },
-              battery: {
-                icon: Battery,
-                value: 'No Internal Battery Required',
-                description:
-                  'Draws constant power from the OBD port.',
-              },
-              connectivity: {
-                icon: Wifi,
-                value: 'LTE Cat M1/NB1 Connectivity',
-                description:
-                  'Reliable real-time tracking via cellular LTE.',
-              },
-              features: {
-                icon: Shield,
-                value: 'Motion & Impact Detection',
-                description:
-                  'Detects sudden movement, braking, or collisions.',
-              },
-            },
+        installation: {
+          icon: Wrench,
+          value: 'Plug & Play GPS Installation',
+          description:
+            'Connects directly to your vehicle’s OBD-II port—no tools needed.',
+        },
+        power: {
+          icon: Zap,
+          value: 'Vehicle-Powered via OBD-II',
+          description: 'Runs directly off the vehicle’s power source.',
+        },
+        bestFor: {
+          icon: Truck,
+          value: 'Cars & Light Commercial Vehicles',
+          description:
+            'Ideal for small fleets, service vehicles, and daily-use cars.',
+        },
+        battery: {
+          icon: Battery,
+          value: 'No Internal Battery Required',
+          description: 'Draws constant power from the OBD port.',
+        },
+        connectivity: {
+          icon: Wifi,
+          value: 'LTE Cat M1/NB1 Connectivity',
+          description: 'Reliable real-time tracking via cellular LTE.',
+        },
+        features: {
+          icon: Shield,
+          value: 'Motion & Impact Detection',
+          description: 'Detects sudden movement, braking, or collisions.',
+        },
+      },
     },
     {
       id: 'hardwired',
@@ -167,43 +163,37 @@ const Tracking = () => {
         className: 'object-contain p-4',
       },
       specs: {
-              installation: {
-                icon: Wrench,
-                value: 'Professional Hardwired Installation',
-                description:
-                  'Secure, permanent install for commercial fleets.',
-              },
-              power: {
-                icon: Zap,
-                value: '9–100V Direct Vehicle Power',
-                description:
-                  'Compatible with trucks, buses, and EVs.',
-              },
-              bestFor: {
-                icon: Truck,
-                value: 'Heavy-Duty Fleet Tracking',
-                description:
-                  'Ideal for trucking, logistics, and large vehicles.',
-              },
-              battery: {
-                icon: Battery,
-                value: 'Integrated Backup Battery',
-                description:
-                  'Keeps tracking active during power loss or tampering.',
-              },
-              connectivity: {
-                icon: Wifi,
-                value: '4G LTE + GPS + GSM',
-                description:
-                  'Reliable real-time tracking across networks.',
-              },
-              features: {
-                icon: Shield,
-                value: 'Advanced Fleet Security',
-                description:
-                  'Tamper, crash, and geofence alerts with OTA updates.',
-              },
-            },
+        installation: {
+          icon: Wrench,
+          value: 'Professional Hardwired Installation',
+          description: 'Secure, permanent install for commercial fleets.',
+        },
+        power: {
+          icon: Zap,
+          value: '9–100V Direct Vehicle Power',
+          description: 'Compatible with trucks, buses, and EVs.',
+        },
+        bestFor: {
+          icon: Truck,
+          value: 'Heavy-Duty Fleet Tracking',
+          description: 'Ideal for trucking, logistics, and large vehicles.',
+        },
+        battery: {
+          icon: Battery,
+          value: 'Integrated Backup Battery',
+          description: 'Keeps tracking active during power loss or tampering.',
+        },
+        connectivity: {
+          icon: Wifi,
+          value: '4G LTE + GPS + GSM',
+          description: 'Reliable real-time tracking across networks.',
+        },
+        features: {
+          icon: Shield,
+          value: 'Advanced Fleet Security',
+          description: 'Tamper, crash, and geofence alerts with OTA updates.',
+        },
+      },
     },
     {
       id: 'asset',
@@ -215,43 +205,40 @@ const Tracking = () => {
         className: 'object-contain p-4',
       },
       specs: {
-              installation: {
-                icon: Wrench,
-                value: 'Compact & Portable Design',
-                description:
-                  'Small form factor, ideal for trailers and containers.',
-              },
-              power: {
-                icon: Zap,
-                value: '2400mAh Battery Powered',
-                description:
-                  'Built-in 2400mAh battery for extended tracking.',
-              },
-              bestFor: {
-                icon: Box,
-                value: 'Equipment & Asset Monitoring',
-                description:
-                  'Great for trailers, containers, and non-powered assets.',
-              },
-              battery: {
-                icon: Battery,
-                value: '3-Year Battery Life',
-                description:
-                  'Up to 3 years with variable frequency.',
-              },
-              connectivity: {
-                icon: Wifi,
-                value: 'LTE + 2G/3G Backup',
-                description:
-                  'Reliable tracking with fallback coverage in rural zones.',
-              },
-              features: {
-                icon: Shield,
-                value: 'Weatherproof & Rugged',
-                description:
-                  'Waterproof and built to withstand harsh outdoor conditions.',
-              },
-            },
+        installation: {
+          icon: Wrench,
+          value: 'Compact & Portable Design',
+          description: 'Small form factor, ideal for trailers and containers.',
+        },
+        power: {
+          icon: Zap,
+          value: '2400mAh Battery Powered',
+          description: 'Built-in 2400mAh battery for extended tracking.',
+        },
+        bestFor: {
+          icon: Box,
+          value: 'Equipment & Asset Monitoring',
+          description:
+            'Great for trailers, containers, and non-powered assets.',
+        },
+        battery: {
+          icon: Battery,
+          value: '3-Year Battery Life',
+          description: 'Up to 3 years with variable frequency.',
+        },
+        connectivity: {
+          icon: Wifi,
+          value: 'LTE + 2G/3G Backup',
+          description:
+            'Reliable tracking with fallback coverage in rural zones.',
+        },
+        features: {
+          icon: Shield,
+          value: 'Weatherproof & Rugged',
+          description:
+            'Waterproof and built to withstand harsh outdoor conditions.',
+        },
+      },
     },
   ];
 
@@ -1014,8 +1001,7 @@ const Tracking = () => {
                         icon: Database,
                         name: 'Software Compatibility',
                         value: 'Universal Telematics Integration',
-                        description:
-                          'Works seamlessly with API integrations.',
+                        description: 'Works seamlessly with API integrations.',
                       },
                       {
                         icon: Laptop,
@@ -1101,7 +1087,7 @@ const Tracking = () => {
                       viewport={{ once: true }}
                       className="relative"
                     >
-                      <div className='relative mt-20 max-w-md mx-auto lg:max-w-none'>
+                      <div className="relative mb-40 max-w-md mx-auto lg:max-w-none">
                         {/* <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6' /> */}
                         <Image
                           src={`/assets/devices/OBDNoBKGD.png`}
@@ -1148,10 +1134,10 @@ const Tracking = () => {
             viewport={{ once: true }}
             className="mt-16 text-center"
           >
-            <Link href='/contact'>
-              <button className='bg-[#678FCA] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#678FCA]/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group'>
+            <Link href="/contact">
+              <button className="bg-[#678FCA] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#678FCA]/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group">
                 Contact a Specialist
-                <ChevronRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </Link>
           </motion.div>
