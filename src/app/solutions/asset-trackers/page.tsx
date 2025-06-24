@@ -291,9 +291,9 @@ const Tracking = () => {
         {/* Background Image & Overlays */}
         <div className="absolute inset-0">
           <Image
-            src="/assets/fleet-management/RidesIQIQ120.jpg"
-            alt="GPS Tracking Device"
-            className="w-full h-full object-cover"
+            src='/assets/universal/installation.jpg'
+            alt='GPS Tracking Device'
+            className='w-full h-full object-cover'
             width={1920}
             height={1080}
           />
@@ -1127,10 +1127,12 @@ const Tracking = () => {
             viewport={{ once: true }}
             className="mt-16 text-center"
           >
-            <button className="bg-[#678FCA] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#678FCA]/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group">
-              Download Full Specifications
-              <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            <Link href="/contact">
+              <button className="bg-[#678FCA] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#678FCA]/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto group">
+                Contact a Specialist
+                <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -1283,13 +1285,13 @@ const Tracking = () => {
                   {/* Tag Buttons */}
                   <div className="flex flex-wrap justify-center gap-4">
                     <div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">
-                      Fleet Tracking
+                      #FleetTracking
                     </div>
                     <div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">
-                      Real Insights
+                      #RealInsights
                     </div>
                     <div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">
-                      Compliance
+                      #Compliance
                     </div>
                   </div>
                 </motion.div>

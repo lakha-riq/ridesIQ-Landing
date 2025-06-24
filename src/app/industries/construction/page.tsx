@@ -110,7 +110,7 @@ const constructionData: IndustryData = {
   subtitle: 'Construction Fleet GPS Tracking',
   description:
     'Track heavy machinery, vehicles, and on-site equipment in real-time with RidesIQ’s rugged GPS tracking solutions built for the construction industry.',
-  heroImage: '/assets/fleet-management/RidesIQIQ120.jpg',
+  heroImage: '/assets/universal/installation.jpg',
   challenges: [
     {
       icon: Clock,
@@ -185,7 +185,7 @@ const constructionData: IndustryData = {
     author: 'Michael Chen',
     role: 'Operations Director',
     company: 'BuildTech Construction',
-    image: '/assets/fleet-management/1.png',
+    image: '/assets/headshots/Michael_Chen Headshot.png',
   },
   products: [
     {

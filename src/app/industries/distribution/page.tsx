@@ -105,11 +105,99 @@ const distributionKeyFeatures: KeyFeature[] = [
 ];
 
 const distributionData: IndustryData = {
-  name: ' GPS Tracking for Construction Fleets',
-  subtitle: 'Construction Fleet GPS Tracking',
+	name: " GPS Tracking for Auto Dealerships",
+	subtitle: "Dealership Vehicle Tracking",
+	description: "Protect your lot, reduce vehicle misuse, and streamline test-drive tracking with GPS solutions designed for dealerships. Get real-time visibility across every vehicle—on or off the lot.",
+	heroImage: "/assets/universal/installation.jpg",
+	challenges: [
+		{
+			icon: Clock,
+			title: "Lot Transfers & Inventory Audits",
+			description: "Manual tracking of transfers and off-site storage vehicles creates delays and miscounts.",
+		},
+		{
+			icon: AlertCircle,
+			title: "Unauthorized/Off-Hour Use",
+			description: "Prevent misuse with ignition alerts, after-hours movement notifications, and custom driving rules.",
+		},
+		{
+			icon: Settings2,
+			title: "Stolen Vehicle Risk",
+			description: "Dealerships lose thousands each year to theft—often after hours or during extended test drives.",
+		},
+	],
+	solutions: [
+		{
+			icon: Warehouse,
+			title: "Multi-Lot Tracking",
+			description: "Monitor vehicle movement across all locations and reduce manual data entry with automatic logging.",
+		},
+		{
+			icon: Shield,
+			title: "Demo Vehicle Monitoring",
+			description: "Track test drives, limit use zones, and get real-time alerts for aggressive driving or off-route activity.",
+		},
+		{
+			icon: MapPin,
+			title: "Theft Recovery & Alerts",
+			description: "Get instant tamper alerts, disable ignition remotely, and increase recovery speed with precision tracking.",
+		},
+	],
+	stats: [
+		{
+			icon: Box,
+			value: 40,
+			suffix: "k+",
+			label: "Vehicles Tracked",
+		},
+		{
+			icon: Timer,
+			value: 96,
+			suffix: "%",
+			label: "On-Time Rate",
+		},
+		{
+			icon: TrendingUp,
+			value: 2.7,
+			suffix: "x",
+			label: "Efficiency Gain",
+		},
+		{
+			icon: Target,
+			value: 99.8,
+			suffix: "%",
+			label: "GPS Accuracy",
+		},
+	],
+	testimonial: {
+		quote: "RidesIQ gives us complete visibility over our lot and loaner fleet. We’ve reduced test-drive misuse, recovered a stolen demo unit, and no longer waste time doing manual lot walks.",
+		author: "Jessica Ramirez",
+		role: "Fleet Operations Manager",
+		company: "Horizon Auto Group",
+		image: "/assets/fleet-management/3.png",
+	},
+	products: [
+		{
+			title: "Hardwired GPS Tracker",
+			image: "/assets/devices/HardWiredNoBKGD.png",
+			features: ["Installed & hidden from drivers", "Real-time GPS via direct power", "Real-time GPS via direct power", "Ideal for long-term use"],
+		},
+		{
+			title: "OBD Plug & Play Tracker",
+			image: "/assets/devices/OBDNoBKGD.png",
+			features: ["Installs in seconds (OBD-II)", "Tracks GPS, speed & diagnostics", "Best for short-term rentals", "Swaps easily between vehicles"],
+		},
+		{
+			title: "Asset Tracker (SVR)",
+			image: "/assets/devices/AssetTrackerNoBKGD.png",
+			features: ["Battery-powered with long life", "Auto-activates if main tracker is removed", "Weatherproof & discreet", "Acts as backup theft recovery"],
+		},
+	],
+  name: ' GPS Tracking for Auto Dealerships',
+  subtitle: 'Dealership Vehicle Tracking',
   description:
-    'Track heavy machinery, vehicles, and on-site equipment in real-time with RidesIQ’s rugged GPS tracking solutions built for the construction industry.',
-  heroImage: '/assets/fleet-management/RidesIQIQ120.jpg',
+    'Protect your lot, reduce vehicle misuse, and streamline test-drive tracking with GPS solutions designed for dealerships. Get real-time visibility across every vehicle—on or off the lot.',
+  heroImage: '/assets/universal/installation.jpg',
   challenges: [
     {
       icon: Clock,

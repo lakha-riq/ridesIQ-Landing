@@ -301,7 +301,7 @@ const Tracking = () => {
         {/* Background Image & Overlays */}
         <div className="absolute inset-0">
           <Image
-            src="/assets/fleet-management/RidesIQIQ120.jpg"
+            src="/assets/universal/installation.jpg"
             alt="GPS Tracking Device"
             className="w-full h-full object-cover"
             width={1920}
@@ -1294,13 +1294,13 @@ const Tracking = () => {
                   {/* Tag Buttons */}
                   <div className="flex flex-wrap justify-center gap-4">
                     <div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">
-                      Plug & Play Tracking
+                      #Plug&PlayTracking
                     </div>
                     <div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">
-                      Real-Time Insights
+                      #Real-TimeInsights
                     </div>
                     <div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">
-                      Engine Diagnostics
+                      #EngineDiagnostics
                     </div>
                   </div>
                 </motion.div>
