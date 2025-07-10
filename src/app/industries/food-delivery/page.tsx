@@ -105,9 +105,9 @@ const foodDeliveryKeyFeatures: KeyFeature[] = [
 
 const foodDeliveryData: IndustryData = {
   name: ' GPS Tracking for Food Delivery',
-  subtitle: 'Food Delivery GPS Tracking & Temperature Monitoring',
+  subtitle: 'Food Delivery GPS Tracking',
   description:
-    'Real-time vehicle tracking and temperature monitoring for food delivery fleets. Ensure on-time arrivals, route visibility, and compliance with cold chain standards.',
+    'Real-time vehicle tracking for food delivery fleets. Ensure on-time arrivals, route visibility, and compliance with cold chain standards.',
   heroImage: '/assets/universal/installation.jpg',
   challenges: [
     {

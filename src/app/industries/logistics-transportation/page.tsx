@@ -96,7 +96,7 @@ const fleetKeyFeatures: KeyFeature[] = [
   },
   {
     icon: LineChart,
-    title: 'Automate Toll Tracking & Billing',
+    title: 'Automate Toll Tracking',
     description:
       'Track toll charges in real time and automatically log costs per vehicle — no more missed charges or manual reconciliations.',
     stat: '100%',
@@ -115,7 +115,7 @@ const fleetManagementData: IndustryData = {
       icon: Shield,
       title: 'Vehicle Security',
       description:
-        'Risk of cargo theft and vehicle misuse during long-haul operations.',
+        'Risk of vehicle theft, misuse and driver abuse during long-haul operations.',
     },
     {
       icon: Globe,

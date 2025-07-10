@@ -204,7 +204,7 @@ function Home() {
               <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto lg:mx-0">
                 <div className="text-center lg:text-left">
                   <div className="text-3xl sm:text-4xl font-bold text-[#678FCA]">
-                    99%
+                    98.9%
                   </div>
                   <div className="text-sm sm:text-base text-gray-600 mt-1">
                     Uptime
@@ -212,7 +212,7 @@ function Home() {
                 </div>
                 <div className="text-center lg:text-left">
                   <div className="text-3xl sm:text-4xl font-bold text-[#678FCA]">
-                    5M+
+                    250M+
                   </div>
                   <div className="text-sm sm:text-base text-gray-600 mt-1">
                     Miles Tracked
@@ -220,7 +220,7 @@ function Home() {
                 </div>
                 <div className="text-center lg:text-left">
                   <div className="text-3xl sm:text-4xl font-bold text-[#678FCA]">
-                    25K+
+                    125K+
                   </div>
                   <div className="text-sm sm:text-base text-gray-600 mt-1">
                     Connected Vehicles
@@ -335,9 +335,9 @@ function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
             <StatsCard
               icon={Truck}
-              value={25}
+              value={125}
               suffix="k+"
-              label="Used by 250+ fleets across multiple continents"
+              label="Used by 1000+ fleets across multiple continents"
               index={0}
             />
             <StatsCard

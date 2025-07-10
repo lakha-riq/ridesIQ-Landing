@@ -171,13 +171,13 @@ export const IndustryTemplate: React.FC<IndustryTemplateProps> = ({
                   </div>
                   <div className='mt-4 grid grid-cols-3 gap-8'>
                     <div>
-                      <div className='text-3xl font-bold text-white'>98%</div>
+                      <div className='text-3xl font-bold text-white'>98.9%</div>
                       <div className='text-sm text-white/70'>
                         Customer Satisfaction
                       </div>
                     </div>
                     <div>
-                      <div className='text-3xl font-bold text-white'>50k+</div>
+                      <div className='text-3xl font-bold text-white'>25k+</div>
                       <div className='text-sm text-white/70'>
                         Active Vehicles
                       </div>
