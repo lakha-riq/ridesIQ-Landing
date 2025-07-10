@@ -1045,7 +1045,7 @@ const Tracking = () => {
                       {
                         icon: Battery,
                         name: 'Operating Temperature',
-                        value: '-20°C to 60°C',
+                        value: '-25°C to 60°C',
                         description:
                           'Reliable performance in extreme conditions',
                       },

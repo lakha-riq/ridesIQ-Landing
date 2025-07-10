@@ -185,8 +185,8 @@ function Home() {
               </h1>
 
               <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                Track every vehicle in real-time, automate toll billing, and
-                recover stolen rentals instantly—powered by RidesIQ’s
+                Track your vehicle in real-time, automate toll billing, and
+                recover stolen vehicles — powered by RidesIQ’s
                 plug-and-play GPS technology.
               </p>
 
@@ -220,7 +220,7 @@ function Home() {
                 </div>
                 <div className="text-center lg:text-left">
                   <div className="text-3xl sm:text-4xl font-bold text-[#678FCA]">
-                    50K+
+                    25K+
                   </div>
                   <div className="text-sm sm:text-base text-gray-600 mt-1">
                     Connected Vehicles
@@ -328,16 +328,16 @@ function Home() {
               viewport={{ once: true }}
               className="text-xl text-black max-w-2xl mx-auto"
             >
-              Trusted by fleets worldwide, RidesIQ delivers measurable impact
+              Trusted by worldwide various industry partners, RidesIQ delivers measurable impact.
             </motion.p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
             <StatsCard
               icon={Truck}
-              value={20}
+              value={25}
               suffix="k+"
-              label="Used by 500+ fleets across North America"
+              label="Used by 250+ fleets across multiple continents"
               index={0}
             />
             <StatsCard
