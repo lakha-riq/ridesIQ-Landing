@@ -400,6 +400,11 @@ const FAQ = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [activeQuestions, setActiveQuestions] = useState<string | null>(null);
+  const toggleCategory = (categoryId: string) => {
+    setActiveCategory((prev) => (prev === categoryId ? null : categoryId));
+    setActiveQuestions(null); // Reset active question when category changes
+  };
+
   const toggleQuestion = (id: string) => {
     setActiveQuestions((prev) => (prev === id ? null : id));
   };
@@ -496,78 +501,89 @@ const FAQ = () => {
       {/* FAQ Categories */}
       <section className="py-12 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto space-y-4">
             {filteredCategories.map((category) => (
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="mb-8"
+                className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
               >
+                {/* Category Header */}
                 <button
-                  onClick={() =>
-                    setActiveCategory(
-                      activeCategory === category.id ? null : category.id
-                    )
-                  }
-                  className="w-full flex items-center justify-between bg-gray-50 p-6 rounded-xl hover:bg-gray-100 transition-colors"
+                  onClick={() => toggleCategory(category.id)}
+                  className="w-full flex items-center justify-between p-6 hover:bg-gray-50 transition-colors"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-[#678FCA]/10 flex items-center justify-center">
-                      <category.icon className="w-6 h-6 text-[#678FCA]" />
+                    <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center">
+                      <category.icon className="w-6 h-6 text-blue-500" />
                     </div>
                     <h2 className="text-xl font-semibold text-gray-900">
                       {category.title}
                     </h2>
                   </div>
                   <ChevronDown
-                    className={`w-5 h-5 text-gray-500 transition-transform ${
+                    className={`w-5 h-5 text-gray-500 transition-transform duration-200 ${
                       activeCategory === category.id ? 'rotate-180' : ''
                     }`}
                   />
                 </button>
 
                 {/* Questions */}
-                {category.questions.map((question) => (
+                {activeCategory === category.id && (
                   <motion.div
-                    key={question.id}
                     initial={{ opacity: 0, height: 0 }}
-                    animate={{
-                      opacity: 1,
-                      height: 'auto',
-                      transition: { duration: 0.3 },
-                    }}
-                    className="mt-4"
+                    animate={{ opacity: 1, height: 'auto' }}
+                    transition={{ duration: 0.3 }}
+                    className="border-t border-gray-100"
                   >
-                    <button
-                      onClick={() => toggleQuestion(question.id)}
-                      className="w-full bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-gray-100"
-                    >
-                      <div className="flex items-center justify-between">
-                        <h3 className="text-lg font-semibold text-gray-900 text-left">
-                          {question.question}
-                        </h3>
-                        {activeQuestions === question.id ? (
-                          <X className="w-5 h-5 text-gray-500" />
-                        ) : (
-                          <ChevronDown className="w-5 h-5 text-gray-500" />
-                        )}
-                      </div>
+                    <div className="p-6 pt-0">
+                      <div className="space-y-3 mt-6">
+                        {category.questions.map((question) => (
+                          <motion.div
+                            key={question.id}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="border border-gray-200 rounded-lg overflow-hidden"
+                          >
+                            <button
+                              onClick={() => toggleQuestion(question.id)}
+                              className="w-full p-4 text-left hover:bg-gray-50 transition-colors"
+                            >
+                              <div className="flex items-center justify-between">
+                                <h3 className="font-medium text-gray-900 pr-4">
+                                  {question.question}
+                                </h3>
+                                {activeQuestions === question.id ? (
+                                  <X className="w-4 h-4 text-gray-500 flex-shrink-0" />
+                                ) : (
+                                  <ChevronDown className="w-4 h-4 text-gray-500 flex-shrink-0" />
+                                )}
+                              </div>
+                            </button>
 
-                      {activeQuestions === question.id && (
-                        <motion.div
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.2 }}
-                          className="mt-4 text-left"
-                        >
-                          <p className="text-gray-600">{question.answer}</p>
-                        </motion.div>
-                      )}
-                    </button>
+                            {activeQuestions === question.id && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: 'auto' }}
+                                transition={{ duration: 0.2 }}
+                                className="border-t border-gray-200 bg-gray-50"
+                              >
+                                <div className="p-4">
+                                  <p className="text-gray-600 leading-relaxed">
+                                    {question.answer}
+                                  </p>
+                                </div>
+                              </motion.div>
+                            )}
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
                   </motion.div>
-                ))}
+                )}
               </motion.div>
             ))}
           </div>
