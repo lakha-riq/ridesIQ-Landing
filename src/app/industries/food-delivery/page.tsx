@@ -66,6 +66,11 @@ type IndustryData = {
     tag2: string;
     tag3: string;
   };
+  trustStat: {
+    stat1: string;
+    stat2: string;
+    stat3: string;
+  };
 };
 
 const foodDeliveryKeyFeatures: KeyFeature[] = [
@@ -229,6 +234,11 @@ const foodDeliveryData: IndustryData = {
     tag2: '#Real-TimeGPS',
     tag3: '#FoodDeliveryInsights',
   },
+  trustStat: {
+    stat1: '98.9%',
+    stat2: '125k+',
+    stat3: '24/7',
+  },
 };
 
 const FoodDelivery = () => {
@@ -237,7 +247,7 @@ const FoodDelivery = () => {
       industry={foodDeliveryData}
       keyFeatures={
         <IndustryKeyFeatures
-          industryName='Food Delivery'
+          industryName="Food Delivery"
           features={foodDeliveryKeyFeatures}
         />
       }

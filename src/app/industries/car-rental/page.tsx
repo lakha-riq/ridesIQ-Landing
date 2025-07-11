@@ -64,6 +64,11 @@ type IndustryData = {
     tag2: string;
     tag3: string;
   };
+  trustStat: {
+    stat1: string;
+    stat2: string;
+    stat3: string;
+  };
 };
 const carRentalKeyFeatures = [
   {
@@ -225,6 +230,11 @@ const carRentalData: IndustryData = {
     tag2: '#FleetTracking',
     tag3: '#VehicleTelematics',
   },
+  trustStat: {
+    stat1: '98.9%',
+    stat2: '125k+',
+    stat3: '24/7',
+  },
 };
 
 const CarRental = () => {
@@ -233,7 +243,7 @@ const CarRental = () => {
       industry={carRentalData}
       keyFeatures={
         <IndustryKeyFeatures
-          industryName='Car Rental'
+          industryName="Car Rental"
           features={carRentalKeyFeatures}
         />
       }

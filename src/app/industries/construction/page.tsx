@@ -68,6 +68,11 @@ type IndustryData = {
     tag2: string;
     tag3: string;
   };
+  trustStat: {
+    stat1: string;
+    stat2: string;
+    stat3: string;
+  };
 };
 
 const constructionKeyFeatures: KeyFeature[] = [
@@ -230,6 +235,11 @@ const constructionData: IndustryData = {
     tag2: '#Fuel&Idle Reports',
     tag3: '#JobSiteGeofencing',
   },
+  trustStat: {
+    stat1: '98.9%',
+    stat2: '125k+',
+    stat3: '24/7',
+  },
 };
 
 const Construction = () => {
@@ -238,7 +248,7 @@ const Construction = () => {
       industry={constructionData}
       keyFeatures={
         <IndustryKeyFeatures
-          industryName='Construction'
+          industryName="Construction"
           features={constructionKeyFeatures}
         />
       }

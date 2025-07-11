@@ -68,6 +68,11 @@ type IndustryData = {
     tag2: string;
     tag3: string;
   };
+  trustStat: {
+    stat1: string;
+    stat2: string;
+    stat3: string;
+  };
 };
 const fleetKeyFeatures: KeyFeature[] = [
   {
@@ -229,6 +234,11 @@ const fleetManagementData: IndustryData = {
     tag2: '#GPSFleetTracking',
     tag3: ' #VehicleTelematics',
   },
+  trustStat: {
+    stat1: '98.9%',
+    stat2: '125k+',
+    stat3: '24/7',
+  },
 };
 
 const FleetManagement = () => {
@@ -237,7 +247,7 @@ const FleetManagement = () => {
       industry={fleetManagementData}
       keyFeatures={
         <IndustryKeyFeatures
-          industryName='Fleet Management'
+          industryName="Fleet Management"
           features={fleetKeyFeatures}
         />
       }
