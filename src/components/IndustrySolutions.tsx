@@ -28,7 +28,7 @@ const industries: Industry[] = [
     icon: Car,
     title: 'Car Rental',
     description:
-      'Recover stolen vehicles, track tolls, and automate billing with GPS built for rental fleets.',
+      'Recover stolen vehicles, track tolls (in-house application), and automate billing with GPS built for rental fleets.',
     link: '/industries/car-rental',
   },
   {

@@ -109,7 +109,7 @@ const carRentalData: IndustryData = {
   name: ' GPS Fleet Tracking for Car Rental Companies',
   subtitle: 'Advanced Vehicle Tracking & Management',
   description:
-    'Boost vehicle recovery, reduce misuse, and simplify operations with real-time GPS tracking, geofencing, and automated alerts—trusted by 50,000+ active vehicles.',
+    'Boost vehicle recovery, reduce misuse, and simplify operations with real-time GPS tracking, geofencing, and automated alerts—trusted by 25,000+ active vehicles.',
   heroImage: '/assets/universal/Installation.jpg',
   challenges: [
     {
@@ -127,6 +127,18 @@ const carRentalData: IndustryData = {
     {
       icon: Shield,
       title: 'Vehicle Theft & Misuse Risk',
+      description:
+        'Unattended or off-rental vehicles are vulnerable to theft, tampering, and unauthorized usage.',
+    },
+    {
+      icon: Shield,
+      title: 'Smoking Missuse',
+      description:
+        'Unattended or off-rental vehicles are vulnerable to theft, tampering, and unauthorized usage.',
+    },
+    {
+      icon: Shield,
+      title: 'Toll',
       description:
         'Unattended or off-rental vehicles are vulnerable to theft, tampering, and unauthorized usage.',
     },

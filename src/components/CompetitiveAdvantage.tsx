@@ -82,7 +82,7 @@ const features: ComparisonFeature[] = [
     name: 'Rental-Fleet Features',
     ridesiq: {
       supported: true,
-      detail: 'Allows Toll billing, border alerts, hidden installs',
+      detail: 'Allows Toll tracking, border alerts, hidden installs',
     },
     competitors: {
       CompetitorA: {
@@ -110,6 +110,21 @@ const features: ComparisonFeature[] = [
   },
   {
     name: 'Fleet Scalability',
+    ridesiq: {
+      supported: true,
+      detail: '1–10,000+ vehicles supported',
+    },
+    competitors: {
+      CompetitorA: {
+        supported: false,
+        detail: 'Often built for small to medium sized fleets only',
+      },
+      CompetitorB: { supported: false, detail: 'No Encryption' },
+      CompetitorC: { supported: false, detail: 'Basic Encryption' },
+    },
+  },
+  {
+    name: 'Smoke Detecting',
     ridesiq: {
       supported: true,
       detail: '1–10,000+ vehicles supported',
