@@ -1,3 +1,4 @@
+'use client';
 import React, { FormEvent, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -60,41 +61,41 @@ const Footer = () => {
 
   return (
     <div>
-      <footer className='bg-gray-900 text-white pt-16 pb-30 sm:pb-8 px-4 relative'>
-        <div className='max-w-7xl mx-auto'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12'>
+      <footer className="bg-gray-900 text-white pt-16 pb-30 sm:pb-8 px-4 relative">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
             {/* Email Signup */}
-            <div className='lg:col-span-4'>
+            <div className="lg:col-span-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <h3 className='text-2xl font-bold mb-4'>
+                <h3 className="text-2xl font-bold mb-4">
                   Sign up for email updates
                 </h3>
-                <p className='text-gray-400 mb-6'>
+                <p className="text-gray-400 mb-6">
                   Your one-stop shop for Telematics news you need to know each
                   month.
                 </p>
-                <form className='space-y-3' onSubmit={handleSubmit}>
-                  <div className='relative'>
+                <form className="space-y-3" onSubmit={handleSubmit}>
+                  <div className="relative">
                     <input
-                      type='email'
-                      placeholder='Enter email address...'
+                      type="email"
+                      placeholder="Enter email address..."
                       value={email}
                       onChange={handleEmailChange}
-                      className='w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#678FCA] focus:border-transparent transition-all'
+                      className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#678FCA] focus:border-transparent transition-all"
                       required
                     />
                   </div>
                   <button
-                    type='submit'
-                    className='w-full bg-[#678FCA] text-white px-6 py-3 rounded-lg hover:bg-[#678FCA]/90 transition-all flex items-center justify-center group'
+                    type="submit"
+                    className="w-full bg-[#678FCA] text-white px-6 py-3 rounded-lg hover:bg-[#678FCA]/90 transition-all flex items-center justify-center group"
                     disabled={isLoading}
                   >
                     {isLoading ? 'Subscribing...' : 'Subscribe'}
-                    <ArrowRight className='ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform' />
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
                   {message && (
                     <p
@@ -110,8 +111,8 @@ const Footer = () => {
             </div>
 
             {/* Navigation Links */}
-            <div className='lg:col-span-8'>
-              <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
+            <div className="lg:col-span-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Industries */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -119,36 +120,36 @@ const Footer = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 }}
                 >
-                  <h4 className='text-lg font-semibold mb-4'>Industries</h4>
-                  <ul className='space-y-3'>
+                  <h4 className="text-lg font-semibold mb-4">Industries</h4>
+                  <ul className="space-y-3">
                     <li>
                       <a
-                        href='/industries/car-rental'
-                        className='text-gray-400 hover:text-white transition-colors'
+                        href="/industries/car-rental"
+                        className="text-gray-400 hover:text-white transition-colors"
                       >
                         Car Rental
                       </a>
                     </li>
                     <li>
                       <a
-                        href='/industries/logistics-transportation'
-                        className='text-gray-400 hover:text-white transition-colors'
+                        href="/industries/logistics-transportation"
+                        className="text-gray-400 hover:text-white transition-colors"
                       >
                         Logistics & Transportation
                       </a>
                     </li>
                     <li>
                       <a
-                        href='/industries/construction'
-                        className='text-gray-400 hover:text-white transition-colors'
+                        href="/industries/construction"
+                        className="text-gray-400 hover:text-white transition-colors"
                       >
                         Construction
                       </a>
                     </li>
                     <li>
                       <a
-                        href='/industries/food-delivery'
-                        className='text-gray-400 hover:text-white transition-colors'
+                        href="/industries/food-delivery"
+                        className="text-gray-400 hover:text-white transition-colors"
                       >
                         Food Delivery
                       </a>
@@ -163,28 +164,28 @@ const Footer = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
                 >
-                  <h4 className='text-lg font-semibold mb-4'>Solutions</h4>
-                  <ul className='space-y-3'>
+                  <h4 className="text-lg font-semibold mb-4">Solutions</h4>
+                  <ul className="space-y-3">
                     <li>
                       <a
-                        href='/solutions/hard-wired-trackers'
-                        className='text-gray-400 hover:text-white transition-colors'
+                        href="/solutions/hard-wired-trackers"
+                        className="text-gray-400 hover:text-white transition-colors"
                       >
                         Hard-Wired Trackers
                       </a>
                     </li>
                     <li>
                       <a
-                        href='/solutions/obd-trackers'
-                        className='text-gray-400 hover:text-white transition-colors'
+                        href="/solutions/obd-trackers"
+                        className="text-gray-400 hover:text-white transition-colors"
                       >
                         OBD Trackers
                       </a>
                     </li>
                     <li>
                       <a
-                        href='/solutions/asset-trackers'
-                        className='text-gray-400 hover:text-white transition-colors'
+                        href="/solutions/asset-trackers"
+                        className="text-gray-400 hover:text-white transition-colors"
                       >
                         Asset Trackers
                       </a>
@@ -199,8 +200,8 @@ const Footer = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 }}
                 >
-                  <h4 className='text-lg font-semibold mb-4'>Resources</h4>
-                  <ul className='space-y-3'>
+                  <h4 className="text-lg font-semibold mb-4">Resources</h4>
+                  <ul className="space-y-3">
                     {/* <li className="flex items-center">
 											<a
 												href="#"
@@ -212,8 +213,8 @@ const Footer = () => {
 										</li> */}
                     <li>
                       <a
-                        href='/faq'
-                        className='text-gray-400 hover:text-white transition-colors'
+                        href="/faq"
+                        className="text-gray-400 hover:text-white transition-colors"
                       >
                         FAQs
                       </a>
@@ -229,8 +230,8 @@ const Footer = () => {
 										</li> */}
                     <li>
                       <a
-                        href='/contact'
-                        className='text-gray-400 hover:text-white transition-colors'
+                        href="/contact"
+                        className="text-gray-400 hover:text-white transition-colors"
                       >
                         Contact
                       </a>
@@ -242,13 +243,13 @@ const Footer = () => {
           </div>
 
           {/* Bottom Bar */}
-          <div className='pt-8 mt-8 border-t border-gray-800'>
-            <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
+          <div className="pt-8 mt-8 border-t border-gray-800">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               {/* Legal Links */}
-              <div className='flex flex-wrap justify-center md:justify-start gap-4 text-sm text-gray-400'>
+              <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-gray-400">
                 <Link
-                  href='/privacy-policy'
-                  className='hover:text-white transition-colors'
+                  href="/privacy-policy"
+                  className="hover:text-white transition-colors"
                 >
                   Privacy Policy
                 </Link>

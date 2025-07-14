@@ -651,7 +651,6 @@ const Contact = () => {
         </div>
       </section> */}
 
-      {/* FAQ Section */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-[#678FCA]/[0.02] hero-pattern opacity-50" />
         <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
@@ -720,7 +719,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#678FCA] via-[#99D5C9] to-[#678FCA] shadow-2xl">
@@ -779,11 +777,8 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
       <Footer />
 
-      {/* Mobile CTA */}
       <div className="fixed bottom-0 left-0 right-0 p-4 bg-white shadow-lg md:hidden">
         <button className="w-full bg-[#678FCA] text-white py-3 rounded-full flex items-center justify-center">
           Contact Us <ChevronRight className="ml-2 w-5 h-5" />
