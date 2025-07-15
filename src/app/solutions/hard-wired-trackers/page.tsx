@@ -83,25 +83,35 @@ const Tracking = () => {
 
       // Only apply sticky behavior on desktop
       if (window.innerWidth >= 1024) {
-        // Calculate the start and end points for the effect
-        const startPoint = containerRect.top - windowHeight * 0.5;
+        // Wait for image to reach center before starting sticky behavior
+        const imageHeight = image.offsetHeight;
+        const containerTop = containerRect.top;
+        const containerHeight = container.offsetHeight;
+
+        // Calculate when image center aligns with viewport center
+        const imageCenterOffset = imageHeight / 2;
+        const viewportCenter = windowHeight / 2;
+
+        // Start sticky behavior when image center reaches viewport center
+        const startPoint = containerTop - viewportCenter + imageCenterOffset;
+
+        // End when container bottom reaches viewport bottom
         const endPoint = containerRect.bottom - windowHeight;
 
-        // Calculate scroll progress (0 to 1)
-        const scrollProgress = Math.max(
-          0,
-          Math.min(1, -startPoint / (endPoint - startPoint))
-        );
+        // Only start sticky behavior after image has centered
+        if (startPoint <= 0 && endPoint >= 0) {
+          // Calculate scroll progress (0 to 1)
+          const scrollProgress = Math.max(
+            0,
+            Math.min(1, -startPoint / (endPoint - startPoint))
+          );
 
-        // Calculate maximum scroll distance
-        const maxScroll = container.offsetHeight - image.offsetHeight - 100;
+          const maxScroll = containerHeight - imageHeight - 100;
+          const scrollAmount = Math.min(maxScroll, scrollProgress * maxScroll);
 
-        // Apply the transform with easing
-        const scrollAmount = Math.min(maxScroll, scrollProgress * maxScroll);
-
-        // Only apply transform when container is in view
-        if (containerRect.top <= windowHeight && containerRect.bottom >= 0) {
           image.style.transform = `translateY(${scrollAmount}px)`;
+        } else if (startPoint > 0) {
+          image.style.transform = `translateY(0px)`;
         }
       }
     };
@@ -124,38 +134,32 @@ const Tracking = () => {
         installation: {
           icon: Wrench,
           value: 'Professional Hardwired Installation',
-          description:
-            'Secure, permanent install for commercial fleets.',
+          description: 'Secure, permanent install for commercial fleets.',
         },
         power: {
           icon: Zap,
           value: '9–100V Direct Vehicle Power',
-          description:
-            'Compatible with trucks, buses, and EVs.',
+          description: 'Compatible with trucks, buses, and EVs.',
         },
         bestFor: {
           icon: Truck,
           value: 'Heavy-Duty Fleet Tracking',
-          description:
-            'Ideal for trucking, logistics, and large vehicles.',
+          description: 'Ideal for trucking, logistics, and large vehicles.',
         },
         battery: {
           icon: Battery,
           value: 'Integrated Backup Battery',
-          description:
-            'Keeps tracking active during power loss or tampering.',
+          description: 'Keeps tracking active during power loss or tampering.',
         },
         connectivity: {
           icon: Wifi,
           value: '4G LTE + GPS + GSM',
-          description:
-            'Reliable real-time tracking across networks.',
+          description: 'Reliable real-time tracking across networks.',
         },
         features: {
           icon: Shield,
           value: 'Advanced Fleet Security',
-          description:
-            'Tamper, crash, and geofence alerts with OTA updates.',
+          description: 'Tamper, crash, and geofence alerts with OTA updates.',
         },
       },
     },
@@ -178,8 +182,7 @@ const Tracking = () => {
         power: {
           icon: Zap,
           value: 'Vehicle-Powered via OBD-II',
-          description:
-            'Runs directly off the vehicle’s power source.',
+          description: 'Runs directly off the vehicle’s power source.',
         },
         bestFor: {
           icon: Truck,
@@ -190,20 +193,17 @@ const Tracking = () => {
         battery: {
           icon: Battery,
           value: 'No Internal Battery Required',
-          description:
-            'Draws constant power from the OBD port.',
+          description: 'Draws constant power from the OBD port.',
         },
         connectivity: {
           icon: Wifi,
           value: 'LTE Cat M1/NB1 Connectivity',
-          description:
-            'Reliable real-time tracking via cellular LTE.',
+          description: 'Reliable real-time tracking via cellular LTE.',
         },
         features: {
           icon: Shield,
           value: 'Motion & Impact Detection',
-          description:
-            'Detects sudden movement, braking, or collisions.',
+          description: 'Detects sudden movement, braking, or collisions.',
         },
       },
     },
@@ -220,14 +220,12 @@ const Tracking = () => {
         installation: {
           icon: Wrench,
           value: 'Compact & Portable Design',
-          description:
-            'Small form factor, ideal for trailers and containers.',
+          description: 'Small form factor, ideal for trailers and containers.',
         },
         power: {
           icon: Zap,
           value: '2400mAh Battery Powered',
-          description:
-            'Built-in 2400mAh battery for extended tracking.',
+          description: 'Built-in 2400mAh battery for extended tracking.',
         },
         bestFor: {
           icon: Box,
@@ -238,8 +236,7 @@ const Tracking = () => {
         battery: {
           icon: Battery,
           value: '3-Year Battery Life',
-          description:
-            'Up to 3 years with variable frequency.',
+          description: 'Up to 3 years with variable frequency.',
         },
         connectivity: {
           icon: Wifi,
@@ -686,8 +683,7 @@ const Tracking = () => {
               {
                 icon: Lock,
                 title: 'Secure Data Transmission',
-                description:
-                  'Encrypted GPS data with reliable cloud delivery.',
+                description: 'Encrypted GPS data with reliable cloud delivery.',
               },
               {
                 icon: Radio,
@@ -1093,51 +1089,23 @@ const Tracking = () => {
                 </motion.div>
 
                 {/* Product Image - Sticky Container */}
-                <div className="relative order-1 lg:order-2 lg:-mt-12">
-                  <div
-                    className="lg:sticky lg:top-1/2 lg:transform lg:-translate-y-1/2"
-                    ref={imageRef}
-                  >
+                <div className="order-1 lg:order-2">
+                  <div className="lg:sticky lg:top-24" ref={imageRef}>
                     <motion.div
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
-                      className="relative"
+                      className="relative flex items-center justify-center min-h-[600px]"
                     >
-                      <div className='relative mt-20 max-w-md mx-auto lg:max-w-none'>
-                        {/* <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6' /> */}
+                      <div className="relative max-w-md mx-auto lg:max-w-none">
                         <Image
                           src={`/assets/devices/HardWiredNoBKGD.png`}
                           alt={products[0].name}
-                          // className='relative z-10 rounded-3xl shadow-2xl transform -rotate-3 transition-transform duration-500 hover:rotate-0 w-full'
                           width={800}
                           height={800}
                           priority
                         />
                       </div>
-
-                      {/* Certification Badge */}
-                      {/* <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 }}
-                        className="absolute -right-4 top-1/4 bg-white p-4 rounded-xl shadow-lg"
-                      >
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                            <Award className="w-5 h-5 text-blue-600" />
-                          </div>
-                          <div>
-                            <div className="text-sm font-medium text-gray-900">
-                              Certified Device
-                            </div>
-                            <div className="text-xs text-gray-500">
-                              FCC, CE, PTCRB
-                            </div>
-                          </div>
-                        </div>
-                      </motion.div> */}
                     </motion.div>
                   </div>
                 </div>

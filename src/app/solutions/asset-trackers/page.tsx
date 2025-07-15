@@ -83,25 +83,35 @@ const Tracking = () => {
 
       // Only apply sticky behavior on desktop
       if (window.innerWidth >= 1024) {
-        // Calculate the start and end points for the effect
-        const startPoint = containerRect.top - windowHeight * 0.5;
+        // Wait for image to reach center before starting sticky behavior
+        const imageHeight = image.offsetHeight;
+        const containerTop = containerRect.top;
+        const containerHeight = container.offsetHeight;
+
+        // Calculate when image center aligns with viewport center
+        const imageCenterOffset = imageHeight / 2;
+        const viewportCenter = windowHeight / 2;
+
+        // Start sticky behavior when image center reaches viewport center
+        const startPoint = containerTop - viewportCenter + imageCenterOffset;
+
+        // End when container bottom reaches viewport bottom
         const endPoint = containerRect.bottom - windowHeight;
 
-        // Calculate scroll progress (0 to 1)
-        const scrollProgress = Math.max(
-          0,
-          Math.min(1, -startPoint / (endPoint - startPoint))
-        );
+        // Only start sticky behavior after image has centered
+        if (startPoint <= 0 && endPoint >= 0) {
+          // Calculate scroll progress (0 to 1)
+          const scrollProgress = Math.max(
+            0,
+            Math.min(1, -startPoint / (endPoint - startPoint))
+          );
 
-        // Calculate maximum scroll distance
-        const maxScroll = container.offsetHeight - image.offsetHeight - 100;
+          const maxScroll = containerHeight - imageHeight - 100;
+          const scrollAmount = Math.min(maxScroll, scrollProgress * maxScroll);
 
-        // Apply the transform with easing
-        const scrollAmount = Math.min(maxScroll, scrollProgress * maxScroll);
-
-        // Only apply transform when container is in view
-        if (containerRect.top <= windowHeight && containerRect.bottom >= 0) {
           image.style.transform = `translateY(${scrollAmount}px)`;
+        } else if (startPoint > 0) {
+          image.style.transform = `translateY(0px)`;
         }
       }
     };
@@ -291,9 +301,9 @@ const Tracking = () => {
         {/* Background Image & Overlays */}
         <div className="absolute inset-0">
           <Image
-            src='/assets/universal/installation.jpg'
-            alt='GPS Tracking Device'
-            className='w-full h-full object-cover'
+            src="/assets/universal/installation.jpg"
+            alt="GPS Tracking Device"
+            className="w-full h-full object-cover"
             width={1920}
             height={1080}
           />
@@ -1070,19 +1080,15 @@ const Tracking = () => {
                 </motion.div>
 
                 {/* Product Image - Sticky Container */}
-                <div className="relative order-1 lg:order-2 lg:-mt-12">
-                  <div
-                    className="lg:sticky lg:top-1/2 lg:transform lg:-translate-y-1/2"
-                    ref={imageRef}
-                  >
+                <div className="relative order-1 lg:order-2">
+                  <div className="lg:sticky lg:top-24" ref={imageRef}>
                     <motion.div
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
-                      className="relative"
+                      className="relative flex items-center justify-center min-h-[600px]"
                     >
-                      <div className="relative mb-40 max-w-lg mx-auto lg:max-w-none">
-                        {/* <div className='absolute inset-0 bg-gradient-to-br from-[#678FCA]/20 to-[#99D5C9]/20 rounded-3xl transform rotate-6' /> */}
+                      <div className="relative max-w-lg mx-auto lg:max-w-none">
                         <Image
                           src={`/assets/devices/AssetTrackerNoBKGD.png`}
                           alt={products[0].name}
@@ -1094,26 +1100,26 @@ const Tracking = () => {
 
                       {/* Certification Badge */}
                       {/* <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 }}
-                        className="absolute -right-4 top-1/4 bg-white p-4 rounded-xl shadow-lg"
-                      >
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                            <Award className="w-5 h-5 text-blue-600" />
-                          </div>
-                          <div>
-                            <div className="text-sm font-medium text-gray-900">
-                              Certified Device
-                            </div>
-                            <div className="text-xs text-gray-500">
-                              FCC, CE, PTCRB
-                            </div>
-                          </div>
-                        </div>
-                      </motion.div> */}
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3 }}
+        className="absolute -right-4 top-1/4 bg-white p-4 rounded-xl shadow-lg"
+      >
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+            <Award className="w-5 h-5 text-blue-600" />
+          </div>
+          <div>
+            <div className="text-sm font-medium text-gray-900">
+              Certified Device
+            </div>
+            <div className="text-xs text-gray-500">
+              FCC, CE, PTCRB
+            </div>
+          </div>
+        </div>
+      </motion.div> */}
                     </motion.div>
                   </div>
                 </div>
