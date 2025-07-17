@@ -107,8 +107,8 @@ const BlogPage = () => {
 
         <aside className="w-full md:w-1/4">
           <BlogSidebar
-            popularPosts={popularPosts}
-            recentPosts={recentPosts}
+            popularPosts={blogPosts}
+            recentPosts={blogPosts}
             tags={tags}
           />
         </aside>

@@ -169,7 +169,7 @@ const BlogPost = () => {
                       alert('Sharing not supported on this device. 😢');
                     }
                   }}
-                  className="text-gray-600 cursor-pointer font-medium flex items-center hover:text-[#678FCA] transition-colors"
+                  className="text-gray-600 cur font-medium flex items-center hover:text-[#678FCA] transition-colors"
                 >
                   <Share2 className="w-4 h-4 mr-2" />
                   Share
