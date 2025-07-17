@@ -1,96 +1,96 @@
 export const blogPosts = [
   {
-    slug: 'fleet-management-trends',
-    title: 'Top 5 Fleet Management Trends in 2025',
-    excerpt:
-      'Explore how AI-powered analytics are transforming fleet operations and driving new levels of efficiency in 2025.',
+    slug: 'maximizing-fleet-efficiency',
+    title: 'Maximizing Fleet Efficiency with AI-Powered Analytics',
     content: `
-## The Role of AI in Modern Fleet Management
+      Fleet management has evolved significantly in recent years, with artificial intelligence and machine learning leading the charge in operational optimization. This comprehensive guide explores how AI-powered analytics are transforming fleet operations and driving unprecedented levels of efficiency.
 
-Artificial Intelligence is revolutionizing how fleet managers make decisions and optimize their operations. From predictive maintenance to route optimization, AI algorithms are processing vast amounts of data to deliver actionable insights in real-time.
+      ## The Role of AI in Modern Fleet Management
 
-### Key Benefits of AI-Powered Analytics:
+      Artificial Intelligence is revolutionizing how fleet managers make decisions and optimize their operations. From predictive maintenance to route optimization, AI algorithms are processing vast amounts of data to deliver actionable insights in real-time.
 
-1. **Predictive Maintenance**
-   - Early detection of potential vehicle issues
-   - Reduced downtime and maintenance costs
-   - Optimized service scheduling
+      ### Key Benefits of AI-Powered Analytics:
 
-2. **Route Optimization**
-   - Real-time traffic analysis
-   - Weather-aware routing
-   - Fuel consumption optimization
+      1. Predictive Maintenance
+      - Early detection of potential vehicle issues
+      - Reduced downtime and maintenance costs
+      - Optimized service scheduling
 
-3. **Driver Behavior Analysis**
-   - Safety improvement
-   - Fuel efficiency optimization
-   - Performance monitoring
+      2. Route Optimization
+      - Real-time traffic analysis
+      - Weather-aware routing
+      - Fuel consumption optimization
 
-## Implementing AI Solutions in Your Fleet
+      3. Driver Behavior Analysis
+      - Safety improvement
+      - Fuel efficiency optimization
+      - Performance monitoring
 
-The transition to AI-powered fleet management requires careful planning and execution. Here's a step-by-step approach to implementing these solutions effectively:
+      ## Implementing AI Solutions in Your Fleet
 
-1. **Assessment Phase**
-   - Evaluate current operations
-   - Identify key pain points
-   - Define success metrics
+      The transition to AI-powered fleet management requires careful planning and execution. Here's a step-by-step approach to implementing these solutions effectively:
 
-2. **Technology Selection**
-   - Choose appropriate AI solutions
-   - Ensure compatibility with existing systems
-   - Consider scalability requirements
+      1. Assessment Phase
+      - Evaluate current operations
+      - Identify key pain points
+      - Define success metrics
 
-3. **Implementation Strategy**
-   - Develop a phased approach
-   - Train staff and drivers
-   - Monitor and adjust as needed
+      2. Technology Selection
+      - Choose appropriate AI solutions
+      - Ensure compatibility with existing systems
+      - Consider scalability requirements
 
-## Measuring Success
+      3. Implementation Strategy
+      - Develop a phased approach
+      - Train staff and drivers
+      - Monitor and adjust as needed
 
-The impact of AI-powered analytics can be measured across various metrics:
+      ## Measuring Success
 
-- Reduced fuel consumption
-- Decreased maintenance costs
-- Improved driver safety scores
-- Enhanced customer satisfaction
-- Increased operational efficiency
+      The impact of AI-powered analytics can be measured across various metrics:
 
-## Looking Ahead
+      - Reduced fuel consumption
+      - Decreased maintenance costs
+      - Improved driver safety scores
+      - Enhanced customer satisfaction
+      - Increased operational efficiency
 
-As AI technology continues to evolve, we can expect even more sophisticated solutions for fleet management. Stay ahead of the curve by keeping informed about the latest developments and being ready to adapt to new technologies as they emerge.
+      ## Looking Ahead
+
+      As AI technology continues to evolve, we can expect even more sophisticated solutions for fleet management. Stay ahead of the curve by keeping informed about the latest developments and being ready to adapt to new technologies as they emerge.
     `,
-    image: '/blog/trends.jpg',
+    image:
+      'https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=2000&q=80',
     author: {
-      name: 'John Doe',
-      avatar: '/authors/john.jpg',
+      name: 'Sarah Johnson',
+      avatar:
+        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80',
+      role: 'Fleet Analytics Specialist',
     },
-    publishedAt: new Date('2025-06-01'),
-  },
-  {
-    slug: 'driver-safety',
-    title: 'Improving Driver Safety with Real-Time Data',
-    excerpt:
-      'Learn how real-time insights are transforming road safety standards for commercial fleets.',
-    content: `
-## Real-Time Data and Driver Safety
-
-Fleet safety is no longer just about compliance — it’s about proactive insights. With real-time data, fleet managers can monitor driver behavior, vehicle health, and road conditions in real-time.
-
-### Benefits Include:
-
-- Immediate alerts for harsh braking or speeding
-- Better training and coaching programs
-- Safer driving culture and fewer accidents
-    `,
-    image: '/blog/safety.jpg',
-    author: {
-      name: 'Jane Smith',
-      avatar: '/authors/jane.jpg',
-    },
-    publishedAt: new Date('2025-05-20'),
+    publishedAt: new Date('2024-03-15'),
+    readTime: '8 min read',
+    category: 'Fleet Management',
   },
 ];
 
+export const categories = [
+  'Fleet Management',
+  'Compliance',
+  'Safety',
+  'Telematics',
+  'AI & Automation',
+];
+
+export const tags = [
+  { name: 'Fleet Management', count: 24 },
+  { name: 'EV Transition', count: 18 },
+  { name: 'Compliance', count: 15 },
+  { name: 'Safety', count: 12 },
+  { name: 'Telematics', count: 10 },
+  { name: 'AI', count: 8 },
+  { name: 'Automation', count: 7 },
+  { name: 'Maintenance', count: 6 },
+];
 export const popularPosts = [
   {
     slug: 'fleet-savings',
@@ -107,10 +107,4 @@ export const recentPosts = [
     image: '/blog/gps-vs-telematics.jpg',
     publishedAt: new Date('2025-06-28'),
   },
-];
-
-export const tags = [
-  { name: 'Telematics', count: 12 },
-  { name: 'Fleet Safety', count: 8 },
-  { name: 'Cost Reduction', count: 5 },
 ];

@@ -1,21 +1,50 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from '@/components/Footer';
 import { Navigation } from '@/components/Navigation';
 import { BlogCard } from '@/components/BlogCard';
 import { BlogSidebar } from '@/components/BlogSidebar';
 import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
+import { popularPosts, recentPosts, tags } from '@/data/blogData';
+import { getParsedBlogEntries } from '@/util/blogUtils';
 
-import { blogPosts, popularPosts, recentPosts, tags } from '@/data/blogData'; // ✅ Importing from new file
+type BlogPost = {
+  id: string;
+  title: string;
+  slug: string;
+  content: string;
+  image: string;
+  author: {
+    name: string;
+    avatar: string;
+    role: string;
+  };
+  category: string;
+  readtime: string;
+  publishedAt: Date;
+};
 
 const BlogPage = () => {
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const parsed = await getParsedBlogEntries();
+      console.log(parsed);
+      setBlogPosts(parsed);
+    };
+
+    fetchBlogs();
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation customColor="text-white" />
 
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        {/* Background & Overlays */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 to-gray-900/70" />
           <div className="absolute inset-0 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:32px_32px] opacity-10" />
@@ -36,7 +65,7 @@ const BlogPage = () => {
                 className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-white text-sm font-medium"
               >
                 <Sparkles className="w-4 h-4 mr-2" />
-                24/7 Support Available
+                Fleet Management Insights
               </motion.div>
 
               <motion.h1
@@ -45,9 +74,9 @@ const BlogPage = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]"
               >
-                <span className="text-white">Get in Touch with </span>
+                <span className="text-white">Stay Updated with the </span>
                 <span className="bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent">
-                  RidesIQ
+                  Latest in Fleet Management
                 </span>
               </motion.h1>
 
@@ -57,13 +86,14 @@ const BlogPage = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-xl text-white/90 leading-relaxed"
               >
-                Have questions? Need a demo? Our team is here to help you with
-                all your fleet tracking needs.
+                Expert insights, industry trends, and technology updates to keep
+                your fleet ahead.
               </motion.p>
             </motion.div>
           </div>
         </div>
 
+        {/* Hero Bottom Gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
 

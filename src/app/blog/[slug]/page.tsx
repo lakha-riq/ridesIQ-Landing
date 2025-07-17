@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   Sparkles,
@@ -15,11 +15,25 @@ import { Navigation } from '../../../components/Navigation';
 import { BlogSidebar } from '../../../components/BlogSidebar';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { blogPosts } from '@/data/blogData'; // Make sure this import is correct
+import { getParsedBlogEntries } from '@/util/blogUtils';
+import { popularPosts, recentPosts, tags } from '@/data/blogData';
+import Image from 'next/image';
+import Footer from '@/components/Footer';
 
 const BlogPost = () => {
   const { slug } = useParams();
-  const post = blogPosts.find((p) => p.slug === slug);
+  const [post, setPost] = useState<any>(null);
+  const [allPosts, setAllPosts] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchPost = async () => {
+      const parsed = await getParsedBlogEntries();
+      setAllPosts(parsed);
+      const matchedPost = parsed.find((p) => p.slug === slug);
+      setPost(matchedPost);
+    };
+    fetchPost();
+  }, [slug]);
 
   if (!post) {
     return (
@@ -63,14 +77,15 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
+      <Navigation customColor="text-white" />
 
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <Image
             src={post.image}
             alt={post.title}
+            fill
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 to-gray-900/70" />
@@ -86,7 +101,7 @@ const BlogPost = () => {
               className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-white text-sm font-medium"
             >
               <Sparkles className="w-4 h-4 mr-2" />
-              {/* {post.category} */}
+              {post.category}
             </motion.div>
 
             <motion.h1
@@ -105,24 +120,26 @@ const BlogPost = () => {
               className="flex items-center justify-center gap-6 text-white/90"
             >
               <div className="flex items-center gap-3">
-                <img
+                <Image
                   src={post.author.avatar}
                   alt={post.author.name}
+                  width={10}
+                  height={10}
                   className="w-10 h-10 rounded-full"
                 />
                 <div className="text-left">
                   <div className="font-medium">{post.author.name}</div>
                   <div className="text-sm text-white/70">
-                    {post.author.name}
+                    {post.author.role}
                   </div>
                 </div>
               </div>
-              <div className="w-px h-8 bg-white/20" />
+              <div className="w-2 h-8 bg-white/50" />
               <div className="text-sm">
                 {format(post.publishedAt, 'MMM d, yyyy')}
               </div>
-              <div className="w-px h-8 bg-white/20" />
-              {/* <div className="text-sm">{post.readTime}</div> */}
+              <div className="w-2 h-8 bg-white/50" />
+              <div className="text-sm">{post.readtime}</div>
             </motion.div>
           </div>
         </div>
@@ -137,11 +154,27 @@ const BlogPost = () => {
             <div className="lg:col-span-2">
               {/* Share Buttons */}
               <div className="flex items-center gap-4 mb-8">
-                <span className="text-gray-600 font-medium flex items-center">
+                <button
+                  onClick={() => {
+                    if (navigator.share) {
+                      navigator
+                        .share({
+                          title: post?.title,
+                          text: 'Check out this post!',
+                          url: window.location.href,
+                        })
+                        .then(() => console.log('Shared successfully'))
+                        .catch((err) => console.error('Share failed:', err));
+                    } else {
+                      alert('Sharing not supported on this device. 😢');
+                    }
+                  }}
+                  className="text-gray-600 cursor-pointer font-medium flex items-center hover:text-[#678FCA] transition-colors"
+                >
                   <Share2 className="w-4 h-4 mr-2" />
                   Share
-                </span>
-                <div className="flex items-center gap-2">
+                </button>
+                {/* <div className="flex items-center gap-2">
                   {[Twitter, Linkedin, Facebook, Mail].map((Icon, idx) => (
                     <button
                       key={idx}
@@ -150,10 +183,10 @@ const BlogPost = () => {
                       <Icon className="w-4 h-4" />
                     </button>
                   ))}
-                </div>
+                </div> */}
               </div>
 
-              <article className="prose prose-lg max-w-none">
+              <article className="prose prose-lg max-w-none list-none">
                 {renderContent(post.content)}
               </article>
 
@@ -178,8 +211,8 @@ const BlogPost = () => {
             {/* Sidebar */}
             <div className="lg:col-span-1">
               <BlogSidebar
-                popularPosts={blogPosts}
-                recentPosts={blogPosts}
+                popularPosts={popularPosts}
+                recentPosts={recentPosts}
                 tags={[
                   { name: 'Fleet Management', count: 24 },
                   { name: 'AI', count: 8 },
@@ -233,6 +266,8 @@ const BlogPost = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

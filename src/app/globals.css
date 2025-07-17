@@ -35,3 +35,9 @@ body {
   scrollbar-width: none;
   /* Firefox */
 }
+
+.divider-line {
+  width: 1px;
+  height: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
