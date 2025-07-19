@@ -303,7 +303,7 @@ export const MultiStepForm: React.FC = () => {
                         : [...formData.interest, option.value];
                       updateFormData('interest', updated);
                     }}
-                    className={`p-6 w-full h-28 sm:h-32 rounded-xl border-2 transition-all duration-300 flex items-center gap-4 hover:border-[#678FCA] hover:shadow-lg ${
+                    className={`p-6 w-full h-28 sm:min-h-32 rounded-xl border-2 transition-all duration-300 flex items-center gap-4 hover:border-[#678FCA] hover:shadow-lg ${
                       formData.interest.includes(option.value)
                         ? 'border-[#678FCA] bg-[#678FCA]/5'
                         : 'border-gray-200'
