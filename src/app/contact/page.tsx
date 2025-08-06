@@ -56,11 +56,6 @@ const Contact = () => {
         'Absolutely. You can book a live demo with one of our fleet specialists to see how RidesIQ works for your needs.',
     },
     {
-      question: 'Where are your offices located?',
-      answer:
-        'We operate out of Toronto (ON), Buffalo (NY), and Lewes (DE), with support available across North America.',
-    },
-    {
       question: 'Do you offer onboarding or training for new clients?',
       answer:
         'Yes — every new customer receives personalized onboarding support to ensure smooth installation and system adoption.',
@@ -146,7 +141,6 @@ const Contact = () => {
               }
             : null,
         location: {
-          offices: ['Toronto, ON', 'Buffalo, NY', 'Lewes, DE'],
           supportEmail: 'support@ridesiq.com',
           businessHours: '9 AM - 5 PM EST',
         },
@@ -329,7 +323,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Office Locations */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -366,7 +360,7 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Email Contact */}
             <motion.div
