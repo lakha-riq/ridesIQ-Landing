@@ -161,15 +161,15 @@ const constructionData: IndustryData = {
   stats: [
     {
       icon: ConstructionIcon,
-      value: 15,
+      value: 25,
       suffix: 'k+',
       label: 'Equipment Tracked',
     },
     {
       icon: Timer,
-      value: 95,
+      value: 98.9,
       suffix: '%',
-      label: 'Equipment Uptime',
+      label: 'Customer Satisfaction',
     },
     {
       icon: TrendingUp,
@@ -237,7 +237,7 @@ const constructionData: IndustryData = {
   },
   trustStat: {
     stat1: '98.9%',
-    stat2: '125k+',
+    stat2: '25k+',
     stat3: '24/7',
   },
 };
