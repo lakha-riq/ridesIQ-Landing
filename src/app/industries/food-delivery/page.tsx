@@ -159,9 +159,9 @@ const foodDeliveryData: IndustryData = {
   stats: [
     {
       icon: Bike,
-      value: 50,
+      value: 10,
       suffix: 'k+',
-      label: 'Daily Deliveries',
+      label: 'Active Deliveries',
     },
     {
       icon: Timer,
@@ -236,7 +236,7 @@ const foodDeliveryData: IndustryData = {
   },
   trustStat: {
     stat1: '98.9%',
-    stat2: '125k+',
+    stat2: '10k+',
     stat3: '24/7',
   },
 };
