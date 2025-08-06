@@ -64,6 +64,36 @@ const features: ComparisonFeature[] = [
     },
   },
   {
+    name: 'Smoke Detecting',
+    ridesiq: {
+      supported: true,
+      detail: 'Real-time smoke alerts',
+    },
+    competitors: {
+      CompetitorA: {
+        supported: false,
+        detail: 'No smoke detection',
+      },
+      CompetitorB: { supported: false, detail: 'No Encryption' },
+      CompetitorC: { supported: false, detail: 'Basic Encryption' },
+    },
+  },
+  {
+    name: 'Remote Immobilization',
+    ridesiq: {
+      supported: true,
+      detail: 'Wireless remote engine shutoff',
+    },
+    competitors: {
+      CompetitorA: {
+        supported: false,
+        detail: 'Not supported',
+      },
+      CompetitorB: { supported: false, detail: 'No Encryption' },
+      CompetitorC: { supported: false, detail: 'Basic Encryption' },
+    },
+  },
+  {
     name: 'Device Flexibility',
     ridesiq: {
       supported: true,
@@ -118,21 +148,6 @@ const features: ComparisonFeature[] = [
       CompetitorA: {
         supported: false,
         detail: 'Often built for small to medium sized fleets only',
-      },
-      CompetitorB: { supported: false, detail: 'No Encryption' },
-      CompetitorC: { supported: false, detail: 'Basic Encryption' },
-    },
-  },
-  {
-    name: 'Smoke Detecting',
-    ridesiq: {
-      supported: true,
-      detail: '1–10,000+ vehicles supported',
-    },
-    competitors: {
-      CompetitorA: {
-        supported: false,
-        detail: 'Often built for mid-sized fleets only',
       },
       CompetitorB: { supported: false, detail: 'No Encryption' },
       CompetitorC: { supported: false, detail: 'Basic Encryption' },
