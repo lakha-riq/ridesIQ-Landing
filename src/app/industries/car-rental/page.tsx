@@ -13,6 +13,9 @@ import {
   Settings2,
   Users,
   LucideIcon,
+  Cigarette,
+  ShieldCheck,
+  TrafficCone,
 } from 'lucide-react';
 // type KeyFeature = {
 // 	icon: LucideIcon; // From lucide-react
@@ -119,28 +122,22 @@ const carRentalData: IndustryData = {
         'Tracking vehicles across locations is time-consuming and error-prone, especially during peak periods.',
     },
     {
-      icon: Users,
-      title: 'Underutilized Vehicles',
-      description:
-        'Inconsistent fleet distribution results in idle vehicles and missed revenue opportunities.',
-    },
-    {
       icon: Shield,
       title: 'Vehicle Theft & Misuse Risk',
       description:
         'Unattended or off-rental vehicles are vulnerable to theft, tampering, and unauthorized usage.',
     },
     {
-      icon: Shield,
+      icon: Cigarette,
       title: 'Smoking Missuse',
       description:
-        'Unattended or off-rental vehicles are vulnerable to theft, tampering, and unauthorized usage.',
+        'Smoking in rental vehicles leads to strong odours, interior damage, and customer complaints.',
     },
     {
-      icon: Shield,
+      icon: TrafficCone,
       title: 'Toll',
       description:
-        'Unattended or off-rental vehicles are vulnerable to theft, tampering, and unauthorized usage.',
+        'Unauthorized or unpaid toll usage during rentals causes delayed billing, unclaimed tolls, and revenue leakage.',
     },
   ],
   challengePara:
@@ -153,30 +150,36 @@ const carRentalData: IndustryData = {
         'Know where every vehicle is at all times with real-time GPS tracking and live status updates.',
     },
     {
-      icon: Receipt,
-      title: 'Fleet Utilization Insights',
-      description:
-        'Unlock usage patterns to optimize asset distribution and maximize rental availability.',
-    },
-    {
       icon: MapPin,
       title: 'Backup Asset Tracking',
       description:
         'Protect your fleet with hidden trackers and automatic SVR activation if your main GPS is disabled.',
     },
+    {
+      icon: ShieldCheck,
+      title: 'Real-Time Smoke Alerts',
+      description:
+        'Detect in-cabin smoking instantly to apply fines and discourage misuse.',
+    },
+    {
+      icon: MapPin,
+      title: 'Automated Toll Detection',
+      description:
+        'Track toll usage in real-time and pass charges directly to the renter..',
+    },
   ],
   stats: [
     {
       icon: Car,
-      value: 15,
+      value: 125,
       suffix: 'k+',
       label: 'Fleet Coverage',
     },
     {
       icon: Timer,
-      value: 95,
+      value: 98.9,
       suffix: '%',
-      label: 'Uptime Rate',
+      label: 'Customer Satisfaction',
     },
     {
       icon: TrendingUp,
