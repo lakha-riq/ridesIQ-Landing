@@ -130,44 +130,44 @@ const faqCategories: FAQCategory[] = [
       },
     ],
   },
-  {
-    id: 'pricing',
-    icon: CreditCard,
-    title: 'Pricing & Billing',
-    questions: [
-      {
-        id: 'cost',
-        question: 'How much does RidesIQ cost?',
-        answer:
-          'RidesIQ offers flexible pricing plans based on fleet size and feature requirements. Our basic plan starts at $19.99 per vehicle per month, with volume discounts available for larger fleets. Contact our sales team for a customized quote tailored to your specific needs.',
-      },
-      {
-        id: 'discounts',
-        question: 'Are there volume discounts for large fleets?',
-        answer:
-          'Yes, we offer significant volume discounts for fleets with 10 or more vehicles. The discount percentage increases with fleet size, and we can create custom enterprise packages for fleets with specific requirements. Contact our sales team to discuss volume pricing options.',
-      },
-    ],
-  },
-  {
-    id: 'troubleshooting',
-    icon: Wrench,
-    title: 'Troubleshooting',
-    questions: [
-      {
-        id: 'not-updating',
-        question: 'My tracker is not updating, what should I do?',
-        answer:
-          "If your tracker isn't updating, try these steps: 1) Check your vehicle's power supply, 2) Ensure the device is properly connected, 3) Verify cellular coverage in your area, 4) Restart the device. If issues persist, contact our 24/7 support team for immediate assistance.",
-      },
-      {
-        id: 'reset-device',
-        question: 'How do I reset my device?',
-        answer:
-          'To reset your RidesIQ device: 1) Locate the reset button on the device, 2) Press and hold for 10 seconds until the LED indicator flashes, 3) Wait for the device to restart (approximately 2 minutes), 4) Verify connection in your dashboard. For OBD devices, simply unplug and reconnect after 30 seconds.',
-      },
-    ],
-  },
+  // {
+  //   id: 'pricing',
+  //   icon: CreditCard,
+  //   title: 'Pricing & Billing',
+  //   questions: [
+  //     {
+  //       id: 'cost',
+  //       question: 'How much does RidesIQ cost?',
+  //       answer:
+  //         'RidesIQ offers flexible pricing plans based on fleet size and feature requirements. Our basic plan starts at $19.99 per vehicle per month, with volume discounts available for larger fleets. Contact our sales team for a customized quote tailored to your specific needs.',
+  //     },
+  //     {
+  //       id: 'discounts',
+  //       question: 'Are there volume discounts for large fleets?',
+  //       answer:
+  //         'Yes, we offer significant volume discounts for fleets with 10 or more vehicles. The discount percentage increases with fleet size, and we can create custom enterprise packages for fleets with specific requirements. Contact our sales team to discuss volume pricing options.',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 'troubleshooting',
+  //   icon: Wrench,
+  //   title: 'Troubleshooting',
+  //   questions: [
+  //     {
+  //       id: 'not-updating',
+  //       question: 'My tracker is not updating, what should I do?',
+  //       answer:
+  //         "If your tracker isn't updating, try these steps: 1) Check your vehicle's power supply, 2) Ensure the device is properly connected, 3) Verify cellular coverage in your area, 4) Restart the device. If issues persist, contact our 24/7 support team for immediate assistance.",
+  //     },
+  //     {
+  //       id: 'reset-device',
+  //       question: 'How do I reset my device?',
+  //       answer:
+  //         'To reset your RidesIQ device: 1) Locate the reset button on the device, 2) Press and hold for 10 seconds until the LED indicator flashes, 3) Wait for the device to restart (approximately 2 minutes), 4) Verify connection in your dashboard. For OBD devices, simply unplug and reconnect after 30 seconds.',
+  //     },
+  //   ],
+  // },
   {
     id: 'asset-tracker',
     icon: PcCase,
@@ -177,7 +177,7 @@ const faqCategories: FAQCategory[] = [
         id: 'how-accurate-is-the-gps-tracking',
         question: 'How accurate is the GPS tracking?',
         answer:
-          'Our GPS tracking provides accuracy within 2-3 meters in optimal conditions. The system updates every 10 seconds to ensure real-time location data.',
+          'Our GPS tracking provides accuracy within 2-3 meters in optimal conditions.',
       },
       {
         id: 'what-is-the-battery-life-of-the-tracking-devices',
@@ -202,7 +202,7 @@ const faqCategories: FAQCategory[] = [
         id: 'what-kind-of-support-do-you-offer',
         question: 'What kind of support do you offer?',
         answer:
-          'We provide 24/7 technical support via phone, email, and chat. Our team of experts is always available to help with any issues or questions.',
+          'We provide 24/7 technical support via email. Our team of experts is always available to help with any issues or questions.',
       },
     ],
   },
@@ -296,7 +296,7 @@ const faqCategories: FAQCategory[] = [
         id: 'how-accurate-is-the-gps-location-tracking',
         question: 'How accurate is the GPS location tracking?',
         answer:
-          'Our OBD tracker uses a high-sensitivity GNSS receiver with autonomous positioning accuracy of under 2.5 meters and tracking sensitivity down to -162 dBm.',
+          'Our OBD tracker uses a high-sensitivity GNSS receiver that provides location accuracy within 2.5 meters under normal conditions. It maintains reliable tracking even in low-signal areas thanks to advanced signal sensitivity.',
       },
       {
         id: 'what-happens-if-the-tracker-is-unplugged-or-loses-power',
@@ -309,12 +309,6 @@ const faqCategories: FAQCategory[] = [
         question: 'Can I track driving behavior with the OBD tracker?',
         answer:
           'Yes. The device can detect harsh acceleration, braking, and sharp turns using its built-in 3-axis accelerometer, helping you manage driver safety and compliance.',
-      },
-      {
-        id: 'how-often-does-the-device-update-its-location',
-        question: 'How often does the device update its location?',
-        answer:
-          'Location updates can be customized by time interval, movement, or status changes. This allows for real-time visibility without draining network or power resources.',
       },
       {
         id: 'does-this-tracker-work-across-borders-or-in-multiple-countries',
@@ -360,12 +354,6 @@ const faqCategories: FAQCategory[] = [
         question: 'Can I schedule a product demo or consultation?',
         answer:
           'Absolutely. You can book a live demo with one of our fleet specialists to see how RidesIQ works for your needs.',
-      },
-      {
-        id: 'where-are-your-offices-located',
-        question: 'Where are your offices located?',
-        answer:
-          'We operate out of Toronto (ON), Buffalo (NY), and Lewes (DE), with support available across North America.',
       },
       {
         id: 'do-you-offer-onboarding-or-training-for-new-clients',
