@@ -160,15 +160,15 @@ const fleetManagementData: IndustryData = {
   stats: [
     {
       icon: Truck,
-      value: 20,
+      value: 15,
       suffix: 'k+',
       label: 'Vehicles Tracked',
     },
     {
       icon: Timer,
-      value: 98,
+      value: 98.9,
       suffix: '%',
-      label: 'Fleet Uptime',
+      label: 'Customer Satisfaction',
     },
     {
       icon: TrendingUp,
@@ -236,7 +236,7 @@ const fleetManagementData: IndustryData = {
   },
   trustStat: {
     stat1: '98.9%',
-    stat2: '125k+',
+    stat2: '15k+',
     stat3: '24/7',
   },
 };
