@@ -29,7 +29,7 @@ const countryOptions = Country.getAllCountries().map((country) => ({
 }));
 
 const formSchema = z.object({
-  interest: z.string().min(1, 'Please select an interest'),
+  interest: z.array(z.string()).min(1, 'Please select an interest'),
   vehicleCount: z.string().min(1, 'Please select vehicle count'),
   trackingType: z
     .array(z.string())
@@ -60,7 +60,7 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 const initialFormData: FormData = {
-  interest: '',
+  interest: [],
   vehicleCount: '',
   trackingType: [],
   features: [],
@@ -293,10 +293,18 @@ export const MultiStepForm: React.FC = () => {
                   <button
                     key={option.value}
                     onClick={() => {
-                      updateFormData('interest', option.value);
+                      const alreadySelected = formData.interest.includes(
+                        option.value
+                      );
+                      const updated = alreadySelected
+                        ? formData.interest.filter(
+                            (val) => val !== option.value
+                          )
+                        : [...formData.interest, option.value];
+                      updateFormData('interest', updated);
                     }}
-                    className={`p-6 w-full h-28 sm:h-32 rounded-xl border-2 transition-all duration-300 flex items-center gap-4 hover:border-[#678FCA] hover:shadow-lg ${
-                      formData.interest === option.value
+                    className={`p-6 w-full h-28 sm:min-h-32 rounded-xl border-2 transition-all duration-300 flex items-center gap-4 hover:border-[#678FCA] hover:shadow-lg ${
+                      formData.interest.includes(option.value)
                         ? 'border-[#678FCA] bg-[#678FCA]/5'
                         : 'border-gray-200'
                     }`}
@@ -707,7 +715,7 @@ export const MultiStepForm: React.FC = () => {
   return (
     <div
       ref={formRef}
-      className="bg-white w-full max-w-4xl mx-auto rounded-2xl p-8 shadow-lg border border-gray-100 flex flex-col"
+      className="bg-white w-full overflow-y-auto max-w-4xl mx-auto rounded-2xl p-8 shadow-lg border border-gray-100 flex flex-col"
       style={{ minHeight: '600px' }}
     >
       <div className="mb-6">
