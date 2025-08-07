@@ -321,7 +321,7 @@ const Contact = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
             {/* Office Locations */}
             {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -373,7 +373,7 @@ const Contact = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/5 to-[#99D5C9]/5 rounded-2xl transform transition-all duration-300 group-hover:scale-[1.02]" />
 
               <div className="relative bg-white h-full rounded-2xl p-8 shadow-lg transition-all duration-300 group-hover:shadow-xl border border-gray-100/50">
-                <div className="flex items-start gap-6">
+                <div className="flex items-center gap-6">
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0">
                     <div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
                       <Mail className="w-7 h-7 text-[#678FCA]" />
@@ -412,7 +412,7 @@ const Contact = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-[#678FCA]/5 to-[#99D5C9]/5 rounded-2xl transform transition-all duration-300 group-hover:scale-[1.02]" />
 
               <div className="relative bg-white h-full rounded-2xl p-8 shadow-lg transition-all duration-300 group-hover:shadow-xl border border-gray-100/50">
-                <div className="flex items-start gap-6">
+                <div className="flex items-center gap-6">
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0">
                     <div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
                       <Clock className="w-7 h-7 text-[#678FCA]" />
@@ -426,7 +426,6 @@ const Contact = () => {
                     <div className="space-y-2">
                       <p className="text-gray-600">Monday - Friday</p>
                       <p className="text-gray-600">9 AM - 5 PM EST</p>
-                      <p className="text-sm text-gray-500 mt-2"></p>
                     </div>
                   </div>
                 </div>

@@ -84,7 +84,7 @@ export const IndustryKeyFeatures: React.FC<IndustryKeyFeaturesProps> = ({
                 <div className="flex items-start gap-4">
                   {/* Icon */}
                   <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] flex items-center justify-center flex-shrink-0">
-                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white flex items-center justify-center">
+                    <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-xl bg-white flex items-center justify-center">
                       <feature.icon className="w-6 h-6 sm:w-7 sm:h-7 text-[#678FCA]" />
                     </div>
                   </div>

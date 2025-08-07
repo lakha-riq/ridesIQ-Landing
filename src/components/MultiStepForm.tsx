@@ -303,7 +303,7 @@ export const MultiStepForm: React.FC = () => {
                         : [...formData.interest, option.value];
                       updateFormData('interest', updated);
                     }}
-                    className={`p-6 w-full h-28 sm:min-h-32 rounded-xl border-2 transition-all duration-300 flex items-center gap-4 hover:border-[#678FCA] hover:shadow-lg ${
+                    className={`p-6 w-full h-20  rounded-xl border-2 transition-all duration-300 flex items-center gap-4 hover:border-[#678FCA] hover:shadow-lg ${
                       formData.interest.includes(option.value)
                         ? 'border-[#678FCA] bg-[#678FCA]/5'
                         : 'border-gray-200'
@@ -492,7 +492,7 @@ export const MultiStepForm: React.FC = () => {
             exit={{ opacity: 0, x: -20 }}
             className="h-full flex flex-col"
           >
-            <div className="flex-1 overflow-y-auto">
+            <div className="flex-1 overflow-visible">
               <h3 className="text-xl font-semibold mb-4">
                 Location Information
               </h3>
@@ -510,10 +510,16 @@ export const MultiStepForm: React.FC = () => {
                     }}
                     placeholder="Select a country..."
                     className={errors.country ? 'border-red-500' : ''}
+                    menuPortalTarget={document.body}
+                    menuPosition="fixed"
                     styles={{
                       placeholder: (provided) => ({
                         ...provided,
                         color: '#6B7280', // Tailwind's text-gray-500
+                      }),
+                      menuPortal: (provided) => ({
+                        ...provided,
+                        zIndex: 9999,
                       }),
                     }}
                   />
@@ -537,10 +543,16 @@ export const MultiStepForm: React.FC = () => {
                     placeholder="Select a region..."
                     isDisabled={!selectedCountryCode}
                     className={errors.region ? 'border-red-500' : ''}
+                    menuPortalTarget={document.body}
+                    menuPosition="fixed"
                     styles={{
                       placeholder: (provided) => ({
                         ...provided,
                         color: '#6B7280',
+                      }),
+                      menuPortal: (provided) => ({
+                        ...provided,
+                        zIndex: 9999,
                       }),
                     }}
                   />

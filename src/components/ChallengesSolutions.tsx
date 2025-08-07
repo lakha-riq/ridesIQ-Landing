@@ -153,100 +153,101 @@ export const ChallengesSolutions: React.FC<ChallengesSolutionsProps> = ({
   });
 
   return (
-    <section className='py-24 relative overflow-hidden' ref={containerRef}>
+    <section className="py-24 relative overflow-hidden" ref={containerRef}>
       {/* Background Elements */}
-      <div className='absolute inset-0 bg-gradient-to-b from-gray-50/50 to-white' />
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-white" />
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center opacity-5" />
 
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative'>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className='text-center mb-16'
+          className="text-center mb-16"
         >
           {/* Real-Time Solutions Badge */}
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-50 text-blue-600 text-sm font-medium mb-8'>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 text-blue-600 text-sm font-medium mb-8">
             <svg
-              className='w-4 h-4 mr-2'
-              viewBox='0 0 24 24'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'
+              className="w-4 h-4 mr-2"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d='M12 2L2 7L12 12L22 7L12 2Z'
-                stroke='currentColor'
-                strokeWidth='2'
-                strokeLinecap='round'
-                strokeLinejoin='round'
+                d="M12 2L2 7L12 12L22 7L12 2Z"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
-                d='M2 17L12 22L22 17'
-                stroke='currentColor'
-                strokeWidth='2'
-                strokeLinecap='round'
-                strokeLinejoin='round'
+                d="M2 17L12 22L22 17"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
-                d='M2 12L12 17L22 12'
-                stroke='currentColor'
-                strokeWidth='2'
-                strokeLinecap='round'
-                strokeLinejoin='round'
+                d="M2 12L12 17L22 12"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
             Real-Time Solutions
           </div>
 
-          <h2 className='text-4xl sm:text-5xl font-bold mb-6'>
-            From <span className='text-[#678FCA]'>Challenges</span> to{' '}
-            <span className='text-[#99D5C9]'>Solutions</span>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+            From <span className="text-[#678FCA]">Challenges</span> to{' '}
+            <span className="text-[#99D5C9]">Solutions</span>
           </h2>
-          <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {challengePara}
           </p>
         </motion.div>
 
         {/* Desktop View - Two columns */}
         <motion.div
-          initial='hidden'
-          whileInView='visible'
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
           variants={{
             hidden: {},
             visible: { transition: { staggerChildren: 0.2 } },
           }}
-          className='hidden sm:grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10'
+          className="hidden sm:grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10"
         >
           {/* Challenges Column */}
-          <div className='space-y-6'>
+          <div className="space-y-6">
             {challenges.map((challenge, index) => {
               const Icon = challenge.icon;
               return (
                 <motion.div
                   key={`desktop-challenge-${index}`}
                   variants={cardVariants('left')}
-                  className='relative group'
+                  className="relative group"
                 >
-                  <div className='bg-white md:h-45 lg:h-33 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300'>
-                    <div className='flex items-start gap-4'>
-                      <div className='w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0'>
-                        <div className='w-full h-full rounded-xl bg-white flex items-center justify-center'>
-                          <Icon className='w-7 h-7 text-[#678FCA]' />
+                  <div className="bg-white md:h-45 lg:h-33 flex rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div className="relative flex-shrink-0 w-14 mr-4">
+                      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5">
+                        <div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
+                          <Icon className="w-7 h-7 text-[#678FCA]" />
                         </div>
                       </div>
-                      <div>
-                        <h3 className='text-xl font-semibold mb-2 text-gray-900'>
-                          {challenge.title}
-                        </h3>
-                        <p className='text-sm text-gray-600 leading-relaxed'>
-                          {challenge.description}
-                        </p>
-                      </div>
+                    </div>
+
+                    <div className="flex-1 min-h-0">
+                      <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                        {challenge.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 leading-relaxed">
+                        {challenge.description}
+                      </p>
                     </div>
                   </div>
                   <motion.div
-                    className='absolute top-1/2 -right-10 -translate-y-4 w-10 h-6 z-0 hidden md:block'
+                    className="absolute top-1/2 -right-10 -translate-y-4 w-10 h-6 z-0 hidden md:block"
                     initial={{ opacity: 0, scale: 0.5 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{
@@ -258,7 +259,7 @@ export const ChallengesSolutions: React.FC<ChallengesSolutionsProps> = ({
                   >
                     <HiArrowNarrowRight
                       size={40}
-                      className='text-[#678FCA]/70'
+                      className="text-[#678FCA]/70"
                     />
                   </motion.div>
                 </motion.div>
@@ -268,7 +269,7 @@ export const ChallengesSolutions: React.FC<ChallengesSolutionsProps> = ({
 
           {/* Solutions Column */}
           <motion.div
-            className='space-y-6'
+            className="space-y-6"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -281,20 +282,20 @@ export const ChallengesSolutions: React.FC<ChallengesSolutionsProps> = ({
                   key={`desktop-solution-${index}`}
                   variants={cardVariants('right')}
                   whileHover={{ scale: 1.03 }}
-                  className='relative z-10 transition-all duration-300'
+                  className="relative z-10 transition-all duration-300"
                 >
-                  <div className='bg-white md:h-45 lg:h-33 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300'>
-                    <div className='flex items-start gap-4'>
-                      <div className='w-14 h-14 rounded-xl bg-gradient-to-br from-[#99D5C9] to-[#678FCA] p-0.5 flex-shrink-0'>
-                        <div className='w-full h-full rounded-xl bg-white flex items-center justify-center'>
-                          <Icon className='w-7 h-7 text-[#678FCA]' />
+                  <div className="bg-white md:h-45 lg:h-33 flex items-center rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div className="flex items-center gap-4">
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#99D5C9] to-[#678FCA] p-0.5 flex-shrink-0">
+                        <div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
+                          <Icon className="w-7 h-7 text-[#678FCA]" />
                         </div>
                       </div>
                       <div>
-                        <h3 className='text-xl font-semibold mb-2 text-gray-900'>
+                        <h3 className="text-xl font-semibold mb-2 text-gray-900">
                           {solution.title}
                         </h3>
-                        <p className='text-sm text-gray-600 leading-relaxed'>
+                        <p className="text-sm text-gray-600 leading-relaxed">
                           {solution.description}
                         </p>
                       </div>
@@ -307,34 +308,34 @@ export const ChallengesSolutions: React.FC<ChallengesSolutionsProps> = ({
         </motion.div>
 
         {/* Mobile View - Alternating challenges and solutions */}
-        <div className='md:hidden space-y-10'>
+        <div className="md:hidden space-y-10">
           {pairs.map((pair, index) => {
             if (!pair.challenge || !pair.solution) return null;
             const ChallengeIcon = pair.challenge.icon;
             const SolutionIcon = pair.solution.icon;
 
             return (
-              <div key={`mobile-pair-${index}`} className='space-y-7'>
+              <div key={`mobile-pair-${index}`} className="space-y-7">
                 {/* Challenge */}
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4 }}
-                  className='relative'
+                  className="relative"
                 >
-                  <div className='bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition duration-300'>
-                    <div className='flex items-start gap-4'>
-                      <div className='w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0'>
-                        <div className='w-full h-full rounded-xl bg-white flex items-center justify-center'>
-                          <ChallengeIcon className='w-7 h-7 text-[#678FCA]' />
+                  <div className="bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition duration-300">
+                    <div className="flex items-start gap-4">
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#678FCA] to-[#99D5C9] p-0.5 flex-shrink-0">
+                        <div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
+                          <ChallengeIcon className="w-7 h-7 text-[#678FCA]" />
                         </div>
                       </div>
                       <div>
-                        <h3 className='text-lg font-semibold mb-1 text-gray-900'>
+                        <h3 className="text-lg font-semibold mb-1 text-gray-900">
                           {pair.challenge.title}
                         </h3>
-                        <p className='text-sm text-gray-600'>
+                        <p className="text-sm text-gray-600">
                           {pair.challenge.description}
                         </p>
                       </div>
@@ -343,7 +344,7 @@ export const ChallengesSolutions: React.FC<ChallengesSolutionsProps> = ({
 
                   {/* Arrow */}
                   <motion.div
-                    className='absolute left-1/2 -bottom-[28px] -translate-x-1/2 z-0 flex justify-center'
+                    className="absolute left-1/2 -bottom-[28px] -translate-x-1/2 z-0 flex justify-center"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -356,7 +357,7 @@ export const ChallengesSolutions: React.FC<ChallengesSolutionsProps> = ({
                   >
                     <HiArrowNarrowDown
                       size={28}
-                      className='text-[#678FCA]/70'
+                      className="text-[#678FCA]/70"
                     />
                   </motion.div>
                 </motion.div>
@@ -367,20 +368,20 @@ export const ChallengesSolutions: React.FC<ChallengesSolutionsProps> = ({
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4 }}
-                  className='relative'
+                  className="relative"
                 >
-                  <div className='bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition duration-300'>
-                    <div className='flex items-start gap-4'>
-                      <div className='w-14 h-14 rounded-xl bg-gradient-to-br from-[#99D5C9] to-[#678FCA] p-0.5 flex-shrink-0'>
-                        <div className='w-full h-full rounded-xl bg-white flex items-center justify-center'>
-                          <SolutionIcon className='w-7 h-7 text-[#678FCA]' />
+                  <div className="bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition duration-300">
+                    <div className="flex items-start gap-4">
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#99D5C9] to-[#678FCA] p-0.5 flex-shrink-0">
+                        <div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
+                          <SolutionIcon className="w-7 h-7 text-[#678FCA]" />
                         </div>
                       </div>
                       <div>
-                        <h3 className='text-lg font-semibold mb-1 text-gray-900'>
+                        <h3 className="text-lg font-semibold mb-1 text-gray-900">
                           {pair.solution.title}
                         </h3>
-                        <p className='text-sm text-gray-600'>
+                        <p className="text-sm text-gray-600">
                           {pair.solution.description}
                         </p>
                       </div>

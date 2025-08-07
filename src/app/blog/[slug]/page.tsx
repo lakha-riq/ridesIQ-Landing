@@ -16,19 +16,37 @@ import { BlogSidebar } from '../../../components/BlogSidebar';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { getParsedBlogEntries } from '@/util/blogUtils';
-import { popularPosts, recentPosts, tags } from '@/data/blogData';
+import { tags } from '@/data/blogData';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
+
+type BlogPost = {
+  id: string;
+  title: string;
+  slug: string;
+  content: string;
+  image: string;
+  author: {
+    name: string;
+    avatar: string;
+    role: string;
+  };
+  category: string;
+  readtime: string;
+  publishedAt: Date;
+};
 
 const BlogPost = () => {
   const { slug } = useParams();
   const [post, setPost] = useState<any>(null);
   const [allPosts, setAllPosts] = useState<any[]>([]);
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
 
   useEffect(() => {
     const fetchPost = async () => {
       const parsed = await getParsedBlogEntries();
       setAllPosts(parsed);
+      setBlogPosts(parsed);
       const matchedPost = parsed.find((p) => p.slug === slug);
       setPost(matchedPost);
     };
@@ -211,13 +229,9 @@ const BlogPost = () => {
             {/* Sidebar */}
             <div className="lg:col-span-1">
               <BlogSidebar
-                popularPosts={popularPosts}
-                recentPosts={recentPosts}
-                tags={[
-                  { name: 'Fleet Management', count: 24 },
-                  { name: 'AI', count: 8 },
-                  { name: 'Analytics', count: 12 },
-                ]}
+                popularPosts={blogPosts}
+                recentPosts={blogPosts}
+                tags={tags}
               />
             </div>
           </div>
