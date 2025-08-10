@@ -1,11 +1,24 @@
-import { NextResponse } from "next/server";
-import { sendEmail, StoreEmail } from "@/actions/smtp";
+import { NextResponse } from 'next/server';
+import { sendEmail, StoreEmail } from '@/actions/smtp';
 
 export async function POST(request: Request) {
-	try {
-		const body = await request.json();
-		const { firstName, lastName, email, companyName, phone, interest, vehicleCount, trackingType, features, region, existingCustomer } = body;
-		const html = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  try {
+    const body = await request.json();
+    const {
+      firstName,
+      lastName,
+      email,
+      companyName,
+      phone,
+      interest,
+      vehicleCount,
+      trackingType,
+      features,
+      region,
+      country,
+      existingCustomer,
+    } = body;
+    const html = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html dir="ltr" lang="en">
   <head>
     <meta name="viewport" content="width=device-width" />
@@ -141,15 +154,16 @@ export async function POST(request: Request) {
   </body>
 </html>`;
 
-		// Format the text for RidesIQ team email
-		const text = `
+    // Format the text for RidesIQ team email
+    const text = `
 	Quote Request Details:\n
 	-------------------\n
 	Name: ${firstName} ${lastName}\n
 	Email: ${email}\n
 	Company: ${companyName}\n
 	Phone: ${phone}\n
-	Region: ${region}\n
+	Region: ${region.lable}\n
+	Country: ${country.lable}\n
 	Existing Customer: ${existingCustomer}\n
 
 	Fleet Information:\n
@@ -160,8 +174,8 @@ export async function POST(request: Request) {
 	Required Features: ${JSON.stringify(features)} \n
 		`;
 
-		// Create HTML template for RidesIQ team email
-		const teamEmailHtml = `
+    // Create HTML template for RidesIQ team email
+    const teamEmailHtml = `
 		<html>
 		<head>
 		  <style>
@@ -210,7 +224,11 @@ export async function POST(request: Request) {
 			  </div>
 			  <div class="info-row">
 				<div class="label">Region:</div>
-				<div class="value">${region}</div>
+				<div class="value">${region.lable}</div>
+			  </div> 
+        <div class="info-row">
+				<div class="label">Region:</div>
+				<div class="value">${country.lable}</div>
 			  </div>
 			  <div class="info-row">
 				<div class="label">Existing Customer:</div>
@@ -232,7 +250,9 @@ export async function POST(request: Request) {
 				<div class="label">Vehicle Types:</div>
 				<div class="value">
 				  <ul>
-					${trackingType.map((type: string) => `<li class="list-item">${type}</li>`).join("")}
+					${trackingType
+            .map((type: string) => `<li class="list-item">${type}</li>`)
+            .join('')}
 				  </ul>
 				</div>
 			  </div>
@@ -240,7 +260,9 @@ export async function POST(request: Request) {
 				<div class="label">Required Features:</div>
 				<div class="value">
 				  <ul>
-					${features.map((feature: string) => `<li class="list-item">${feature}</li>`).join("")}
+					${features
+            .map((feature: string) => `<li class="list-item">${feature}</li>`)
+            .join('')}
 				  </ul>
 				</div>
 			  </div>
@@ -252,35 +274,47 @@ export async function POST(request: Request) {
         </body>
 		</html>`;
 
-		// Send to RidesIQ team
-		const StoreEmailResult = await StoreEmail({
-			to: [email],
-			from: process.env.AWS_SES_VERIFIED_EMAIL!,
-			subject: `Quote Request from ${firstName} ${lastName}`,
-			name: `${firstName} ${lastName}`,
-			text: text,
-			html: teamEmailHtml,
-		});
-		if (!StoreEmailResult.success) {
-			return NextResponse.json({ error: "Failed to store email" }, { status: 500 });
-		}
+    // Send to RidesIQ team
+    const StoreEmailResult = await StoreEmail({
+      to: [email],
+      from: process.env.AWS_SES_VERIFIED_EMAIL!,
+      subject: `Quote Request from ${firstName} ${lastName}`,
+      name: `${firstName} ${lastName}`,
+      text: text,
+      html: teamEmailHtml,
+    });
+    if (!StoreEmailResult.success) {
+      return NextResponse.json(
+        { error: 'Failed to store email' },
+        { status: 500 }
+      );
+    }
 
-		// Send confirmation to client with original template
-		const SendToContacterResult = await sendEmail({
-			to: [email],
-			from: process.env.AWS_SES_VERIFIED_EMAIL!,
-			subject: "Thank you for contacting RidesIQ",
-			html,
-			text: "Thank you for contacting RidesIQ. We'll get back to you soon!",
-		});
+    // Send confirmation to client with original template
+    const SendToContacterResult = await sendEmail({
+      to: [email],
+      from: process.env.AWS_SES_VERIFIED_EMAIL!,
+      subject: 'Thank you for contacting RidesIQ',
+      html,
+      text: "Thank you for contacting RidesIQ. We'll get back to you soon!",
+    });
 
-		if (!SendToContacterResult.success) {
-			return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
-		}
+    if (!SendToContacterResult.success) {
+      return NextResponse.json(
+        { error: 'Failed to send email' },
+        { status: 500 }
+      );
+    }
 
-		return NextResponse.json({ success: true, messageId: SendToContacterResult.messageId });
-	} catch (error) {
-		console.error("Error in email API route:", error);
-		return NextResponse.json({ error: "Internal server error" }, { status: 500 });
-	}
+    return NextResponse.json({
+      success: true,
+      messageId: SendToContacterResult.messageId,
+    });
+  } catch (error) {
+    console.error('Error in email API route:', error);
+    return NextResponse.json(
+      { error: 'Internal server error' },
+      { status: 500 }
+    );
+  }
 }

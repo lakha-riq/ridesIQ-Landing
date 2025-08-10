@@ -19,8 +19,27 @@
   }
 }
 
+
 body {
   background: var(--background);
   color: black;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.divider-line {
+  width: 1px;
+  height: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+
 }
