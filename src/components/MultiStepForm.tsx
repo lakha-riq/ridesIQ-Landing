@@ -575,7 +575,7 @@ export const MultiStepForm: React.FC = () => {
             exit={{ opacity: 0, x: -20 }}
             className="h-full flex flex-col"
           >
-            <div className="flex-1 overflow-y-auto">
+            <div className="flex-1 p-1 overflow-y-auto">
               <h3 className="text-xl font-semibold mb-4">
                 Contact Information
               </h3>
