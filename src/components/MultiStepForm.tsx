@@ -219,7 +219,6 @@ export const MultiStepForm: React.FC = () => {
     if (!validateStep(6)) return;
 
     if (formSchema.safeParse(formData).success) {
-      console.log(formData);
       try {
         const res = await fetch('/api/mail', {
           method: 'POST',
@@ -231,7 +230,6 @@ export const MultiStepForm: React.FC = () => {
           setFormData(initialFormData);
           setStep(1);
           setErrors({});
-          console.log(formData);
         } else {
           console.error('Failed to send quote request');
         }
