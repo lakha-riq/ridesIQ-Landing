@@ -219,7 +219,6 @@ export const MultiStepForm: React.FC = () => {
     if (!validateStep(6)) return;
 
     if (formSchema.safeParse(formData).success) {
-      console.log(formData);
       try {
         const res = await fetch('/api/mail', {
           method: 'POST',
@@ -510,8 +509,9 @@ export const MultiStepForm: React.FC = () => {
                     }}
                     placeholder="Select a country..."
                     className={errors.country ? 'border-red-500' : ''}
-                    menuPortalTarget={document.body}
-                    menuPosition="fixed"
+                    menuPortalTarget={null}
+                    menuPlacement="auto"
+                    menuShouldScrollIntoView={false}
                     styles={{
                       placeholder: (provided) => ({
                         ...provided,
@@ -543,8 +543,9 @@ export const MultiStepForm: React.FC = () => {
                     placeholder="Select a region..."
                     isDisabled={!selectedCountryCode}
                     className={errors.region ? 'border-red-500' : ''}
-                    menuPortalTarget={document.body}
-                    menuPosition="fixed"
+                    menuPortalTarget={null}
+                    menuPlacement="auto"
+                    menuShouldScrollIntoView={false}
                     styles={{
                       placeholder: (provided) => ({
                         ...provided,
@@ -574,7 +575,7 @@ export const MultiStepForm: React.FC = () => {
             exit={{ opacity: 0, x: -20 }}
             className="h-full flex flex-col"
           >
-            <div className="flex-1 overflow-y-auto">
+            <div className="flex-1 p-1 overflow-y-auto">
               <h3 className="text-xl font-semibold mb-4">
                 Contact Information
               </h3>
@@ -685,6 +686,9 @@ export const MultiStepForm: React.FC = () => {
                     <span className="text-red-500">*</span>
                   </label>
                   <Select
+                    menuPortalTarget={document.body}
+                    menuPlacement="auto"
+                    menuShouldScrollIntoView={false}
                     options={[
                       { value: 'yes', label: 'Yes' },
                       { value: 'no', label: 'No' },
@@ -703,9 +707,26 @@ export const MultiStepForm: React.FC = () => {
                     onChange={(option) =>
                       updateFormData('existingCustomer', option?.value || '')
                     }
-                    className={`text-base ${
-                      errors.existingCustomer ? 'border-red-500' : ''
-                    }`}
+                    styles={{
+                      control: (base, state) => ({
+                        ...base,
+                        minHeight: '48px',
+                        padding: '4px 16px',
+                        borderRadius: '8px',
+                        borderColor: errors.existingCustomer
+                          ? '#ef4444'
+                          : state.isFocused
+                          ? '#678FCA' // Focus me bhi border visible rahe
+                          : '#d1d5db',
+
+                        boxShadow: 'none',
+                        '&:hover': {
+                          borderColor: errors.existingCustomer
+                            ? '#ef4444'
+                            : '#678FCA',
+                        },
+                      }),
+                    }}
                     placeholder="Select an option..."
                   />
                   {errors.existingCustomer && (

@@ -73,9 +73,7 @@ export async function StoreEmail({
   try {
     const command = new SendEmailCommand({
       Destination: {
-        ToAddresses: [
-          process.env.AWS_SES_VERIFIED_EMAIL ?? 'noreply@ridesiq.com',
-        ],
+        ToAddresses: [process.env.AWS_SES_VERIFIED_EMAIL ?? 'aman@ridesiq.com'],
       },
       Message: {
         Body: {

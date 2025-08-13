@@ -175,7 +175,6 @@ const Contact = () => {
     }
   };
 
-  // Add handlers for CTA buttons
   const handleDemoRequest = () => {
     const pageData = {
       action: 'demo_request',
