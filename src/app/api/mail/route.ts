@@ -223,12 +223,12 @@ export async function POST(request: Request) {
 				<div class="value">${phone}</div>
 			  </div>
 			  <div class="info-row">
-				<div class="label">Region:</div>
-				<div class="value">${region.lable}</div>
+				<div class="label">Country:</div>
+				<div class="value">${country.label}</div>
 			  </div> 
         <div class="info-row">
 				<div class="label">Region:</div>
-				<div class="value">${country.lable}</div>
+				<div class="value">${region.label}</div>
 			  </div>
 			  <div class="info-row">
 				<div class="label">Existing Customer:</div>
