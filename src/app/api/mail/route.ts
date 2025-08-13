@@ -228,7 +228,7 @@ export async function POST(request: Request) {
 			  </div> 
         <div class="info-row">
 				<div class="label">Region:</div>
-				<div class="value">${region.lable}</div>
+				<div class="value">${region.label}</div>
 			  </div>
 			  <div class="info-row">
 				<div class="label">Existing Customer:</div>
