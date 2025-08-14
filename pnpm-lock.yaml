@@ -77,6 +77,12 @@ importers:
       react-intersection-observer:
         specifier: ^9.16.0
         version: 9.16.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react-microsoft-clarity:
+        specifier: ^2.0.0
+        version: 2.0.0
+      react-mouseflow:
+        specifier: ^1.0.4
+        version: 1.0.4
       react-select:
         specifier: ^5.10.1
         version: 5.10.1(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -2432,6 +2438,12 @@ packages:
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  react-microsoft-clarity@2.0.0:
+    resolution: {integrity: sha512-Hnbmiv+/vHSekS+Diho7SzvigNLNm+wayZMhxS4otaxPBlN3ccpY7k+PJd2Ytg3F6umU3JZzFtLzvK1WmfdhpA==}
+
+  react-mouseflow@1.0.4:
+    resolution: {integrity: sha512-xmpzc1spcJlXFY7ZvtgDTDC55sVX8Q28Zdwn9g9qmgHOc/cfYHCnMvuQ/zI05YuJOTfHdslrdV7zZ6K38i3ezg==}
 
   react-select@5.10.1:
     resolution: {integrity: sha512-roPEZUL4aRZDx6DcsD+ZNreVl+fM8VsKn0Wtex1v4IazH60ILp5xhdlp464IsEAlJdXeD+BhDAFsBVMfvLQueA==}
@@ -5863,6 +5875,10 @@ snapshots:
       react-dom: 19.0.0(react@19.0.0)
 
   react-is@16.13.1: {}
+
+  react-microsoft-clarity@2.0.0: {}
+
+  react-mouseflow@1.0.4: {}
 
   react-select@5.10.1(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:

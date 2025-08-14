@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import AnalyticsProvider from './AnalyticsProvider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -21,16 +22,28 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID || '';
+
   return (
-    <html lang='en'>
-      <GoogleTagManager gtmId='G-20S21GCSHW' />
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
+
+        <AnalyticsProvider>{children}</AnalyticsProvider>
+
+        <GoogleTagManager gtmId={gtmId} />
         <SpeedInsights />
       </body>
     </html>
