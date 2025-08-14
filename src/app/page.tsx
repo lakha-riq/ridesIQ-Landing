@@ -186,8 +186,8 @@ function Home() {
 
               <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 Track your vehicle in real-time, automate toll billing, and
-                recover stolen vehicles — powered by RidesIQ’s
-                plug-and-play GPS technology.
+                recover stolen vehicles — powered by RidesIQ’s plug-and-play GPS
+                technology.
               </p>
 
               <div className="flex justify-center lg:justify-start mb-12">
@@ -230,12 +230,12 @@ function Home() {
             </div>
 
             {/* Right Content - 3D Product Render */}
-            <div className="relative lg:h-[600px] flex items-center justify-center mt-12 lg:mt-0">
+            <div className="z-0 relative lg:h-[600px] flex items-center justify-center mt-12 lg:mt-0">
               <div className="relative w-full max-w-lg mx-auto">
                 {/* Main Product Image */}
                 <div className="product-render relative z-20 transform hover:scale-105 transition-transform duration-500">
                   <Image
-                    src='/assets/homepage/Dashboard.png'
+                    src="/assets/homepage/Dashboard.png"
                     width={600}
                     height={600}
                     alt="Fleet vehicle GPS tracking dashboard – RidesIQ"
@@ -328,7 +328,8 @@ function Home() {
               viewport={{ once: true }}
               className="text-xl text-black max-w-2xl mx-auto"
             >
-              Trusted by worldwide various industry partners, RidesIQ delivers measurable impact.
+              Trusted by worldwide various industry partners, RidesIQ delivers
+              measurable impact.
             </motion.p>
           </motion.div>
 
@@ -569,11 +570,11 @@ function Home() {
                   </Link>
 
                   {/* Tag Buttons */}
-                  <div className='flex flex-wrap justify-center gap-4'>
-                    <div className='px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium'>
+                  <div className="flex flex-wrap justify-center gap-4">
+                    <div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">
                       #FleetTracking
                     </div>
-                    <div className='px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium'>
+                    <div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">
                       #RealtimeInsights
                     </div>
                     <div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">
@@ -591,7 +592,7 @@ function Home() {
       <Footer />
 
       {/* Mobile CTA */}
-      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white shadow-lg md:hidden">
+      <div className="fixed z-1 bottom-0 left-0 right-0 p-4 bg-white shadow-lg md:hidden">
         <button className="w-full bg-[#678FCA] text-white py-3 rounded-full flex items-center justify-center">
           Get a Demo <ChevronRight className="ml-2 w-5 h-5" />
         </button>
