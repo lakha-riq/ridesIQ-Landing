@@ -4,6 +4,7 @@ import './globals.css';
 import Script from 'next/script';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import AnalyticsProvider from './AnalyticsProvider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -25,6 +26,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID || '';
   return (
     <html lang="en">
       <head>
@@ -88,16 +90,14 @@ export default function RootLayout({
         {/* GTM noscript */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-MVKTVVZT"
+            src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
         </noscript>
-
-        {children}
-
-        <GoogleTagManager gtmId="G-20S21GCSHW" />
+        <AnalyticsProvider>{children}</AnalyticsProvider>
+        <GoogleTagManager gtmId={gtmId} />
         <SpeedInsights />
       </body>
     </html>
