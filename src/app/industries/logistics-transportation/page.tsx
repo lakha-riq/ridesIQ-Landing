@@ -114,7 +114,7 @@ const fleetManagementData: IndustryData = {
   subtitle: 'Professional Vehicle Monitoring Systems',
   description:
     'Optimize routes, reduce fuel costs, and increase fleet productivity with real-time tracking designed for logistics and delivery operations.',
-  heroImage: '/assets/universal/installation.jpg',
+  heroImage: '/assets/universal/Installation.jpg',
   challenges: [
     {
       icon: Shield,

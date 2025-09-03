@@ -113,7 +113,7 @@ const foodDeliveryData: IndustryData = {
   subtitle: 'Food Delivery GPS Tracking',
   description:
     'Real-time vehicle tracking for food delivery fleets. Ensure on-time arrivals, route visibility, and compliance with cold chain standards.',
-  heroImage: '/assets/universal/installation.jpg',
+  heroImage: '/assets/universal/Installation.jpg',
   challenges: [
     {
       icon: Clock,

@@ -179,6 +179,7 @@ function Home() {
                   Advanced Fleet Telematics
                 </div>
 
+
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
                   <span className="bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent">
                     Real-Time GPS Tracking for{' '}
@@ -602,6 +603,7 @@ function Home() {
             Get a Demo <ChevronRight className="ml-2 w-5 h-5" />
           </button>
         </div>
+
       </div>
     </div>
   );
