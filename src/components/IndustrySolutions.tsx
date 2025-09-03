@@ -80,7 +80,7 @@ const additionalIndustries: Industry[] = [
 
 export const IndustrySolutions = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="min-h-screen py-24 snap-start relative overflow-hidden">
       <div className="absolute inset-0 bg-[#678FCA]/[0.02] hero-pattern opacity-50" />
       <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
 

@@ -159,24 +159,24 @@ const competitors = [{ id: 'CompetitorA', name: 'Competitor A' }];
 
 export const CompetitiveAdvantage = () => {
   return (
-    <section className='py-24 relative overflow-hidden'>
-      <div className='absolute inset-0 bg-[#678FCA]/[0.02] hero-pattern opacity-50' />
-      <div className='absolute inset-0 bg-gradient-to-b from-white via-transparent to-white' />
+    <section className="min-h-screen py-24 snap-start relative overflow-hidden">
+      <div className="absolute inset-0 bg-[#678FCA]/[0.02] hero-pattern opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
 
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative'>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className='text-center mb-16'
+          className="text-center mb-16"
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className='inline-flex items-center px-4 py-2 rounded-full bg-[#678FCA]/10 text-[#678FCA] text-sm font-medium mb-6'
+            className="inline-flex items-center px-4 py-2 rounded-full bg-[#678FCA]/10 text-[#678FCA] text-sm font-medium mb-6"
           >
-            <Sparkles className='w-4 h-4 mr-2' />
+            <Sparkles className="w-4 h-4 mr-2" />
             Competitive Analysis
           </motion.div>
 
@@ -184,10 +184,10 @@ export const CompetitiveAdvantage = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className='text-4xl sm:text-5xl font-bold mb-6'
+            className="text-4xl sm:text-5xl font-bold mb-6"
           >
             Why Choose{' '}
-            <span className='bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent'>
+            <span className="bg-gradient-to-r from-[#678FCA] to-[#99D5C9] bg-clip-text text-transparent">
               RidesIQ
             </span>
           </motion.h2>
@@ -196,41 +196,41 @@ export const CompetitiveAdvantage = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className='text-xl text-gray-600 max-w-2xl mx-auto'
+            className="text-xl text-gray-600 max-w-2xl mx-auto"
           >
             See how RidesIQ compares to other fleet management solutions
           </motion.p>
         </motion.div>
 
         {/* Comparison Table */}
-        <div className='overflow-x-auto'>
-          <table className='w-full border border-gray-100 min-w-[600px] sm:min-w-[800px]'>
+        <div className="overflow-x-auto">
+          <table className="w-full border border-gray-100 min-w-[600px] sm:min-w-[800px]">
             <thead>
-              <tr className='border-b-1 border-gray-100'>
-                <th className='sm:p-4 text-sm sm:text-lg p-2 text-left text-gray-600 font-medium'>
+              <tr className="border-b-1 border-gray-100">
+                <th className="sm:p-4 text-sm sm:text-lg p-2 text-left text-gray-600 font-medium">
                   Features
                 </th>
-                <th className='sm:p-4 p-2 text-left'>
-                  <div className='bg-[#678FCA]/5 rounded-xl p-4'>
-                    <div className='text-[#678FCA] text-sm font-bold sm:text-lg'>
+                <th className="sm:p-4 p-2 text-left">
+                  <div className="bg-[#678FCA]/5 rounded-xl p-4">
+                    <div className="text-[#678FCA] text-sm font-bold sm:text-lg">
                       RidesIQ
                     </div>
-                    <div className='text-sm text-gray-600'>Industry Leader</div>
+                    <div className="text-sm text-gray-600">Industry Leader</div>
                   </div>
                 </th>
                 {competitors.map((competitor) => (
-                  <th key={competitor.id} className='p-4 text-left'>
-                    <div className='sm:p-4 p-2'>
-                      <div className='text-gray-900 sm:text-lg font-bold'>
+                  <th key={competitor.id} className="p-4 text-left">
+                    <div className="sm:p-4 p-2">
+                      <div className="text-gray-900 sm:text-lg font-bold">
                         {competitor.name}
                       </div>
-                      <div className='text-sm text-gray-600'>Competitor</div>
+                      <div className="text-sm text-gray-600">Competitor</div>
                     </div>
                   </th>
                 ))}
               </tr>
             </thead>
-            <tbody className='divide-y divide-gray-100'>
+            <tbody className="divide-y divide-gray-100">
               {features.map((feature, index) => (
                 <motion.tr
                   key={feature.name}
@@ -238,29 +238,29 @@ export const CompetitiveAdvantage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className='group hover:bg-gray-50/50'
+                  className="group hover:bg-gray-50/50"
                 >
-                  <td className='sm:p-4 p-2'>
-                    <div className='font-medium text-sm sm:text-lg text-gray-900'>
+                  <td className="sm:p-4 p-2">
+                    <div className="font-medium text-sm sm:text-lg text-gray-900">
                       {feature.name}
                     </div>
                   </td>
-                  <td className='sm:p-4 p-2'>
-                    <div className='bg-[#678FCA]/5 group-hover:bg-[#678FCA]/10 rounded-xl p-4 transition-colors'>
-                      <div className='flex items-start gap-3'>
-                        <div className='w-6 h-6 rounded-full bg-[#678FCA]/10 flex items-center justify-center flex-shrink-0'>
-                          <Check className='w-4 h-4 text-[#678FCA]' />
+                  <td className="sm:p-4 p-2">
+                    <div className="bg-[#678FCA]/5 group-hover:bg-[#678FCA]/10 rounded-xl p-4 transition-colors">
+                      <div className="flex items-start gap-3">
+                        <div className="w-6 h-6 rounded-full bg-[#678FCA]/10 flex items-center justify-center flex-shrink-0">
+                          <Check className="w-4 h-4 text-[#678FCA]" />
                         </div>
-                        <div className='text-sm text-gray-600'>
+                        <div className="text-sm text-gray-600">
                           {feature.ridesiq.detail}
                         </div>
                       </div>
                     </div>
                   </td>
                   {competitors.map((competitor) => (
-                    <td key={competitor.id} className='sm:p-4 p-2'>
-                      <div className='p-4'>
-                        <div className='flex items-start gap-3'>
+                    <td key={competitor.id} className="sm:p-4 p-2">
+                      <div className="p-4">
+                        <div className="flex items-start gap-3">
                           <div
                             className={`w-6 h-6 rounded-full ${
                               feature.competitors[competitor.id].supported
@@ -269,12 +269,12 @@ export const CompetitiveAdvantage = () => {
                             } flex items-center justify-center flex-shrink-0`}
                           >
                             {feature.competitors[competitor.id].supported ? (
-                              <Check className='w-4 h-4 text-green-600' />
+                              <Check className="w-4 h-4 text-green-600" />
                             ) : (
-                              <X className='w-4 h-4 text-red-600' />
+                              <X className="w-4 h-4 text-red-600" />
                             )}
                           </div>
-                          <div className='text-sm text-gray-600'>
+                          <div className="text-sm text-gray-600">
                             {feature.competitors[competitor.id].detail}
                           </div>
                         </div>
@@ -292,14 +292,14 @@ export const CompetitiveAdvantage = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className='mt-12 text-center'
+          className="mt-12 text-center"
         >
           <Link
-            href='/contact'
-            className='inline-flex items-center bg-[#678FCA] text-white px-8 py-4 rounded-full hover:bg-[#678FCA]/90 transition-all group'
+            href="/contact"
+            className="inline-flex items-center bg-[#678FCA] text-white px-8 py-4 rounded-full hover:bg-[#678FCA]/90 transition-all group"
           >
             See How RidesIQ Can Transform Your Fleet
-            <ChevronRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
+            <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>
       </div>
