@@ -61,7 +61,7 @@ const Footer = () => {
 
   return (
     <div>
-      <footer className="bg-gray-900 text-white pt-16 pb-30 sm:pb-8 px-4 relative">
+      <footer className="snap-start bg-gray-900 text-white pt-16 pb-30 sm:pb-8 px-4 relative">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
             {/* Email Signup */}
