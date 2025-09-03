@@ -73,28 +73,22 @@ export const Navigation = ({ customColor = 'text-gray-700' }) => {
   }, [isMenuOpen]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const scrollContainer = document.querySelector('.scroll-container');
 
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        isMenuOpen &&
-        menuRef.current &&
-        !menuRef.current.contains(event.target as Node) &&
-        buttonRef.current &&
-        !buttonRef.current.contains(event.target as Node)
-      ) {
-        setIsMenuOpen(false);
+    const handleScroll = () => {
+      if (scrollContainer) {
+        setScrolled((scrollContainer as HTMLElement).scrollTop > 20);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    document.addEventListener('mousedown', handleClickOutside);
+    if (scrollContainer) {
+      scrollContainer.addEventListener('scroll', handleScroll);
+    }
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('mousedown', handleClickOutside);
+      if (scrollContainer) {
+        scrollContainer.removeEventListener('scroll', handleScroll);
+      }
     };
   }, [isMenuOpen]);
 
