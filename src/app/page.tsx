@@ -158,12 +158,12 @@ function Home() {
   const totalDots = Math.ceil(productsData.length / 3);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="h-screen overflow-y-scroll snap-y snap-mandatory bg-white">
       <Toaster position="top-center" />
       {/* Navigation */}
       <Navigation />
       {/* Hero Section */}
-      <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-white">
+      <section className="relative snap-start min-h-[100svh] flex items-center justify-center overflow-hidden bg-white">
         <div className="absolute inset-0 bg-[#678FCA]/[0.02] hero-pattern opacity-50"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white/80"></div>
 
@@ -186,8 +186,8 @@ function Home() {
 
               <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 Track your vehicle in real-time, automate toll billing, and
-                recover stolen vehicles — powered by RidesIQ’s
-                plug-and-play GPS technology.
+                recover stolen vehicles — powered by RidesIQ’s plug-and-play GPS
+                technology.
               </p>
 
               <div className="flex justify-center lg:justify-start mb-12">
@@ -235,7 +235,7 @@ function Home() {
                 {/* Main Product Image */}
                 <div className="product-render relative z-20 transform hover:scale-105 transition-transform duration-500">
                   <Image
-                    src='/assets/homepage/Dashboard.png'
+                    src="/assets/homepage/Dashboard.png"
                     width={600}
                     height={600}
                     alt="Fleet vehicle GPS tracking dashboard – RidesIQ"
@@ -288,7 +288,7 @@ function Home() {
       </section>
 
       {/* Customer Success & ROI Stats Section */}
-      <section className="py-24 sm:py-32 relative overflow-hidden">
+      <section className="min-h-screen py-24 snap-start sm:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-[#678FCA]/[0.02] hero-pattern opacity-50" />
         <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
 
@@ -328,7 +328,8 @@ function Home() {
               viewport={{ once: true }}
               className="text-xl text-black max-w-2xl mx-auto"
             >
-              Trusted by worldwide various industry partners, RidesIQ delivers measurable impact.
+              Trusted by worldwide various industry partners, RidesIQ delivers
+              measurable impact.
             </motion.p>
           </motion.div>
 
@@ -366,7 +367,7 @@ function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 sm:py-32 relative overflow-hidden bg-gray-50/50">
+      <section className="min-h-screen py-20 snap-start sm:py-32 relative overflow-hidden bg-gray-50/50">
         <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50/80" />
         <div className="absolute inset-0 hero-pattern opacity-10" />
 
@@ -434,7 +435,7 @@ function Home() {
       <IndustrySolutions />
 
       {/* Product Comparison Section */}
-      <section className="py-24 sm:py-32 relative overflow-hidden">
+      <section className="min-h-screen py-24 sm:py-32 snap-start relative overflow-hidden">
         <div className="absolute inset-0 bg-[#678FCA]/[0.02] hero-pattern opacity-50" />
         <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
 
@@ -523,7 +524,7 @@ function Home() {
       <CompetitiveAdvantage />
 
       {/* CTA Section */}
-      <section className="py-24">
+      <section className="min-h-screen py-24 snap-start">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#678FCA] via-[#99D5C9] to-[#678FCA] shadow-2xl">
             {/* Background Pattern */}
@@ -569,11 +570,11 @@ function Home() {
                   </Link>
 
                   {/* Tag Buttons */}
-                  <div className='flex flex-wrap justify-center gap-4'>
-                    <div className='px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium'>
+                  <div className="flex flex-wrap justify-center gap-4">
+                    <div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">
                       #FleetTracking
                     </div>
-                    <div className='px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium'>
+                    <div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">
                       #RealtimeInsights
                     </div>
                     <div className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">
